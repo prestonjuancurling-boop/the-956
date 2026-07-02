@@ -1,0 +1,37 @@
+{
+  "section_note": "What's happening around the Valley today.",
+  "items": [
+    {
+      "headline": "Downtown McAllen launches free trolley rides",
+      "summary": "The new Downtown Circulator Route is now running, offering free trolley rides through downtown McAllen — no fare, no app, just hop on.",
+      "source": "KRGV",
+      "topic": "Transportation",
+      "published": "Jul 1",
+      "url": "https://www.krgv.com/local-news"
+    },
+    {
+      "headline": "Progreso voters could decide on term limits",
+      "summary": "A measure heading toward the ballot would let Progreso residents decide whether to limit how long their elected leaders can serve.",
+      "source": "KRGV",
+      "topic": "Local government",
+      "published": "Jul 1",
+      "url": "https://www.krgv.com/local-news"
+    },
+    {
+      "headline": "Brownsville gives bars a path to compliance",
+      "summary": "After ordering several bars to shut down, Brownsville city leaders are giving the businesses a chance to follow city rules before closures become final.",
+      "source": "ValleyCentral",
+      "topic": "Business",
+      "published": "Jun 30",
+      "url": "https://www.valleycentral.com/"
+    },
+    {
+      "headline": "Shelters urge pet owners to prep for fireworks",
+      "summary": "The Brownsville Animal Regulation and Care Center is reminding pet owners that the Fourth is the busiest week of the year for lost pets — secure yards, update tags, and keep animals indoors during shows.",
+      "source": "ValleyCentral",
+      "topic": "Community",
+      "published": "Jun 30",
+      "url": "https://www.valleycentral.com/"
+    }
+  ]
+}

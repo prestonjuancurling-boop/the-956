@@ -1,0 +1,46 @@
+{
+  "section_note": "The Valley's most-talked-about food spots, ranked by mentions across local blogs, review roundups and r/RioGrandeValley.",
+  "disclaimer": "Launch-week buzz scores are illustrative — the weekly update pipeline computes real mention counts.",
+  "spots": [
+    {
+      "rank": 1,
+      "name": "Delia's Tamales",
+      "city": "San Juan + 6 Valley locations",
+      "known_for": "18 kinds of handmade tamales — a Valley institution since 1998, now famous statewide",
+      "mentions": 214,
+      "trend": "steady"
+    },
+    {
+      "rank": 2,
+      "name": "Vera's Backyard Bar-B-Que",
+      "city": "Brownsville",
+      "known_for": "The last true pit-smoked barbacoa de cabeza in Texas — a James Beard \"America's Classic\"",
+      "mentions": 187,
+      "trend": "up"
+    },
+    {
+      "rank": 3,
+      "name": "Los Compadres",
+      "city": "RGV",
+      "known_for": "Legendary Mexican breakfast & lunch buffet — menudo, pozole, barbacoa, nopalitos",
+      "mentions": 122,
+      "trend": "up"
+    },
+    {
+      "rank": 4,
+      "name": "Casa De Mariscos",
+      "city": "Weslaco",
+      "known_for": "Seafood botanas piled with fried shrimp, stuffed crab and oysters",
+      "mentions": 98,
+      "trend": "steady"
+    },
+    {
+      "rank": 5,
+      "name": "El Pato Mexican Food",
+      "city": "Valley-wide",
+      "known_for": "The homegrown patos chain — soft, griddled and open since the '70s",
+      "mentions": 91,
+      "trend": "down"
+    }
+  ]
+}

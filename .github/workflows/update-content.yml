@@ -1,0 +1,77 @@
+# Self-updating content pipeline.
+#
+# Runs the updater in the cloud on a schedule, commits the fresh JSON, and the
+# push triggers the Pages deploy — the site refreshes itself with no computer on.
+#
+# Requires one repo secret: ANTHROPIC_API_KEY (repo Settings → Secrets and
+# variables → Actions). Until the secret is added, runs skip gracefully.
+
+name: Update content
+
+on:
+  schedule:
+    - cron: "30 11 * * *"   # daily 6:30 AM Valley time (CDT) — news
+    - cron: "0 11 * * 1"    # Mondays 6:00 AM CDT — everything
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Section to update (news, events, restaurants, rankings, all)"
+        default: "all"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for API key
+        id: keycheck
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "No ANTHROPIC_API_KEY secret set — skipping content update."
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.keycheck.outputs.enabled == 'true'
+        with:
+          node-version: 22
+
+      - name: Install Claude Code
+        if: steps.keycheck.outputs.enabled == 'true'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Determine target
+        if: steps.keycheck.outputs.enabled == 'true'
+        id: target
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "target=${{ inputs.target }}" >> "$GITHUB_OUTPUT"
+          elif [ "$(date -u +%u)" = "1" ] && [ "$(date -u +%H)" = "11" ] && [ "$(date -u +%M)" -lt 20 ]; then
+            echo "target=all" >> "$GITHUB_OUTPUT"
+          else
+            echo "target=news" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update content
+        if: steps.keycheck.outputs.enabled == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/update-content.mjs ${{ steps.target.outputs.target }}
+
+      - name: Commit and push changes
+        if: steps.keycheck.outputs.enabled == 'true'
+        run: |
+          git config user.name "the-956-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet && echo "No content changes." && exit 0
+          git commit -m "Auto-update content ($(date -u +%Y-%m-%d))"
+          git push

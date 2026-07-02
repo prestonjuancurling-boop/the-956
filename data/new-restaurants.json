@@ -1,0 +1,53 @@
+{
+  "section_note": "New and just-announced spots around the Valley.",
+  "restaurants": [
+    {
+      "name": "AMBRA",
+      "city": "McAllen",
+      "cuisine": "Contemporary",
+      "status": "Opening soon",
+      "blurb": "Billed as McAllen's most anticipated restaurant opening of the year — details are still under wraps, which is half the fun.",
+      "emoji": "✨"
+    },
+    {
+      "name": "Zaya",
+      "city": "McAllen",
+      "cuisine": "Eclectic",
+      "status": "Now open",
+      "blurb": "The newest spot in town and already a go-to for girls' night — dressed-up plates and a lively room.",
+      "emoji": "🥂"
+    },
+    {
+      "name": "Moūsai",
+      "city": "McAllen",
+      "cuisine": "Sushi",
+      "status": "Now open",
+      "blurb": "A sleek new sushi bar bringing fresh rolls and nigiri to the McAllen dining scene.",
+      "emoji": "🍣"
+    },
+    {
+      "name": "Blu Brasserie",
+      "city": "McAllen",
+      "cuisine": "Brasserie",
+      "status": "Now open",
+      "blurb": "Being called McAllen's new culinary gem — a polished brasserie for date nights and long dinners.",
+      "emoji": "🍷"
+    },
+    {
+      "name": "Brasas",
+      "city": "McAllen",
+      "cuisine": "Peruvian",
+      "status": "Now open",
+      "blurb": "Peruvian flavors land in the Valley — think rotisserie-style chicken, lomo saltado and aji verde on everything.",
+      "emoji": "🔥"
+    },
+    {
+      "name": "Hacienda Las Mariposas",
+      "city": "RGV",
+      "cuisine": "Mexican",
+      "status": "Now open",
+      "blurb": "A new hacienda-style spot earning early buzz as one of the Valley's prettiest new dining rooms.",
+      "emoji": "🦋"
+    }
+  ]
+}

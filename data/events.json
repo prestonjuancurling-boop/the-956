@@ -1,0 +1,66 @@
+{
+  "section_note": "The five biggest things happening across the Valley this week.",
+  "events": [
+    {
+      "rank": 1,
+      "title": "26th Annual Salute to Freedom Celebration",
+      "city": "Brownsville",
+      "venue": "Brownsville Sports Park, 1000 Sports Park Blvd",
+      "date": "Sat, July 4",
+      "time": "Tailgate 5 PM · Fireworks 9:20 PM",
+      "price": "Free",
+      "tag": "Fireworks",
+      "blurb": "Stars, stripes and summer nights — live music, a classic car show, food vendors, and a drone-light + fireworks finale. Veterans get complimentary food and refreshments.",
+      "url": "https://www.valleycentral.com/news/local-news/list-4th-of-july-events-happening-across-the-valley/"
+    },
+    {
+      "rank": 2,
+      "title": "Freedom Fest",
+      "city": "Harlingen",
+      "venue": "Lon C. Hill Destination Park, 1216 Fair Park Blvd",
+      "date": "Sat, July 4",
+      "time": "5 – 10 PM",
+      "price": "Free",
+      "tag": "Festival",
+      "blurb": "Live music, a beer garden, family games, food vendors, the first-ever Freedom Fest 4K race, and a fireworks show to close out the night.",
+      "url": "https://www.krgv.com/news/list-fourth-of-july-events-happening-across-the-rio-grande-valley/"
+    },
+    {
+      "rank": 3,
+      "title": "Show in the Sky 2026",
+      "city": "McAllen",
+      "venue": "Payne Arena grounds · McAllen Food Park",
+      "date": "Sat, July 4",
+      "time": "Live music 6 PM",
+      "price": "Free",
+      "tag": "Fireworks",
+      "blurb": "McAllen's Independence Day tradition — catch the Midnight Mustang Band at the Food Park at 6, then look up for the big show over Payne Arena.",
+      "url": "https://www.krgv.com/news/list-fourth-of-july-events-happening-across-the-rio-grande-valley/"
+    },
+    {
+      "rank": 4,
+      "title": "Annual Walking Beach Parade",
+      "city": "South Padre Island",
+      "venue": "Whitecap Circle (Beach Access #8) → Beach Circle (Access #4)",
+      "date": "Sat, July 4",
+      "time": "Morning",
+      "price": "Free",
+      "tag": "Family",
+      "blurb": "Decorate your crew in red, white and blue and stroll the sand — SPI's most laid-back Fourth tradition, right on the Gulf.",
+      "url": "https://www.valleycentral.com/news/local-news/list-4th-of-july-events-across-the-valley/"
+    },
+    {
+      "rank": 5,
+      "title": "Stars & Stripes Freedom Festival",
+      "city": "Weslaco",
+      "venue": "South Texas Blvd, Downtown Weslaco",
+      "date": "Sat, July 4",
+      "time": "6 – 10 PM · Drone show 9:15 PM",
+      "price": "Free",
+      "tag": "Drone show",
+      "blurb": "A free, family-friendly downtown block party capped by a drone show finale lighting up the Mid-Valley sky.",
+      "url": "https://www.krgv.com/news/list-4th-of-july-events-across-the-valley/"
+    }
+  ],
+  "also_happening": "Also this week: Mercedes celebrates America's 250th birthday Friday, July 3 at the Mercedes Dome (1202 N. Vermont Ave)."
+}

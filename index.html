@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 956 — El Valle's Weekly Digest</title>
+  <meta name="description" content="The Rio Grande Valley's local digest: this week's biggest events, daily news, new restaurants, and the Valley's most-talked-about food spots." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>" />
+</head>
+<body>
+
+  <div class="ticker" id="ticker" aria-label="This week's highlights">
+    <div class="ticker-track" id="ticker-track"></div>
+  </div>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="masthead-meta">
+        <span id="edition">—</span>
+        <span class="dot">·</span>
+        <span id="week-of">—</span>
+      </div>
+      <h1 class="masthead-title">The <span class="accent">956</span></h1>
+      <p class="masthead-tag" id="tagline">El Valle's weekly digest</p>
+      <nav class="masthead-nav">
+        <a href="#events">The Big 5</a>
+        <a href="#news">Daily Rundown</a>
+        <a href="#fresh">Fresh Plates</a>
+        <a href="#rankings">Power Rankings</a>
+      </nav>
+    </div>
+    <div class="sun" aria-hidden="true"></div>
+  </header>
+
+  <main class="wrap">
+
+    <section id="events" class="section">
+      <div class="section-head">
+        <span class="overline">This week in el Valle</span>
+        <h2>The Big <em>5</em></h2>
+        <p class="section-note" data-note="events"></p>
+      </div>
+      <ol class="event-list" id="event-list"></ol>
+      <p class="also" id="also-happening"></p>
+    </section>
+
+    <section id="news" class="section">
+      <div class="section-head">
+        <span class="overline">Fresh off the wire</span>
+        <h2>The Daily Rundown</h2>
+        <p class="section-note" data-note="news"></p>
+      </div>
+      <div class="news-list" id="news-list"></div>
+    </section>
+
+    <section id="fresh" class="section">
+      <div class="section-head">
+        <span class="overline">New in town</span>
+        <h2>Fresh Plates</h2>
+        <p class="section-note" data-note="restaurants"></p>
+      </div>
+      <div class="resto-grid" id="resto-grid"></div>
+    </section>
+
+    <section id="rankings" class="section">
+      <div class="section-head">
+        <span class="overline">Most-mentioned eats</span>
+        <h2>The 956 Power Rankings</h2>
+        <p class="section-note" data-note="rankings"></p>
+      </div>
+      <div class="rank-list" id="rank-list"></div>
+      <p class="fineprint" id="rank-disclaimer"></p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><strong>The 956</strong> — hecho en el Valle 🌴</p>
+      <p class="fineprint">
+        Curated from local sources including <a href="https://www.krgv.com/news" target="_blank" rel="noopener">KRGV</a>,
+        <a href="https://www.valleycentral.com/" target="_blank" rel="noopener">ValleyCentral</a> and
+        <a href="https://myrgv.com/" target="_blank" rel="noopener">MyRGV</a>.
+        Content refreshes automatically — last updated <span id="updated-at">—</span>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
