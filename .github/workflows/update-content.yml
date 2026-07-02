@@ -3,8 +3,11 @@
 # Runs the updater in the cloud on a schedule, commits the fresh JSON, and the
 # push triggers the Pages deploy — the site refreshes itself with no computer on.
 #
-# Requires one repo secret: ANTHROPIC_API_KEY (repo Settings → Secrets and
-# variables → Actions). Until the secret is added, runs skip gracefully.
+# Secrets (repo Settings → Secrets and variables → Actions), all optional —
+# missing ones skip gracefully:
+#   ANTHROPIC_API_KEY                       events/news/restaurants sections
+#   REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET  Power Rankings reddit mentions
+#   GOOGLE_PLACES_API_KEY                   review velocity + restaurant photos
 
 name: Update content
 
@@ -27,6 +30,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Compute data-driven Power Rankings + restaurant photos
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: node scripts/compute-buzz.mjs
+
       - name: Check for API key
         id: keycheck
         env:
@@ -38,11 +52,6 @@ jobs:
           else
             echo "enabled=true" >> "$GITHUB_OUTPUT"
           fi
-
-      - uses: actions/setup-node@v4
-        if: steps.keycheck.outputs.enabled == 'true'
-        with:
-          node-version: 22
 
       - name: Install Claude Code
         if: steps.keycheck.outputs.enabled == 'true'
@@ -67,7 +76,6 @@ jobs:
         run: node scripts/update-content.mjs ${{ steps.target.outputs.target }}
 
       - name: Commit and push changes
-        if: steps.keycheck.outputs.enabled == 'true'
         run: |
           git config user.name "the-956-bot"
           git config user.email "actions@users.noreply.github.com"

@@ -315,6 +315,30 @@ a { color: var(--sunset-deep); }
 
 .resto-card:hover { transform: translateY(-2px); }
 
+.resto-card.has-photo { padding-top: 0; overflow: hidden; }
+
+.resto-photo {
+  margin: 0 -24px 6px;
+  height: 150px;
+  position: relative;
+}
+
+.resto-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.resto-photo::after {
+  /* warm tint so photos sit inside the site's palette */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(240, 168, 50, 0.08), rgba(34, 48, 31, 0.14));
+  pointer-events: none;
+}
+
 .resto-top { display: flex; align-items: center; gap: 12px; }
 
 .resto-emoji {

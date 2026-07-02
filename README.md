@@ -71,14 +71,42 @@ this folder to a repo, host it free on Pages, and add a workflow with
 key) and commits the new JSON. Fully hands-off: the site updates itself
 daily/weekly with no computer involved.
 
-### Making it more deterministic later
+## Data-driven Power Rankings
 
-The LLM-with-web-search approach is the fastest way to automate all four
-sections. For higher reliability you can swap individual sections to
-structured sources without touching the site:
+`scripts/compute-buzz.mjs` replaces LLM guesswork with real public data:
+
+- **Reddit mentions** — posts in r/RioGrandeValley over the past week
+  mentioning each spot in `data/watchlist.json`
+- **Google review velocity** — new Google reviews gained since the last run
+  (history kept in `data/buzz-history.json`)
+- **Photos** — each Fresh Plates restaurant gets its actual Google Places
+  photo, automatically
+
+Score = reddit mentions × 10 + new reviews × 3; top 5 make the site.
+Add candidate spots to `data/watchlist.json` anytime.
+
+### One-time key setup (both free)
+
+1. **Reddit** — https://www.reddit.com/prefs/apps → "create another app" →
+   type **script**, any name, redirect uri `http://localhost` → copy the
+   client id (under the app name) and secret.
+2. **Google Places** — https://console.cloud.google.com → create project →
+   enable **Places API (New)** → Credentials → create API key. The free tier
+   comfortably covers ~10 lookups/week.
+
+Locally, put them in env vars and run:
+
+```powershell
+$env:REDDIT_CLIENT_ID="..."; $env:REDDIT_CLIENT_SECRET="..."
+$env:GOOGLE_PLACES_API_KEY="..."
+node scripts/compute-buzz.mjs
+```
+
+For the cloud schedule, add the same three names as repo secrets
+(Settings → Secrets and variables → Actions).
+
+### Other sections, more deterministic later (optional)
 
 - **Events** — Eventbrite/Ticketmaster APIs + city parks & rec calendars
 - **News** — RSS feeds (KRGV, ValleyCentral, MyRGV) summarized per item
 - **Restaurants** — Google Places API "newly opened" queries
-- **Rankings** — Google Places / Yelp APIs for review-count deltas, plus
-  Reddit API mention counts for real "times mentioned" data

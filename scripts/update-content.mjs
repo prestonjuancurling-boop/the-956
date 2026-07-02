@@ -10,8 +10,10 @@
  *   node scripts/update-content.mjs news          # daily
  *   node scripts/update-content.mjs events        # weekly (Mondays)
  *   node scripts/update-content.mjs restaurants   # weekly
- *   node scripts/update-content.mjs rankings      # weekly
  *   node scripts/update-content.mjs all
+ *
+ * (The Power Rankings are handled by scripts/compute-buzz.mjs, which uses
+ * real Reddit + Google review data instead of an LLM.)
  *
  * Requires: Claude Code CLI installed and logged in (`claude --version`).
  */
@@ -77,21 +79,6 @@ Find restaurants that recently opened or were just announced in the RGV
 4-6 restaurants. Only include places you can verify from a source.`,
   },
 
-  rankings: {
-    file: "top-eats.json",
-    validate: (d) => Array.isArray(d.spots) && d.spots.length === 5,
-    prompt: `${COMMON}
-Rank the 5 most-talked-about RGV food spots right now, based on how often
-they're mentioned in local blogs, "best of RGV" roundups, r/RioGrandeValley
-threads and recent reviews you find via search. Estimate a relative mention
-count per spot from what you find (higher = more buzz). Compare with the
-previous ranking to set each trend. Previous ranking for reference:
-${readFileSync(join(dataDir, "top-eats.json"), "utf8")}
-Produce JSON: {"section_note": "...", "disclaimer": "Buzz scores are estimated
-from public mentions, not an exact count.", "spots": [{"rank": 1, "name": "...",
-"city": "...", "known_for": "...", "mentions": 214, "trend": "up"|"down"|"steady"}]}
-Exactly 5 spots.`,
-  },
 };
 
 function runClaude(prompt) {

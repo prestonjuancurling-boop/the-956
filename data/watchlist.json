@@ -1,0 +1,86 @@
+{
+  "comment": "Candidate pool for the Power Rankings. compute-buzz.mjs measures each spot's Reddit mentions and Google review velocity, then ranks the top 5. Add or remove spots freely — aliases are the search terms used for Reddit matching.",
+  "subreddit": "RioGrandeValley",
+  "spots": [
+    {
+      "name": "Delia's Tamales",
+      "aliases": ["delia's", "delias"],
+      "city": "San Juan",
+      "display_city": "San Juan + 6 Valley locations",
+      "known_for": "18 kinds of handmade tamales — a Valley institution since 1998, now famous statewide",
+      "places_query": "Delia's Tamales San Juan TX"
+    },
+    {
+      "name": "Vera's Backyard Bar-B-Que",
+      "aliases": ["vera's", "veras barbacoa", "vera's backyard"],
+      "city": "Brownsville",
+      "display_city": "Brownsville",
+      "known_for": "The last true pit-smoked barbacoa de cabeza in Texas — a James Beard \"America's Classic\"",
+      "places_query": "Vera's Backyard Bar-B-Que Brownsville TX"
+    },
+    {
+      "name": "Los Compadres",
+      "aliases": ["los compadres"],
+      "city": "RGV",
+      "display_city": "RGV",
+      "known_for": "Legendary Mexican breakfast & lunch buffet — menudo, pozole, barbacoa, nopalitos",
+      "places_query": "Los Compadres restaurant Rio Grande Valley TX"
+    },
+    {
+      "name": "Casa De Mariscos",
+      "aliases": ["casa de mariscos"],
+      "city": "Weslaco",
+      "display_city": "Weslaco",
+      "known_for": "Seafood botanas piled with fried shrimp, stuffed crab and oysters",
+      "places_query": "Casa De Mariscos Weslaco TX"
+    },
+    {
+      "name": "El Pato Mexican Food",
+      "aliases": ["el pato"],
+      "city": "McAllen",
+      "display_city": "Valley-wide",
+      "known_for": "The homegrown patos chain — soft, griddled and open since the '70s",
+      "places_query": "El Pato Mexican Food McAllen TX"
+    },
+    {
+      "name": "Taco Palenque",
+      "aliases": ["taco palenque", "palenque"],
+      "city": "McAllen",
+      "display_city": "Valley-wide",
+      "known_for": "The border's beloved 24/7 taco institution — pirata tacos and salsa bar supremacy",
+      "places_query": "Taco Palenque McAllen TX"
+    },
+    {
+      "name": "Zaya",
+      "aliases": ["zaya"],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
+      "places_query": "Zaya restaurant McAllen TX"
+    },
+    {
+      "name": "Moūsai",
+      "aliases": ["mousai", "moūsai"],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
+      "places_query": "Mousai sushi McAllen TX"
+    },
+    {
+      "name": "Blu Brasserie",
+      "aliases": ["blu brasserie"],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
+      "places_query": "Blu Brasserie McAllen TX"
+    },
+    {
+      "name": "Brasas",
+      "aliases": ["brasas"],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
+      "places_query": "Brasas Peruvian McAllen TX"
+    }
+  ]
+}

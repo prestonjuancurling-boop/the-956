@@ -70,7 +70,8 @@ function renderNews(data) {
 function renderRestaurants(data) {
   $('[data-note="restaurants"]').textContent = data.section_note;
   $("#resto-grid").innerHTML = data.restaurants.map((r) => `
-    <div class="resto-card">
+    <div class="resto-card${r.photo ? " has-photo" : ""}">
+      ${r.photo ? `<div class="resto-photo"><img src="${esc(r.photo)}" alt="${esc(r.name)}" loading="lazy"></div>` : ""}
       <div class="resto-top">
         <div class="resto-emoji">${esc(r.emoji || "🍽️")}</div>
         <div>
@@ -87,6 +88,12 @@ function renderRankings(data) {
   $('[data-note="rankings"]').textContent = data.section_note;
   const max = Math.max(...data.spots.map((s) => s.mentions));
   const arrows = { up: "▲", down: "▼", steady: "—" };
+  const buzzLabel = (s) => {
+    const parts = [];
+    if (s.reddit_mentions != null) parts.push(`${s.reddit_mentions} Reddit mention${s.reddit_mentions === 1 ? "" : "s"}`);
+    if (s.review_delta != null) parts.push(`+${s.review_delta} Google reviews`);
+    return parts.length ? parts.join(" · ") : `${s.mentions} mentions this month`;
+  };
   $("#rank-list").innerHTML = data.spots.map((s) => `
     <div class="rank-row">
       <div class="rank-pos">${s.rank}</div>
@@ -97,7 +104,7 @@ function renderRankings(data) {
       </div>
       <div class="buzz">
         <div class="buzz-bar"><div class="buzz-fill" style="width:${Math.round((s.mentions / max) * 100)}%"></div></div>
-        <div class="buzz-label">${s.mentions} mentions this month</div>
+        <div class="buzz-label">${esc(buzzLabel(s))}</div>
       </div>
       <div class="trend ${esc(s.trend)}">${arrows[s.trend] || "—"}</div>
     </div>`).join("");
