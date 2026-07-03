@@ -58,5 +58,35 @@
     "rating": 4.8,
     "ema": 0,
     "date": "2026-07-03"
+  },
+  "cat:Young's Sno Wiz": {
+    "reviewCount": 513,
+    "rating": 4.8,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "cat:Margo's": {
+    "reviewCount": 464,
+    "rating": 4.5,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "cat:Viva La Raspa": {
+    "reviewCount": 25,
+    "rating": 4.6,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "cat:Iced Cube": {
+    "reviewCount": 65,
+    "rating": 3.9,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "cat:Fruti Raspas La Isla": {
+    "reviewCount": 28,
+    "rating": 4.7,
+    "ema": 0,
+    "date": "2026-07-03"
   }
 }

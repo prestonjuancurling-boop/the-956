@@ -31,6 +31,7 @@ const UI = {
     "h-fresh": "Fresh Plates",
     "ov-rank": "Most-mentioned eats",
     "h-rank": "The 956 Power Rankings",
+    "ov-micro": "This month's micro-ranking",
     "footer-curated": 'Curated from local sources including <a href="https://www.krgv.com/news" target="_blank" rel="noopener">KRGV</a>, <a href="https://www.valleycentral.com/" target="_blank" rel="noopener">ValleyCentral</a> and <a href="https://myrgv.com/" target="_blank" rel="noopener">MyRGV</a>.',
     "footer-updated": "Content refreshes automatically — last updated",
     weekPrefix: "Week of",
@@ -59,6 +60,7 @@ const UI = {
     "h-fresh": "Platos Nuevos",
     "ov-rank": "Los más mencionados",
     "h-rank": "El Ranking del 956",
+    "ov-micro": "El micro-ranking del mes",
     "footer-curated": 'Curado de fuentes locales como <a href="https://www.krgv.com/news" target="_blank" rel="noopener">KRGV</a>, <a href="https://www.valleycentral.com/" target="_blank" rel="noopener">ValleyCentral</a> y <a href="https://myrgv.com/" target="_blank" rel="noopener">MyRGV</a>.',
     "footer-updated": "El contenido se actualiza solo — última actualización",
     weekPrefix: "Semana del",
@@ -202,6 +204,42 @@ function renderRankings(data) {
   $("#rank-disclaimer").textContent = t(data, "disclaimer") || "";
 }
 
+function renderMicro(cat) {
+  const section = $("#micro");
+  if (!cat) { section.style.display = "none"; return; }
+  section.style.display = "";
+  $("#micro-title").textContent = t(cat, "title");
+  $('[data-note="micro"]').textContent = t(cat, "note");
+
+  if (cat.status === "measuring") {
+    $("#micro-card").innerHTML = `
+      <p class="micro-measuring">${esc(t(cat, "measuring_note"))}</p>
+      <div class="micro-contenders">
+        ${cat.spots.map((s) => `
+          <div class="micro-contender">
+            <div class="micro-name">${esc(s.name)}</div>
+            <div class="micro-city">📍 ${esc(s.display_city)}</div>
+            <div class="micro-known">${esc(t(s, "known_for"))}</div>
+          </div>`).join("")}
+      </div>`;
+  } else {
+    const max = Math.max(...cat.spots.map((s) => s.mentions || 1));
+    $("#micro-card").innerHTML = cat.spots.map((s) => `
+      <div class="rank-row">
+        <div class="rank-pos">${s.rank}</div>
+        <div>
+          <div class="rank-name">${esc(s.name)}</div>
+          <div class="rank-city">${esc(s.display_city)}</div>
+          <div class="rank-known">${esc(t(s, "known_for"))}</div>
+        </div>
+        <div class="buzz">
+          <div class="buzz-bar"><div class="buzz-fill" style="width:${Math.round(((s.mentions || 0) / max) * 100)}%"></div></div>
+        </div>
+        <div class="trend steady"></div>
+      </div>`).join("");
+  }
+}
+
 function renderAll() {
   if (!DATA) return;
   applyStatic();
@@ -210,6 +248,7 @@ function renderAll() {
   renderNews(DATA.news);
   renderRestaurants(DATA.restos);
   renderRankings(DATA.eats);
+  renderMicro(DATA.category);
 }
 
 document.querySelectorAll("#lang-toggle button").forEach((b) => {
@@ -223,11 +262,12 @@ document.querySelectorAll("#lang-toggle button").forEach((b) => {
 
 async function init() {
   try {
-    const [meta, events, news, restos, eats] = await Promise.all([
+    const [meta, events, news, restos, eats, category] = await Promise.all([
       loadJSON("meta"), loadJSON("events"), loadJSON("news"),
       loadJSON("new-restaurants"), loadJSON("top-eats"),
+      loadJSON("category").catch(() => null),
     ]);
-    DATA = { meta, events, news, restos, eats };
+    DATA = { meta, events, news, restos, eats, category };
     renderAll();
   } catch (err) {
     document.querySelector("main").innerHTML =

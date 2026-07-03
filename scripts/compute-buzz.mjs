@@ -257,6 +257,60 @@ if (totalSignal === 0) {
   console.log("✔ Wrote data/top-eats.json");
 }
 
+// ————— monthly micro-ranking (data/category.json) —————
+// Same engine, smaller arena. History keys are prefixed "cat:" so a spot can
+// appear in both pools without colliding.
+
+const categoryPath = join(dataDir, "category.json");
+if (existsSync(categoryPath)) {
+  const cat = JSON.parse(readFileSync(categoryPath, "utf8"));
+  const catResults = [];
+  for (const spot of cat.spots) {
+    console.log(`Measuring [${cat.title}] ${spot.name}…`);
+    const reddit = token ? await redditMentions(token, spot) : null;
+    const places = hasPlaces ? await placesLookup(spot) : null;
+    const key = "cat:" + spot.name;
+    const prev = history[key];
+    const delta =
+      places?.reviewCount != null && prev?.reviewCount != null
+        ? Math.max(0, places.reviewCount - prev.reviewCount)
+        : null;
+    const relV =
+      delta != null && places?.reviewCount
+        ? delta / Math.sqrt(Math.max(places.reviewCount, 30))
+        : 0;
+    const raw = ((reddit ?? 0) * 10 + relV * 60) * qualityFactor(places?.rating);
+    const ema = prev?.ema != null ? 0.6 * raw + 0.4 * prev.ema : raw;
+    history[key] = {
+      reviewCount: places?.reviewCount ?? prev?.reviewCount ?? null,
+      rating: places?.rating ?? prev?.rating ?? null,
+      ema,
+      date: new Date().toISOString().slice(0, 10),
+    };
+    catResults.push({ spot, reddit, delta, rating: places?.rating ?? null, score: Math.round(ema) });
+    console.log(`  reddit: ${reddit ?? "n/a"} · reviews: ${places?.reviewCount ?? "n/a"} (Δ ${delta ?? "n/a"}) · score: ${Math.round(ema)}`);
+  }
+  const catSignal = catResults.reduce((s, r) => s + (r.reddit ?? 0) + (r.delta ?? 0), 0);
+  if (catSignal > 0) {
+    catResults.sort((a, b) => b.score - a.score);
+    cat.status = "ranked";
+    cat.spots = catResults.map((r, i) => ({
+      ...r.spot,
+      rank: i + 1,
+      mentions: r.score,
+      reddit_mentions: r.reddit,
+      review_delta: r.delta,
+      rating: r.rating,
+    }));
+    console.log(`✔ Ranked category "${cat.title}"`);
+  } else {
+    cat.status = "measuring";
+    console.log(`✔ Category "${cat.title}" baseline seeded — still measuring`);
+  }
+  writeFileSync(categoryPath, JSON.stringify(cat, null, 2) + "\n");
+  writeFileSync(historyPath, JSON.stringify(history, null, 2) + "\n");
+}
+
 // ————— bonus: real photos for the Fresh Plates cards —————
 // Photos are downloaded as local site assets. Never store the API-keyed
 // media URL in a data file — this repo is public and the URL embeds the key.

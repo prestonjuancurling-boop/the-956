@@ -1,0 +1,73 @@
+{
+  "comment": "The rotating monthly micro-ranking. Rotate the category on the 1st of each month: update month/title/note, swap in 5-6 real candidate spots (verified via local sources — never invented), and reset status to 'measuring'. compute-buzz.mjs scores candidates weekly with the same engine as the Power Rankings (history keys prefixed 'cat:'). Planned rotation: July raspas, August breakfast tacos, September barbacoa, late-August+ high school football (separate feature).",
+  "month": "2026-07",
+  "title": "July: Best Raspas ❄️",
+  "title_es": "Julio: Las mejores raspas ❄️",
+  "note": "It's 98° in the Valley — the only ranking that matters right now. Tracked with the same real-data engine as the Power Rankings.",
+  "note_es": "Hace 98° en el Valle — el único ranking que importa ahorita. Medido con el mismo sistema de datos reales que El Ranking.",
+  "measuring_note": "Tracking just started — the first ranking drops Monday. The contenders:",
+  "measuring_note_es": "Apenas empezamos a medir — el primer ranking sale el lunes. Los contendientes:",
+  "status": "measuring",
+  "spots": [
+    {
+      "name": "Young's Sno Wiz",
+      "aliases": [
+        "young's",
+        "sno wiz",
+        "youngs sno"
+      ],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "The McAllen institution locals swear has the best raspas in the Valley",
+      "known_for_es": "La institución de McAllen que según los locales tiene las mejores raspas del Valle",
+      "places_query": "Young's Sno Wiz McAllen TX"
+    },
+    {
+      "name": "Margo's",
+      "aliases": [
+        "margo's raspas",
+        "margos raspa"
+      ],
+      "city": "RGV",
+      "display_city": "RGV",
+      "known_for": "60+ combinations with homemade syrups — home of the legendary mangonada",
+      "known_for_es": "Más de 60 combinaciones con jarabes caseros — la casa de la legendaria mangonada",
+      "places_query": "Margo's raspas Rio Grande Valley TX"
+    },
+    {
+      "name": "Viva La Raspa",
+      "aliases": [
+        "viva la raspa"
+      ],
+      "city": "Weslaco",
+      "display_city": "Weslaco",
+      "known_for": "Mexican-blanket murals and raspas born from watching everyone else's long lines",
+      "known_for_es": "Murales de cobija mexicana y raspas que nacieron de ver las filas largas de los demás",
+      "places_query": "Viva La Raspa Weslaco TX"
+    },
+    {
+      "name": "Iced Cube",
+      "aliases": [
+        "iced cube raspa",
+        "iced cube elsa"
+      ],
+      "city": "Elsa",
+      "display_city": "Elsa",
+      "known_for": "The stand people drive from San Antonio and Corpus for — worth the trip to Elsa",
+      "known_for_es": "El puesto al que la gente maneja desde San Antonio y Corpus — vale el viaje a Elsa",
+      "places_query": "Iced Cube raspas Elsa TX"
+    },
+    {
+      "name": "Fruti Raspas La Isla",
+      "aliases": [
+        "fruti raspas",
+        "la isla raspas"
+      ],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "Fruteria-style raspas piled with fresh fruit, chamoy and everything on it",
+      "known_for_es": "Raspas estilo frutería con fruta fresca, chamoy y de todo encima",
+      "places_query": "Fruti Raspas La Isla McAllen TX"
+    }
+  ]
+}
