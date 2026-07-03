@@ -87,6 +87,15 @@
       "places_query": "Blu Brasserie McAllen TX"
     },
     {
+      "name": "AMBRA",
+      "aliases": ["ambra"],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
+      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
+      "places_query": "AMBRA restaurant McAllen TX"
+    },
+    {
       "name": "Brasas",
       "aliases": ["brasas"],
       "city": "McAllen",

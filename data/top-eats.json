@@ -1,53 +1,92 @@
 {
-  "section_note": "The Valley's most-talked-about food spots, ranked by mentions across local blogs, review roundups and r/RioGrandeValley.",
-  "section_note_es": "Los lugares de comida más mencionados del Valle, según blogs locales, reseñas y r/RioGrandeValley.",
-  "disclaimer": "Launch-week buzz scores are illustrative — the weekly update pipeline computes real mention counts.",
-  "disclaimer_es": "Los puntajes de esta semana de lanzamiento son ilustrativos — el sistema semanal calcula menciones reales.",
+  "section_note": "The Valley's most-talked-about food spots, ranked by real data: Google review velocity (scaled to each spot's size).",
+  "section_note_es": "Los lugares de comida más mencionados del Valle, con datos reales: velocidad de reseñas de Google (ajustada al tamaño de cada lugar).",
+  "disclaimer": "Scores blend this week's buzz with running momentum, size-relative review velocity, a newcomer boost, and a small quality factor — computed automatically, no opinions.",
+  "disclaimer_es": "Los puntajes combinan el buzz de la semana con el impulso acumulado, la velocidad de reseñas relativa al tamaño, un empujón para los recién abiertos y un pequeño factor de calidad — todo automático, sin opiniones.",
   "spots": [
     {
       "rank": 1,
-      "name": "Delia's Tamales",
-      "city": "San Juan + 6 Valley locations",
-      "known_for": "18 kinds of handmade tamales — a Valley institution since 1998, now famous statewide",
-      "known_for_es": "18 tipos de tamales hechos a mano — una institución del Valle desde 1998, ahora famosa en todo Texas",
-      "mentions": 214,
-      "trend": "steady"
+      "name": "Moūsai",
+      "city": "McAllen",
+      "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
+      "known_for_es": "El nuevo sushi bar elegante que trae rollos frescos y nigiri a McAllen",
+      "mentions": 5,
+      "reddit_mentions": null,
+      "review_delta": 3,
+      "rating": 4.8,
+      "trend": "steady",
+      "badges": [
+        "new_entry"
+      ],
+      "streak_weeks": 1
     },
     {
       "rank": 2,
-      "name": "Vera's Backyard Bar-B-Que",
-      "city": "Brownsville",
-      "known_for": "The last true pit-smoked barbacoa de cabeza in Texas — a James Beard \"America's Classic\"",
-      "known_for_es": "La última barbacoa de cabeza en pozo de todo Texas — un \"America's Classic\" de la Fundación James Beard",
-      "mentions": 187,
-      "trend": "up"
-    },
-    {
-      "rank": 3,
-      "name": "Los Compadres",
-      "city": "RGV",
-      "known_for": "Legendary Mexican breakfast & lunch buffet — menudo, pozole, barbacoa, nopalitos",
-      "known_for_es": "El legendario buffet mexicano de desayuno y comida — menudo, pozole, barbacoa, nopalitos",
-      "mentions": 122,
-      "trend": "up"
-    },
-    {
-      "rank": 4,
-      "name": "Casa De Mariscos",
-      "city": "Weslaco",
-      "known_for": "Seafood botanas piled with fried shrimp, stuffed crab and oysters",
-      "known_for_es": "Botanas de mariscos con camarón frito, jaibas rellenas y ostiones",
-      "mentions": 98,
-      "trend": "steady"
-    },
-    {
-      "rank": 5,
       "name": "El Pato Mexican Food",
       "city": "Valley-wide",
       "known_for": "The homegrown patos chain — soft, griddled and open since the '70s",
       "known_for_es": "La cadena de patos del Valle — suavecitos, doraditos y abiertos desde los 70s",
-      "mentions": 91,
-      "trend": "down"
+      "mentions": 1,
+      "reddit_mentions": null,
+      "review_delta": 1,
+      "rating": 4.3,
+      "trend": "up",
+      "badges": [
+        "biggest_mover"
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Delia's Tamales",
+      "city": "San Juan + 6 Valley locations",
+      "known_for": "18 kinds of handmade tamales — a Valley institution since 1998, now famous statewide",
+      "known_for_es": "18 tipos de tamales hechos a mano — una institución del Valle desde 1998, ahora famosa en todo Texas",
+      "mentions": 0,
+      "reddit_mentions": null,
+      "review_delta": 0,
+      "rating": 4.6,
+      "trend": "down",
+      "badges": []
+    },
+    {
+      "rank": 4,
+      "name": "Vera's Backyard Bar-B-Que",
+      "city": "Brownsville",
+      "known_for": "The last true pit-smoked barbacoa de cabeza in Texas — a James Beard \"America's Classic\"",
+      "known_for_es": "La última barbacoa de cabeza en pozo de todo Texas — un \"America's Classic\" de la Fundación James Beard",
+      "mentions": 0,
+      "reddit_mentions": null,
+      "review_delta": 0,
+      "rating": 4.5,
+      "trend": "down",
+      "badges": []
+    },
+    {
+      "rank": 5,
+      "name": "Los Compadres",
+      "city": "RGV",
+      "known_for": "Legendary Mexican breakfast & lunch buffet — menudo, pozole, barbacoa, nopalitos",
+      "known_for_es": "El legendario buffet mexicano de desayuno y comida — menudo, pozole, barbacoa, nopalitos",
+      "mentions": 0,
+      "reddit_mentions": null,
+      "review_delta": 0,
+      "rating": 4.6,
+      "trend": "down",
+      "badges": []
+    }
+  ],
+  "bubble": [
+    {
+      "name": "Casa De Mariscos",
+      "city": "Weslaco"
+    },
+    {
+      "name": "Taco Palenque",
+      "city": "Valley-wide"
+    },
+    {
+      "name": "Zaya",
+      "city": "McAllen"
     }
   ]
 }
