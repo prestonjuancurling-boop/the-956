@@ -22,11 +22,10 @@ if (!key) {
 }
 
 const venues = [
-  { slug: "brownsville-sports-park", query: "Brownsville Sports Park Brownsville TX" },
-  { slug: "lon-c-hill-destination-park", query: "Lon C. Hill Destination Park Harlingen TX" },
-  { slug: "payne-arena", query: "Payne Arena Hidalgo TX" },
-  { slug: "south-padre-island-beach", query: "South Padre Island beach Texas" },
-  { slug: "downtown-weslaco", query: "Downtown Weslaco Texas" },
+  { slug: "bert-ogden-arena", query: "Bert Ogden Arena Edinburg TX" },
+  { slug: "cine-el-rey", query: "Cine El Rey McAllen TX" },
+  { slug: "gladys-porter-zoo", query: "Gladys Porter Zoo Brownsville TX" },
+  { slug: "mcallen-farmers-market", query: "McAllen Farmers Market McAllen TX" },
 ];
 
 async function fetchPhotoFor(query, slug) {

@@ -2,20 +2,20 @@
   "site_name": "The 956",
   "tagline": "El Valle's weekly digest",
   "tagline_es": "El resumen semanal del Valle",
-  "week_of": "June 29 – July 5, 2026",
-  "week_of_es": "29 de junio al 5 de julio, 2026",
-  "edition": "Vol. 1 · No. 1",
-  "generated_at": "2026-07-01T08:00:00-05:00",
+  "week_of": "July 6 – 12, 2026",
+  "week_of_es": "6 al 12 de julio, 2026",
+  "edition": "Vol. 1 · No. 2",
+  "generated_at": "2026-07-02T21:30:00-05:00",
   "ticker": [
-    "🎆 Fourth of July week — fireworks in Brownsville, Harlingen, McAllen, Weslaco & SPI",
-    "🚋 Free trolley rides now running in downtown McAllen",
-    "🇺🇸 America turns 250 — Mercedes celebrates Friday at the Dome",
-    "🌴 Semana del 29 de junio al 5 de julio"
+    "🎤 Grupo Frontera comes home — Bert Ogden Arena, July 16–17",
+    "🍧 The first-ever 956 Raspa Rankings drop Monday",
+    "🎆 SPI fireworks every Friday night, all summer",
+    "🌽 McAllen Farmers Market — Saturdays 10 to 1"
   ],
   "ticker_es": [
-    "🎆 Semana del 4 de julio — fuegos artificiales en Brownsville, Harlingen, McAllen, Weslaco y SPI",
-    "🚋 El trolley gratis ya circula por el centro de McAllen",
-    "🇺🇸 Estados Unidos cumple 250 años — Mercedes celebra el viernes en el Dome",
-    "🌴 Hecho en el Valle, para el Valle"
+    "🎤 Grupo Frontera vuelve a casa — Bert Ogden Arena, 16 y 17 de julio",
+    "🍧 El primer Raspa Ranking del 956 sale el lunes",
+    "🎆 Fuegos artificiales en SPI todos los viernes del verano",
+    "🌽 Farmers Market de McAllen — sábados de 10 a 1"
   ]
 }
