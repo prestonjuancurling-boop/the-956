@@ -189,10 +189,14 @@ for (const spot of watchlist.spots) {
 
 writeFileSync(historyPath, JSON.stringify(history, null, 2) + "\n");
 
+// Below this, a couple of stray reviews would decide #1 — not a ranking,
+// noise. Keep measuring until the data actually says something.
+const MIN_SIGNAL = 8;
+
 const totalSignal = results.reduce((s, r) => s + (r.reddit ?? 0) + (r.reviewDelta ?? 0), 0);
-if (totalSignal === 0) {
+if (totalSignal < MIN_SIGNAL) {
   console.log(
-    "✔ No signal yet (baseline run) — seeded data/buzz-history.json, rankings left untouched."
+    `✔ Signal too thin to publish (${totalSignal} < ${MIN_SIGNAL}) — history updated, published rankings left untouched.`
   );
 } else {
   results.sort((a, b) => b.score - a.score);
@@ -290,8 +294,12 @@ if (existsSync(categoryPath)) {
     catResults.push({ spot, reddit, delta, rating: places?.rating ?? null, score: Math.round(ema) });
     console.log(`  reddit: ${reddit ?? "n/a"} · reviews: ${places?.reviewCount ?? "n/a"} (Δ ${delta ?? "n/a"}) · score: ${Math.round(ema)}`);
   }
+  if (!cat.baseline_date) cat.baseline_date = new Date().toISOString().slice(0, 10);
+  const daysMeasured = (Date.now() - new Date(cat.baseline_date)) / 86400000;
   const catSignal = catResults.reduce((s, r) => s + (r.reddit ?? 0) + (r.delta ?? 0), 0);
-  if (catSignal > 0) {
+  // Publish only after a real measuring window, so one stray review on day
+  // one can't crown a winner before the announced reveal.
+  if (catSignal > 0 && daysMeasured >= 3) {
     catResults.sort((a, b) => b.score - a.score);
     cat.status = "ranked";
     cat.spots = catResults.map((r, i) => ({
