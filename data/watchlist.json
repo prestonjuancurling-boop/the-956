@@ -1,5 +1,5 @@
 {
-  "comment": "Candidate pool for the Power Rankings. compute-buzz.mjs measures each spot's Reddit mentions and Google review velocity, then ranks the top 5. Add or remove spots freely — aliases are the search terms used for Reddit matching.",
+  "comment": "Candidate pool for the Power Rankings. compute-buzz.mjs measures each spot's Reddit mentions and Google review velocity, then ranks the top 5. Add or remove spots freely — aliases are the search terms used for Reddit matching. Optional `opened` (YYYY-MM, approximate is fine) gives recently opened spots a newcomer boost: ×1.2 under 4 months, ×1.1 under 8.",
   "subreddit": "RioGrandeValley",
   "spots": [
     {
@@ -55,6 +55,7 @@
       "aliases": ["zaya"],
       "city": "McAllen",
       "display_city": "McAllen",
+      "opened": "2026-06",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
       "places_query": "Zaya restaurant McAllen TX"
     },
@@ -63,6 +64,7 @@
       "aliases": ["mousai", "moūsai"],
       "city": "McAllen",
       "display_city": "McAllen",
+      "opened": "2026-05",
       "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
       "places_query": "Mousai sushi McAllen TX"
     },
@@ -71,6 +73,7 @@
       "aliases": ["blu brasserie"],
       "city": "McAllen",
       "display_city": "McAllen",
+      "opened": "2026-05",
       "known_for": "McAllen's polished new brasserie for date nights and long dinners",
       "places_query": "Blu Brasserie McAllen TX"
     },
@@ -79,6 +82,7 @@
       "aliases": ["brasas"],
       "city": "McAllen",
       "display_city": "McAllen",
+      "opened": "2026-06",
       "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
       "places_query": "Brasas Peruvian McAllen TX"
     }

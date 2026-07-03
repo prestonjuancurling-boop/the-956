@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fdf8ee; --paper-2: #f7efdd; --ink: #22301f; --ink-soft: #5a6653;
+    --sunset: #e4582b; --sunset-deep: #c2431c; --citrus: #f0a832;
+    --palm: #2e6e4e; --palm-deep: #1d4a33; --card: #fffdf7; --line: #e4d9c2;
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); }
+  .slide {
+    width: 1080px; height: 1350px;
+    background: var(--paper);
+    background-image: radial-gradient(ellipse 1400px 700px at 50% -150px, #fdeed3 0%, var(--paper) 62%);
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+  .slide + .slide { margin-top: 40px; }
+  .band {
+    background: var(--palm-deep); color: #f2ecd9;
+    font-family: var(--sans); font-weight: 700; font-size: 26px;
+    letter-spacing: 0.04em; padding: 22px 56px;
+    display: flex; justify-content: space-between;
+  }
+  .pad { padding: 56px 64px; flex: 1; display: flex; flex-direction: column; }
+  .sun {
+    position: absolute; top: -220px; left: 50%; transform: translateX(-50%);
+    width: 620px; height: 620px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,168,50,0.30) 0%, rgba(240,168,50,0) 68%);
+  }
+
+  /* cover */
+  .cover-mast { text-align: center; margin-top: 40px; }
+  .cover-mast .overline { font-size: 24px; font-weight: 700; letter-spacing: 0.18em; color: var(--sunset); text-transform: uppercase; }
+  .cover-mast h1 { font-family: var(--serif); font-weight: 800; font-size: 110px; line-height: 0.98; letter-spacing: -0.02em; color: var(--ink); margin-top: 18px; }
+  .cover-mast h1 em { color: var(--sunset); font-style: italic; }
+  .cover-hook { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 72px; color: var(--ink); margin-top: 60px; padding: 0 30px; line-height: 1.15; }
+  .cover-hook em { color: var(--sunset); font-style: italic; }
+  .cover-sub { text-align: center; font-size: 32px; color: var(--ink-soft); margin-top: 30px; padding: 0 50px; line-height: 1.4; }
+  .cover-footer { margin-top: auto; text-align: center; padding-bottom: 20px; font-size: 26px; font-weight: 700; color: var(--palm-deep); }
+  .crown-big { text-align: center; font-size: 140px; margin-top: 50px; }
+
+  /* spot slide */
+  .sp-photo { position: relative; width: 100%; height: 660px; flex-shrink: 0; overflow: hidden; background: var(--paper-2); }
+  .sp-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sp-photo-tint {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(29,74,51,0.15) 0%, rgba(29,74,51,0.05) 45%, var(--paper) 100%);
+  }
+  .medal {
+    position: absolute; top: 36px; left: 40px;
+    width: 150px; height: 150px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-weight: 900; font-size: 84px;
+    flex-shrink: 0;
+    background: var(--card); border: 6px solid var(--citrus); color: var(--citrus);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+  .medal.gold { border-color: var(--sunset); color: var(--sunset); }
+  .crown-tag { position: absolute; top: -50px; left: 50%; transform: translateX(-50%); font-size: 52px; }
+  .sp-pad { padding-top: 40px; }
+  .sp-name { font-family: var(--serif); font-weight: 700; font-size: 58px; line-height: 1.08; color: var(--ink); }
+  .sp-city { font-size: 26px; font-weight: 700; color: var(--palm); margin-top: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .sp-known { font-family: var(--sans); font-size: 28px; color: var(--ink-soft); margin-top: 28px; line-height: 1.5; }
+  .hot-take {
+    margin-top: auto; background: var(--card); border: 2px solid var(--line); border-radius: 20px;
+    padding: 32px 38px; position: relative;
+  }
+  .hot-take .label { font-size: 20px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sunset); margin-bottom: 12px; }
+  .hot-take .quote { font-family: var(--serif); font-style: italic; font-size: 32px; line-height: 1.32; color: var(--ink); }
+  .sp-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 26px; margin-top: 26px; border-top: 3px double var(--line); }
+  .sp-footer .brand { font-family: var(--serif); font-weight: 800; font-size: 34px; color: var(--ink); }
+  .sp-footer .brand em { color: var(--sunset); font-style: italic; }
+  .sp-footer .swipe { font-size: 24px; font-weight: 700; color: var(--ink-soft); }
+
+  /* radar slide */
+  .radar-title { font-family: var(--serif); font-weight: 700; font-size: 60px; color: var(--ink); margin-top: 10px; }
+  .radar-sub { font-size: 28px; color: var(--ink-soft); margin-top: 14px; line-height: 1.5; }
+  .radar-list { margin-top: 50px; display: flex; flex-direction: column; gap: 22px; }
+  .radar-item {
+    display: flex; align-items: center; gap: 24px;
+    background: var(--card); border: 2px solid var(--line); border-radius: 16px; padding: 26px 32px;
+  }
+  .radar-item .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--citrus); flex-shrink: 0; }
+  .radar-item .name { font-family: var(--serif); font-weight: 700; font-size: 34px; color: var(--ink); }
+  .radar-item .desc { font-size: 22px; color: var(--ink-soft); margin-top: 4px; }
+
+  /* CTA slide */
+  .cta-icon { text-align: center; font-size: 130px; margin-top: 60px; }
+  .cta-title { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 66px; color: var(--ink); margin-top: 30px; padding: 0 40px; line-height: 1.2; }
+  .cta-title em { color: var(--sunset); font-style: italic; }
+  .cta-body { text-align: center; font-size: 32px; color: var(--ink-soft); margin-top: 34px; padding: 0 60px; line-height: 1.5; }
+  .cta-prompt {
+    margin-top: 50px; margin-left: 60px; margin-right: 60px;
+    background: var(--palm-deep); color: #f2ecd9; border-radius: 20px; padding: 40px 44px;
+    font-family: var(--serif); font-style: italic; font-size: 34px; text-align: center; line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+
+  <!-- SLIDE 0: COVER / HOOK -->
+  <div class="slide" id="slide-0">
+    <div class="sun"></div>
+    <div class="pad">
+      <div class="cover-mast">
+        <div class="overline">The 956 Power Rankings</div>
+        <h1>Meet the <em>Founding Five</em></h1>
+      </div>
+      <div class="crown-big">👑</div>
+      <div class="cover-hook">The RGV spots<br>everyone's already<br>talking about</div>
+      <div class="cover-sub">Real-time buzz tracking (Reddit + Google reviews) launches next week. Here's who's starting on top →</div>
+      <div class="cover-footer">Swipe for the lineup · the956.com</div>
+    </div>
+  </div>
+
+  <!-- SLIDES 1-5: SPOTS -->
+  <div id="spots"></div>
+
+<script>
+const spots = [
+  {
+    rank: 1,
+    name: "Delia's Tamales",
+    city: "San Juan + 6 Valley locations",
+    photo: "photos/delia-s-tamales.jpg",
+    known_for: "18 kinds of handmade tamales — a Valley institution since 1998, now famous statewide.",
+    take: "If you haven't had the tamales, do you even live here?"
+  },
+  {
+    rank: 2,
+    name: "Vera's Backyard Bar-B-Que",
+    city: "Brownsville",
+    photo: "photos/vera-s-backyard-bar-b-que.jpg",
+    known_for: "The last true pit-smoked barbacoa de cabeza in Texas — a James Beard \"America's Classic.\"",
+    take: "Get there before sunrise or don't bother. The barbacoa's gone by 9am for a reason."
+  },
+  {
+    rank: 3,
+    name: "Los Compadres",
+    city: "RGV",
+    photo: "photos/los-compadres.jpg",
+    known_for: "Legendary Mexican breakfast & lunch buffet — menudo, pozole, barbacoa, nopalitos.",
+    take: "The buffet that ruins every other buffet for you."
+  },
+  {
+    rank: 4,
+    name: "Casa De Mariscos",
+    city: "Weslaco",
+    photo: "photos/casa-de-mariscos.jpg",
+    known_for: "Seafood botanas piled with fried shrimp, stuffed crab and oysters.",
+    take: "Seafood so good it's basically a Weslaco landmark at this point."
+  },
+  {
+    rank: 5,
+    name: "El Pato Mexican Food",
+    city: "Valley-wide",
+    photo: "photos/el-pato-mexican-food.jpg",
+    known_for: "The homegrown patos chain — soft, griddled and open since the '70s.",
+    take: "Open since the '70s and somehow still the move at 2am."
+  }
+];
+
+const container = document.getElementById("spots");
+spots.forEach((s, i) => {
+  const slide = document.createElement("div");
+  slide.className = "slide";
+  slide.id = "slide-" + (i + 1);
+  slide.innerHTML = `
+    <div class="band"><span>THE FOUNDING FIVE</span><span>#${s.rank} OF 5</span></div>
+    <div class="sp-photo">
+      <img src="${s.photo}" alt="${s.name}">
+      <div class="sp-photo-tint"></div>
+      <div class="medal${s.rank === 1 ? " gold" : ""}">
+        ${s.rank === 1 ? '<div class="crown-tag">👑</div>' : ""}
+        ${s.rank}
+      </div>
+    </div>
+    <div class="pad sp-pad">
+      <div class="sp-name">${s.name}</div>
+      <div class="sp-city">📍 ${s.city}</div>
+      <div class="sp-known">${s.known_for}</div>
+      <div class="hot-take">
+        <div class="label">The take</div>
+        <div class="quote">"${s.take}"</div>
+      </div>
+      <div class="sp-footer">
+        <div class="brand">The <em>956</em></div>
+        <div class="swipe">swipe →</div>
+      </div>
+    </div>
+  `;
+  container.appendChild(slide);
+});
+
+// SLIDE 6: ON THE RADAR
+const radar = document.createElement("div");
+radar.className = "slide";
+radar.id = "slide-6";
+radar.innerHTML = `
+  <div class="band"><span>ON THE RADAR</span><span>WATCHING</span></div>
+  <div class="pad">
+    <div class="radar-title">Knocking on the door</div>
+    <div class="radar-sub">These didn't crack the Founding Five — yet. Real tracking starts next week, so anything can happen.</div>
+    <div class="radar-list">
+      <div class="radar-item"><div class="dot"></div><div><div class="name">Taco Palenque</div><div class="desc">The 24/7 pirata-taco institution</div></div></div>
+      <div class="radar-item"><div class="dot"></div><div><div class="name">Brasas</div><div class="desc">Peruvian rotisserie, new to McAllen</div></div></div>
+      <div class="radar-item"><div class="dot"></div><div><div class="name">Zaya</div><div class="desc">McAllen's newest see-and-be-seen room</div></div></div>
+      <div class="radar-item"><div class="dot"></div><div><div class="name">Moūsai</div><div class="desc">Fresh sushi bar making noise</div></div></div>
+    </div>
+  </div>
+`;
+document.body.insertBefore(radar, document.currentScript);
+
+// SLIDE 7: CTA
+const cta = document.createElement("div");
+cta.className = "slide";
+cta.id = "slide-7";
+cta.innerHTML = `
+  <div class="pad">
+    <div class="cta-icon">📊</div>
+    <div class="cta-title">Next week: the<br><em>real</em> rankings</div>
+    <div class="cta-body">Tracked by actual Reddit mentions + Google review velocity. No opinions — just counts. Follow so you don't miss who's #1.</div>
+    <div class="cta-prompt">Who do YOU think should be #1?<br>Tell us below 👇</div>
+  </div>
+`;
+document.body.insertBefore(cta, document.currentScript);
+
+// ?slide=N isolates a single slide for clean headless-Chrome screenshotting.
+const only = new URLSearchParams(location.search).get("slide");
+if (only !== null) {
+  document.querySelectorAll(".slide").forEach((s) => {
+    s.style.display = s.id === "slide-" + only ? "flex" : "none";
+    s.style.margin = "0";
+  });
+}
+</script>
+</body>
+</html>

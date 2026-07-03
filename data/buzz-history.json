@@ -1,0 +1,62 @@
+{
+  "Delia's Tamales": {
+    "reviewCount": 4132,
+    "rating": 4.6,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "Vera's Backyard Bar-B-Que": {
+    "reviewCount": 388,
+    "rating": 4.5,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "Los Compadres": {
+    "reviewCount": 21,
+    "rating": 4.6,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "Casa De Mariscos": {
+    "reviewCount": 3737,
+    "rating": 4.6,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "El Pato Mexican Food": {
+    "reviewCount": 1137,
+    "rating": 4.3,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "Taco Palenque": {
+    "reviewCount": 3499,
+    "rating": 4.3,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "Zaya": {
+    "reviewCount": 172,
+    "rating": 4.8,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "Moūsai": {
+    "reviewCount": 1011,
+    "rating": 4.8,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "Blu Brasserie": {
+    "reviewCount": 93,
+    "rating": 4.9,
+    "ema": 0,
+    "date": "2026-07-03"
+  },
+  "Brasas": {
+    "reviewCount": 165,
+    "rating": 4.8,
+    "ema": 0,
+    "date": "2026-07-03"
+  }
+}

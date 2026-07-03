@@ -2,19 +2,28 @@
 /**
  * The 956 — data-driven Power Rankings.
  *
- * Measures real buzz for every spot in data/watchlist.json:
- *   1. Reddit mentions — posts in r/RioGrandeValley over the past week that
- *      mention the spot (Reddit OAuth, free tier).
- *   2. Google review velocity — how many new Google reviews the spot gained
- *      since the last run (Places API, free tier), tracked in
- *      data/buzz-history.json.
+ * Measures real buzz for every spot in data/watchlist.json and ranks the
+ * top 5 with context, not just raw counts:
  *
- * Score = reddit_mentions × 10 + review_delta × 3. Top 5 become
- * data/top-eats.json. Restaurant photos come from the Places API when
- * available. Both sources are optional — with no credentials the script
- * exits without touching anything, so the site never breaks.
+ *   1. Reddit mentions — posts in r/RioGrandeValley over the past week.
+ *   2. Size-relative review velocity — new Google reviews this week divided
+ *      by sqrt(total reviews), so a newcomer gaining 40 reviews on a base of
+ *      100 outranks an institution gaining 40 on a base of 8,000.
+ *   3. Newcomer boost — spots with a recent `opened` date in the watchlist
+ *      get ×1.2 (<120 days) or ×1.1 (<240 days).
+ *   4. Quality factor — small multiplier from Google rating so a spot going
+ *      viral for the wrong reasons can't take #1.
+ *   5. Momentum smoothing — final score is an EMA (60% this week, 40%
+ *      running score) so rankings reward sustained heat over one-off spikes.
  *
- * Credentials (env vars):
+ * Also emits story badges (new entry, biggest mover, #1 streak) and an
+ * "on the bubble" list (ranks 6-8), and keeps per-spot state in
+ * data/buzz-history.json.
+ *
+ * If a run produces zero signal (first run, or every source failed), it
+ * seeds the history baseline and leaves the published rankings untouched.
+ *
+ * Credentials (env vars, both optional but at least one needed for signal):
  *   REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET — free "script" app from
  *     https://www.reddit.com/prefs/apps
  *   GOOGLE_PLACES_API_KEY — from Google Cloud console (Places API New)
@@ -25,7 +34,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const dataDir = join(dirname(fileURLToPath(import.meta.url)), "..", "data");
-const UA = "the-956-buzz/1.0 (RGV local digest; github.com/the-956)";
+const UA = "the-956-buzz/1.0 (RGV local digest; the956.com)";
 
 const watchlist = JSON.parse(readFileSync(join(dataDir, "watchlist.json"), "utf8"));
 const historyPath = join(dataDir, "buzz-history.json");
@@ -110,6 +119,25 @@ async function placesLookup(spot) {
   };
 }
 
+// ————— scoring —————
+
+function daysSince(yyyyMm) {
+  if (!yyyyMm) return Infinity;
+  return (Date.now() - new Date(`${yyyyMm}-01`)) / 86400000;
+}
+
+function newcomerBoost(spot) {
+  const age = daysSince(spot.opened);
+  if (age < 120) return 1.2;
+  if (age < 240) return 1.1;
+  return 1.0;
+}
+
+function qualityFactor(rating) {
+  if (rating == null) return 1.0;
+  return Math.min(1.12, Math.max(0.85, 1 + (rating - 4.2) * 0.2));
+}
+
 // ————— main —————
 
 const token = hasReddit ? await redditToken() : null;
@@ -126,58 +154,111 @@ for (const spot of watchlist.spots) {
       ? Math.max(0, places.reviewCount - prev.reviewCount)
       : null;
 
-  if (places?.reviewCount != null) {
-    history[spot.name] = {
-      reviewCount: places.reviewCount,
-      rating: places.rating,
-      date: new Date().toISOString().slice(0, 10),
-    };
-  }
+  // Size-relative velocity: same delta means much more on a small base.
+  const relVelocity =
+    reviewDelta != null && places?.reviewCount
+      ? reviewDelta / Math.sqrt(Math.max(places.reviewCount, 30))
+      : 0;
 
-  const score = (reddit ?? 0) * 10 + (reviewDelta ?? 0) * 3;
-  results.push({ spot, reddit, reviewDelta, rating: places?.rating ?? null, score });
+  const rawBuzz =
+    ((reddit ?? 0) * 10 + relVelocity * 60) *
+    newcomerBoost(spot) *
+    qualityFactor(places?.rating);
+
+  const ema = prev?.ema != null ? 0.6 * rawBuzz + 0.4 * prev.ema : rawBuzz;
+
+  history[spot.name] = {
+    reviewCount: places?.reviewCount ?? prev?.reviewCount ?? null,
+    rating: places?.rating ?? prev?.rating ?? null,
+    ema,
+    date: new Date().toISOString().slice(0, 10),
+  };
+
+  results.push({
+    spot,
+    reddit,
+    reviewDelta,
+    rating: places?.rating ?? null,
+    score: Math.round(ema),
+  });
   console.log(
     `  reddit: ${reddit ?? "n/a"} · reviews: ${places?.reviewCount ?? "n/a"}` +
-      ` (Δ ${reviewDelta ?? "n/a"}) · score: ${score}`
+      ` (Δ ${reviewDelta ?? "n/a"}) · relVel: ${relVelocity.toFixed(2)} · score: ${Math.round(ema)}`
   );
 }
 
-results.sort((a, b) => b.score - a.score);
-const top5 = results.slice(0, 5);
-
-const prevRank = Object.fromEntries((prevEats.spots ?? []).map((s) => [s.name, s.rank]));
-
-const sources = [
-  hasReddit && `mentions in r/${watchlist.subreddit} this week`,
-  hasPlaces && "new Google reviews since last week",
-].filter(Boolean).join(" and ");
-
-writeFileSync(join(dataDir, "top-eats.json"), JSON.stringify({
-  section_note: `The Valley's most-talked-about food spots, ranked by real data: ${sources}.`,
-  disclaimer: "Computed automatically from public data — no opinions, just counts. Rankings refresh weekly.",
-  spots: top5.map((r, i) => {
-    const rank = i + 1;
-    const was = prevRank[r.spot.name];
-    return {
-      rank,
-      name: r.spot.name,
-      city: r.spot.display_city,
-      known_for: r.spot.known_for,
-      mentions: r.score,
-      reddit_mentions: r.reddit,
-      review_delta: r.reviewDelta,
-      rating: r.rating,
-      trend: was == null ? "steady" : was > rank ? "up" : was < rank ? "down" : "steady",
-    };
-  }),
-}, null, 2) + "\n");
-
 writeFileSync(historyPath, JSON.stringify(history, null, 2) + "\n");
-console.log("✔ Wrote data/top-eats.json and data/buzz-history.json");
+
+const totalSignal = results.reduce((s, r) => s + (r.reddit ?? 0) + (r.reviewDelta ?? 0), 0);
+if (totalSignal === 0) {
+  console.log(
+    "✔ No signal yet (baseline run) — seeded data/buzz-history.json, rankings left untouched."
+  );
+} else {
+  results.sort((a, b) => b.score - a.score);
+  const top5 = results.slice(0, 5);
+  const bubble = results.slice(5, 8).map((r) => ({ name: r.spot.name, city: r.spot.display_city }));
+
+  const prevRank = Object.fromEntries((prevEats.spots ?? []).map((s) => [s.name, s.rank]));
+  const prevStreak = prevEats.spots?.[0]?.streak_weeks ?? 1;
+
+  // Biggest positive rank jump (needs to have been ranked before, jump ≥ 2).
+  let moverName = null, moverJump = 1;
+  for (let i = 0; i < top5.length; i++) {
+    const was = prevRank[top5[i].spot.name];
+    if (was != null && was - (i + 1) > moverJump) {
+      moverJump = was - (i + 1);
+      moverName = top5[i].spot.name;
+    }
+  }
+
+  const sources = [
+    hasReddit && "Reddit chatter in r/" + watchlist.subreddit,
+    hasPlaces && "Google review velocity (scaled to each spot's size)",
+  ].filter(Boolean).join(" + ");
+
+  writeFileSync(join(dataDir, "top-eats.json"), JSON.stringify({
+    section_note: `The Valley's most-talked-about food spots, ranked by real data: ${sources}.`,
+    disclaimer:
+      "Scores blend this week's buzz with running momentum, size-relative review velocity, a newcomer boost, and a small quality factor — computed automatically, no opinions.",
+    spots: top5.map((r, i) => {
+      const rank = i + 1;
+      const was = prevRank[r.spot.name];
+      const badges = [];
+      if (was == null) badges.push("new_entry");
+      if (r.spot.name === moverName) badges.push("biggest_mover");
+      const entry = {
+        rank,
+        name: r.spot.name,
+        city: r.spot.display_city,
+        known_for: r.spot.known_for,
+        mentions: r.score,
+        reddit_mentions: r.reddit,
+        review_delta: r.reviewDelta,
+        rating: r.rating,
+        trend: was == null ? "steady" : was > rank ? "up" : was < rank ? "down" : "steady",
+        badges,
+      };
+      if (rank === 1) {
+        entry.streak_weeks = prevEats.spots?.[0]?.name === r.spot.name ? prevStreak + 1 : 1;
+      }
+      return entry;
+    }),
+    bubble,
+  }, null, 2) + "\n");
+  console.log("✔ Wrote data/top-eats.json");
+}
 
 // ————— bonus: real photos for the Fresh Plates cards —————
+// Photos are downloaded as local site assets. Never store the API-keyed
+// media URL in a data file — this repo is public and the URL embeds the key.
 
 if (hasPlaces) {
+  const { mkdirSync } = await import("node:fs");
+  const photoDir = join(dataDir, "..", "assets", "photos");
+  mkdirSync(photoDir, { recursive: true });
+  const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
   const restoPath = join(dataDir, "new-restaurants.json");
   const restos = JSON.parse(readFileSync(restoPath, "utf8"));
   let added = 0;
@@ -187,11 +268,17 @@ if (hasPlaces) {
       name: r.name,
       places_query: `${r.name} restaurant ${r.city === "RGV" ? "Rio Grande Valley" : r.city} TX`,
     });
-    if (found?.photo) {
-      r.photo = found.photo;
-      added++;
-      console.log(`  📷 photo found for ${r.name}`);
+    if (!found?.photo) continue;
+    const imgRes = await fetch(found.photo);
+    if (!imgRes.ok) {
+      console.warn(`  photo download failed for ${r.name}: ${imgRes.status}`);
+      continue;
     }
+    const rel = `assets/photos/${slugify(r.name)}.jpg`;
+    writeFileSync(join(dataDir, "..", rel), Buffer.from(await imgRes.arrayBuffer()));
+    r.photo = rel;
+    added++;
+    console.log(`  📷 saved ${rel}`);
   }
   if (added) {
     writeFileSync(restoPath, JSON.stringify(restos, null, 2) + "\n");

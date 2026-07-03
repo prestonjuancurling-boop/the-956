@@ -1,3 +1,7 @@
 node_modules/
 .DS_Store
 Thumbs.db
+
+# Generated social-post images and downloaded post photos (not site assets)
+social/output/
+social/photos/

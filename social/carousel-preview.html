@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fdf8ee; --paper-2: #f7efdd; --ink: #22301f; --ink-soft: #5a6653;
+    --sunset: #e4582b; --sunset-deep: #c2431c; --citrus: #f0a832;
+    --palm: #2e6e4e; --palm-deep: #1d4a33; --card: #fffdf7; --line: #e4d9c2;
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); }
+  .slide {
+    width: 1080px; height: 1350px;
+    background: var(--paper);
+    background-image: radial-gradient(ellipse 1400px 700px at 50% -150px, #fdeed3 0%, var(--paper) 62%);
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+  .slide + .slide { margin-top: 40px; }
+  .band {
+    background: var(--palm-deep); color: #f2ecd9;
+    font-family: var(--sans); font-weight: 700; font-size: 26px;
+    letter-spacing: 0.04em; padding: 22px 56px;
+  }
+  .pad { padding: 56px 64px; flex: 1; display: flex; flex-direction: column; }
+  .sun {
+    position: absolute; top: -220px; left: 50%; transform: translateX(-50%);
+    width: 620px; height: 620px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,168,50,0.30) 0%, rgba(240,168,50,0) 68%);
+  }
+
+  /* cover */
+  .cover-mast { text-align: center; margin-top: 60px; }
+  .cover-mast .overline { font-size: 24px; font-weight: 700; letter-spacing: 0.18em; color: var(--sunset); text-transform: uppercase; }
+  .cover-mast h1 { font-family: var(--serif); font-weight: 800; font-size: 190px; line-height: 0.95; letter-spacing: -0.02em; color: var(--ink); margin-top: 18px; }
+  .cover-mast h1 em { color: var(--sunset); font-style: italic; }
+  .cover-mast .tag { font-family: var(--serif); font-style: italic; font-size: 42px; color: var(--palm); margin-top: 20px; }
+  .cover-week { text-align: center; font-size: 28px; font-weight: 600; color: var(--ink-soft); margin-top: 46px; }
+  .cover-headline { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 68px; color: var(--ink); margin-top: 70px; padding: 0 40px; line-height: 1.15; }
+  .cover-sub { text-align: center; font-size: 30px; color: var(--ink-soft); margin-top: 26px; }
+  .cover-footer { margin-top: auto; text-align: center; padding-bottom: 20px; font-size: 26px; font-weight: 700; color: var(--palm-deep); }
+
+  /* event slide */
+  .ev-photo { position: relative; width: 100%; height: 620px; flex-shrink: 0; overflow: hidden; background: var(--paper-2); }
+  .ev-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ev-photo-tint {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(29,74,51,0.15) 0%, rgba(29,74,51,0.05) 45%, var(--paper) 100%);
+  }
+  .ev-num {
+    position: absolute; top: 36px; left: 40px;
+    width: 140px; height: 140px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-weight: 900; font-size: 78px;
+    background: var(--card); border: 6px solid var(--citrus); color: var(--citrus);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+  .ev-num.first { border-color: var(--sunset); color: var(--sunset); }
+  .ev-pad { padding-top: 36px; }
+  .ev-title { font-family: var(--serif); font-weight: 700; font-size: 58px; line-height: 1.08; color: var(--ink); }
+  .chips { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+  .chip { font-size: 24px; font-weight: 700; padding: 11px 26px; border-radius: 999px; border: 2px solid var(--line); background: var(--card); color: var(--ink-soft); }
+  .chip.date { background: var(--sunset); border-color: var(--sunset); color: #fff; }
+  .chip.city { background: var(--palm); border-color: var(--palm); color: #fff; }
+  .chip.free { background: #eaf3ec; border-color: #cde3d4; color: var(--palm-deep); }
+  .ev-blurb { font-family: var(--serif); font-size: 34px; line-height: 1.38; color: var(--ink); margin-top: 34px; }
+  .ev-venue { font-size: 26px; color: var(--ink-soft); margin-top: 26px; }
+  .ev-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 26px; border-top: 3px double var(--line); }
+  .ev-footer .brand { font-family: var(--serif); font-weight: 800; font-size: 34px; color: var(--ink); }
+  .ev-footer .brand em { color: var(--sunset); font-style: italic; }
+  .ev-footer .swipe { font-size: 24px; font-weight: 700; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+  <!-- SLIDE 0: COVER -->
+  <div class="slide" id="slide-0">
+    <div class="sun"></div>
+    <div class="pad">
+      <div class="cover-mast">
+        <div class="overline">This Week in El Valle</div>
+        <h1>The <em>956</em></h1>
+        <div class="tag">El Valle's weekly digest</div>
+      </div>
+      <div class="cover-week">Week of June 29 – July 5, 2026</div>
+      <div class="cover-headline">The Big 5<br>Fourth of July Edition</div>
+      <div class="cover-sub">Five biggest things happening across the Valley this week →</div>
+      <div class="cover-footer">Swipe for the full list · the956.com</div>
+    </div>
+  </div>
+
+  <!-- SLIDES 1-5: EVENTS -->
+  <div id="events"></div>
+
+<script>
+const events = [
+  {
+    "rank": 1,
+    "title": "26th Annual Salute to Freedom Celebration",
+    "city": "Brownsville",
+    "venue": "Brownsville Sports Park, 1000 Sports Park Blvd",
+    "photo": "photos/brownsville-sports-park.jpg",
+    "date": "Sat, July 4",
+    "time": "Tailgate 5 PM · Fireworks 9:20 PM",
+    "price": "Free",
+    "blurb": "Stars, stripes and summer nights — live music, a classic car show, food vendors, and a drone-light + fireworks finale. Veterans get complimentary food and refreshments."
+  },
+  {
+    "rank": 2,
+    "title": "Freedom Fest",
+    "city": "Harlingen",
+    "venue": "Lon C. Hill Destination Park, 1216 Fair Park Blvd",
+    "photo": "photos/lon-c-hill-destination-park.jpg",
+    "date": "Sat, July 4",
+    "time": "5 – 10 PM",
+    "price": "Free",
+    "blurb": "Live music, a beer garden, family games, food vendors, the first-ever Freedom Fest 4K race, and a fireworks show to close out the night."
+  },
+  {
+    "rank": 3,
+    "title": "Show in the Sky 2026",
+    "city": "McAllen",
+    "venue": "Payne Arena grounds · McAllen Food Park",
+    "photo": "photos/payne-arena.jpg",
+    "date": "Sat, July 4",
+    "time": "Live music 6 PM",
+    "price": "Free",
+    "blurb": "McAllen's Independence Day tradition — catch the Midnight Mustang Band at the Food Park at 6, then look up for the big show over Payne Arena."
+  },
+  {
+    "rank": 4,
+    "title": "Annual Walking Beach Parade",
+    "city": "South Padre Island",
+    "venue": "Whitecap Circle (Beach Access #8) → Beach Circle (Access #4)",
+    "photo": "photos/south-padre-island-beach.jpg",
+    "date": "Sat, July 4",
+    "time": "Morning",
+    "price": "Free",
+    "blurb": "Decorate your crew in red, white and blue and stroll the sand — SPI's most laid-back Fourth tradition, right on the Gulf."
+  },
+  {
+    "rank": 5,
+    "title": "Stars & Stripes Freedom Festival",
+    "city": "Weslaco",
+    "venue": "South Texas Blvd, Downtown Weslaco",
+    "photo": "photos/downtown-weslaco.jpg",
+    "date": "Sat, July 4",
+    "time": "6 – 10 PM · Drone show 9:15 PM",
+    "price": "Free",
+    "blurb": "A free, family-friendly downtown block party capped by a drone show finale lighting up the Mid-Valley sky."
+  }
+];
+
+const container = document.getElementById("events");
+events.forEach((e, i) => {
+  const slide = document.createElement("div");
+  slide.className = "slide";
+  slide.id = "slide-" + (i + 1);
+  slide.innerHTML = `
+    <div class="band">THE BIG 5 · #${e.rank} OF 5</div>
+    <div class="ev-photo">
+      <img src="${e.photo}" alt="${e.title}">
+      <div class="ev-photo-tint"></div>
+      <div class="ev-num${e.rank === 1 ? " first" : ""}">${e.rank}</div>
+    </div>
+    <div class="pad ev-pad">
+      <div class="ev-title">${e.title}</div>
+      <div class="chips">
+        <span class="chip date">${e.date}</span>
+        <span class="chip city">📍 ${e.city}</span>
+        <span class="chip">${e.time}</span>
+        <span class="chip free">${e.price}</span>
+      </div>
+      <div class="ev-blurb">${e.blurb}</div>
+      <div class="ev-venue">${e.venue}</div>
+      <div class="ev-footer">
+        <div class="brand">The <em>956</em></div>
+        <div class="swipe">${i < events.length - 1 ? "swipe →" : "the956.com"}</div>
+      </div>
+    </div>
+  `;
+  container.appendChild(slide);
+});
+
+// ?slide=N isolates a single slide for clean headless-Chrome screenshotting.
+const only = new URLSearchParams(location.search).get("slide");
+if (only !== null) {
+  document.querySelectorAll(".slide").forEach((s) => {
+    s.style.display = s.id === "slide-" + only ? "flex" : "none";
+    s.style.margin = "0";
+  });
+}
+</script>
+</body>
+</html>

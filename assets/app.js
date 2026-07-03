@@ -94,11 +94,17 @@ function renderRankings(data) {
     if (s.review_delta != null) parts.push(`+${s.review_delta} Google reviews`);
     return parts.length ? parts.join(" · ") : `${s.mentions} mentions this month`;
   };
+  const badgeLabels = { new_entry: "🆕 New entry", biggest_mover: "🔥 Biggest mover" };
+  const badgesFor = (s) => {
+    const chips = (s.badges ?? []).map((b) => badgeLabels[b]).filter(Boolean);
+    if (s.streak_weeks >= 2) chips.push(`👑 ${s.streak_weeks} weeks at #1`);
+    return chips.map((c) => `<span class="rank-badge">${esc(c)}</span>`).join("");
+  };
   $("#rank-list").innerHTML = data.spots.map((s) => `
     <div class="rank-row">
       <div class="rank-pos">${s.rank}</div>
       <div>
-        <div class="rank-name">${esc(s.name)}</div>
+        <div class="rank-name">${esc(s.name)} ${badgesFor(s)}</div>
         <div class="rank-city">${esc(s.city)}</div>
         <div class="rank-known">${esc(s.known_for)}</div>
       </div>
@@ -108,6 +114,13 @@ function renderRankings(data) {
       </div>
       <div class="trend ${esc(s.trend)}">${arrows[s.trend] || "—"}</div>
     </div>`).join("");
+  if (data.bubble?.length) {
+    $("#rank-list").insertAdjacentHTML("beforeend", `
+      <div class="bubble-row">
+        <span class="bubble-label">On the bubble</span>
+        ${data.bubble.map((b) => esc(b.name)).join(" · ")}
+      </div>`);
+  }
   $("#rank-disclaimer").textContent = data.disclaimer || "";
 }
 
