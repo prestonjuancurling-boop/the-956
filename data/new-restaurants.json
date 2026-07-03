@@ -5,11 +5,11 @@
     {
       "name": "AMBRA",
       "city": "McAllen",
-      "cuisine": "Contemporary",
-      "cuisine_es": "Contemporáneo",
-      "status": "Opening soon",
-      "blurb": "Billed as McAllen's most anticipated restaurant opening of the year — details are still under wraps, which is half the fun.",
-      "blurb_es": "Dicen que es la apertura más esperada del año en McAllen — los detalles siguen en secreto, y eso es la mitad de la emoción.",
+      "cuisine": "Steakhouse",
+      "cuisine_es": "Steakhouse",
+      "status": "Now open",
+      "blurb": "McAllen's most anticipated opening is officially here — a globally inspired steakhouse and chic lounge already sitting at 4.8 stars. The guava cake and lobster mac are early legends.",
+      "blurb_es": "La apertura más esperada de McAllen ya está aquí — un steakhouse de inspiración global con lounge, ya con 4.8 estrellas. El pastel de guayaba y el lobster mac ya son leyenda.",
       "emoji": "✨",
       "photo": "assets/photos/ambra.jpg"
     },
