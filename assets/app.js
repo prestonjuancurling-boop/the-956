@@ -32,6 +32,7 @@ const UI = {
     "ov-rank": "Most-mentioned eats",
     "h-rank": "The 956 Power Rankings",
     "ov-micro": "This month's micro-ranking",
+    microDrops: (d) => `⏳ Measuring this week — the first ranking drops ${d}`,
     "footer-curated": 'Curated from local sources including <a href="https://www.krgv.com/news" target="_blank" rel="noopener">KRGV</a>, <a href="https://www.valleycentral.com/" target="_blank" rel="noopener">ValleyCentral</a> and <a href="https://myrgv.com/" target="_blank" rel="noopener">MyRGV</a>.',
     "footer-updated": "Content refreshes automatically — last updated",
     weekPrefix: "Week of",
@@ -61,6 +62,7 @@ const UI = {
     "ov-rank": "Los más mencionados",
     "h-rank": "El Ranking del 956",
     "ov-micro": "El micro-ranking del mes",
+    microDrops: (d) => `⏳ Midiendo esta semana — el primer ranking sale el ${d}`,
     "footer-curated": 'Curado de fuentes locales como <a href="https://www.krgv.com/news" target="_blank" rel="noopener">KRGV</a>, <a href="https://www.valleycentral.com/" target="_blank" rel="noopener">ValleyCentral</a> y <a href="https://myrgv.com/" target="_blank" rel="noopener">MyRGV</a>.',
     "footer-updated": "El contenido se actualiza solo — última actualización",
     weekPrefix: "Semana del",
@@ -212,14 +214,23 @@ function renderMicro(cat) {
   $('[data-note="micro"]').textContent = t(cat, "note");
 
   if (cat.status === "measuring") {
+    // The weekly scoring run lands on Mondays — show the real drop date.
+    const next = new Date();
+    next.setDate(next.getDate() + ((8 - next.getDay()) % 7 || 7));
+    const dropDay = next.toLocaleDateString(ui("locale"), {
+      weekday: "long", month: "long", day: "numeric",
+    });
     $("#micro-card").innerHTML = `
-      <p class="micro-measuring">${esc(t(cat, "measuring_note"))}</p>
+      <div class="micro-status">${esc(ui("microDrops")(dropDay))}</div>
       <div class="micro-contenders">
         ${cat.spots.map((s) => `
           <div class="micro-contender">
-            <div class="micro-name">${esc(s.name)}</div>
-            <div class="micro-city">📍 ${esc(s.display_city)}</div>
-            <div class="micro-known">${esc(t(s, "known_for"))}</div>
+            <div class="micro-q">?</div>
+            <div>
+              <div class="micro-name">${esc(s.name)}</div>
+              <div class="micro-city">📍 ${esc(s.display_city)}</div>
+              <div class="micro-known">${esc(t(s, "known_for"))}</div>
+            </div>
           </div>`).join("")}
       </div>`;
   } else {
