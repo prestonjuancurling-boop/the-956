@@ -1,35 +1,48 @@
 {
   "section_note": "What's happening around the Valley today.",
+  "section_note_es": "Lo que está pasando hoy en el Valle.",
   "items": [
     {
       "headline": "Downtown McAllen launches free trolley rides",
+      "headline_es": "El centro de McAllen estrena trolley gratis",
       "summary": "The new Downtown Circulator Route is now running, offering free trolley rides through downtown McAllen — no fare, no app, just hop on.",
+      "summary_es": "Ya está funcionando la nueva Downtown Circulator Route, con viajes gratis en trolley por el centro de McAllen — sin pagar, sin app, nomás súbete.",
       "source": "KRGV",
       "topic": "Transportation",
+      "topic_es": "Transporte",
       "published": "Jul 1",
       "url": "https://www.krgv.com/local-news"
     },
     {
       "headline": "Progreso voters could decide on term limits",
+      "headline_es": "Progreso podría votar sobre límites de mandato",
       "summary": "A measure heading toward the ballot would let Progreso residents decide whether to limit how long their elected leaders can serve.",
+      "summary_es": "Una propuesta rumbo a la boleta dejaría que los residentes de Progreso decidan si limitan cuánto tiempo pueden servir sus funcionarios electos.",
       "source": "KRGV",
       "topic": "Local government",
+      "topic_es": "Gobierno local",
       "published": "Jul 1",
       "url": "https://www.krgv.com/local-news"
     },
     {
       "headline": "Brownsville gives bars a path to compliance",
+      "headline_es": "Brownsville da otra oportunidad a los bares",
       "summary": "After ordering several bars to shut down, Brownsville city leaders are giving the businesses a chance to follow city rules before closures become final.",
+      "summary_es": "Después de ordenar el cierre de varios bares, la ciudad de Brownsville les está dando la oportunidad de cumplir con las reglas antes de que los cierres sean definitivos.",
       "source": "ValleyCentral",
       "topic": "Business",
+      "topic_es": "Negocios",
       "published": "Jun 30",
       "url": "https://www.valleycentral.com/"
     },
     {
       "headline": "Shelters urge pet owners to prep for fireworks",
+      "headline_es": "Refugios piden preparar a las mascotas para los fuegos",
       "summary": "The Brownsville Animal Regulation and Care Center is reminding pet owners that the Fourth is the busiest week of the year for lost pets — secure yards, update tags, and keep animals indoors during shows.",
+      "summary_es": "El Brownsville Animal Regulation and Care Center recuerda que el 4 de julio es la semana del año con más mascotas perdidas — asegura tu patio, actualiza las placas y mantén a los animales adentro durante los shows.",
       "source": "ValleyCentral",
       "topic": "Community",
+      "topic_es": "Comunidad",
       "published": "Jun 30",
       "url": "https://www.valleycentral.com/"
     }

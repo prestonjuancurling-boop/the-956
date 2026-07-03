@@ -216,11 +216,18 @@ if (totalSignal === 0) {
     hasReddit && "Reddit chatter in r/" + watchlist.subreddit,
     hasPlaces && "Google review velocity (scaled to each spot's size)",
   ].filter(Boolean).join(" + ");
+  const sourcesEs = [
+    hasReddit && "menciones en r/" + watchlist.subreddit,
+    hasPlaces && "velocidad de reseñas de Google (ajustada al tamaño de cada lugar)",
+  ].filter(Boolean).join(" + ");
 
   writeFileSync(join(dataDir, "top-eats.json"), JSON.stringify({
     section_note: `The Valley's most-talked-about food spots, ranked by real data: ${sources}.`,
+    section_note_es: `Los lugares de comida más mencionados del Valle, con datos reales: ${sourcesEs}.`,
     disclaimer:
       "Scores blend this week's buzz with running momentum, size-relative review velocity, a newcomer boost, and a small quality factor — computed automatically, no opinions.",
+    disclaimer_es:
+      "Los puntajes combinan el buzz de la semana con el impulso acumulado, la velocidad de reseñas relativa al tamaño, un empujón para los recién abiertos y un pequeño factor de calidad — todo automático, sin opiniones.",
     spots: top5.map((r, i) => {
       const rank = i + 1;
       const was = prevRank[r.spot.name];
@@ -232,6 +239,7 @@ if (totalSignal === 0) {
         name: r.spot.name,
         city: r.spot.display_city,
         known_for: r.spot.known_for,
+        known_for_es: r.spot.known_for_es,
         mentions: r.score,
         reddit_mentions: r.reddit,
         review_delta: r.reviewDelta,

@@ -18,6 +18,10 @@
   </div>
 
   <header class="masthead">
+    <div class="lang-toggle" id="lang-toggle" aria-label="Language">
+      <button data-lang="en">EN</button>
+      <button data-lang="es">ES</button>
+    </div>
     <div class="wrap">
       <div class="masthead-meta">
         <span id="edition">—</span>
@@ -27,10 +31,10 @@
       <h1 class="masthead-title">The <span class="accent">956</span></h1>
       <p class="masthead-tag" id="tagline">El Valle's weekly digest</p>
       <nav class="masthead-nav">
-        <a href="#events">The Big 5</a>
-        <a href="#news">Daily Rundown</a>
-        <a href="#fresh">Fresh Plates</a>
-        <a href="#rankings">Power Rankings</a>
+        <a href="#events" data-ui="nav-events">The Big 5</a>
+        <a href="#news" data-ui="nav-news">Daily Rundown</a>
+        <a href="#fresh" data-ui="nav-fresh">Fresh Plates</a>
+        <a href="#rankings" data-ui="nav-rank">Power Rankings</a>
       </nav>
     </div>
     <div class="sun" aria-hidden="true"></div>
@@ -40,8 +44,8 @@
 
     <section id="events" class="section">
       <div class="section-head">
-        <span class="overline">This week in el Valle</span>
-        <h2>The Big <em>5</em></h2>
+        <span class="overline" data-ui="ov-events">This week in el Valle</span>
+        <h2 data-ui="h-events">The Big <em>5</em></h2>
         <p class="section-note" data-note="events"></p>
       </div>
       <ol class="event-list" id="event-list"></ol>
@@ -50,8 +54,8 @@
 
     <section id="news" class="section">
       <div class="section-head">
-        <span class="overline">Fresh off the wire</span>
-        <h2>The Daily Rundown</h2>
+        <span class="overline" data-ui="ov-news">Fresh off the wire</span>
+        <h2 data-ui="h-news">The Daily Rundown</h2>
         <p class="section-note" data-note="news"></p>
       </div>
       <div class="news-list" id="news-list"></div>
@@ -59,8 +63,8 @@
 
     <section id="fresh" class="section">
       <div class="section-head">
-        <span class="overline">New in town</span>
-        <h2>Fresh Plates</h2>
+        <span class="overline" data-ui="ov-fresh">New in town</span>
+        <h2 data-ui="h-fresh">Fresh Plates</h2>
         <p class="section-note" data-note="restaurants"></p>
       </div>
       <div class="resto-grid" id="resto-grid"></div>
@@ -68,8 +72,8 @@
 
     <section id="rankings" class="section">
       <div class="section-head">
-        <span class="overline">Most-mentioned eats</span>
-        <h2>The 956 Power Rankings</h2>
+        <span class="overline" data-ui="ov-rank">Most-mentioned eats</span>
+        <h2 data-ui="h-rank">The 956 Power Rankings</h2>
         <p class="section-note" data-note="rankings"></p>
       </div>
       <div class="rank-list" id="rank-list"></div>
@@ -82,10 +86,10 @@
     <div class="wrap">
       <p><strong>The 956</strong> — hecho en el Valle 🌴</p>
       <p class="fineprint">
-        Curated from local sources including <a href="https://www.krgv.com/news" target="_blank" rel="noopener">KRGV</a>,
+        <span data-ui="footer-curated">Curated from local sources including <a href="https://www.krgv.com/news" target="_blank" rel="noopener">KRGV</a>,
         <a href="https://www.valleycentral.com/" target="_blank" rel="noopener">ValleyCentral</a> and
-        <a href="https://myrgv.com/" target="_blank" rel="noopener">MyRGV</a>.
-        Content refreshes automatically — last updated <span id="updated-at">—</span>.
+        <a href="https://myrgv.com/" target="_blank" rel="noopener">MyRGV</a>.</span>
+        <span data-ui="footer-updated">Content refreshes automatically — last updated</span> <span id="updated-at">—</span>.
       </p>
     </div>
   </footer>

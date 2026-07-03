@@ -1,5 +1,5 @@
 {
-  "comment": "Candidate pool for the Power Rankings. compute-buzz.mjs measures each spot's Reddit mentions and Google review velocity, then ranks the top 5. Add or remove spots freely — aliases are the search terms used for Reddit matching. Optional `opened` (YYYY-MM, approximate is fine) gives recently opened spots a newcomer boost: ×1.2 under 4 months, ×1.1 under 8.",
+  "comment": "Candidate pool for the Power Rankings. compute-buzz.mjs measures each spot's Reddit mentions and Google review velocity, then ranks the top 5. Add or remove spots freely — aliases are the search terms used for Reddit matching. Optional `opened` (YYYY-MM, approximate is fine) gives recently opened spots a newcomer boost: ×1.2 under 4 months, ×1.1 under 8. `known_for_es` is the Spanish blurb shown when the site is toggled to español.",
   "subreddit": "RioGrandeValley",
   "spots": [
     {
@@ -8,6 +8,7 @@
       "city": "San Juan",
       "display_city": "San Juan + 6 Valley locations",
       "known_for": "18 kinds of handmade tamales — a Valley institution since 1998, now famous statewide",
+      "known_for_es": "18 tipos de tamales hechos a mano — una institución del Valle desde 1998, ahora famosa en todo Texas",
       "places_query": "Delia's Tamales San Juan TX"
     },
     {
@@ -16,6 +17,7 @@
       "city": "Brownsville",
       "display_city": "Brownsville",
       "known_for": "The last true pit-smoked barbacoa de cabeza in Texas — a James Beard \"America's Classic\"",
+      "known_for_es": "La última barbacoa de cabeza en pozo de todo Texas — un \"America's Classic\" de la Fundación James Beard",
       "places_query": "Vera's Backyard Bar-B-Que Brownsville TX"
     },
     {
@@ -24,6 +26,7 @@
       "city": "RGV",
       "display_city": "RGV",
       "known_for": "Legendary Mexican breakfast & lunch buffet — menudo, pozole, barbacoa, nopalitos",
+      "known_for_es": "El legendario buffet mexicano de desayuno y comida — menudo, pozole, barbacoa, nopalitos",
       "places_query": "Los Compadres restaurant Rio Grande Valley TX"
     },
     {
@@ -32,6 +35,7 @@
       "city": "Weslaco",
       "display_city": "Weslaco",
       "known_for": "Seafood botanas piled with fried shrimp, stuffed crab and oysters",
+      "known_for_es": "Botanas de mariscos con camarón frito, jaibas rellenas y ostiones",
       "places_query": "Casa De Mariscos Weslaco TX"
     },
     {
@@ -40,6 +44,7 @@
       "city": "McAllen",
       "display_city": "Valley-wide",
       "known_for": "The homegrown patos chain — soft, griddled and open since the '70s",
+      "known_for_es": "La cadena de patos del Valle — suavecitos, doraditos y abiertos desde los 70s",
       "places_query": "El Pato Mexican Food McAllen TX"
     },
     {
@@ -48,6 +53,7 @@
       "city": "McAllen",
       "display_city": "Valley-wide",
       "known_for": "The border's beloved 24/7 taco institution — pirata tacos and salsa bar supremacy",
+      "known_for_es": "La institución taquera 24/7 de la frontera — tacos pirata y la mejor barra de salsas",
       "places_query": "Taco Palenque McAllen TX"
     },
     {
@@ -57,6 +63,7 @@
       "display_city": "McAllen",
       "opened": "2026-06",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
+      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
       "places_query": "Zaya restaurant McAllen TX"
     },
     {
@@ -66,6 +73,7 @@
       "display_city": "McAllen",
       "opened": "2026-05",
       "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
+      "known_for_es": "El nuevo sushi bar elegante que trae rollos frescos y nigiri a McAllen",
       "places_query": "Mousai sushi McAllen TX"
     },
     {
@@ -75,6 +83,7 @@
       "display_city": "McAllen",
       "opened": "2026-05",
       "known_for": "McAllen's polished new brasserie for date nights and long dinners",
+      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
       "places_query": "Blu Brasserie McAllen TX"
     },
     {
@@ -84,6 +93,7 @@
       "display_city": "McAllen",
       "opened": "2026-06",
       "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
+      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
       "places_query": "Brasas Peruvian McAllen TX"
     }
   ]

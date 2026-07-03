@@ -1,12 +1,15 @@
 {
   "section_note": "The Valley's most-talked-about food spots, ranked by mentions across local blogs, review roundups and r/RioGrandeValley.",
+  "section_note_es": "Los lugares de comida más mencionados del Valle, según blogs locales, reseñas y r/RioGrandeValley.",
   "disclaimer": "Launch-week buzz scores are illustrative — the weekly update pipeline computes real mention counts.",
+  "disclaimer_es": "Los puntajes de esta semana de lanzamiento son ilustrativos — el sistema semanal calcula menciones reales.",
   "spots": [
     {
       "rank": 1,
       "name": "Delia's Tamales",
       "city": "San Juan + 6 Valley locations",
       "known_for": "18 kinds of handmade tamales — a Valley institution since 1998, now famous statewide",
+      "known_for_es": "18 tipos de tamales hechos a mano — una institución del Valle desde 1998, ahora famosa en todo Texas",
       "mentions": 214,
       "trend": "steady"
     },
@@ -15,6 +18,7 @@
       "name": "Vera's Backyard Bar-B-Que",
       "city": "Brownsville",
       "known_for": "The last true pit-smoked barbacoa de cabeza in Texas — a James Beard \"America's Classic\"",
+      "known_for_es": "La última barbacoa de cabeza en pozo de todo Texas — un \"America's Classic\" de la Fundación James Beard",
       "mentions": 187,
       "trend": "up"
     },
@@ -23,6 +27,7 @@
       "name": "Los Compadres",
       "city": "RGV",
       "known_for": "Legendary Mexican breakfast & lunch buffet — menudo, pozole, barbacoa, nopalitos",
+      "known_for_es": "El legendario buffet mexicano de desayuno y comida — menudo, pozole, barbacoa, nopalitos",
       "mentions": 122,
       "trend": "up"
     },
@@ -31,6 +36,7 @@
       "name": "Casa De Mariscos",
       "city": "Weslaco",
       "known_for": "Seafood botanas piled with fried shrimp, stuffed crab and oysters",
+      "known_for_es": "Botanas de mariscos con camarón frito, jaibas rellenas y ostiones",
       "mentions": 98,
       "trend": "steady"
     },
@@ -39,6 +45,7 @@
       "name": "El Pato Mexican Food",
       "city": "Valley-wide",
       "known_for": "The homegrown patos chain — soft, griddled and open since the '70s",
+      "known_for_es": "La cadena de patos del Valle — suavecitos, doraditos y abiertos desde los 70s",
       "mentions": 91,
       "trend": "down"
     }

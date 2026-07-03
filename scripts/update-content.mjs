@@ -39,6 +39,13 @@ sources (KRGV, ValleyCentral/KVEO, MyRGV/The Monitor, Texas Border Business,
 city event pages, local blogs). Tone: warm, upbeat, for locals — light Spanish
 flavor is welcome ("el Valle"). Never invent events, restaurants, or news.
 If you can't verify something, leave it out.
+The site is bilingual: for EVERY human-readable text field you write, also
+include a "_es" twin (e.g. blurb → blurb_es, summary → summary_es,
+headline → headline_es, topic → topic_es, section_note → section_note_es,
+also_happening → also_happening_es, date → date_es, time → time_es,
+tag → tag_es, cuisine → cuisine_es) written in natural, casual Mexican
+border Spanish — the way people actually talk in the RGV. Keep proper
+names (venues, bands, cities) untranslated.
 Respond with ONLY valid JSON — no markdown fences, no commentary.`;
 
 const JOBS = {

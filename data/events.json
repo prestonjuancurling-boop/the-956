@@ -1,5 +1,6 @@
 {
   "section_note": "The five biggest things happening across the Valley this week.",
+  "section_note_es": "Los cinco eventos más grandes del Valle esta semana.",
   "events": [
     {
       "rank": 1,
@@ -7,10 +8,14 @@
       "city": "Brownsville",
       "venue": "Brownsville Sports Park, 1000 Sports Park Blvd",
       "date": "Sat, July 4",
+      "date_es": "sáb, 4 de julio",
       "time": "Tailgate 5 PM · Fireworks 9:20 PM",
+      "time_es": "Tailgate 5 PM · Fuegos artificiales 9:20 PM",
       "price": "Free",
       "tag": "Fireworks",
+      "tag_es": "Fuegos artificiales",
       "blurb": "Stars, stripes and summer nights — live music, a classic car show, food vendors, and a drone-light + fireworks finale. Veterans get complimentary food and refreshments.",
+      "blurb_es": "Estrellas, barras y noches de verano — música en vivo, show de carros clásicos, vendedores de comida, y un gran final de drones y fuegos artificiales. Los veteranos reciben comida y bebida de cortesía.",
       "url": "https://www.valleycentral.com/news/local-news/list-4th-of-july-events-happening-across-the-valley/"
     },
     {
@@ -19,10 +24,14 @@
       "city": "Harlingen",
       "venue": "Lon C. Hill Destination Park, 1216 Fair Park Blvd",
       "date": "Sat, July 4",
+      "date_es": "sáb, 4 de julio",
       "time": "5 – 10 PM",
+      "time_es": "5 – 10 PM",
       "price": "Free",
       "tag": "Festival",
+      "tag_es": "Festival",
       "blurb": "Live music, a beer garden, family games, food vendors, the first-ever Freedom Fest 4K race, and a fireworks show to close out the night.",
+      "blurb_es": "Música en vivo, beer garden, juegos para toda la familia, vendedores de comida, la primera carrera 4K del Freedom Fest, y fuegos artificiales para cerrar la noche.",
       "url": "https://www.krgv.com/news/list-fourth-of-july-events-happening-across-the-rio-grande-valley/"
     },
     {
@@ -31,10 +40,14 @@
       "city": "McAllen",
       "venue": "Payne Arena grounds · McAllen Food Park",
       "date": "Sat, July 4",
+      "date_es": "sáb, 4 de julio",
       "time": "Live music 6 PM",
+      "time_es": "Música en vivo 6 PM",
       "price": "Free",
       "tag": "Fireworks",
+      "tag_es": "Fuegos artificiales",
       "blurb": "McAllen's Independence Day tradition — catch the Midnight Mustang Band at the Food Park at 6, then look up for the big show over Payne Arena.",
+      "blurb_es": "La tradición de McAllen para el 4 de julio — disfruta a la Midnight Mustang Band en el Food Park a las 6, y luego mira al cielo para el gran show sobre el Payne Arena.",
       "url": "https://www.krgv.com/news/list-fourth-of-july-events-happening-across-the-rio-grande-valley/"
     },
     {
@@ -43,10 +56,14 @@
       "city": "South Padre Island",
       "venue": "Whitecap Circle (Beach Access #8) → Beach Circle (Access #4)",
       "date": "Sat, July 4",
+      "date_es": "sáb, 4 de julio",
       "time": "Morning",
+      "time_es": "Por la mañana",
       "price": "Free",
       "tag": "Family",
+      "tag_es": "Familiar",
       "blurb": "Decorate your crew in red, white and blue and stroll the sand — SPI's most laid-back Fourth tradition, right on the Gulf.",
+      "blurb_es": "Viste a tu familia de rojo, blanco y azul y pasea por la arena — la tradición más relajada del 4 de julio en SPI, junto al Golfo.",
       "url": "https://www.valleycentral.com/news/local-news/list-4th-of-july-events-across-the-valley/"
     },
     {
@@ -55,12 +72,17 @@
       "city": "Weslaco",
       "venue": "South Texas Blvd, Downtown Weslaco",
       "date": "Sat, July 4",
+      "date_es": "sáb, 4 de julio",
       "time": "6 – 10 PM · Drone show 9:15 PM",
+      "time_es": "6 – 10 PM · Show de drones 9:15 PM",
       "price": "Free",
       "tag": "Drone show",
+      "tag_es": "Show de drones",
       "blurb": "A free, family-friendly downtown block party capped by a drone show finale lighting up the Mid-Valley sky.",
+      "blurb_es": "Una fiesta familiar y gratuita en el centro, coronada con un show de drones iluminando el cielo del Mid-Valley.",
       "url": "https://www.krgv.com/news/list-4th-of-july-events-across-the-valley/"
     }
   ],
-  "also_happening": "Also this week: Mercedes celebrates America's 250th birthday Friday, July 3 at the Mercedes Dome (1202 N. Vermont Ave)."
+  "also_happening": "Also this week: Mercedes celebrates America's 250th birthday Friday, July 3 at the Mercedes Dome (1202 N. Vermont Ave).",
+  "also_happening_es": "También esta semana: Mercedes celebra los 250 años de Estados Unidos el viernes 3 de julio en el Mercedes Dome (1202 N. Vermont Ave)."
 }

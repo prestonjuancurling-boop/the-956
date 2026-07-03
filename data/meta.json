@@ -1,7 +1,9 @@
 {
   "site_name": "The 956",
   "tagline": "El Valle's weekly digest",
+  "tagline_es": "El resumen semanal del Valle",
   "week_of": "June 29 – July 5, 2026",
+  "week_of_es": "29 de junio al 5 de julio, 2026",
   "edition": "Vol. 1 · No. 1",
   "generated_at": "2026-07-01T08:00:00-05:00",
   "ticker": [
@@ -9,5 +11,11 @@
     "🚋 Free trolley rides now running in downtown McAllen",
     "🇺🇸 America turns 250 — Mercedes celebrates Friday at the Dome",
     "🌴 Semana del 29 de junio al 5 de julio"
+  ],
+  "ticker_es": [
+    "🎆 Semana del 4 de julio — fuegos artificiales en Brownsville, Harlingen, McAllen, Weslaco y SPI",
+    "🚋 El trolley gratis ya circula por el centro de McAllen",
+    "🇺🇸 Estados Unidos cumple 250 años — Mercedes celebra el viernes en el Dome",
+    "🌴 Hecho en el Valle, para el Valle"
   ]
 }

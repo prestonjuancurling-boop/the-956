@@ -70,6 +70,35 @@ a { color: var(--sunset-deep); }
   overflow: hidden;
 }
 
+.lang-toggle {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  z-index: 2;
+  display: flex;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  overflow: hidden;
+}
+
+.lang-toggle button {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 7px 14px;
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.lang-toggle button.active {
+  background: var(--palm-deep);
+  color: #f2ecd9;
+}
+
 .sun {
   position: absolute;
   top: -140px;
