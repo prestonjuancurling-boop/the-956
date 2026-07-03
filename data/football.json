@@ -1,0 +1,438 @@
+{
+  "comment": "The 956 Friday Night Rankings. District rosters verified against the official UIL 2026-28 alignment PDFs (realignment.uiltexas.org, fetched 2026-07). Operating guide: (1) during the season, append completed games to games[] as {week, date, home, away, home_score, away_score, neutral?} using team ids; (2) scripts/compute-football.mjs recomputes Elo ratings from the full game log (deterministic, safe to re-run) and writes rankings[]; it flips status to live automatically once games exist. Non-RGV district members (Corpus Christi, Laredo, etc.) carry rgv:false — they count as opponents but are excluded from the published Top 10. 3A and smaller Valley programs (Raymondville, Rio Hondo, Lyford, Santa Rosa, La Villa...) are a future expansion: add their districts and teams here and everything downstream just works.",
+  "season": 2026,
+  "status": "preseason",
+  "week": 0,
+  "kickoff": "2026-08-28",
+  "kickoff_display": "Friday, August 28",
+  "kickoff_display_es": "viernes 28 de agosto",
+  "note": "Every Valley varsity program from 6A to 4A, rated by an Elo system that only believes scoreboards — updated every Monday during the season.",
+  "note_es": "Cada equipo varsity del Valle de 6A a 4A, calificado por un sistema Elo que solo le cree al marcador — actualizado cada lunes durante la temporada.",
+  "preseason_note": "First rankings drop after Week 1.",
+  "preseason_note_es": "El primer ranking sale después de la Semana 1.",
+  "districts": [
+    {
+      "id": "31-6A",
+      "name": "District 31-6A",
+      "classification": "6A"
+    },
+    {
+      "id": "32-6A",
+      "name": "District 32-6A",
+      "classification": "6A"
+    },
+    {
+      "id": "15-5A-DI",
+      "name": "District 15-5A Division I",
+      "classification": "5A DI"
+    },
+    {
+      "id": "16-5A-DI",
+      "name": "District 16-5A Division I",
+      "classification": "5A DI"
+    },
+    {
+      "id": "15-5A-DII",
+      "name": "District 15-5A Division II",
+      "classification": "5A DII"
+    },
+    {
+      "id": "16-5A-DII",
+      "name": "District 16-5A Division II",
+      "classification": "5A DII"
+    },
+    {
+      "id": "16-4A-DI",
+      "name": "District 16-4A Division I",
+      "classification": "4A DI"
+    },
+    {
+      "id": "16-4A-DII",
+      "name": "District 16-4A Division II",
+      "classification": "4A DII"
+    }
+  ],
+  "teams": [
+    {
+      "id": "edinburg",
+      "name": "Edinburg High",
+      "short": "Edinburg",
+      "district": "31-6A",
+      "rgv": true
+    },
+    {
+      "id": "economedes",
+      "name": "Edinburg Economedes",
+      "short": "Economedes",
+      "district": "31-6A",
+      "rgv": true
+    },
+    {
+      "id": "edinburg-north",
+      "name": "Edinburg North",
+      "short": "Edinburg North",
+      "district": "31-6A",
+      "rgv": true
+    },
+    {
+      "id": "edinburg-vela",
+      "name": "Edinburg Vela",
+      "short": "Vela",
+      "district": "31-6A",
+      "rgv": true
+    },
+    {
+      "id": "la-joya",
+      "name": "La Joya",
+      "short": "La Joya",
+      "district": "31-6A",
+      "rgv": true
+    },
+    {
+      "id": "weslaco",
+      "name": "Weslaco High",
+      "short": "Weslaco",
+      "district": "31-6A",
+      "rgv": true
+    },
+    {
+      "id": "brownsville-veterans",
+      "name": "Brownsville Veterans Memorial",
+      "short": "Brownsville Vets",
+      "district": "32-6A",
+      "rgv": true
+    },
+    {
+      "id": "harlingen",
+      "name": "Harlingen High",
+      "short": "Harlingen",
+      "district": "32-6A",
+      "rgv": true
+    },
+    {
+      "id": "los-fresnos",
+      "name": "Los Fresnos",
+      "short": "Los Fresnos",
+      "district": "32-6A",
+      "rgv": true
+    },
+    {
+      "id": "psja",
+      "name": "Pharr-San Juan-Alamo",
+      "short": "PSJA",
+      "district": "32-6A",
+      "rgv": true
+    },
+    {
+      "id": "psja-north",
+      "name": "PSJA North",
+      "short": "PSJA North",
+      "district": "32-6A",
+      "rgv": true
+    },
+    {
+      "id": "san-benito",
+      "name": "San Benito",
+      "short": "San Benito",
+      "district": "32-6A",
+      "rgv": true
+    },
+    {
+      "id": "brownsville-hanna",
+      "name": "Brownsville Hanna",
+      "short": "Hanna",
+      "district": "15-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "brownsville-rivera",
+      "name": "Brownsville Rivera",
+      "short": "Rivera",
+      "district": "15-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "cc-carroll",
+      "name": "Corpus Christi Carroll",
+      "short": "CC Carroll",
+      "district": "15-5A-DI",
+      "rgv": false
+    },
+    {
+      "id": "cc-flour-bluff",
+      "name": "Corpus Christi Flour Bluff",
+      "short": "Flour Bluff",
+      "district": "15-5A-DI",
+      "rgv": false
+    },
+    {
+      "id": "cc-veterans",
+      "name": "Corpus Christi Veterans Memorial",
+      "short": "CC Veterans",
+      "district": "15-5A-DI",
+      "rgv": false
+    },
+    {
+      "id": "harlingen-south",
+      "name": "Harlingen South",
+      "short": "Harlingen South",
+      "district": "15-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "weslaco-east",
+      "name": "Weslaco East",
+      "short": "Weslaco East",
+      "district": "15-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "donna-north",
+      "name": "Donna North",
+      "short": "Donna North",
+      "district": "16-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "palmview",
+      "name": "La Joya Palmview",
+      "short": "Palmview",
+      "district": "16-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "mcallen",
+      "name": "McAllen High",
+      "short": "McHi",
+      "district": "16-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "mcallen-memorial",
+      "name": "McAllen Memorial",
+      "short": "McAllen Memorial",
+      "district": "16-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "mcallen-rowe",
+      "name": "McAllen Rowe",
+      "short": "Rowe",
+      "district": "16-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "mission",
+      "name": "Mission High",
+      "short": "Mission",
+      "district": "16-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "psja-memorial",
+      "name": "PSJA Memorial",
+      "short": "PSJA Memorial",
+      "district": "16-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "rio-grande-city",
+      "name": "Rio Grande City",
+      "short": "RGC",
+      "district": "16-5A-DI",
+      "rgv": true
+    },
+    {
+      "id": "brownsville-lopez",
+      "name": "Brownsville Lopez",
+      "short": "Lopez",
+      "district": "15-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "brownsville-pace",
+      "name": "Brownsville Pace",
+      "short": "Pace",
+      "district": "15-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "brownsville-porter",
+      "name": "Brownsville Porter",
+      "short": "Porter",
+      "district": "15-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "cc-ray",
+      "name": "Corpus Christi Ray",
+      "short": "CC Ray",
+      "district": "15-5A-DII",
+      "rgv": false
+    },
+    {
+      "id": "donna",
+      "name": "Donna High",
+      "short": "Donna",
+      "district": "15-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "gregory-portland",
+      "name": "Gregory-Portland",
+      "short": "G-P",
+      "district": "15-5A-DII",
+      "rgv": false
+    },
+    {
+      "id": "mercedes",
+      "name": "Mercedes",
+      "short": "Mercedes",
+      "district": "15-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "juarez-lincoln",
+      "name": "La Joya Juarez-Lincoln",
+      "short": "Juarez-Lincoln",
+      "district": "16-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "laredo-cigarroa",
+      "name": "Laredo Cigarroa",
+      "short": "Cigarroa",
+      "district": "16-5A-DII",
+      "rgv": false
+    },
+    {
+      "id": "sharyland",
+      "name": "Sharyland High",
+      "short": "Sharyland",
+      "district": "16-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "mission-veterans",
+      "name": "Mission Veterans Memorial",
+      "short": "Mission Vets",
+      "district": "16-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "psja-southwest",
+      "name": "PSJA Southwest",
+      "short": "PSJA Southwest",
+      "district": "16-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "roma",
+      "name": "Roma",
+      "short": "Roma",
+      "district": "16-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "sharyland-pioneer",
+      "name": "Sharyland Pioneer",
+      "short": "Pioneer",
+      "district": "16-5A-DII",
+      "rgv": true
+    },
+    {
+      "id": "alice",
+      "name": "Alice",
+      "short": "Alice",
+      "district": "16-4A-DI",
+      "rgv": false
+    },
+    {
+      "id": "edcouch-elsa",
+      "name": "Edcouch-Elsa",
+      "short": "Edcouch-Elsa",
+      "district": "16-4A-DI",
+      "rgv": true
+    },
+    {
+      "id": "hidalgo",
+      "name": "Hidalgo Early College",
+      "short": "Hidalgo",
+      "district": "16-4A-DI",
+      "rgv": true
+    },
+    {
+      "id": "valley-view",
+      "name": "Pharr Valley View",
+      "short": "Valley View",
+      "district": "16-4A-DI",
+      "rgv": true
+    },
+    {
+      "id": "zapata",
+      "name": "Zapata",
+      "short": "Zapata",
+      "district": "16-4A-DI",
+      "rgv": false
+    },
+    {
+      "id": "cc-london",
+      "name": "Corpus Christi London",
+      "short": "CC London",
+      "district": "16-4A-DII",
+      "rgv": false
+    },
+    {
+      "id": "ingleside",
+      "name": "Ingleside",
+      "short": "Ingleside",
+      "district": "16-4A-DII",
+      "rgv": false
+    },
+    {
+      "id": "kingsville-king",
+      "name": "Kingsville King",
+      "short": "Kingsville",
+      "district": "16-4A-DII",
+      "rgv": false
+    },
+    {
+      "id": "la-feria",
+      "name": "La Feria",
+      "short": "La Feria",
+      "district": "16-4A-DII",
+      "rgv": true
+    },
+    {
+      "id": "port-isabel",
+      "name": "Port Isabel",
+      "short": "Port Isabel",
+      "district": "16-4A-DII",
+      "rgv": true
+    },
+    {
+      "id": "grulla",
+      "name": "Rio Grande City Grulla",
+      "short": "La Grulla",
+      "district": "16-4A-DII",
+      "rgv": true
+    },
+    {
+      "id": "robstown",
+      "name": "Robstown",
+      "short": "Robstown",
+      "district": "16-4A-DII",
+      "rgv": false
+    },
+    {
+      "id": "rockport-fulton",
+      "name": "Rockport-Fulton",
+      "short": "Rockport-Fulton",
+      "district": "16-4A-DII",
+      "rgv": false
+    }
+  ],
+  "games": [],
+  "rankings": [],
+  "computed_at": null
+}

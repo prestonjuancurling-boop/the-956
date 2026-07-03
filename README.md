@@ -105,6 +105,31 @@ node scripts/compute-buzz.mjs
 For the cloud schedule, add the same three names as repo secrets
 (Settings → Secrets and variables → Actions).
 
+## Friday Night Rankings (HS football)
+
+`data/football.json` holds all 54 teams across the 8 UIL districts that
+touch the Valley (rosters verified against the official 2026-28 UIL
+alignment PDFs). The site shows a kickoff-countdown teaser until games
+exist, then flips to a weekly Top 10 automatically.
+
+Weekly in-season flow:
+
+1. After Friday games, append results to `games[]`:
+   `{"week": 3, "date": "2026-09-11", "home": "san-benito", "away": "harlingen", "home_score": 28, "away_score": 21}`
+   (team ids are in `teams[]`; add `"neutral": true` for neutral sites)
+2. `node scripts/compute-football.mjs` — replays the whole season through
+   an Elo model (margin-of-victory weighted, 65-pt home advantage,
+   classification-based seeds) and publishes the Top 10 with trend
+   arrows, 🆕/🔥 badges and a #1 streak counter. Deterministic: fixing a
+   typo'd score and re-running heals everything, and same-week re-runs
+   don't inflate streaks.
+3. Push. The Monday Actions run also executes the script, so scores
+   pushed over the weekend publish rankings automatically Monday 6 AM.
+
+Non-RGV district members (Corpus Christi, Laredo, etc.) are rated as
+opponents but never ranked. Season: Week 1 is Aug 27-29, 2026; district
+certification Nov 7; playoffs from Nov 12.
+
 ### Other sections, more deterministic later (optional)
 
 - **Events** — Eventbrite/Ticketmaster APIs + city parks & rec calendars

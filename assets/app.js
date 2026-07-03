@@ -33,6 +33,14 @@ const UI = {
     "h-rank": "The 956 Power Rankings",
     "ov-micro": "This month's micro-ranking",
     microDrops: (d) => `⏳ Measuring this week — the first ranking drops ${d}`,
+    "ov-football": "El Valle under the lights",
+    "h-football": "The Friday Night Rankings 🏈",
+    fbKickoff: (days, date) => `🏈 Kickoff in ${days} day${days === 1 ? "" : "s"} — Week 1 starts ${date}`,
+    fbUnderway: "🏈 The season is underway — first rankings after Week 1",
+    fbTracking: (n, d) => `Tracking ${n} Valley teams across ${d} districts, 6A to 4A`,
+    fbTeams: (n) => `${n} teams`,
+    fbWeek: (w) => `Week ${w}`,
+    fbRating: (r) => `rating ${r}`,
     "footer-curated": 'Curated from local sources including <a href="https://www.krgv.com/news" target="_blank" rel="noopener">KRGV</a>, <a href="https://www.valleycentral.com/" target="_blank" rel="noopener">ValleyCentral</a> and <a href="https://myrgv.com/" target="_blank" rel="noopener">MyRGV</a>.',
     "footer-updated": "Content refreshes automatically — last updated",
     weekPrefix: "Week of",
@@ -63,6 +71,14 @@ const UI = {
     "h-rank": "El Ranking del 956",
     "ov-micro": "El micro-ranking del mes",
     microDrops: (d) => `⏳ Midiendo esta semana — el primer ranking sale el ${d}`,
+    "ov-football": "El Valle bajo las luces",
+    "h-football": "El Ranking de los Viernes 🏈",
+    fbKickoff: (days, date) => `🏈 Arranca en ${days} día${days === 1 ? "" : "s"} — la Semana 1 empieza el ${date}`,
+    fbUnderway: "🏈 La temporada ya empezó — el primer ranking sale después de la Semana 1",
+    fbTracking: (n, d) => `Siguiendo ${n} equipos del Valle en ${d} distritos, de 6A a 4A`,
+    fbTeams: (n) => `${n} equipos`,
+    fbWeek: (w) => `Semana ${w}`,
+    fbRating: (r) => `rating ${r}`,
     "footer-curated": 'Curado de fuentes locales como <a href="https://www.krgv.com/news" target="_blank" rel="noopener">KRGV</a>, <a href="https://www.valleycentral.com/" target="_blank" rel="noopener">ValleyCentral</a> y <a href="https://myrgv.com/" target="_blank" rel="noopener">MyRGV</a>.',
     "footer-updated": "El contenido se actualiza solo — última actualización",
     weekPrefix: "Semana del",
@@ -252,6 +268,64 @@ function renderMicro(cat) {
   }
 }
 
+function renderFootball(fb) {
+  const section = $("#football");
+  if (!fb) { section.style.display = "none"; return; }
+  section.style.display = "";
+  $('[data-note="football"]').textContent = t(fb, "note");
+
+  const badgeLabels = { new_entry: "🆕", biggest_mover: "🔥" };
+  const badgesFor = (r) => {
+    const chips = (r.badges ?? []).map((b) =>
+      b === "new_entry" ? ui("badge_new_entry") : b === "biggest_mover" ? ui("badge_biggest_mover") : badgeLabels[b]
+    ).filter(Boolean);
+    if (r.streak_weeks >= 2) chips.push(ui("streak")(r.streak_weeks));
+    return chips.map((c) => `<span class="rank-badge">${esc(c)}</span>`).join("");
+  };
+
+  if (fb.status === "preseason" || !fb.rankings?.length) {
+    const kickoff = new Date(`${fb.kickoff}T19:00:00-05:00`);
+    const days = Math.ceil((kickoff - Date.now()) / 86400000);
+    const banner = days > 0
+      ? ui("fbKickoff")(days, t(fb, "kickoff_display"))
+      : ui("fbUnderway");
+    const rgvCount = fb.teams.filter((x) => x.rgv).length;
+    $("#football-card").innerHTML = `
+      <div class="micro-status">${esc(banner)}</div>
+      <p class="fb-track">${esc(ui("fbTracking")(rgvCount, fb.districts.length))}</p>
+      <div class="fb-districts">
+        ${fb.districts.map((d) => {
+          const n = fb.teams.filter((x) => x.district === d.id).length;
+          return `<div class="fb-district">
+            <div class="fb-district-name">${esc(d.name)}</div>
+            <div class="fb-district-meta">${esc(d.classification)} · ${esc(ui("fbTeams")(n))}</div>
+          </div>`;
+        }).join("")}
+      </div>`;
+    return;
+  }
+
+  const ratings = fb.rankings.map((r) => r.rating);
+  const max = Math.max(...ratings);
+  const min = Math.min(...ratings) - 40;
+  const arrows = { up: "▲", down: "▼", steady: "—" };
+  $("#football-card").innerHTML = `
+    <div class="micro-status">🏈 ${esc(ui("fbWeek")(fb.week))}</div>
+    ${fb.rankings.map((r) => `
+      <div class="rank-row">
+        <div class="rank-pos">${r.rank}</div>
+        <div>
+          <div class="rank-name">${esc(r.short || r.name)} ${badgesFor(r)}</div>
+          <div class="rank-city">${esc(r.district)} · ${esc(r.classification)}</div>
+        </div>
+        <div class="buzz">
+          <div class="buzz-bar"><div class="buzz-fill" style="width:${Math.round(((r.rating - min) / (max - min)) * 100)}%"></div></div>
+          <div class="buzz-label">${esc(r.record)} · ${esc(ui("fbRating")(r.rating))}</div>
+        </div>
+        <div class="trend ${esc(r.trend)}">${arrows[r.trend] || "—"}</div>
+      </div>`).join("")}`;
+}
+
 function renderAll() {
   if (!DATA) return;
   applyStatic();
@@ -261,6 +335,7 @@ function renderAll() {
   renderRestaurants(DATA.restos);
   renderRankings(DATA.eats);
   renderMicro(DATA.category);
+  renderFootball(DATA.football);
 }
 
 document.querySelectorAll("#lang-toggle button").forEach((b) => {
@@ -274,12 +349,13 @@ document.querySelectorAll("#lang-toggle button").forEach((b) => {
 
 async function init() {
   try {
-    const [meta, events, news, restos, eats, category] = await Promise.all([
+    const [meta, events, news, restos, eats, category, football] = await Promise.all([
       loadJSON("meta"), loadJSON("events"), loadJSON("news"),
       loadJSON("new-restaurants"), loadJSON("top-eats"),
       loadJSON("category").catch(() => null),
+      loadJSON("football").catch(() => null),
     ]);
-    DATA = { meta, events, news, restos, eats, category };
+    DATA = { meta, events, news, restos, eats, category, football };
     renderAll();
   } catch (err) {
     document.querySelector("main").innerHTML =

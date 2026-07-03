@@ -48,6 +48,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%u)" = "1" ]; then
             node scripts/compute-buzz.mjs
+            node scripts/compute-football.mjs   # offline Elo replay; no-op until season games exist
           else
             echo "Not Monday — skipping rankings computation (weekly cadence)."
           fi
