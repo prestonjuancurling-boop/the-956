@@ -13,8 +13,10 @@ name: Update content
 
 on:
   schedule:
-    - cron: "30 11 * * *"   # daily 6:30 AM Valley time (CDT) — news
-    - cron: "0 11 * * 1"    # Mondays 6:00 AM CDT — everything
+    # The two crons are ~90 minutes apart so the hour disambiguates which run
+    # this is even when GitHub delays cron firing (often 5-40+ minutes).
+    - cron: "30 12 * * *"   # daily 7:30 AM Valley time (CDT) — news only
+    - cron: "0 11 * * 1"    # Mondays 6:00 AM CDT — rankings + full refresh
   workflow_dispatch:
     inputs:
       target:
@@ -34,12 +36,21 @@ jobs:
         with:
           node-version: 22
 
-      - name: Compute data-driven Power Rankings + restaurant photos
+      - name: Compute data-driven Power Rankings + restaurant photos (Mondays only)
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
-        run: node scripts/compute-buzz.mjs
+        # Rankings are a weekly product. Running the scorer daily consumes the
+        # review-count deltas one day at a time, which both starves the weekly
+        # signal and lets a single busy day publish a statistically thin
+        # ranking (this happened on 2026-07-03).
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%u)" = "1" ]; then
+            node scripts/compute-buzz.mjs
+          else
+            echo "Not Monday — skipping rankings computation (weekly cadence)."
+          fi
 
       - name: Check for API key
         id: keycheck
@@ -61,9 +72,11 @@ jobs:
         if: steps.keycheck.outputs.enabled == 'true'
         id: target
         run: |
+          # Disambiguate by hour, not minute — GitHub cron firing is routinely
+          # delayed by 5-40+ minutes, so a minute-window check misclassifies.
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "target=${{ inputs.target }}" >> "$GITHUB_OUTPUT"
-          elif [ "$(date -u +%u)" = "1" ] && [ "$(date -u +%H)" = "11" ] && [ "$(date -u +%M)" -lt 20 ]; then
+          elif [ "$(date -u +%u)" = "1" ] && [ "$(date -u +%H)" -lt 12 ]; then
             echo "target=all" >> "$GITHUB_OUTPUT"
           else
             echo "target=news" >> "$GITHUB_OUTPUT"

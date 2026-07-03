@@ -214,9 +214,10 @@ function renderMicro(cat) {
   $('[data-note="micro"]').textContent = t(cat, "note");
 
   if (cat.status === "measuring") {
-    // The weekly scoring run lands on Mondays — show the real drop date.
+    // The weekly scoring run lands on Mondays — show the real drop date
+    // (on a Monday itself, that's today, not next week).
     const next = new Date();
-    next.setDate(next.getDate() + ((8 - next.getDay()) % 7 || 7));
+    next.setDate(next.getDate() + ((8 - next.getDay()) % 7));
     const dropDay = next.toLocaleDateString(ui("locale"), {
       weekday: "long", month: "long", day: "numeric",
     });

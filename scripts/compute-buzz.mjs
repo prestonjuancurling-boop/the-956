@@ -140,13 +140,24 @@ function qualityFactor(rating) {
 
 // ————— main —————
 
-const token = hasReddit ? await redditToken() : null;
+// Network hiccups on one source or one spot must never kill the whole run —
+// history still gets written and the zero-signal/threshold guards handle the gap.
+async function tryOrNull(label, fn) {
+  try {
+    return await fn();
+  } catch (err) {
+    console.warn(`  ${label} failed: ${err.message}`);
+    return null;
+  }
+}
+
+const token = hasReddit ? await tryOrNull("Reddit auth", redditToken) : null;
 const results = [];
 
 for (const spot of watchlist.spots) {
   console.log(`Measuring ${spot.name}…`);
-  const reddit = token ? await redditMentions(token, spot) : null;
-  const places = hasPlaces ? await placesLookup(spot) : null;
+  const reddit = token ? await tryOrNull("Reddit search", () => redditMentions(token, spot)) : null;
+  const places = hasPlaces ? await tryOrNull("Places lookup", () => placesLookup(spot)) : null;
 
   const prev = history[spot.name];
   const reviewDelta =
@@ -271,8 +282,8 @@ if (existsSync(categoryPath)) {
   const catResults = [];
   for (const spot of cat.spots) {
     console.log(`Measuring [${cat.title}] ${spot.name}…`);
-    const reddit = token ? await redditMentions(token, spot) : null;
-    const places = hasPlaces ? await placesLookup(spot) : null;
+    const reddit = token ? await tryOrNull("Reddit search", () => redditMentions(token, spot)) : null;
+    const places = hasPlaces ? await tryOrNull("Places lookup", () => placesLookup(spot)) : null;
     const key = "cat:" + spot.name;
     const prev = history[key];
     const delta =
@@ -334,21 +345,22 @@ if (hasPlaces) {
   let added = 0;
   for (const r of restos.restaurants) {
     if (r.photo) continue;
-    const found = await placesLookup({
-      name: r.name,
-      places_query: `${r.name} restaurant ${r.city === "RGV" ? "Rio Grande Valley" : r.city} TX`,
+    const saved = await tryOrNull(`photo for ${r.name}`, async () => {
+      const found = await placesLookup({
+        name: r.name,
+        places_query: `${r.name} restaurant ${r.city === "RGV" ? "Rio Grande Valley" : r.city} TX`,
+      });
+      if (!found?.photo) return null;
+      const imgRes = await fetch(found.photo);
+      if (!imgRes.ok) throw new Error(`download HTTP ${imgRes.status}`);
+      const rel = `assets/photos/${slugify(r.name)}.jpg`;
+      writeFileSync(join(dataDir, "..", rel), Buffer.from(await imgRes.arrayBuffer()));
+      return rel;
     });
-    if (!found?.photo) continue;
-    const imgRes = await fetch(found.photo);
-    if (!imgRes.ok) {
-      console.warn(`  photo download failed for ${r.name}: ${imgRes.status}`);
-      continue;
-    }
-    const rel = `assets/photos/${slugify(r.name)}.jpg`;
-    writeFileSync(join(dataDir, "..", rel), Buffer.from(await imgRes.arrayBuffer()));
-    r.photo = rel;
+    if (!saved) continue;
+    r.photo = saved;
     added++;
-    console.log(`  📷 saved ${rel}`);
+    console.log(`  📷 saved ${saved}`);
   }
   if (added) {
     writeFileSync(restoPath, JSON.stringify(restos, null, 2) + "\n");

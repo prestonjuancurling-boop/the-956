@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Inter:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fdf8ee; --ink: #22301f;
+    --sunset: #e4582b; --sunset-deep: #c2431c; --citrus: #f0a832;
+    --palm: #2e6e4e; --palm-deep: #1d4a33;
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* Facebook covers get cropped much wider than the classic 820x312 spec
+     on modern wide desktop screens. Build wide (3.4:1) with content truly
+     centered as a group, so it survives whatever crop Facebook applies —
+     rather than pre-shifting to dodge the profile-picture corner. */
+  .cover {
+    width: 1920px; height: 565px;
+    background: var(--paper);
+    background-image: radial-gradient(ellipse 1300px 900px at 50% 45%, #fdeed3 0%, var(--paper) 65%);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .content {
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center;
+  }
+  .overline {
+    font-family: var(--sans); font-weight: 700; font-size: 26px;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--sunset);
+  }
+  .word { font-family: var(--serif); font-weight: 800; font-size: 140px; line-height: 0.95; letter-spacing: -0.02em; color: var(--ink); margin-top: 10px; }
+  .word em { color: var(--sunset); font-style: italic; }
+  .tag { font-family: var(--serif); font-style: italic; font-size: 40px; color: var(--palm); margin-top: 16px; }
+  .handle { font-family: var(--sans); font-weight: 700; font-size: 24px; color: var(--ink-soft, #5a6653); margin-top: 24px; letter-spacing: 0.02em; }
+
+  /* Small, symmetric, purely decorative — safe to lose on any crop. */
+  .palm { position: absolute; bottom: -30px; font-size: 170px; opacity: 0.5; }
+  .palm.left { left: 40px; }
+  .palm.right { right: 40px; }
+
+  /* Reserved zone: on desktop the profile-picture circle overlaps here. */
+  .safe-guide {
+    position: absolute; left: 40px; bottom: -60px;
+    width: 320px; height: 320px; border-radius: 50%;
+    border: 4px dashed rgba(228,88,43,0.5);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--sans); font-size: 20px; font-weight: 700; color: var(--sunset-deep);
+    text-align: center; line-height: 1.4;
+    z-index: 2;
+  }
+  .center-guide {
+    position: absolute; top: 0; bottom: 0; left: 50%;
+    width: 2px; background: rgba(46,110,78,0.4);
+  }
+</style>
+</head>
+<body>
+
+  <!-- final deliverable: no guide overlay -->
+  <div class="cover" id="final">
+    <div class="palm left">🌴</div>
+    <div class="content">
+      <div class="overline">Rio Grande Valley</div>
+      <div class="word">The <em>956</em></div>
+      <div class="tag">El Valle's weekly digest</div>
+      <div class="handle">the956.com · @the956rgv</div>
+    </div>
+    <div class="palm right">🌴</div>
+  </div>
+
+  <!-- preview only: shows center line + where the profile-pic circle sits -->
+  <div class="cover" id="preview" style="margin-top:40px;">
+    <div class="center-guide"></div>
+    <div class="palm left">🌴</div>
+    <div class="content">
+      <div class="overline">Rio Grande Valley</div>
+      <div class="word">The <em>956</em></div>
+      <div class="tag">El Valle's weekly digest</div>
+      <div class="handle">the956.com · @the956rgv</div>
+    </div>
+    <div class="palm right">🌴</div>
+    <div class="safe-guide">profile photo<br>overlaps here<br>(desktop)</div>
+  </div>
+
+<script>
+  const only = new URLSearchParams(location.search).get("id");
+  if (only) {
+    document.querySelectorAll(".cover").forEach((c) => {
+      c.style.display = c.id === only ? "flex" : "none";
+      c.style.margin = "0";
+    });
+  }
+</script>
+</body>
+</html>

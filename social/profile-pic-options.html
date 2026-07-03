@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fdf8ee; --ink: #22301f;
+    --sunset: #e4582b; --sunset-deep: #c2431c; --citrus: #f0a832;
+    --palm: #2e6e4e; --palm-deep: #1d4a33;
+    --serif: "Fraunces", Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .canvas {
+    width: 1080px; height: 1080px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .canvas + .canvas { margin-top: 40px; }
+  /* Circle safe-zone guide: platforms crop anything outside this circle. */
+  .safe-guide {
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2000px rgba(0,0,0,0.55);
+  }
+
+  /* Option A: bold numerals on sunset-glow paper */
+  .a { background: var(--paper); background-image: radial-gradient(circle at 50% 45%, #fdeed3 0%, var(--paper) 68%); }
+  .a .num { font-family: var(--serif); font-weight: 900; font-size: 480px; letter-spacing: -0.02em; color: var(--sunset); line-height: 1; }
+
+  /* Option B: solid palm circle, cream numerals */
+  .b { background: var(--palm-deep); }
+  .b .num { font-family: var(--serif); font-weight: 900; font-size: 460px; letter-spacing: -0.02em; color: #fdeed3; line-height: 1; }
+
+  /* Option C: sunset-to-citrus gradient block, ink numerals */
+  .c { background: linear-gradient(135deg, var(--sunset) 0%, var(--citrus) 100%); }
+  .c .num { font-family: var(--serif); font-weight: 900; font-size: 460px; letter-spacing: -0.02em; color: var(--paper); line-height: 1; }
+
+  /* Option D: paper with thin ring + numerals, like a coin/seal */
+  .d { background: var(--paper); }
+  .d .ring { position: absolute; inset: 70px; border: 14px solid var(--palm-deep); border-radius: 50%; }
+  .d .num { font-family: var(--serif); font-weight: 900; font-size: 420px; letter-spacing: -0.02em; color: var(--palm-deep); line-height: 1; z-index: 1; }
+</style>
+</head>
+<body>
+  <div class="canvas a" id="a"><div class="num">956</div></div>
+  <div class="canvas b" id="b"><div class="num">956</div></div>
+  <div class="canvas c" id="c"><div class="num">956</div></div>
+  <div class="canvas d" id="d"><div class="ring"></div><div class="num">956</div></div>
+
+  <!-- circle-cropped previews, same options, to see the actual platform result -->
+  <div class="canvas a" id="a-crop" style="border-radius:50%;"><div class="num">956</div></div>
+  <div class="canvas b" id="b-crop" style="border-radius:50%;"><div class="num">956</div></div>
+  <div class="canvas c" id="c-crop" style="border-radius:50%;"><div class="num">956</div></div>
+  <div class="canvas d" id="d-crop" style="border-radius:50%;"><div class="ring"></div><div class="num">956</div></div>
+
+<script>
+  const only = new URLSearchParams(location.search).get("id");
+  if (only) {
+    document.querySelectorAll(".canvas").forEach((c) => {
+      c.style.display = c.id === only ? "flex" : "none";
+      c.style.margin = "0";
+    });
+    if (only.endsWith("-crop")) document.body.style.background = "#e5e5e5";
+  }
+</script>
+</body>
+</html>
