@@ -2,7 +2,7 @@
   "Delia's Tamales": {
     "reviewCount": 4134,
     "rating": 4.6,
-    "ema": 1.209402928171805,
+    "ema": 0.48376117126872203,
     "date": "2026-07-06"
   },
   "Vera's Backyard Bar-B-Que": {
@@ -20,49 +20,49 @@
   "Casa De Mariscos": {
     "reviewCount": 3739,
     "rating": 4.6,
-    "ema": 1.2716819860126496,
+    "ema": 0.5086727944050599,
     "date": "2026-07-06"
   },
   "El Pato Mexican Food": {
     "reviewCount": 1138,
     "rating": 4.3,
-    "ema": 0.17416124641823827,
+    "ema": 0.06966449856729531,
     "date": "2026-07-06"
   },
   "Taco Palenque": {
     "reviewCount": 5179,
     "rating": 4.4,
-    "ema": 349.9545284100214,
+    "ema": 139.98181136400856,
     "date": "2026-07-06"
   },
   "Zaya": {
     "reviewCount": 176,
     "rating": 4.8,
-    "ema": 14.588324896050514,
+    "ema": 5.835329958420206,
     "date": "2026-07-06"
   },
   "Moūsai": {
     "reviewCount": 1021,
     "rating": 4.8,
-    "ema": 11.328867974078507,
+    "ema": 4.531547189631403,
     "date": "2026-07-06"
   },
   "Blu Brasserie": {
     "reviewCount": 96,
     "rating": 4.9,
-    "ema": 14.814513964352663,
+    "ema": 5.925805585741066,
     "date": "2026-07-06"
   },
   "Brasas": {
     "reviewCount": 166,
     "rating": 4.8,
-    "ema": 3.755326703577519,
+    "ema": 1.5021306814310078,
     "date": "2026-07-06"
   },
   "cat:Young's Sno Wiz": {
     "reviewCount": 514,
     "rating": 4.8,
-    "ema": 1.7784389604894426,
+    "ema": 0.7113755841957771,
     "date": "2026-07-06"
   },
   "cat:Margo's": {
@@ -86,13 +86,13 @@
   "cat:Fruti Raspas La Isla": {
     "reviewCount": 29,
     "rating": 4.6,
-    "ema": 7.09848434526695,
+    "ema": 2.8393937381067804,
     "date": "2026-07-06"
   },
   "AMBRA": {
     "reviewCount": 2343,
     "rating": 4.8,
-    "ema": 4.997877757034855,
+    "ema": 1.9991511028139421,
     "date": "2026-07-06"
   }
 }
