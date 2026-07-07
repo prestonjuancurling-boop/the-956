@@ -322,9 +322,14 @@ if (existsSync(categoryPath)) {
       rating: r.rating,
     }));
     console.log(`✔ Ranked category "${cat.title}"`);
-  } else {
+  } else if (cat.status !== "ranked") {
+    // Only pre-publication runs may hold the category in "measuring".
+    // A quiet week must never un-publish an already-ranked category
+    // (a same-day double run did exactly that on 2026-07-06).
     cat.status = "measuring";
     console.log(`✔ Category "${cat.title}" baseline seeded — still measuring`);
+  } else {
+    console.log(`✔ Category "${cat.title}" quiet this run — keeping published ranking`);
   }
   writeFileSync(categoryPath, JSON.stringify(cat, null, 2) + "\n");
   writeFileSync(historyPath, JSON.stringify(history, null, 2) + "\n");

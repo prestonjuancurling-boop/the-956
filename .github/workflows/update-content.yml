@@ -46,11 +46,15 @@ jobs:
         # signal and lets a single busy day publish a statistically thin
         # ranking (this happened on 2026-07-03).
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%u)" = "1" ]; then
+          # Run only on the weekly cron (Mondays before 12:00 UTC) or manual
+          # dispatch. The daily 12:30 cron also fires on Mondays — without the
+          # hour check it re-scored 90 minutes after the weekly run with zero
+          # new signal (2026-07-06), which un-published the category ranking.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || { [ "$(date -u +%u)" = "1" ] && [ "$(date -u +%H)" -lt 12 ]; }; then
             node scripts/compute-buzz.mjs
             node scripts/compute-football.mjs   # offline Elo replay; no-op until season games exist
           else
-            echo "Not Monday — skipping rankings computation (weekly cadence)."
+            echo "Not the weekly rankings run — skipping (weekly cadence)."
           fi
 
       - name: Check for API key
