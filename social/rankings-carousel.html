@@ -108,7 +108,7 @@
     if ((s.badges || []).includes("new_entry")) pills.push(`<span class="pill hot">New Entry</span>`);
     if ((s.badges || []).includes("biggest_mover")) pills.push(`<span class="pill hot">Biggest Mover</span>`);
     if (s.rank === 1 && s.streak_weeks > 1) pills.push(`<span class="pill">🔥 ${s.streak_weeks} weeks at #1</span>`);
-    if (s.review_delta) pills.push(`<span class="pill">+${s.review_delta} reviews this week</span>`);
+    if (s.review_delta) pills.push(`<span class="pill">+${s.review_delta} review${s.review_delta === 1 ? "" : "s"} this week</span>`);
     slide.innerHTML = `
       <div class="band"><span>POWER RANKINGS</span><span>#${s.rank} OF ${spots.length}</span></div>
       <div class="sp-photo">
