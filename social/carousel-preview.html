@@ -76,123 +76,79 @@
 </head>
 <body>
 
-  <!-- SLIDE 0: COVER -->
-  <div class="slide" id="slide-0">
+<script>
+// Data-driven: reads data/events.json + data/meta.json (or data/staged/ with ?preview=staged)
+// so this carousel can never drift from what the site actually shows.
+(async () => {
+  const staged = new URLSearchParams(location.search).get("preview") === "staged";
+  const base = staged ? "../data/staged/" : "../data/";
+  const [meta, eventsData] = await Promise.all([
+    fetch(base + "meta.json", { cache: "no-store" }).then(r => r.json()),
+    fetch(base + "events.json", { cache: "no-store" }).then(r => r.json()),
+  ]);
+
+  const cover = document.createElement("div");
+  cover.className = "slide";
+  cover.id = "slide-0";
+  cover.innerHTML = `
     <div class="sun"></div>
     <div class="pad">
       <div class="cover-mast">
         <div class="overline">This Week in El Valle</div>
         <h1>The <em>956</em></h1>
-        <div class="tag">El Valle's weekly digest</div>
+        <div class="tag">${meta.tagline || "El Valle's weekly digest"}</div>
       </div>
-      <div class="cover-week">Week of July 6 – 12, 2026</div>
-      <div class="cover-headline">The Big 5<br>Hometown Heroes Edition</div>
-      <div class="cover-sub">Five biggest things happening across the Valley this week →</div>
+      <div class="cover-week">Week of ${meta.week_of}</div>
+      <div class="cover-headline">The Big 5</div>
+      <div class="cover-sub">${eventsData.section_note}</div>
       <div class="cover-footer">Swipe for the full list · the956.com</div>
     </div>
-  </div>
-
-  <!-- SLIDES 1-5: EVENTS -->
-  <div id="events"></div>
-
-<script>
-const events = [
-  {
-    "rank": 1,
-    "title": "Grupo Frontera Comes Home",
-    "city": "Edinburg",
-    "venue": "Bert Ogden Arena",
-    "photo": "photos/bert-ogden-arena.jpg",
-    "date": "Jul 16–17",
-    "time": "Tickets on sale now",
-    "price": "Ticketed",
-    "blurb": "The Valley's own Grupo Frontera brings the Triste Pero Bien C*brón tour home for two nights in Edinburg. Hometown crowd, full-arena singalong — these will sell out."
-  },
-  {
-    "rank": 2,
-    "title": "Friday Night Fireworks",
-    "city": "South Padre Island",
-    "venue": "Laguna Madre Bay — best views between Palm & Red Snapper St",
-    "photo": "photos/south-padre-island-beach.jpg",
-    "date": "Fri, Jul 10",
-    "time": "9:15 PM",
-    "price": "Free",
-    "blurb": "Every Friday all summer long, the bay side of the Island lights up at 9:15. Grab dinner on the water and stay for the show."
-  },
-  {
-    "rank": 3,
-    "title": "Wavves at Cine El Rey",
-    "city": "McAllen",
-    "venue": "Cine El Rey, 311 S 17th St",
-    "photo": "photos/cine-el-rey.jpg",
-    "date": "Sat, Jul 11",
-    "time": "7 PM",
-    "price": "Ticketed",
-    "blurb": "California surf-punk vets Wavves hit the Valley's historic 1940s movie house — downtown McAllen's best room for loud guitars. Snooper plays the same stage Thursday."
-  },
-  {
-    "rank": 4,
-    "title": "McAllen Farmers Market",
-    "city": "McAllen",
-    "venue": "McAllen Public Library, 4001 N 23rd St",
-    "photo": "photos/mcallen-farmers-market.jpg",
-    "date": "Sat, Jul 11",
-    "time": "10 AM – 1 PM",
-    "price": "Free",
-    "blurb": "Local growers, honey, pan dulce and produce every Saturday — the Valley's year-round market staple."
-  },
-  {
-    "rank": 5,
-    "title": "Summer Safari at Gladys Porter Zoo",
-    "city": "Brownsville",
-    "venue": "Gladys Porter Zoo, 500 E Ringgold St",
-    "photo": "photos/gladys-porter-zoo.jpg",
-    "date": "All week",
-    "time": "Daily",
-    "price": "Admission",
-    "blurb": "Puppet shows, crafts and animal encounters all season — and circle July 25, when the first 1,000 kids at Kids Appreciation Day get a backpack of school supplies."
-  }
-];
-
-const container = document.getElementById("events");
-events.forEach((e, i) => {
-  const slide = document.createElement("div");
-  slide.className = "slide";
-  slide.id = "slide-" + (i + 1);
-  slide.innerHTML = `
-    <div class="band">THE BIG 5 · #${e.rank} OF 5</div>
-    <div class="ev-photo">
-      <img src="${e.photo}" alt="${e.title}">
-      <div class="ev-photo-tint"></div>
-      <div class="ev-num${e.rank === 1 ? " first" : ""}">${e.rank}</div>
-    </div>
-    <div class="pad ev-pad">
-      <div class="ev-title">${e.title}</div>
-      <div class="chips">
-        <span class="chip date">${e.date}</span>
-        <span class="chip city">📍 ${e.city}</span>
-        <span class="chip">${e.time}</span>
-        <span class="chip free">${e.price}</span>
-      </div>
-      <div class="ev-blurb">${e.blurb}</div>
-      <div class="ev-venue">${e.venue}</div>
-      <div class="ev-footer">
-        <div class="brand">The <em>956</em></div>
-        <div class="swipe">${i < events.length - 1 ? "swipe →" : "the956.com"}</div>
-      </div>
-    </div>
   `;
-  container.appendChild(slide);
-});
+  document.body.appendChild(cover);
 
-// ?slide=N isolates a single slide for clean headless-Chrome screenshotting.
-const only = new URLSearchParams(location.search).get("slide");
-if (only !== null) {
-  document.querySelectorAll(".slide").forEach((s) => {
-    s.style.display = s.id === "slide-" + only ? "flex" : "none";
-    s.style.margin = "0";
+  const events = eventsData.events;
+  events.forEach((e, i) => {
+    const slide = document.createElement("div");
+    slide.className = "slide";
+    slide.id = "slide-" + (i + 1);
+    const photoTag = e.photo
+      ? `<img src="photos/${e.photo}" alt="${e.title}" onerror="this.remove()">`
+      : "";
+    slide.innerHTML = `
+      <div class="band">THE BIG 5 · #${e.rank} OF ${events.length}</div>
+      <div class="ev-photo">
+        ${photoTag}
+        <div class="ev-photo-tint"></div>
+        <div class="ev-num${e.rank === 1 ? " first" : ""}">${e.rank}</div>
+      </div>
+      <div class="pad ev-pad">
+        <div class="ev-title">${e.title}</div>
+        <div class="chips">
+          <span class="chip date">${e.date}</span>
+          <span class="chip city">📍 ${e.city}</span>
+          <span class="chip">${e.time}</span>
+          <span class="chip free">${e.price}</span>
+        </div>
+        <div class="ev-blurb">${e.blurb}</div>
+        <div class="ev-venue">${e.venue}</div>
+        <div class="ev-footer">
+          <div class="brand">The <em>956</em></div>
+          <div class="swipe">${i < events.length - 1 ? "swipe →" : "the956.com"}</div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(slide);
   });
-}
+
+  // ?slide=N isolates a single slide for clean headless-Chrome screenshotting.
+  const only = new URLSearchParams(location.search).get("slide");
+  if (only !== null) {
+    document.querySelectorAll(".slide").forEach((s) => {
+      s.style.display = s.id === "slide-" + only ? "flex" : "none";
+      s.style.margin = "0";
+    });
+  }
+})();
 </script>
 </body>
 </html>

@@ -12,26 +12,11 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: var(--sans); }
-  .slide {
-    width: 1080px; height: 1350px;
-    background: var(--paper);
-    background-image: radial-gradient(ellipse 1400px 700px at 50% -150px, #fdeed3 0%, var(--paper) 62%);
-    display: flex; flex-direction: column;
-    position: relative; overflow: hidden;
-  }
+  .slide { width: 1080px; height: 1350px; background: var(--paper); background-image: radial-gradient(ellipse 1400px 700px at 50% -150px, #fdeed3 0%, var(--paper) 62%); display: flex; flex-direction: column; position: relative; overflow: hidden; }
   .slide + .slide { margin-top: 40px; }
-  .band {
-    background: var(--palm-deep); color: #f2ecd9;
-    font-family: var(--sans); font-weight: 700; font-size: 26px;
-    letter-spacing: 0.04em; padding: 22px 56px;
-    display: flex; justify-content: space-between;
-  }
+  .band { background: var(--palm-deep); color: #f2ecd9; font-family: var(--sans); font-weight: 700; font-size: 26px; letter-spacing: 0.04em; padding: 22px 56px; display: flex; justify-content: space-between; }
   .pad { padding: 56px 64px; flex: 1; display: flex; flex-direction: column; }
-  .sun {
-    position: absolute; top: -220px; left: 50%; transform: translateX(-50%);
-    width: 620px; height: 620px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(240,168,50,0.30) 0%, rgba(240,168,50,0) 68%);
-  }
+  .sun { position: absolute; top: -220px; left: 50%; transform: translateX(-50%); width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(240,168,50,0.30) 0%, rgba(240,168,50,0) 68%); }
 
   /* cover */
   .cover-mast { text-align: center; margin-top: 50px; }
@@ -47,18 +32,8 @@
   /* restaurant slide */
   .r-photo { position: relative; width: 100%; height: 660px; flex-shrink: 0; overflow: hidden; background: var(--paper-2); }
   .r-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .r-photo-tint {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(29,74,51,0.15) 0%, rgba(29,74,51,0.05) 45%, var(--paper) 100%);
-  }
-  .r-emoji {
-    position: absolute; top: 36px; left: 40px;
-    width: 130px; height: 130px; border-radius: 26px;
-    background: var(--card); border: 4px solid var(--citrus);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 70px; flex-shrink: 0;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-  }
+  .r-photo-tint { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(29,74,51,0.15) 0%, rgba(29,74,51,0.05) 45%, var(--paper) 100%); }
+  .r-emoji { position: absolute; top: 36px; left: 40px; width: 130px; height: 130px; border-radius: 26px; background: var(--card); border: 4px solid var(--citrus); display: flex; align-items: center; justify-content: center; font-size: 70px; flex-shrink: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
   .r-pad { padding-top: 40px; }
   .r-name { font-family: var(--serif); font-weight: 700; font-size: 58px; line-height: 1.05; color: var(--ink); }
   .r-sub { font-size: 26px; font-weight: 700; color: var(--palm); margin-top: 10px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -77,98 +52,88 @@
   .cta-title { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 66px; color: var(--ink); margin-top: 30px; padding: 0 40px; line-height: 1.2; }
   .cta-title em { color: var(--sunset); font-style: italic; }
   .cta-body { text-align: center; font-size: 32px; color: var(--ink-soft); margin-top: 34px; padding: 0 60px; line-height: 1.5; }
-  .cta-prompt {
-    margin-top: 60px; margin-left: 60px; margin-right: 60px;
-    background: var(--palm-deep); color: #f2ecd9; border-radius: 20px; padding: 40px 44px;
-    font-family: var(--serif); font-style: italic; font-size: 34px; text-align: center; line-height: 1.4;
-  }
+  .cta-prompt { margin-top: 60px; margin-left: 60px; margin-right: 60px; background: var(--palm-deep); color: #f2ecd9; border-radius: 20px; padding: 40px 44px; font-family: var(--serif); font-style: italic; font-size: 34px; text-align: center; line-height: 1.4; }
 </style>
 </head>
 <body>
+<script>
+// Data-driven: reads the live data/new-restaurants.json (or data/staged/ with
+// ?preview=staged) so the carousel always matches what the site shows.
+(async () => {
+  const staged = new URLSearchParams(location.search).get("preview") === "staged";
+  const base = staged ? "../data/staged/" : "../data/";
+  const data = await fetch(base + "new-restaurants.json", { cache: "no-store" }).then(r => r.json());
+  const restos = data.restaurants;
 
-  <!-- SLIDE 0: COVER -->
-  <div class="slide" id="slide-0">
+  const cover = document.createElement("div");
+  cover.className = "slide";
+  cover.id = "slide-0";
+  cover.innerHTML = `
     <div class="sun"></div>
     <div class="pad">
       <div class="cover-mast">
         <div class="overline">This Week in El Valle</div>
         <h1>Fresh <em>Plates</em></h1>
       </div>
-      <div class="cover-emoji-row">✨ 🥂 🍣 🍷 🔥 🦋</div>
-      <div class="cover-hook">6 new spots<br>the Valley's<br>talking about</div>
-      <div class="cover-sub">New openings & just-announced restaurants around the RGV →</div>
+      <div class="cover-emoji-row">${restos.map(r => r.emoji).join(" ")}</div>
+      <div class="cover-hook">${restos.length} new spots<br>the Valley's<br>talking about</div>
+      <div class="cover-sub">${data.section_note}</div>
       <div class="cover-footer">Swipe for the lineup · the956.com</div>
     </div>
-  </div>
+  `;
+  document.body.appendChild(cover);
 
-  <!-- SLIDES 1-6: RESTAURANTS -->
-  <div id="restos"></div>
-
-<script>
-const restos = [
-  { name: "AMBRA", city: "McAllen", cuisine: "Steakhouse", status: "Now open", emoji: "✨", photo: "photos/ambra.jpg",
-    blurb: "McAllen's most anticipated opening is officially here — a globally inspired steakhouse and chic lounge already sitting at 4.8 stars. The guava cake and lobster mac are early legends." },
-  { name: "Zaya", city: "McAllen", cuisine: "Eclectic", status: "Now open", emoji: "🥂", photo: "photos/zaya.jpg",
-    blurb: "The newest spot in town and already a go-to for girls' night — dressed-up plates and a lively room." },
-  { name: "Moūsai", city: "McAllen", cuisine: "Sushi", status: "Now open", emoji: "🍣", photo: "photos/mo-sai.jpg",
-    blurb: "A sleek new sushi bar bringing fresh rolls and nigiri to the McAllen dining scene." },
-  { name: "Blu Brasserie", city: "McAllen", cuisine: "Brasserie", status: "Now open", emoji: "🍷", photo: "photos/blu-brasserie.jpg",
-    blurb: "Being called McAllen's new culinary gem — a polished brasserie for date nights and long dinners." },
-  { name: "Brasas", city: "McAllen", cuisine: "Peruvian", status: "Now open", emoji: "🔥", photo: "photos/brasas.jpg",
-    blurb: "Peruvian flavors land in the Valley — think rotisserie-style chicken, lomo saltado and aji verde on everything." },
-  { name: "Hacienda Las Mariposas", city: "RGV", cuisine: "Mexican", status: "Now open", emoji: "🦋", photo: "photos/hacienda-las-mariposas.jpg",
-    blurb: "A new hacienda-style spot earning early buzz as one of the Valley's prettiest new dining rooms." }
-];
-
-const container = document.getElementById("restos");
-restos.forEach((r, i) => {
-  const slide = document.createElement("div");
-  slide.className = "slide";
-  slide.id = "slide-" + (i + 1);
-  const isOpen = r.status === "Now open";
-  slide.innerHTML = `
-    <div class="band"><span>FRESH PLATES</span><span>#${i + 1} OF ${restos.length}</span></div>
-    <div class="r-photo">
-      <img src="${r.photo}" alt="${r.name}">
-      <div class="r-photo-tint"></div>
-      <div class="r-emoji">${r.emoji}</div>
-    </div>
-    <div class="pad r-pad">
-      <div class="r-name">${r.name}</div>
-      <div class="r-sub">📍 ${r.city} · ${r.cuisine}</div>
-      <div class="badge-row"><span class="badge ${isOpen ? "open" : "soon"}">${r.status}</span></div>
-      <div class="r-blurb">${r.blurb}</div>
-      <div class="r-footer">
-        <div class="brand">The <em>956</em></div>
-        <div class="swipe">swipe →</div>
+  restos.forEach((r, i) => {
+    const slide = document.createElement("div");
+    slide.className = "slide";
+    slide.id = "slide-" + (i + 1);
+    const isOpen = r.status === "Now open";
+    const filename = (r.photo || "").split("/").pop();
+    const photoTag = filename
+      ? `<img src="photos/${filename}" alt="${r.name}" onerror="this.remove()">`
+      : "";
+    slide.innerHTML = `
+      <div class="band"><span>FRESH PLATES</span><span>#${i + 1} OF ${restos.length}</span></div>
+      <div class="r-photo">
+        ${photoTag}
+        <div class="r-photo-tint"></div>
+        <div class="r-emoji">${r.emoji}</div>
       </div>
+      <div class="pad r-pad">
+        <div class="r-name">${r.name}</div>
+        <div class="r-sub">📍 ${r.city} · ${r.cuisine}</div>
+        <div class="badge-row"><span class="badge ${isOpen ? "open" : "soon"}">${r.status}</span></div>
+        <div class="r-blurb">${r.blurb}</div>
+        <div class="r-footer">
+          <div class="brand">The <em>956</em></div>
+          <div class="swipe">swipe →</div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(slide);
+  });
+
+  const cta = document.createElement("div");
+  cta.className = "slide";
+  cta.id = "slide-" + (restos.length + 1);
+  cta.innerHTML = `
+    <div class="pad">
+      <div class="cta-icon">🍽️</div>
+      <div class="cta-title">Know a spot<br>we're <em>missing</em>?</div>
+      <div class="cta-body">New restaurant openings around the Valley, every week. Full details and more at the956.com.</div>
+      <div class="cta-prompt">Tell us who just opened near you 👇</div>
     </div>
   `;
-  container.appendChild(slide);
-});
+  document.body.appendChild(cta);
 
-// FINAL SLIDE: CTA
-const cta = document.createElement("div");
-cta.className = "slide";
-cta.id = "slide-" + (restos.length + 1);
-cta.innerHTML = `
-  <div class="pad">
-    <div class="cta-icon">🍽️</div>
-    <div class="cta-title">Know a spot<br>we're <em>missing</em>?</div>
-    <div class="cta-body">New restaurant openings around the Valley, every week. Full details and more at the956.com.</div>
-    <div class="cta-prompt">Tell us who just opened near you 👇</div>
-  </div>
-`;
-document.body.insertBefore(cta, document.currentScript);
-
-// ?slide=N isolates a single slide for clean headless-Chrome screenshotting.
-const only = new URLSearchParams(location.search).get("slide");
-if (only !== null) {
-  document.querySelectorAll(".slide").forEach((s) => {
-    s.style.display = s.id === "slide-" + only ? "flex" : "none";
-    s.style.margin = "0";
-  });
-}
+  const only = new URLSearchParams(location.search).get("slide");
+  if (only !== null) {
+    document.querySelectorAll(".slide").forEach((s) => {
+      s.style.display = s.id === "slide-" + only ? "flex" : "none";
+      s.style.margin = "0";
+    });
+  }
+})();
 </script>
 </body>
 </html>

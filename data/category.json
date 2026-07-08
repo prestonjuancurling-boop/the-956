@@ -7,7 +7,7 @@
   "note_es": "Hace 98° en el Valle — el único ranking que importa ahorita. Medido con el mismo sistema de datos reales que El Ranking.",
   "measuring_note": "Tracking just started — the first ranking drops Monday. The contenders:",
   "measuring_note_es": "Apenas empezamos a medir — el primer ranking sale el lunes. Los contendientes:",
-  "status": "measuring",
+  "status": "ranked",
   "spots": [
     {
       "name": "Fruti Raspas La Isla",
@@ -24,7 +24,8 @@
       "mentions": 7,
       "reddit_mentions": null,
       "review_delta": 1,
-      "rating": 4.6
+      "rating": 4.6,
+      "photo": "fruti-raspas-la-isla.jpg"
     },
     {
       "name": "Young's Sno Wiz",
@@ -42,7 +43,8 @@
       "mentions": 2,
       "reddit_mentions": null,
       "review_delta": 1,
-      "rating": 4.8
+      "rating": 4.8,
+      "photo": "young-s-sno-wiz.jpg"
     },
     {
       "name": "Margo's",
@@ -59,7 +61,8 @@
       "mentions": 0,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 4.5
+      "rating": 4.5,
+      "photo": "margo-s.jpg"
     },
     {
       "name": "Viva La Raspa",
@@ -75,7 +78,8 @@
       "mentions": 0,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 4.6
+      "rating": 4.6,
+      "photo": "viva-la-raspa.jpg"
     },
     {
       "name": "Iced Cube",
@@ -92,7 +96,8 @@
       "mentions": 0,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 3.9
+      "rating": 3.9,
+      "photo": "iced-cube.jpg"
     }
   ],
   "baseline_date": "2026-07-02"

@@ -33,7 +33,8 @@
       "trend": "steady",
       "badges": [
         "new_entry"
-      ]
+      ],
+      "photo": "zaya.jpg"
     },
     {
       "rank": 3,
@@ -48,7 +49,8 @@
       "trend": "steady",
       "badges": [
         "new_entry"
-      ]
+      ],
+      "photo": "blu-brasserie.jpg"
     },
     {
       "rank": 4,
@@ -63,7 +65,8 @@
       "trend": "steady",
       "badges": [
         "new_entry"
-      ]
+      ],
+      "photo": "mo-sai.jpg"
     },
     {
       "rank": 5,
@@ -78,7 +81,8 @@
       "trend": "steady",
       "badges": [
         "new_entry"
-      ]
+      ],
+      "photo": "ambra.jpg"
     }
   ],
   "bubble": [

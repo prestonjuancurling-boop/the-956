@@ -335,40 +335,71 @@ if (existsSync(categoryPath)) {
   writeFileSync(historyPath, JSON.stringify(history, null, 2) + "\n");
 }
 
-// ————— bonus: real photos for the Fresh Plates cards —————
-// Photos are downloaded as local site assets. Never store the API-keyed
-// media URL in a data file — this repo is public and the URL embeds the key.
+// ————— bonus: real photos for Fresh Plates, Power Rankings and the —————
+// ————— monthly category cards. Photos are downloaded as local site  —————
+// ————— assets. Never store the API-keyed media URL in a data file — —————
+// ————— this repo is public and the URL embeds the key.              —————
+//
+// Every downloaded photo is saved under the same filename in BOTH
+// assets/photos/ (the live site) and social/photos/ (Instagram carousel
+// templates, which are data-driven and expect a matching local file) —
+// that keeps the carousels from ever needing a manual photo-copy step.
 
 if (hasPlaces) {
   const { mkdirSync } = await import("node:fs");
-  const photoDir = join(dataDir, "..", "assets", "photos");
-  mkdirSync(photoDir, { recursive: true });
+  const assetsPhotoDir = join(dataDir, "..", "assets", "photos");
+  const socialPhotoDir = join(dataDir, "..", "social", "photos");
+  mkdirSync(assetsPhotoDir, { recursive: true });
+  mkdirSync(socialPhotoDir, { recursive: true });
   const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+  async function fillMissingPhotos(list, queryFor) {
+    let added = 0;
+    for (const item of list) {
+      if (item.photo) continue;
+      const filename = `${slugify(item.name)}.jpg`;
+      const saved = await tryOrNull(`photo for ${item.name}`, async () => {
+        const found = await placesLookup({ name: item.name, places_query: queryFor(item) });
+        if (!found?.photo) return null;
+        const imgRes = await fetch(found.photo);
+        if (!imgRes.ok) throw new Error(`download HTTP ${imgRes.status}`);
+        const bytes = Buffer.from(await imgRes.arrayBuffer());
+        writeFileSync(join(assetsPhotoDir, filename), bytes);
+        writeFileSync(join(socialPhotoDir, filename), bytes);
+        return filename;
+      });
+      if (!saved) continue;
+      item.photo = saved;
+      added++;
+      console.log(`  📷 saved ${saved}`);
+    }
+    return added;
+  }
 
   const restoPath = join(dataDir, "new-restaurants.json");
   const restos = JSON.parse(readFileSync(restoPath, "utf8"));
-  let added = 0;
-  for (const r of restos.restaurants) {
-    if (r.photo) continue;
-    const saved = await tryOrNull(`photo for ${r.name}`, async () => {
-      const found = await placesLookup({
-        name: r.name,
-        places_query: `${r.name} restaurant ${r.city === "RGV" ? "Rio Grande Valley" : r.city} TX`,
-      });
-      if (!found?.photo) return null;
-      const imgRes = await fetch(found.photo);
-      if (!imgRes.ok) throw new Error(`download HTTP ${imgRes.status}`);
-      const rel = `assets/photos/${slugify(r.name)}.jpg`;
-      writeFileSync(join(dataDir, "..", rel), Buffer.from(await imgRes.arrayBuffer()));
-      return rel;
-    });
-    if (!saved) continue;
-    r.photo = saved;
-    added++;
-    console.log(`  📷 saved ${saved}`);
-  }
-  if (added) {
+  const restoAdded = await fillMissingPhotos(restos.restaurants, (r) =>
+    `${r.name} restaurant ${r.city === "RGV" ? "Rio Grande Valley" : r.city} TX`
+  );
+  if (restoAdded) {
     writeFileSync(restoPath, JSON.stringify(restos, null, 2) + "\n");
-    console.log(`✔ Added ${added} restaurant photo(s) to data/new-restaurants.json`);
+    console.log(`✔ Added ${restoAdded} restaurant photo(s) to data/new-restaurants.json`);
+  }
+
+  const topEatsPath = join(dataDir, "top-eats.json");
+  const topEats = JSON.parse(readFileSync(topEatsPath, "utf8"));
+  const topAdded = await fillMissingPhotos(topEats.spots, (s) =>
+    `${s.name} ${s.city === "Valley-wide" ? "Rio Grande Valley" : s.city} TX`
+  );
+  if (topAdded) {
+    writeFileSync(topEatsPath, JSON.stringify(topEats, null, 2) + "\n");
+    console.log(`✔ Added ${topAdded} Power Rankings photo(s) to data/top-eats.json`);
+  }
+
+  const catForPhotos = JSON.parse(readFileSync(categoryPath, "utf8"));
+  const catAdded = await fillMissingPhotos(catForPhotos.spots, (s) => s.places_query);
+  if (catAdded) {
+    writeFileSync(categoryPath, JSON.stringify(catForPhotos, null, 2) + "\n");
+    console.log(`✔ Added ${catAdded} category photo(s) to data/category.json`);
   }
 }

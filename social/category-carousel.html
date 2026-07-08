@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fdf8ee; --paper-2: #f7efdd; --ink: #22301f; --ink-soft: #5a6653;
+    --sunset: #e4582b; --sunset-deep: #c2431c; --citrus: #f0a832;
+    --palm: #2e6e4e; --palm-deep: #1d4a33; --card: #fffdf7; --line: #e4d9c2;
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); }
+  .slide { width: 1080px; height: 1350px; background: var(--paper); background-image: radial-gradient(ellipse 1400px 700px at 50% -150px, #fdeed3 0%, var(--paper) 62%); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+  .slide + .slide { margin-top: 40px; }
+  .band { background: var(--palm-deep); color: #f2ecd9; font-weight: 700; font-size: 26px; letter-spacing: 0.04em; padding: 22px 56px; display: flex; justify-content: space-between; }
+  .pad { padding: 56px 64px; flex: 1; display: flex; flex-direction: column; }
+  .sun { position: absolute; top: -220px; left: 50%; transform: translateX(-50%); width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(240,168,50,0.30) 0%, rgba(240,168,50,0) 68%); }
+
+  /* cover */
+  .cover-mast { text-align: center; margin-top: 40px; }
+  .cover-mast .overline { font-size: 24px; font-weight: 700; letter-spacing: 0.18em; color: var(--sunset); text-transform: uppercase; }
+  .cover-mast h1 { font-family: var(--serif); font-weight: 800; font-size: 100px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); margin-top: 18px; }
+  .cover-mast h1 em { color: var(--sunset); font-style: italic; }
+  .cover-emoji { text-align: center; font-size: 140px; margin-top: 40px; }
+  .cover-hook { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 66px; color: var(--ink); margin-top: 36px; line-height: 1.15; }
+  .cover-hook em { color: var(--sunset); font-style: italic; }
+  .cover-sub { text-align: center; font-size: 32px; color: var(--ink-soft); margin-top: 28px; padding: 0 60px; line-height: 1.45; }
+  .cover-footer { margin-top: auto; text-align: center; padding-bottom: 20px; font-size: 26px; font-weight: 700; color: var(--palm-deep); }
+
+  /* contender/winner slide */
+  .c-photo { position: relative; width: 100%; height: 660px; flex-shrink: 0; overflow: hidden; background: var(--paper-2); }
+  .c-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .c-tint { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(29,74,51,0.15) 0%, rgba(29,74,51,0.05) 45%, var(--paper) 100%); }
+  .q-medal { position: absolute; top: 36px; left: 40px; width: 150px; height: 150px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 900; font-size: 84px; background: var(--card); border: 6px solid var(--citrus); color: var(--citrus); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+  .q-medal.gold { border-color: var(--sunset); color: var(--sunset); }
+  .c-pad { padding-top: 40px; }
+  .c-name { font-family: var(--serif); font-weight: 700; font-size: 58px; line-height: 1.08; color: var(--ink); }
+  .c-city { font-size: 26px; font-weight: 700; color: var(--palm); margin-top: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .c-known { font-family: var(--serif); font-size: 38px; line-height: 1.4; color: var(--ink); margin-top: 36px; }
+  .c-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 26px; border-top: 3px double var(--line); }
+  .c-footer .brand { font-family: var(--serif); font-weight: 800; font-size: 34px; color: var(--ink); }
+  .c-footer .brand em { color: var(--sunset); font-style: italic; }
+  .c-footer .swipe { font-size: 24px; font-weight: 700; color: var(--ink-soft); }
+
+  /* CTA */
+  .cta-emoji { text-align: center; font-size: 130px; margin-top: 70px; }
+  .cta-title { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 66px; color: var(--ink); margin-top: 30px; padding: 0 40px; line-height: 1.18; }
+  .cta-title em { color: var(--sunset); font-style: italic; }
+  .cta-body { text-align: center; font-size: 32px; color: var(--ink-soft); margin-top: 32px; padding: 0 70px; line-height: 1.5; }
+  .cta-prompt { margin: 56px 60px 0; background: var(--palm-deep); color: #f2ecd9; border-radius: 20px; padding: 42px 44px; font-family: var(--serif); font-style: italic; font-size: 34px; text-align: center; line-height: 1.4; }
+</style>
+</head>
+<body>
+<script>
+// Data-driven: reads the live data/category.json. Renders in "teaser" mode
+// (status: measuring — ? medals, no ranks shown) or "reveal" mode (status:
+// ranked — real order + medals) automatically, so the same file serves both
+// the monthly kickoff post and the weekly result post with zero editing.
+(async () => {
+  const cat = await fetch("../data/category.json", { cache: "no-store" }).then(r => r.json());
+  const revealed = cat.status === "ranked";
+  const spots = revealed ? [...cat.spots].sort((a, b) => a.rank - b.rank) : cat.spots;
+
+  const cover = document.createElement("div");
+  cover.className = "slide";
+  cover.id = "slide-0";
+  cover.innerHTML = `
+    <div class="sun"></div>
+    <div class="pad">
+      <div class="cover-mast">
+        <div class="overline">The 956 Micro-Rankings</div>
+        <h1>${cat.title}</h1>
+      </div>
+      <div class="cover-emoji">${revealed ? "👑" : "❓"}</div>
+      <div class="cover-hook">${revealed ? "The results are in.<br><em>Meet the winner.</em>" : `${spots.length} contenders.<br>1 crown.<br><em>Ranking soon.</em>`}</div>
+      <div class="cover-sub">${revealed ? cat.note : (cat.measuring_note || cat.note)}</div>
+      <div class="cover-footer">${revealed ? "See the full order" : "Meet the contenders"} · the956.com</div>
+    </div>
+  `;
+  document.body.appendChild(cover);
+
+  spots.forEach((s, i) => {
+    const slide = document.createElement("div");
+    slide.className = "slide";
+    slide.id = "slide-" + (i + 1);
+    const photoTag = s.photo
+      ? `<img src="photos/${s.photo}" alt="${s.name}" onerror="this.remove()">`
+      : "";
+    const medalLabel = revealed ? s.rank : "?";
+    slide.innerHTML = `
+      <div class="band"><span>${cat.title.toUpperCase()}${revealed ? "" : " · CONTENDER"}</span><span>${revealed ? `#${s.rank} OF ${spots.length}` : `${i + 1} OF ${spots.length}`}</span></div>
+      <div class="c-photo">
+        ${photoTag}
+        <div class="c-tint"></div>
+        <div class="q-medal${revealed && s.rank === 1 ? " gold" : ""}">${medalLabel}</div>
+      </div>
+      <div class="pad c-pad">
+        <div class="c-name">${s.name}</div>
+        <div class="c-city">📍 ${s.display_city || s.city}</div>
+        <div class="c-known">${s.known_for}</div>
+        <div class="c-footer">
+          <div class="brand">The <em>956</em></div>
+          <div class="swipe">swipe →</div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(slide);
+  });
+
+  const cta = document.createElement("div");
+  cta.className = "slide";
+  cta.id = "slide-" + (spots.length + 1);
+  cta.innerHTML = revealed ? `
+    <div class="pad">
+      <div class="cta-emoji">🔄</div>
+      <div class="cta-title">New theme,<br><em>every month</em></div>
+      <div class="cta-body">${cat.title} was this month's micro-ranking, tracked with the same real-data engine as the Power Rankings. A new food category kicks off next month.</div>
+      <div class="cta-prompt">Tell us who should be in next month's lineup 👇</div>
+    </div>
+  ` : `
+    <div class="pad">
+      <div class="cta-emoji">👑</div>
+      <div class="cta-title">Who takes<br>the crown?</div>
+      <div class="cta-body">The ranking is computed from real buzz data — Google review velocity and local chatter. No opinions, no favorites.</div>
+      <div class="cta-prompt">Call your winner in the comments 👇</div>
+    </div>
+  `;
+  document.body.appendChild(cta);
+
+  const only = new URLSearchParams(location.search).get("slide");
+  if (only !== null) {
+    document.querySelectorAll(".slide").forEach((s) => {
+      s.style.display = s.id === "slide-" + only ? "flex" : "none";
+      s.style.margin = "0";
+    });
+  }
+})();
+</script>
+</body>
+</html>
