@@ -13,9 +13,10 @@ name: Update content
 
 on:
   schedule:
-    # The two crons are ~90 minutes apart so the hour disambiguates which run
-    # this is even when GitHub delays cron firing (often 5-40+ minutes).
-    - cron: "30 12 * * *"   # daily 7:30 AM Valley time (CDT) — news only
+    # Single weekly cron. Daily news moved to the desktop scheduled tasks
+    # (no ANTHROPIC_API_KEY secret — the user opted out of metered billing),
+    # so a daily cloud run had nothing left to do and only created chances
+    # to mis-fire (it un-published a ranking on 2026-07-06).
     - cron: "0 11 * * 1"    # Mondays 6:00 AM CDT — rankings + full refresh
   workflow_dispatch:
     inputs:
@@ -46,11 +47,11 @@ jobs:
         # signal and lets a single busy day publish a statistically thin
         # ranking (this happened on 2026-07-03).
         run: |
-          # Run only on the weekly cron (Mondays before 12:00 UTC) or manual
-          # dispatch. The daily 12:30 cron also fires on Mondays — without the
-          # hour check it re-scored 90 minutes after the weekly run with zero
-          # new signal (2026-07-06), which un-published the category ranking.
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || { [ "$(date -u +%u)" = "1" ] && [ "$(date -u +%H)" -lt 12 ]; }; then
+          # The only cron is Monday 11:00 UTC, so any scheduled run is the
+          # weekly run. The day check guards against a stale run being
+          # re-run on a later day, which would consume review deltas
+          # mid-week and re-anchor the baselines.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%u)" = "1" ]; then
             node scripts/compute-buzz.mjs
             node scripts/compute-football.mjs   # offline Elo replay; no-op until season games exist
           else
@@ -77,14 +78,11 @@ jobs:
         if: steps.keycheck.outputs.enabled == 'true'
         id: target
         run: |
-          # Disambiguate by hour, not minute — GitHub cron firing is routinely
-          # delayed by 5-40+ minutes, so a minute-window check misclassifies.
+          # Only one cron remains (Mondays), so every scheduled run is "all".
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "target=${{ inputs.target }}" >> "$GITHUB_OUTPUT"
-          elif [ "$(date -u +%u)" = "1" ] && [ "$(date -u +%H)" -lt 12 ]; then
-            echo "target=all" >> "$GITHUB_OUTPUT"
           else
-            echo "target=news" >> "$GITHUB_OUTPUT"
+            echo "target=all" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Update content
@@ -97,7 +95,11 @@ jobs:
         run: |
           git config user.name "the-956-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/
+          # data/ + both photo dirs: compute-buzz downloads photos into
+          # assets/photos/ (site) and social/photos/ (carousels); committing
+          # only data/ would strand the JSON pointing at files that were
+          # thrown away with the runner.
+          git add data/ assets/photos/ social/photos/
           git diff --cached --quiet && echo "No content changes." && exit 0
           git commit -m "Auto-update content ($(date -u +%Y-%m-%d))"
           git push

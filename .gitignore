@@ -2,6 +2,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Generated social-post images and downloaded post photos (not site assets)
+# Generated social-post images (rendered PNGs, large and reproducible)
 social/output/
-social/photos/
+# social/photos/ IS tracked: the Monday cloud run downloads carousel photos
+# there, and the desktop Monday-publish task needs them via git pull.
