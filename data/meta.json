@@ -2,20 +2,20 @@
   "site_name": "The 956",
   "tagline": "El Valle's weekly digest",
   "tagline_es": "El resumen semanal del Valle",
-  "week_of": "July 6 – 12, 2026",
-  "week_of_es": "6 al 12 de julio, 2026",
-  "edition": "Vol. 1 · No. 2",
-  "generated_at": "2026-07-06T19:45:00-05:00",
+  "week_of": "July 13 – 19, 2026",
+  "week_of_es": "13 al 19 de julio, 2026",
+  "edition": "Vol. 1 · No. 3",
+  "generated_at": "2026-07-13T16:33:00-05:00",
   "ticker": [
-    "🎤 Grupo Frontera comes home — Bert Ogden Arena, July 16–17",
-    "🍧 The first-ever 956 Raspa Rankings are live now — Fruti Raspas La Isla takes #1",
-    "🎆 SPI fireworks every Friday night, all summer",
-    "🌽 McAllen Farmers Market — Saturdays 10 to 1"
+    "🎤 Grupo Frontera's hometown shows are finally here — Bert Ogden Arena, July 16–17",
+    "🎸 Los Profugos De Nuevo Leon plays the McAllen PAC, Saturday July 18",
+    "🌅 Downtown at Sundown returns to Harlingen's Lozano Plaza, July 18",
+    "🎆 SPI fireworks light up the bay every Friday night, all summer long"
   ],
   "ticker_es": [
-    "🎤 Grupo Frontera vuelve a casa — Bert Ogden Arena, 16 y 17 de julio",
-    "🍧 Ya está el primer Raspa Ranking del 956 — Fruti Raspas La Isla en el #1",
-    "🎆 Fuegos artificiales en SPI todos los viernes del verano",
-    "🌽 Farmers Market de McAllen — sábados de 10 a 1"
+    "🎤 Por fin llegan los shows de Grupo Frontera en casa — Bert Ogden Arena, 16 y 17 de julio",
+    "🎸 Los Prófugos De Nuevo León tocan en el McAllen PAC, sábado 18 de julio",
+    "🌅 Downtown at Sundown regresa a la Plaza Lozano de Harlingen, 18 de julio",
+    "🎆 Fuegos artificiales en SPI todos los viernes del verano"
   ]
 }
