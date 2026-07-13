@@ -1,98 +1,98 @@
 {
   "Delia's Tamales": {
-    "reviewCount": 4134,
+    "reviewCount": 4139,
     "rating": 4.6,
-    "ema": 0.48376117126872203,
-    "date": "2026-07-06"
+    "ema": 3.215185006509085,
+    "date": "2026-07-13"
   },
   "Vera's Backyard Bar-B-Que": {
     "reviewCount": 388,
     "rating": 4.5,
     "ema": 0,
-    "date": "2026-07-06"
+    "date": "2026-07-13"
   },
   "Los Compadres": {
     "reviewCount": 21,
     "rating": 4.6,
     "ema": 0,
-    "date": "2026-07-06"
+    "date": "2026-07-13"
   },
   "Casa De Mariscos": {
-    "reviewCount": 3739,
+    "reviewCount": 3741,
     "rating": 4.6,
-    "ema": 0.5086727944050599,
-    "date": "2026-07-06"
+    "ema": 1.474811127298604,
+    "date": "2026-07-13"
   },
   "El Pato Mexican Food": {
     "reviewCount": 1138,
     "rating": 4.3,
-    "ema": 0.06966449856729531,
-    "date": "2026-07-06"
+    "ema": 0.027865799426918126,
+    "date": "2026-07-13"
   },
   "Taco Palenque": {
-    "reviewCount": 5179,
+    "reviewCount": 5186,
     "rating": 4.4,
-    "ema": 139.98181136400856,
-    "date": "2026-07-06"
+    "ema": 59.63202258821575,
+    "date": "2026-07-13"
   },
   "Zaya": {
-    "reviewCount": 176,
+    "reviewCount": 177,
     "rating": 4.8,
-    "ema": 5.835329958420206,
-    "date": "2026-07-06"
+    "ema": 5.97089612525697,
+    "date": "2026-07-13"
   },
   "Moūsai": {
-    "reviewCount": 1021,
+    "reviewCount": 1035,
     "rating": 4.8,
-    "ema": 4.531547189631403,
-    "date": "2026-07-06"
+    "ema": 22.867831442072248,
+    "date": "2026-07-13"
   },
   "Blu Brasserie": {
     "reviewCount": 96,
     "rating": 4.9,
-    "ema": 5.925805585741066,
-    "date": "2026-07-06"
+    "ema": 2.3703222342964265,
+    "date": "2026-07-13"
   },
   "Brasas": {
-    "reviewCount": 166,
+    "reviewCount": 168,
     "rating": 4.8,
-    "ema": 1.5021306814310078,
-    "date": "2026-07-06"
+    "ema": 8.066665557138256,
+    "date": "2026-07-13"
   },
   "cat:Young's Sno Wiz": {
-    "reviewCount": 514,
+    "reviewCount": 516,
     "rating": 4.8,
-    "ema": 0.7113755841957771,
-    "date": "2026-07-06"
+    "ema": 3.834528287983225,
+    "date": "2026-07-13"
   },
   "cat:Margo's": {
-    "reviewCount": 464,
+    "reviewCount": 463,
     "rating": 4.5,
     "ema": 0,
-    "date": "2026-07-06"
+    "date": "2026-07-13"
   },
   "cat:Viva La Raspa": {
     "reviewCount": 25,
     "rating": 4.6,
     "ema": 0,
-    "date": "2026-07-06"
+    "date": "2026-07-13"
   },
   "cat:Iced Cube": {
     "reviewCount": 65,
     "rating": 3.9,
     "ema": 0,
-    "date": "2026-07-06"
+    "date": "2026-07-13"
   },
   "cat:Fruti Raspas La Isla": {
     "reviewCount": 29,
     "rating": 4.6,
-    "ema": 2.8393937381067804,
-    "date": "2026-07-06"
+    "ema": 1.1357574952427123,
+    "date": "2026-07-13"
   },
   "AMBRA": {
-    "reviewCount": 2343,
+    "reviewCount": 2360,
     "rating": 4.8,
-    "ema": 1.9991511028139421,
-    "date": "2026-07-06"
+    "ema": 14.90921955206468,
+    "date": "2026-07-13"
   }
 }

@@ -10,24 +10,6 @@
   "status": "ranked",
   "spots": [
     {
-      "name": "Fruti Raspas La Isla",
-      "aliases": [
-        "fruti raspas",
-        "la isla raspas"
-      ],
-      "city": "McAllen",
-      "display_city": "McAllen",
-      "known_for": "Fruteria-style raspas piled with fresh fruit, chamoy and everything on it",
-      "known_for_es": "Raspas estilo frutería con fruta fresca, chamoy y de todo encima",
-      "places_query": "Fruti Raspas La Isla McAllen TX",
-      "rank": 1,
-      "mentions": 7,
-      "reddit_mentions": null,
-      "review_delta": 1,
-      "rating": 4.6,
-      "photo": "fruti-raspas-la-isla.jpg"
-    },
-    {
       "name": "Young's Sno Wiz",
       "aliases": [
         "young's",
@@ -39,12 +21,30 @@
       "known_for": "The McAllen institution locals swear has the best raspas in the Valley",
       "known_for_es": "La institución de McAllen que según los locales tiene las mejores raspas del Valle",
       "places_query": "Young's Sno Wiz McAllen TX",
-      "rank": 2,
-      "mentions": 2,
+      "rank": 1,
+      "mentions": 4,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 2,
       "rating": 4.8,
       "photo": "young-s-sno-wiz.jpg"
+    },
+    {
+      "name": "Fruti Raspas La Isla",
+      "aliases": [
+        "fruti raspas",
+        "la isla raspas"
+      ],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "Fruteria-style raspas piled with fresh fruit, chamoy and everything on it",
+      "known_for_es": "Raspas estilo frutería con fruta fresca, chamoy y de todo encima",
+      "places_query": "Fruti Raspas La Isla McAllen TX",
+      "rank": 2,
+      "mentions": 1,
+      "reddit_mentions": null,
+      "review_delta": 0,
+      "rating": 4.6,
+      "photo": "fruti-raspas-la-isla.jpg"
     },
     {
       "name": "Margo's",
