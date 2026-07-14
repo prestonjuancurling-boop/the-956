@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>The 956 — Mission Control</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fdf8ee; --paper-2: #f7efdd; --ink: #22301f; --ink-soft: #5a6653;
+    --sunset: #e4582b; --sunset-deep: #c2431c; --citrus: #f0a832;
+    --palm: #2e6e4e; --palm-deep: #1d4a33; --card: #fffdf7; --line: #e4d9c2;
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); padding-bottom: 80px; }
+
+  header { background: var(--palm-deep); color: #f2ecd9; padding: 22px 32px; display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+  header h1 { font-family: var(--serif); font-size: 28px; font-weight: 800; }
+  header h1 em { color: var(--citrus); font-style: italic; }
+  header .sub { font-size: 14px; opacity: 0.85; }
+  header a { color: var(--citrus); }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 24px 0; }
+
+  .live-bar { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+  .live-chip { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 18px; }
+  .live-chip .k { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+  .live-chip .v { font-family: var(--serif); font-size: 18px; font-weight: 700; margin-top: 2px; }
+  .live-chip .v.accent { color: var(--sunset); }
+
+  h2.section { font-family: var(--serif); font-size: 26px; font-weight: 800; margin: 34px 0 6px; }
+  h2.section em { color: var(--sunset); font-style: italic; }
+  .section-sub { color: var(--ink-soft); font-size: 14px; margin-bottom: 16px; }
+
+  .week-block { margin-bottom: 10px; }
+  .week-head { display: flex; align-items: baseline; gap: 12px; margin: 22px 0 12px; }
+  .week-head .date { font-family: var(--serif); font-size: 20px; font-weight: 700; }
+  .week-head .badge { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; }
+  .badge.current { background: #eaf3ec; color: var(--palm-deep); border: 1px solid #cde3d4; }
+  .badge.old { background: var(--paper-2); color: var(--ink-soft); border: 1px solid var(--line); }
+
+  .post-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin-bottom: 18px; }
+  .post-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .post-title { font-family: var(--serif); font-size: 20px; font-weight: 700; }
+  .day-chip { font-size: 12px; font-weight: 800; padding: 5px 14px; border-radius: 999px; background: var(--sunset); color: #fff; }
+  .day-chip.wed { background: var(--palm); }
+  .day-chip.fri { background: var(--citrus); color: var(--ink); }
+  .day-chip.bonus { background: var(--paper-2); color: var(--ink-soft); border: 1px solid var(--line); }
+  .count { font-size: 13px; color: var(--ink-soft); }
+
+  .strip { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; }
+  .strip a { flex-shrink: 0; }
+  .strip img { height: 210px; border-radius: 10px; border: 1px solid var(--line); display: block; }
+  .strip img:hover { outline: 3px solid var(--citrus); }
+
+  .caption-box { margin-top: 14px; background: var(--paper-2); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; position: relative; }
+  .caption-box .cap-label { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; }
+  .caption-box pre { font-family: var(--sans); font-size: 14px; line-height: 1.55; white-space: pre-wrap; }
+  .caption-box .none { color: var(--ink-soft); font-style: italic; font-size: 14px; }
+  .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--palm-deep); color: #f2ecd9; border: none; border-radius: 8px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; }
+  .copy-btn:active { background: var(--sunset); }
+
+  .site-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+  .site-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+  .site-card h3 { font-family: var(--serif); font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+  .site-card h3 .tag { font-size: 11px; font-weight: 800; color: var(--ink-soft); letter-spacing: 0.06em; margin-left: 6px; }
+  .row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--line); font-size: 14px; align-items: baseline; }
+  .row:last-child { border-bottom: none; }
+  .row .n { font-family: var(--serif); font-weight: 800; color: var(--sunset); min-width: 20px; }
+  .row .meta { color: var(--ink-soft); font-size: 12px; margin-left: auto; text-align: right; flex-shrink: 0; }
+
+  .cadence { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+  .cad { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 18px; font-size: 14px; }
+  .cad b { font-family: var(--serif); }
+
+  .empty { color: var(--ink-soft); font-style: italic; padding: 18px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>The <em>956</em> · Mission Control</h1>
+  <div class="sub">Everything queued to post — slides, captions, and what's live at <a href="https://the956.com" target="_blank">the956.com</a></div>
+</header>
+
+<div class="wrap">
+  <h2 class="section">Live on the <em>website</em> right now</h2>
+  <div class="live-bar" id="liveBar"><div class="empty">Loading…</div></div>
+  <div class="site-grid" id="siteGrid"></div>
+
+  <h2 class="section">Posting <em>cadence</em></h2>
+  <div class="cadence">
+    <div class="cad">🗓️ <b>Monday</b> — Big 5 (this week's events)</div>
+    <div class="cad">📊 <b>Wednesday</b> — Power Rankings</div>
+    <div class="cad">🍧 <b>Friday</b> — Monthly category ranking</div>
+    <div class="cad">✨ <b>Bonus</b> — Fresh Plates (only when a new spot opens)</div>
+  </div>
+
+  <h2 class="section">Post <em>queue</em></h2>
+  <div class="section-sub">Newest week first. Click any slide to view it full size. Captions load from captions.md in each week's folder.</div>
+  <div id="queue"><div class="empty">Loading…</div></div>
+</div>
+
+<script>
+const POST_TYPES = [
+  { prefix: "3", name: "The Big 5", chip: "Monday", chipClass: "" },
+  { prefix: "1", name: "Power Rankings", chip: "Wednesday", chipClass: "wed" },
+  { prefix: "4", name: "Monthly Category", chip: "Friday", chipClass: "fri" },
+  { prefix: "2", name: "Fresh Plates", chip: "Bonus", chipClass: "bonus" },
+];
+
+async function listDir(path) {
+  // python -m http.server serves an HTML index; parse its links.
+  const res = await fetch(path, { cache: "no-store" });
+  if (!res.ok) return [];
+  const html = await res.text();
+  return [...html.matchAll(/href="([^"]+)"/g)].map((m) => decodeURIComponent(m[1]));
+}
+
+function t(obj, key) { return obj[key] ?? ""; }
+
+async function loadLive() {
+  try {
+    const [meta, events, eats, cat] = await Promise.all([
+      fetch("../data/meta.json", { cache: "no-store" }).then((r) => r.json()),
+      fetch("../data/events.json", { cache: "no-store" }).then((r) => r.json()),
+      fetch("../data/top-eats.json", { cache: "no-store" }).then((r) => r.json()),
+      fetch("../data/category.json", { cache: "no-store" }).then((r) => r.json()).catch(() => null),
+    ]);
+
+    document.getElementById("liveBar").innerHTML = `
+      <div class="live-chip"><div class="k">Edition</div><div class="v">${meta.edition}</div></div>
+      <div class="live-chip"><div class="k">Week</div><div class="v accent">${meta.week_of}</div></div>
+      <div class="live-chip"><div class="k">Last updated</div><div class="v">${new Date(meta.generated_at).toLocaleString()}</div></div>
+    `;
+
+    const big5 = events.events.map((e) =>
+      `<div class="row"><span class="n">${e.rank}</span><span>${e.title}</span><span class="meta">${e.city} · ${e.date}</span></div>`).join("");
+    const eats5 = eats.spots.map((s) =>
+      `<div class="row"><span class="n">${s.rank}</span><span>${s.name}</span><span class="meta">${s.city}${s.review_delta ? ` · +${s.review_delta} reviews` : ""}</span></div>`).join("");
+    let catCard = "";
+    if (cat) {
+      const spots = [...cat.spots].sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99));
+      catCard = `<div class="site-card"><h3>${cat.title}<span class="tag">${cat.status === "ranked" ? "RANKED" : "MEASURING"}</span></h3>` +
+        spots.map((s) => `<div class="row"><span class="n">${cat.status === "ranked" ? s.rank : "?"}</span><span>${s.name}</span><span class="meta">${s.display_city || s.city}</span></div>`).join("") + `</div>`;
+    }
+
+    document.getElementById("siteGrid").innerHTML = `
+      <div class="site-card"><h3>The Big 5</h3>${big5}</div>
+      <div class="site-card"><h3>Power Rankings</h3>${eats5}</div>
+      ${catCard}
+    `;
+  } catch (e) {
+    document.getElementById("liveBar").innerHTML = `<div class="empty">Couldn't load site data: ${e.message}</div>`;
+  }
+}
+
+function parseCaptions(md) {
+  // Format: "## <file-prefix-or-name>" heading followed by the caption text.
+  const sections = {};
+  let current = null;
+  for (const line of md.split(/\r?\n/)) {
+    const h = line.match(/^##\s+(.+)$/);
+    if (h) { current = h[1].trim(); sections[current] = []; continue; }
+    if (current) sections[current].push(line);
+  }
+  for (const k of Object.keys(sections)) sections[k] = sections[k].join("\n").trim();
+  return sections;
+}
+
+function captionFor(sections, typePrefix) {
+  for (const [key, text] of Object.entries(sections)) {
+    if (key.startsWith(typePrefix) || (typePrefix === "3" && /big\s*5|big5/i.test(key)) ||
+        (typePrefix === "1" && /rank/i.test(key)) || (typePrefix === "4" && /categor|raspa|taco/i.test(key)) ||
+        (typePrefix === "2" && /fresh/i.test(key))) {
+      if (text) return text;
+    }
+  }
+  return null;
+}
+
+async function loadQueue() {
+  const entries = await listDir("output/");
+  const weeks = entries.filter((h) => /^\d{4}-\d{2}-\d{2}\/$/.test(h)).map((h) => h.replace("/", "")).sort().reverse();
+  const queue = document.getElementById("queue");
+  if (!weeks.length) { queue.innerHTML = `<div class="empty">No dated post folders found in social/output/.</div>`; return; }
+
+  let html = "";
+  for (const [i, week] of weeks.entries()) {
+    const files = (await listDir(`output/${week}/`)).filter((f) => f.endsWith(".png"));
+    let captions = {};
+    try {
+      const capRes = await fetch(`output/${week}/captions.md`, { cache: "no-store" });
+      if (capRes.ok) captions = parseCaptions(await capRes.text());
+    } catch {}
+
+    html += `<div class="week-block"><div class="week-head"><span class="date">Week of ${week}</span><span class="badge ${i === 0 ? "current" : "old"}">${i === 0 ? "Current" : "Archive"}</span></div>`;
+
+    for (const type of POST_TYPES) {
+      const slides = files.filter((f) => f.startsWith(type.prefix)).sort();
+      if (!slides.length) continue;
+      const cap = captionFor(captions, type.prefix);
+      const capId = `cap-${week}-${type.prefix}`;
+      html += `
+        <div class="post-card">
+          <div class="post-head">
+            <span class="post-title">${type.name}</span>
+            <span class="day-chip ${type.chipClass}">${type.chip}</span>
+            <span class="count">${slides.length} slides</span>
+          </div>
+          <div class="strip">${slides.map((s) => `<a href="output/${week}/${s}" target="_blank"><img loading="lazy" src="output/${week}/${s}" alt="${s}"></a>`).join("")}</div>
+          <div class="caption-box">
+            <div class="cap-label">Caption</div>
+            ${cap ? `<pre id="${capId}">${cap.replace(/</g, "&lt;")}</pre><button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('${capId}').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1200)})">Copy</button>`
+                 : `<div class="none">No caption saved for this post yet (captions.md missing or has no matching section).</div>`}
+          </div>
+        </div>`;
+    }
+    html += `</div>`;
+  }
+  queue.innerHTML = html;
+}
+
+loadLive();
+loadQueue();
+</script>
+</body>
+</html>
