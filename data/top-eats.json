@@ -10,60 +10,58 @@
       "city": "Valley-wide",
       "known_for": "The border's beloved 24/7 taco institution — pirata tacos and salsa bar supremacy",
       "known_for_es": "La institución taquera 24/7 de la frontera — tacos pirata y la mejor barra de salsas",
-      "mentions": 60,
+      "mentions": 29,
       "reddit_mentions": null,
-      "review_delta": 7,
+      "review_delta": 10,
       "rating": 4.4,
       "trend": "steady",
       "badges": [],
-      "streak_weeks": 2,
+      "streak_weeks": 3,
       "photo": "taco-palenque.jpg"
     },
     {
       "rank": 2,
-      "name": "Moūsai",
-      "city": "McAllen",
-      "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
-      "known_for_es": "El nuevo sushi bar elegante que trae rollos frescos y nigiri a McAllen",
-      "mentions": 23,
-      "reddit_mentions": null,
-      "review_delta": 14,
-      "rating": 4.8,
-      "trend": "up",
-      "badges": [
-        "biggest_mover"
-      ],
-      "photo": "mo-sai.jpg"
-    },
-    {
-      "rank": 3,
       "name": "AMBRA",
       "city": "McAllen",
       "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
       "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 15,
+      "mentions": 13,
       "reddit_mentions": null,
-      "review_delta": 17,
+      "review_delta": 8,
       "rating": 4.8,
       "trend": "up",
       "badges": [],
       "photo": "ambra.jpg"
     },
     {
-      "rank": 4,
-      "name": "Brasas",
+      "rank": 3,
+      "name": "Moūsai",
       "city": "McAllen",
-      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
-      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
-      "mentions": 8,
+      "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
+      "known_for_es": "El nuevo sushi bar elegante que trae rollos frescos y nigiri a McAllen",
+      "mentions": 11,
+      "reddit_mentions": null,
+      "review_delta": 1,
+      "rating": 4.8,
+      "trend": "down",
+      "badges": [],
+      "photo": "mo-sai.jpg"
+    },
+    {
+      "rank": 4,
+      "name": "Blu Brasserie",
+      "city": "McAllen",
+      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
+      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
+      "mentions": 11,
       "reddit_mentions": null,
       "review_delta": 2,
-      "rating": 4.8,
+      "rating": 4.9,
       "trend": "steady",
       "badges": [
         "new_entry"
       ],
-      "photo": "brasas.jpg"
+      "photo": "blu-brasserie.jpg"
     },
     {
       "rank": 5,
@@ -71,23 +69,23 @@
       "city": "McAllen",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
       "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 6,
+      "mentions": 10,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 2,
       "rating": 4.8,
-      "trend": "down",
+      "trend": "steady",
       "badges": [],
       "photo": "zaya.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "Delia's Tamales",
-      "city": "San Juan + 6 Valley locations"
+      "name": "Brasas",
+      "city": "McAllen"
     },
     {
-      "name": "Blu Brasserie",
-      "city": "McAllen"
+      "name": "Delia's Tamales",
+      "city": "San Juan + 6 Valley locations"
     },
     {
       "name": "Casa De Mariscos",

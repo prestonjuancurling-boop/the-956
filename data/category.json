@@ -22,29 +22,11 @@
       "known_for_es": "La institución de McAllen que según los locales tiene las mejores raspas del Valle",
       "places_query": "Young's Sno Wiz McAllen TX",
       "rank": 1,
-      "mentions": 4,
+      "mentions": 5,
       "reddit_mentions": null,
       "review_delta": 2,
       "rating": 4.8,
       "photo": "young-s-sno-wiz.jpg"
-    },
-    {
-      "name": "Fruti Raspas La Isla",
-      "aliases": [
-        "fruti raspas",
-        "la isla raspas"
-      ],
-      "city": "McAllen",
-      "display_city": "McAllen",
-      "known_for": "Fruteria-style raspas piled with fresh fruit, chamoy and everything on it",
-      "known_for_es": "Raspas estilo frutería con fruta fresca, chamoy y de todo encima",
-      "places_query": "Fruti Raspas La Isla McAllen TX",
-      "rank": 2,
-      "mentions": 1,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.6,
-      "photo": "fruti-raspas-la-isla.jpg"
     },
     {
       "name": "Margo's",
@@ -57,12 +39,30 @@
       "known_for": "60+ combinations with homemade syrups — home of the legendary mangonada",
       "known_for_es": "Más de 60 combinaciones con jarabes caseros — la casa de la legendaria mangonada",
       "places_query": "Margo's raspas Rio Grande Valley TX",
+      "rank": 2,
+      "mentions": 4,
+      "reddit_mentions": null,
+      "review_delta": 2,
+      "rating": 4.5,
+      "photo": "margo-s.jpg"
+    },
+    {
+      "name": "Fruti Raspas La Isla",
+      "aliases": [
+        "fruti raspas",
+        "la isla raspas"
+      ],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "Fruteria-style raspas piled with fresh fruit, chamoy and everything on it",
+      "known_for_es": "Raspas estilo frutería con fruta fresca, chamoy y de todo encima",
+      "places_query": "Fruti Raspas La Isla McAllen TX",
       "rank": 3,
       "mentions": 0,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 4.5,
-      "photo": "margo-s.jpg"
+      "rating": 4.6,
+      "photo": "fruti-raspas-la-isla.jpg"
     },
     {
       "name": "Viva La Raspa",
