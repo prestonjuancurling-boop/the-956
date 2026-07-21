@@ -300,6 +300,9 @@ if (totalSignal < MIN_SIGNAL) {
         review_delta: r.reviewDelta,
         rating: r.rating,
         trend: was == null ? "steady" : was > rank ? "up" : was < rank ? "down" : "steady",
+        // Signed places moved since last week (null = wasn't ranked last week).
+        // Drives the "▲2" movement chips on the site and carousels.
+        moved: was == null ? null : was - rank,
         badges,
       };
       if (rank === 1) {
@@ -356,10 +359,14 @@ if (existsSync(categoryPath)) {
   // Publish only after a real measuring window, so one stray review on day
   // one can't crown a winner before the announced reveal.
   if (catSignal > 0 && daysMeasured >= 3) {
+    const prevCatRanks = Object.fromEntries(
+      (cat.spots ?? []).filter((s) => s.rank != null).map((s) => [s.name, s.rank])
+    );
     catResults.sort((a, b) => b.score - a.score);
     cat.status = "ranked";
     cat.spots = catResults.map((r, i) => {
       const rank = i + 1;
+      const was = prevCatRanks[r.spot.name];
       const entry = {
         ...r.spot,
         rank,
@@ -367,9 +374,14 @@ if (existsSync(categoryPath)) {
         reddit_mentions: r.reddit,
         review_delta: r.delta,
         rating: r.rating,
+        moved: was == null ? null : was - rank,
       };
       if (rank === 1) {
         entry.streak_weeks = prevCatChampName === r.spot.name ? prevCatChampStreak + 1 : 1;
+      } else {
+        // ...r.spot spreads last week's fields; a dethroned champ must not
+        // keep a stale streak_weeks on its new, lower-ranked entry.
+        delete entry.streak_weeks;
       }
       return entry;
     });

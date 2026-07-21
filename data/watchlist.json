@@ -1,61 +1,7 @@
 {
-  "comment": "Candidate pool for the Power Rankings. compute-buzz.mjs measures each spot's Reddit mentions and Google review velocity, then ranks the top 5. Add or remove spots freely — aliases are the search terms used for Reddit matching. Optional `opened` (YYYY-MM, approximate is fine) gives recently opened spots a newcomer boost: ×1.2 under 4 months, ×1.1 under 8. `known_for_es` is the Spanish blurb shown when the site is toggled to español.",
+  "comment": "Candidate pool for the Power Rankings — current contenders only; permanent institutions live in classics.json (hall of fame, not scored). compute-buzz.mjs measures each spot's Reddit mentions and Google review velocity, then ranks the top 5. Add or remove spots freely — aliases are the search terms used for Reddit matching. Optional `opened` (YYYY-MM, approximate is fine) gives recently opened spots a newcomer boost: ×1.2 under 4 months, ×1.1 under 8. `known_for_es` is the Spanish blurb shown when the site is toggled to español. Expanded to ~29 spots across every Valley city on 2026-07-20 (sources: Yelp/TripAdvisor/RestaurantJi city lists + local coverage); audience nominations via IG DM get added here after verifying the spot exists.",
   "subreddit": "RioGrandeValley",
   "spots": [
-    {
-      "name": "Delia's Tamales",
-      "aliases": ["delia's", "delias"],
-      "city": "San Juan",
-      "display_city": "San Juan + 6 Valley locations",
-      "known_for": "18 kinds of handmade tamales — a Valley institution since 1998, now famous statewide",
-      "known_for_es": "18 tipos de tamales hechos a mano — una institución del Valle desde 1998, ahora famosa en todo Texas",
-      "places_query": "Delia's Tamales San Juan TX"
-    },
-    {
-      "name": "Vera's Backyard Bar-B-Que",
-      "aliases": ["vera's", "veras barbacoa", "vera's backyard"],
-      "city": "Brownsville",
-      "display_city": "Brownsville",
-      "known_for": "The last true pit-smoked barbacoa de cabeza in Texas — a James Beard \"America's Classic\"",
-      "known_for_es": "La última barbacoa de cabeza en pozo de todo Texas — un \"America's Classic\" de la Fundación James Beard",
-      "places_query": "Vera's Backyard Bar-B-Que Brownsville TX"
-    },
-    {
-      "name": "Los Compadres",
-      "aliases": ["los compadres"],
-      "city": "RGV",
-      "display_city": "RGV",
-      "known_for": "Legendary Mexican breakfast & lunch buffet — menudo, pozole, barbacoa, nopalitos",
-      "known_for_es": "El legendario buffet mexicano de desayuno y comida — menudo, pozole, barbacoa, nopalitos",
-      "places_query": "Los Compadres restaurant Rio Grande Valley TX"
-    },
-    {
-      "name": "Casa De Mariscos",
-      "aliases": ["casa de mariscos"],
-      "city": "Weslaco",
-      "display_city": "Weslaco",
-      "known_for": "Seafood botanas piled with fried shrimp, stuffed crab and oysters",
-      "known_for_es": "Botanas de mariscos con camarón frito, jaibas rellenas y ostiones",
-      "places_query": "Casa De Mariscos Weslaco TX"
-    },
-    {
-      "name": "El Pato Mexican Food",
-      "aliases": ["el pato"],
-      "city": "McAllen",
-      "display_city": "Valley-wide",
-      "known_for": "The homegrown patos chain — soft, griddled and open since the '70s",
-      "known_for_es": "La cadena de patos del Valle — suavecitos, doraditos y abiertos desde los 70s",
-      "places_query": "El Pato Mexican Food McAllen TX"
-    },
-    {
-      "name": "Taco Palenque",
-      "aliases": ["taco palenque", "palenque"],
-      "city": "McAllen",
-      "display_city": "Valley-wide",
-      "known_for": "The border's beloved 24/7 taco institution — pirata tacos and salsa bar supremacy",
-      "known_for_es": "La institución taquera 24/7 de la frontera — tacos pirata y la mejor barra de salsas",
-      "places_query": "Taco Palenque McAllen TX"
-    },
     {
       "name": "Zaya",
       "aliases": ["zaya"],
@@ -104,6 +50,223 @@
       "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
       "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
       "places_query": "Brasas Peruvian McAllen TX"
+    },
+    {
+      "name": "Hacienda Las Mariposas",
+      "aliases": ["hacienda las mariposas", "las mariposas"],
+      "city": "RGV",
+      "display_city": "RGV",
+      "opened": "2026-06",
+      "known_for": "The hacienda-style newcomer with one of the Valley's prettiest dining rooms",
+      "known_for_es": "El nuevo lugar estilo hacienda con uno de los comedores más bonitos del Valle",
+      "places_query": "Hacienda Las Mariposas restaurant Rio Grande Valley TX"
+    },
+    {
+      "name": "Republic of the Rio Grande",
+      "aliases": ["republic of the rio grande", "republic rgv"],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "Border-cuisine grill and cantina — a McAllen date-night staple",
+      "known_for_es": "Cocina fronteriza y cantina — un clásico de McAllen para salir a cenar",
+      "places_query": "Republic of the Rio Grande McAllen TX"
+    },
+    {
+      "name": "Taqueria Sheko's",
+      "aliases": ["sheko's", "shekos", "taqueria shekos"],
+      "city": "Brownsville",
+      "display_city": "Brownsville",
+      "known_for": "Suadero and molleja tacos that Brownsville swears by",
+      "known_for_es": "Tacos de suadero y molleja que Brownsville defiende con todo",
+      "places_query": "Taqueria Sheko's Brownsville TX"
+    },
+    {
+      "name": "Chilmoli Mexican Steakhouse",
+      "aliases": ["chilmoli"],
+      "city": "Brownsville",
+      "display_city": "Brownsville",
+      "known_for": "Brownsville's Mexican steakhouse — top-ranked in town",
+      "known_for_es": "El steakhouse mexicano de Brownsville — de lo mejor de la ciudad",
+      "places_query": "Chilmoli Mexican Steakhouse Brownsville TX"
+    },
+    {
+      "name": "Madeira",
+      "aliases": ["madeira restaurant"],
+      "city": "Brownsville",
+      "display_city": "Brownsville",
+      "known_for": "One of Brownsville's most talked-about dining rooms",
+      "known_for_es": "Uno de los restaurantes más comentados de Brownsville",
+      "places_query": "Madeira restaurant Brownsville TX"
+    },
+    {
+      "name": "Cayuco Seafood & Grill",
+      "aliases": ["cayuco"],
+      "city": "Brownsville",
+      "display_city": "Brownsville",
+      "known_for": "Seafood and grill plates earning Brownsville's buzz",
+      "known_for_es": "Mariscos y parrilla que traen a Brownsville hablando",
+      "places_query": "Cayuco Seafood Grill Brownsville TX"
+    },
+    {
+      "name": "Dirty Al's",
+      "aliases": ["dirty al's", "dirty als"],
+      "city": "South Padre Island",
+      "display_city": "SPI + Brownsville",
+      "known_for": "Cajun-fried shrimp baskets that made the coast famous",
+      "known_for_es": "Camarones estilo cajún que hicieron famosa la costa",
+      "places_query": "Dirty Al's South Padre Island TX"
+    },
+    {
+      "name": "Smoke: Texas BBQ & Watering Hole",
+      "aliases": ["smoke bbq", "smoke texas bbq"],
+      "city": "Harlingen",
+      "display_city": "Harlingen",
+      "known_for": "Harlingen's barbecue standard-bearer — brisket and a full watering hole",
+      "known_for_es": "El estandarte del BBQ en Harlingen — brisket y cantina completa",
+      "places_query": "Smoke Texas BBQ Watering Hole Harlingen TX"
+    },
+    {
+      "name": "Frankie Flaves",
+      "aliases": ["frankie flaves"],
+      "city": "Harlingen",
+      "display_city": "Harlingen",
+      "known_for": "Craft burger house stacking Harlingen's favorite patties",
+      "known_for_es": "Hamburguesas artesanales — las favoritas de Harlingen",
+      "places_query": "Frankie Flaves Craft Burger House Harlingen TX"
+    },
+    {
+      "name": "Dos Olivos Market",
+      "aliases": ["dos olivos"],
+      "city": "Harlingen",
+      "display_city": "Harlingen",
+      "known_for": "Market-café hybrid that downtown Harlingen adopted immediately",
+      "known_for_es": "Mercado y café en uno — el centro de Harlingen lo adoptó de inmediato",
+      "places_query": "Dos Olivos Market Harlingen TX"
+    },
+    {
+      "name": "El Toro",
+      "aliases": ["el toro harlingen"],
+      "city": "Harlingen",
+      "display_city": "Harlingen",
+      "known_for": "Family-owned Harlingen staple — carne asada and chiles rellenos for 20+ years",
+      "known_for_es": "Restaurante familiar de Harlingen — carne asada y chiles rellenos por más de 20 años",
+      "places_query": "El Toro restaurant Harlingen TX"
+    },
+    {
+      "name": "Barrel House Kitchen & Bar",
+      "aliases": ["barrel house"],
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Edinburg's kitchen-and-bar for everything from bar bites to full plates",
+      "known_for_es": "Cocina y bar de Edinburg — de botanas a platillos completos",
+      "places_query": "Barrel House Kitchen Bar Edinburg TX"
+    },
+    {
+      "name": "Kokiri Korean Bistro",
+      "aliases": ["kokiri"],
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
+      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
+      "places_query": "Kokiri Korean Bistro Edinburg TX"
+    },
+    {
+      "name": "Los Machetes Quesadillas Factory",
+      "aliases": ["los machetes"],
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Machete-length quesadillas — as fun as they are enormous",
+      "known_for_es": "Quesadillas del tamaño de un machete — tan divertidas como enormes",
+      "places_query": "Los Machetes Quesadillas Factory Edinburg TX"
+    },
+    {
+      "name": "Jerusalem Mediterranean Bistro",
+      "aliases": ["jerusalem bistro", "jerusalem mediterranean"],
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Mediterranean plates and groceries — an Edinburg original",
+      "known_for_es": "Platillos mediterráneos y abarrotes — un original de Edinburg",
+      "places_query": "Jerusalem Mediterranean Bistro Grocery Edinburg TX"
+    },
+    {
+      "name": "El Jardin",
+      "aliases": ["el jardin edinburg"],
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Edinburg's garden-named Mexican mainstay",
+      "known_for_es": "El clásico mexicano de Edinburg",
+      "places_query": "El Jardin Mexican Restaurant Edinburg TX"
+    },
+    {
+      "name": "Angel's Kitchen",
+      "aliases": ["angel's kitchen", "angels kitchen"],
+      "city": "Mission",
+      "display_city": "Mission",
+      "known_for": "Mission's Mexican kitchen with fresh tortillas made in front of you",
+      "known_for_es": "La cocina mexicana de Mission — tortillas frescas hechas frente a ti",
+      "places_query": "Angel's Kitchen Mexican Restaurant Mission TX"
+    },
+    {
+      "name": "5x5 Brewing Co.",
+      "aliases": ["5x5 brewing", "5x5"],
+      "city": "Mission",
+      "display_city": "Mission",
+      "known_for": "The Valley's veteran-owned brewery — craft beer and a packed taproom",
+      "known_for_es": "La cervecería del Valle fundada por veteranos — cerveza artesanal y taproom lleno",
+      "places_query": "5x5 Brewing Co Mission TX"
+    },
+    {
+      "name": "Don Ferruco",
+      "aliases": ["don ferruco"],
+      "city": "Mission",
+      "display_city": "Mission",
+      "known_for": "Mission's Mexican favorite for long family lunches",
+      "known_for_es": "El favorito mexicano de Mission para comidas familiares largas",
+      "places_query": "Don Ferruco Mexican Restaurant Mission TX"
+    },
+    {
+      "name": "Junction Café",
+      "aliases": ["junction cafe"],
+      "city": "Pharr",
+      "display_city": "Pharr",
+      "known_for": "Pharr's homestyle breakfast-and-lunch café",
+      "known_for_es": "El café de Pharr para desayunos y comidas caseras",
+      "places_query": "Junction Cafe Pharr TX"
+    },
+    {
+      "name": "El Itacate",
+      "aliases": ["el itacate", "itacate"],
+      "city": "Pharr",
+      "display_city": "Pharr",
+      "known_for": "The Pharr taquería locals send visitors to first",
+      "known_for_es": "La taquería de Pharr a la que los locales mandan primero a las visitas",
+      "places_query": "El Itacate restaurant Pharr TX"
+    },
+    {
+      "name": "Cast Iron Cafe",
+      "aliases": ["cast iron cafe"],
+      "city": "Pharr",
+      "display_city": "Pharr",
+      "known_for": "Skillet comfort food earning Pharr's morning lines",
+      "known_for_es": "Comida de sartén que hace filas en Pharr por las mañanas",
+      "places_query": "Cast Iron Cafe Pharr TX"
+    },
+    {
+      "name": "El Rancho Grande",
+      "aliases": ["el rancho grande"],
+      "city": "San Juan",
+      "display_city": "San Juan",
+      "known_for": "San Juan's ranch-style Mexican mainstay",
+      "known_for_es": "El clásico mexicano estilo rancho de San Juan",
+      "places_query": "El Rancho Grande Restaurant San Juan TX"
+    },
+    {
+      "name": "GW's BBQ",
+      "aliases": ["gw's bbq", "gws bbq"],
+      "city": "San Juan",
+      "display_city": "San Juan",
+      "known_for": "San Juan smoke — barbecue plates and catering the neighborhood swears by",
+      "known_for_es": "El ahumado de San Juan — platos de BBQ que el barrio defiende",
+      "places_query": "GW's BBQ San Juan TX"
     }
   ]
 }

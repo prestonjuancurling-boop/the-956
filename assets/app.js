@@ -31,6 +31,12 @@ const UI = {
     "h-fresh": "Fresh Plates",
     "ov-rank": "Most-mentioned eats",
     "h-rank": "The 956 Power Rankings",
+    nominate: '🗳️ Know a spot we\'re missing? Nominate it — DM <a href="https://www.instagram.com/the956rgv/" target="_blank" rel="noopener">@the956rgv</a>',
+    "ov-classics": "The hall of fame",
+    "h-classics": "Los <em>Clásicos</em>",
+    since: (y) => `since ${y}`,
+    movedUp: (n) => `▲${n}`,
+    movedDown: (n) => `▼${n}`,
     "ov-micro": "This month's micro-ranking",
     microDrops: (d) => `⏳ Measuring this week — the first ranking drops ${d}`,
     "ov-football": "El Valle under the lights",
@@ -69,6 +75,12 @@ const UI = {
     "h-fresh": "Platos Nuevos",
     "ov-rank": "Los más mencionados",
     "h-rank": "El Ranking del 956",
+    nominate: '🗳️ ¿Falta un lugar? Nomínalo — mándanos DM a <a href="https://www.instagram.com/the956rgv/" target="_blank" rel="noopener">@the956rgv</a>',
+    "ov-classics": "El salón de la fama",
+    "h-classics": "Los <em>Clásicos</em>",
+    since: (y) => `desde ${y}`,
+    movedUp: (n) => `▲${n}`,
+    movedDown: (n) => `▼${n}`,
     "ov-micro": "El micro-ranking del mes",
     microDrops: (d) => `⏳ Midiendo esta semana — el primer ranking sale el ${d}`,
     "ov-football": "El Valle bajo las luces",
@@ -210,7 +222,9 @@ function renderRankings(data) {
         <div class="buzz-bar"><div class="buzz-fill" style="width:${Math.round((s.mentions / max) * 100)}%"></div></div>
         <div class="buzz-label">${esc(buzzLabel(s))}</div>
       </div>
-      <div class="trend ${esc(s.trend)}">${arrows[s.trend] || "—"}</div>
+      <div class="trend ${esc(s.trend)}">${
+        s.moved > 0 ? ui("movedUp")(s.moved) : s.moved < 0 ? ui("movedDown")(-s.moved) : arrows[s.trend] || "—"
+      }</div>
     </div>`).join("");
   if (data.bubble?.length) {
     $("#rank-list").insertAdjacentHTML("beforeend", `
@@ -220,6 +234,22 @@ function renderRankings(data) {
       </div>`);
   }
   $("#rank-disclaimer").textContent = t(data, "disclaimer") || "";
+}
+
+function renderClassics(data) {
+  const section = $("#classics");
+  if (!data?.spots?.length) { section.style.display = "none"; return; }
+  section.style.display = "";
+  $('[data-note="classics"]').textContent = t(data, "section_note");
+  $("#classics-grid").innerHTML = data.spots.map((s) => `
+    <div class="classic-card">
+      ${s.photo ? `<img class="classic-photo" src="assets/photos/${esc(s.photo)}" alt="${esc(s.name)}" loading="lazy" onerror="this.remove()">` : ""}
+      <div class="classic-body">
+        <div class="classic-name">${esc(s.name)}</div>
+        <div class="classic-meta">📍 ${esc(s.city)}${s.since ? ` · ${esc(ui("since")(s.since))}` : ""}</div>
+        <div class="classic-known">${esc(t(s, "known_for"))}</div>
+      </div>
+    </div>`).join("");
 }
 
 function renderMicro(cat) {
@@ -334,6 +364,7 @@ function renderAll() {
   renderNews(DATA.news);
   renderRestaurants(DATA.restos);
   renderRankings(DATA.eats);
+  renderClassics(DATA.classics);
   renderMicro(DATA.category);
   renderFootball(DATA.football);
 }
@@ -349,13 +380,14 @@ document.querySelectorAll("#lang-toggle button").forEach((b) => {
 
 async function init() {
   try {
-    const [meta, events, news, restos, eats, category, football] = await Promise.all([
+    const [meta, events, news, restos, eats, category, football, classics] = await Promise.all([
       loadJSON("meta"), loadJSON("events"), loadJSON("news"),
       loadJSON("new-restaurants"), loadJSON("top-eats"),
       loadJSON("category").catch(() => null),
       loadJSON("football").catch(() => null),
+      loadJSON("classics").catch(() => null),
     ]);
-    DATA = { meta, events, news, restos, eats, category, football };
+    DATA = { meta, events, news, restos, eats, category, football, classics };
     renderAll();
   } catch (err) {
     document.querySelector("main").innerHTML =

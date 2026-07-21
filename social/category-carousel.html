@@ -39,6 +39,10 @@
   .c-name { font-family: var(--serif); font-weight: 700; font-size: 58px; line-height: 1.08; color: var(--ink); }
   .c-city { font-size: 26px; font-weight: 700; color: var(--palm); margin-top: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
   .c-known { font-family: var(--serif); font-size: 38px; line-height: 1.4; color: var(--ink); margin-top: 36px; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+  .move-pill { font-size: 23px; font-weight: 800; letter-spacing: 0.04em; padding: 12px 26px; border-radius: 999px; background: #eaf3ec; color: var(--palm-deep); border: 2px solid #cde3d4; }
+  .move-pill.up { background: #fdeeda; color: #a4610d; border-color: #f3d9ad; }
+  .move-pill.down { background: #f7e9e4; color: var(--sunset-deep); border-color: #ecd2c8; }
   .c-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 26px; border-top: 3px double var(--line); }
   .c-footer .brand { font-family: var(--serif); font-weight: 800; font-size: 34px; color: var(--ink); }
   .c-footer .brand em { color: var(--sunset); font-style: italic; }
@@ -89,6 +93,12 @@
       ? `<img src="photos/${s.photo}" alt="${s.name}" onerror="this.remove()">`
       : "";
     const medalLabel = revealed ? s.rank : "?";
+    const movePill = !revealed || s.moved == null || s.moved === 0 ? "" :
+      s.moved > 0
+        ? `<div class="move-pill up">▲ up ${s.moved} spot${s.moved === 1 ? "" : "s"}</div>`
+        : `<div class="move-pill down">▼ down ${-s.moved}</div>`;
+    const streakPill = revealed && s.rank === 1 && s.streak_weeks > 1
+      ? `<div class="move-pill">🔥 ${s.streak_weeks} weeks at #1</div>` : "";
     slide.innerHTML = `
       <div class="band"><span>${cat.title.toUpperCase()}${revealed ? "" : " · CONTENDER"}</span><span>${revealed ? `#${s.rank} OF ${spots.length}` : `${i + 1} OF ${spots.length}`}</span></div>
       <div class="c-photo">
@@ -99,6 +109,7 @@
       <div class="pad c-pad">
         <div class="c-name">${s.name}</div>
         <div class="c-city">📍 ${s.display_city || s.city}</div>
+        ${movePill || streakPill ? `<div class="pill-row">${streakPill}${movePill}</div>` : ""}
         <div class="c-known">${s.known_for}</div>
         <div class="c-footer">
           <div class="brand">The <em>956</em></div>

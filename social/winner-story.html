@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fdf8ee; --paper-2: #f7efdd; --ink: #22301f; --ink-soft: #5a6653;
+    --sunset: #e4582b; --sunset-deep: #c2431c; --citrus: #f0a832;
+    --palm: #2e6e4e; --palm-deep: #1d4a33; --card: #fffdf7; --line: #e4d9c2;
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); }
+  /* Instagram/Facebook story size */
+  .story {
+    width: 1080px; height: 1920px;
+    background: var(--palm-deep);
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+  .glow {
+    position: absolute; top: -300px; left: 50%; transform: translateX(-50%);
+    width: 900px; height: 900px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,168,50,0.35) 0%, rgba(240,168,50,0) 70%);
+  }
+  .overline { text-align: center; margin-top: 110px; font-size: 30px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--citrus); }
+  .crown { text-align: center; font-size: 170px; margin-top: 30px; line-height: 1; }
+  .headline { text-align: center; font-family: var(--serif); font-weight: 800; font-size: 96px; line-height: 1.02; color: #f2ecd9; margin-top: 26px; padding: 0 70px; }
+  .headline em { color: var(--citrus); font-style: italic; }
+  .photo-frame {
+    margin: 60px 90px 0; height: 700px; border-radius: 32px; overflow: hidden;
+    border: 8px solid var(--citrus); box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    background: var(--paper-2);
+  }
+  .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .spot-name { text-align: center; font-family: var(--serif); font-weight: 800; font-size: 84px; line-height: 1.05; color: #fff; margin-top: 56px; padding: 0 60px; }
+  .spot-city { text-align: center; font-size: 34px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--citrus); margin-top: 18px; }
+  .context { text-align: center; font-size: 34px; color: #cfe0d4; margin-top: 40px; padding: 0 110px; line-height: 1.5; }
+  .footer { margin-top: auto; padding-bottom: 90px; text-align: center; }
+  .footer .brand { font-family: var(--serif); font-weight: 800; font-size: 54px; color: #f2ecd9; }
+  .footer .brand em { color: var(--sunset); font-style: italic; }
+  .footer .site { font-size: 30px; font-weight: 700; color: var(--citrus); margin-top: 10px; }
+  .footer .week { font-size: 26px; color: #9db8a6; margin-top: 16px; }
+</style>
+</head>
+<body>
+<script>
+// Winner story graphic — 1080x1920, made to be SENT TO the winning
+// restaurant so they repost it to their own audience (the growth loop).
+// ?type=rankings (default) uses top-eats.json #1; ?type=category uses
+// category.json #1 (only when status is "ranked").
+(async () => {
+  const type = new URLSearchParams(location.search).get("type") || "rankings";
+  const meta = await fetch("../data/meta.json", { cache: "no-store" }).then(r => r.json());
+
+  let overline, spot, context;
+  if (type === "category") {
+    const cat = await fetch("../data/category.json", { cache: "no-store" }).then(r => r.json());
+    if (cat.status !== "ranked") { document.body.innerHTML = "<p>Category not ranked yet.</p>"; return; }
+    spot = cat.spots.find(s => s.rank === 1);
+    overline = cat.title;
+    context = (spot.streak_weeks > 1)
+      ? `${spot.streak_weeks} straight weeks on top — tracked by real local buzz data, no opinions.`
+      : "Ranked #1 by real local buzz data — no opinions, no favorites.";
+  } else {
+    const eats = await fetch("../data/top-eats.json", { cache: "no-store" }).then(r => r.json());
+    spot = eats.spots.find(s => s.rank === 1);
+    overline = "The 956 Power Rankings";
+    context = (spot.streak_weeks > 1)
+      ? `${spot.streak_weeks} straight weeks at #1 — real Google review data, updated every Monday.`
+      : "This week's #1 — real Google review data, updated every Monday.";
+  }
+
+  const photoTag = spot.photo
+    ? `<div class="photo-frame"><img src="photos/${spot.photo}" onerror="this.parentElement.remove()"></div>` : "";
+
+  document.body.innerHTML = `
+    <div class="story">
+      <div class="glow"></div>
+      <div class="overline">${overline}</div>
+      <div class="crown">👑</div>
+      <div class="headline">This week's <em>#1</em></div>
+      ${photoTag}
+      <div class="spot-name">${spot.name}</div>
+      <div class="spot-city">📍 ${spot.display_city || spot.city}</div>
+      <div class="context">${context}</div>
+      <div class="footer">
+        <div class="brand">The <em>956</em></div>
+        <div class="site">the956.com · @the956rgv</div>
+        <div class="week">Week of ${meta.week_of}</div>
+      </div>
+    </div>`;
+})();
+</script>
+</body>
+</html>

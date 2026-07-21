@@ -1,0 +1,55 @@
+{
+  "comment": "Los Clásicos — the permanent hall of fame. These Valley institutions are honored here and do NOT compete in the weekly Power Rankings (they were moved out of watchlist.json on 2026-07-20 so the weekly list stays a race between current contenders instead of the biggest names coasting). Static content: no scoring, no API calls. Add a spot only when it's truly canon — decades of history or genuine Valley-wide beloved status.",
+  "section_note": "The all-timers. These legends aren't ranked — they're the reason the Valley eats this well in the first place.",
+  "section_note_es": "Los de siempre. Estas leyendas no se rankean — son la razón por la que el Valle come tan bien.",
+  "spots": [
+    {
+      "name": "Delia's Tamales",
+      "city": "San Juan + 6 Valley locations",
+      "since": "1998",
+      "known_for": "18 kinds of handmade tamales — famous statewide, but ours first",
+      "known_for_es": "18 tipos de tamales hechos a mano — famosos en todo Texas, pero primero fueron nuestros",
+      "photo": "delia-s-tamales.jpg"
+    },
+    {
+      "name": "Vera's Backyard Bar-B-Que",
+      "city": "Brownsville",
+      "since": "1955",
+      "known_for": "The last true pit-smoked barbacoa de cabeza in Texas — a James Beard \"America's Classic\"",
+      "known_for_es": "La última barbacoa de cabeza en pozo de todo Texas — un \"America's Classic\" de la Fundación James Beard",
+      "photo": "vera-s-backyard-bar-b-que.jpg"
+    },
+    {
+      "name": "Taco Palenque",
+      "city": "Valley-wide",
+      "since": "1987",
+      "known_for": "The border's 24/7 taco institution — pirata tacos and salsa bar supremacy",
+      "known_for_es": "La institución taquera 24/7 de la frontera — tacos pirata y la mejor barra de salsas",
+      "photo": "taco-palenque.jpg"
+    },
+    {
+      "name": "El Pato Mexican Food",
+      "city": "Valley-wide",
+      "since": "1976",
+      "known_for": "The homegrown patos chain — soft, griddled and open since the '70s",
+      "known_for_es": "La cadena de patos del Valle — suavecitos, doraditos y abiertos desde los 70s",
+      "photo": "el-pato-mexican-food.jpg"
+    },
+    {
+      "name": "Los Compadres",
+      "city": "RGV",
+      "since": "los tiempos",
+      "known_for": "The legendary Mexican breakfast & lunch buffet — menudo, pozole, barbacoa, nopalitos",
+      "known_for_es": "El legendario buffet mexicano de desayuno y comida — menudo, pozole, barbacoa, nopalitos",
+      "photo": "los-compadres.jpg"
+    },
+    {
+      "name": "Casa De Mariscos",
+      "city": "Weslaco",
+      "since": "una leyenda",
+      "known_for": "Seafood botanas piled with fried shrimp, stuffed crab and oysters — a Weslaco landmark",
+      "known_for_es": "Botanas de mariscos con camarón frito, jaibas rellenas y ostiones — un símbolo de Weslaco",
+      "photo": "casa-de-mariscos.jpg"
+    }
+  ]
+}

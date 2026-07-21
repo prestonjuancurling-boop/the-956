@@ -49,6 +49,7 @@
   .badge-row { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px; }
   .pill { font-size: 23px; font-weight: 800; letter-spacing: 0.04em; padding: 12px 26px; border-radius: 999px; background: #eaf3ec; color: var(--palm-deep); border: 2px solid #cde3d4; }
   .pill.hot { background: #fdeeda; color: #a4610d; border-color: #f3d9ad; }
+  .pill.down { background: #f7e9e4; color: var(--sunset-deep); border-color: #ecd2c8; }
   .sp-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 26px; border-top: 3px double var(--line); }
   .sp-footer .brand { font-family: var(--serif); font-weight: 800; font-size: 34px; color: var(--ink); }
   .sp-footer .brand em { color: var(--sunset); font-style: italic; }
@@ -105,6 +106,8 @@
       ? `<img src="photos/${s.photo}" alt="${s.name}" onerror="this.remove()">`
       : "";
     const pills = [];
+    if (s.moved > 0) pills.push(`<span class="pill hot">▲ up ${s.moved} spot${s.moved === 1 ? "" : "s"}</span>`);
+    if (s.moved < 0) pills.push(`<span class="pill down">▼ down ${-s.moved}</span>`);
     if ((s.badges || []).includes("new_entry")) pills.push(`<span class="pill hot">New Entry</span>`);
     if ((s.badges || []).includes("biggest_mover")) pills.push(`<span class="pill hot">Biggest Mover</span>`);
     if (s.rank === 1 && s.streak_weeks > 1) pills.push(`<span class="pill">🔥 ${s.streak_weeks} weeks at #1</span>`);
