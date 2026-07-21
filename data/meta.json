@@ -2,20 +2,20 @@
   "site_name": "The 956",
   "tagline": "El Valle's weekly digest",
   "tagline_es": "El resumen semanal del Valle",
-  "week_of": "July 13 – 19, 2026",
-  "week_of_es": "13 al 19 de julio, 2026",
-  "edition": "Vol. 1 · No. 3",
-  "generated_at": "2026-07-13T16:33:00-05:00",
+  "week_of": "July 20 – 26, 2026",
+  "week_of_es": "20 al 26 de julio, 2026",
+  "edition": "Vol. 1 · No. 4",
+  "generated_at": "2026-07-20T21:15:00-05:00",
   "ticker": [
-    "🎤 Grupo Frontera's hometown shows are finally here — Bert Ogden Arena, July 16–17",
-    "🎸 Los Profugos De Nuevo Leon plays the McAllen PAC, Saturday July 18",
-    "🌅 Downtown at Sundown returns to Harlingen's Lozano Plaza, July 18",
+    "🎤 Marco Antonio Solís — \"El Buki\" — plays Payne Arena, Saturday July 25",
+    "🎶 Eslabón Armado brings Amor Nocturno to the McAllen PAC, Sunday July 26",
+    "🎡 Edinburg's Summer Concert Series wraps with a free K-Pop finale, Saturday July 25",
     "🎆 SPI fireworks light up the bay every Friday night, all summer long"
   ],
   "ticker_es": [
-    "🎤 Por fin llegan los shows de Grupo Frontera en casa — Bert Ogden Arena, 16 y 17 de julio",
-    "🎸 Los Prófugos De Nuevo León tocan en el McAllen PAC, sábado 18 de julio",
-    "🌅 Downtown at Sundown regresa a la Plaza Lozano de Harlingen, 18 de julio",
+    "🎤 Marco Antonio Solís — \"El Buki\" — toca en Payne Arena, sábado 25 de julio",
+    "🎶 Eslabón Armado trae su gira Amor Nocturno al McAllen PAC, domingo 26 de julio",
+    "🎡 La Serie de Conciertos de Verano de Edinburg cierra con finale gratis de K-Pop, sábado 25 de julio",
     "🎆 Fuegos artificiales en SPI todos los viernes del verano"
   ]
 }
