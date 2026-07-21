@@ -13,8 +13,15 @@
  *      get ×1.2 (<120 days) or ×1.1 (<240 days).
  *   4. Quality factor — small multiplier from Google rating so a spot going
  *      viral for the wrong reasons can't take #1.
- *   5. Momentum smoothing — final score is an EMA (60% this week, 40%
- *      running score) so rankings reward sustained heat over one-off spikes.
+ *   5. Size factor — an explicit extra weight by absolute review count
+ *      (×1.35 under 150 reviews down to ×0.6 over 4,000), on top of #2's
+ *      relative velocity, so a big chain's larger absolute foot traffic
+ *      doesn't out-earn small independents even after size-adjusting.
+ *   6. Momentum smoothing — final score is an EMA (60% this week, 40%
+ *      running score) so rankings reward sustained heat over one-off spikes
+ *      — except a reigning #1's carried-forward 40% tapers further each
+ *      extra week they hold the top spot (floor 25%), so stale momentum
+ *      from an old lead doesn't lock out challengers indefinitely.
  *
  * Also emits story badges (new entry, biggest mover, #1 streak) and an
  * "on the bubble" list (ranks 6-8), and keeps per-spot state in
@@ -138,6 +145,31 @@ function qualityFactor(rating) {
   return Math.min(1.12, Math.max(0.85, 1 + (rating - 4.2) * 0.2));
 }
 
+// Reddit/review counts alone still favor whoever has the biggest customer
+// base, even after size-relative velocity — a 5,000-review institution
+// picks up more raw new reviews per week than a 100-review stand ever
+// could, just from foot traffic. This tiers an explicit extra weight by
+// absolute size, on top of relative velocity, so small independent spots
+// get real variety-of-winners rather than the biggest name always coasting.
+function sizeFactor(reviewCount) {
+  if (reviewCount == null) return 1.0;
+  if (reviewCount < 150) return 1.35;
+  if (reviewCount < 500) return 1.15;
+  if (reviewCount < 1500) return 1.0;
+  if (reviewCount < 4000) return 0.8;
+  return 0.6;
+}
+
+// A long-reigning #1's carried-forward momentum tapers a bit more each
+// extra week on top, so a strong week from a challenger has a real shot at
+// overtaking stale momentum instead of the same leader coasting on an old
+// lead indefinitely. Only kicks in once a spot has already held #1 for 2+
+// weeks; a fresh win isn't penalized.
+function emaCarryWeight(isDefendingChamp, streakWeeks) {
+  if (!isDefendingChamp || streakWeeks < 2) return 0.4;
+  return Math.max(0.25, 0.4 - (streakWeeks - 1) * 0.05);
+}
+
 // ————— main —————
 
 // Network hiccups on one source or one spot must never kill the whole run —
@@ -153,6 +185,11 @@ async function tryOrNull(label, fn) {
 
 const token = hasReddit ? await tryOrNull("Reddit auth", redditToken) : null;
 const results = [];
+
+// Captured before the loop mutates anything — who's currently defending #1
+// and for how long, so their EMA carry-forward can be tapered.
+const prevChampName = prevEats.spots?.[0]?.name ?? null;
+const prevChampStreak = prevEats.spots?.[0]?.streak_weeks ?? 1;
 
 for (const spot of watchlist.spots) {
   console.log(`Measuring ${spot.name}…`);
@@ -174,9 +211,12 @@ for (const spot of watchlist.spots) {
   const rawBuzz =
     ((reddit ?? 0) * 10 + relVelocity * 60) *
     newcomerBoost(spot) *
-    qualityFactor(places?.rating);
+    qualityFactor(places?.rating) *
+    sizeFactor(places?.reviewCount);
 
-  const ema = prev?.ema != null ? 0.6 * rawBuzz + 0.4 * prev.ema : rawBuzz;
+  const isDefendingChamp = spot.name === prevChampName;
+  const carryWeight = emaCarryWeight(isDefendingChamp, prevChampStreak);
+  const ema = prev?.ema != null ? 0.6 * rawBuzz + carryWeight * prev.ema : rawBuzz;
 
   history[spot.name] = {
     reviewCount: places?.reviewCount ?? prev?.reviewCount ?? null,
@@ -240,9 +280,9 @@ if (totalSignal < MIN_SIGNAL) {
     section_note: `The Valley's most-talked-about food spots, ranked by real data: ${sources}.`,
     section_note_es: `Los lugares de comida más mencionados del Valle, con datos reales: ${sourcesEs}.`,
     disclaimer:
-      "Scores blend this week's buzz with running momentum, size-relative review velocity, a newcomer boost, and a small quality factor — computed automatically, no opinions.",
+      "Scores blend this week's buzz with running momentum, size-relative review velocity, a newcomer boost, a small quality factor, and an extra weight favoring small independent spots over big chains — computed automatically, no opinions.",
     disclaimer_es:
-      "Los puntajes combinan el buzz de la semana con el impulso acumulado, la velocidad de reseñas relativa al tamaño, un empujón para los recién abiertos y un pequeño factor de calidad — todo automático, sin opiniones.",
+      "Los puntajes combinan el buzz de la semana con el impulso acumulado, la velocidad de reseñas relativa al tamaño, un empujón para los recién abiertos, un pequeño factor de calidad, y un peso extra a favor de los negocios pequeños e independientes sobre las cadenas grandes — todo automático, sin opiniones.",
     spots: top5.map((r, i) => {
       const rank = i + 1;
       const was = prevRank[r.spot.name];
@@ -280,6 +320,9 @@ const categoryPath = join(dataDir, "category.json");
 if (existsSync(categoryPath)) {
   const cat = JSON.parse(readFileSync(categoryPath, "utf8"));
   const catResults = [];
+  const prevCatChamp = cat.spots?.find((s) => s.rank === 1) ?? null;
+  const prevCatChampName = prevCatChamp?.name ?? null;
+  const prevCatChampStreak = prevCatChamp?.streak_weeks ?? 1;
   for (const spot of cat.spots) {
     console.log(`Measuring [${cat.title}] ${spot.name}…`);
     const reddit = token ? await tryOrNull("Reddit search", () => redditMentions(token, spot)) : null;
@@ -294,8 +337,10 @@ if (existsSync(categoryPath)) {
       delta != null && places?.reviewCount
         ? delta / Math.sqrt(Math.max(places.reviewCount, 30))
         : 0;
-    const raw = ((reddit ?? 0) * 10 + relV * 60) * qualityFactor(places?.rating);
-    const ema = prev?.ema != null ? 0.6 * raw + 0.4 * prev.ema : raw;
+    const raw = ((reddit ?? 0) * 10 + relV * 60) * qualityFactor(places?.rating) * sizeFactor(places?.reviewCount);
+    const isDefendingCatChamp = spot.name === prevCatChampName;
+    const catCarryWeight = emaCarryWeight(isDefendingCatChamp, prevCatChampStreak);
+    const ema = prev?.ema != null ? 0.6 * raw + catCarryWeight * prev.ema : raw;
     history[key] = {
       reviewCount: places?.reviewCount ?? prev?.reviewCount ?? null,
       rating: places?.rating ?? prev?.rating ?? null,
@@ -313,14 +358,21 @@ if (existsSync(categoryPath)) {
   if (catSignal > 0 && daysMeasured >= 3) {
     catResults.sort((a, b) => b.score - a.score);
     cat.status = "ranked";
-    cat.spots = catResults.map((r, i) => ({
-      ...r.spot,
-      rank: i + 1,
-      mentions: r.score,
-      reddit_mentions: r.reddit,
-      review_delta: r.delta,
-      rating: r.rating,
-    }));
+    cat.spots = catResults.map((r, i) => {
+      const rank = i + 1;
+      const entry = {
+        ...r.spot,
+        rank,
+        mentions: r.score,
+        reddit_mentions: r.reddit,
+        review_delta: r.delta,
+        rating: r.rating,
+      };
+      if (rank === 1) {
+        entry.streak_weeks = prevCatChampName === r.spot.name ? prevCatChampStreak + 1 : 1;
+      }
+      return entry;
+    });
     console.log(`✔ Ranked category "${cat.title}"`);
   } else if (cat.status !== "ranked") {
     // Only pre-publication runs may hold the category in "measuring".
