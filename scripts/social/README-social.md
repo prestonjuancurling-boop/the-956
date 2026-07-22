@@ -35,6 +35,10 @@ Meta app "Claude" (App ID 1563544178720675 for Facebook, Instagram App ID
 - `refresh-ig-token.mjs` — extends the Instagram token; call periodically
   (the monthly category-rotation task does this each run, a safe ~30-day
   cadence well inside the 60-day window).
+- `stories-publish.mjs <folder> <file.png>` — publishes a single image to
+  @the956rgv's Instagram Story. No caption field (bake text into the image);
+  no future-scheduling (Instagram Stories always publish immediately, and
+  expire after 24h).
 
 ## The approval model — important
 

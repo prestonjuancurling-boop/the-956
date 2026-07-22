@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://the956.com/sitemap.xml
