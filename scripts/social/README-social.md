@@ -39,6 +39,12 @@ Meta app "Claude" (App ID 1563544178720675 for Facebook, Instagram App ID
   @the956rgv's Instagram Story. No caption field (bake text into the image);
   no future-scheduling (Instagram Stories always publish immediately, and
   expire after 24h).
+- `make-tiktok-video.mjs <folder> <out.mp4> <file1> [file2 ...] [--duration=N]`
+  — stitches carousel/story PNGs into a 1080x1920 slideshow video (each
+  image padded onto a blurred copy of itself so any source aspect ratio
+  fills the frame). Requires ffmpeg on PATH. Does NOT publish anywhere —
+  TikTok's Content Posting API needs app review before public posting is
+  allowed, so this just produces the .mp4 for manual upload for now.
 
 ## The approval model — important
 
