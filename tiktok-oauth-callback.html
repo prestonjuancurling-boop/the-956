@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>The 956 — TikTok Authorization</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #fdf8ee; color: #22301f; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; }
+  .box { max-width: 560px; background: #fffdf7; border: 1px solid #e4d9c2; border-radius: 12px; padding: 32px; }
+  h1 { font-size: 22px; margin: 0 0 12px; }
+  code { display: block; background: #f7efdd; border: 1px solid #e4d9c2; border-radius: 8px; padding: 16px; word-break: break-all; font-size: 14px; margin: 16px 0; user-select: all; }
+  button { background: #1d4a33; color: #fff; border: none; border-radius: 8px; padding: 10px 18px; font-size: 15px; cursor: pointer; }
+  .err { color: #c2431c; }
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>TikTok authorization complete</h1>
+    <div id="content">Reading response...</div>
+  </div>
+<script>
+  const params = new URLSearchParams(location.search);
+  const code = params.get("code");
+  const state = params.get("state");
+  const error = params.get("error");
+  const errorDescription = params.get("error_description");
+  const el = document.getElementById("content");
+  if (code) {
+    el.innerHTML = `
+      <p>Copy the code below and paste it back into the chat:</p>
+      <code id="code">${code}</code>
+      <button onclick="navigator.clipboard.writeText(document.getElementById('code').textContent)">Copy code</button>
+      ${state ? `<p style="margin-top:16px;">state:</p><code id="state">${state}</code>` : ""}
+    `;
+  } else if (error) {
+    el.innerHTML = `<p class="err">Authorization was not completed: ${error}${errorDescription ? " — " + errorDescription : ""}</p>`;
+  } else {
+    el.innerHTML = `<p class="err">No authorization code found in the URL.</p>`;
+  }
+</script>
+</body>
+</html>
