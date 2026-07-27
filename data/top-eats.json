@@ -1,23 +1,26 @@
 {
   "section_note": "The Valley's most-talked-about food spots, ranked by real data: Google review velocity (scaled to each spot's size).",
   "section_note_es": "Los lugares de comida más mencionados del Valle, con datos reales: velocidad de reseñas de Google (ajustada al tamaño de cada lugar).",
-  "disclaimer": "Scores blend this week's buzz with running momentum, size-relative review velocity, a newcomer boost, and a small quality factor — computed automatically, no opinions.",
-  "disclaimer_es": "Los puntajes combinan el buzz de la semana con el impulso acumulado, la velocidad de reseñas relativa al tamaño, un empujón para los recién abiertos y un pequeño factor de calidad — todo automático, sin opiniones.",
+  "disclaimer": "Scores blend this week's buzz with running momentum, size-relative review velocity, a newcomer boost, a small quality factor, and an extra weight favoring small independent spots over big chains — computed automatically, no opinions.",
+  "disclaimer_es": "Los puntajes combinan el buzz de la semana con el impulso acumulado, la velocidad de reseñas relativa al tamaño, un empujón para los recién abiertos, un pequeño factor de calidad, y un peso extra a favor de los negocios pequeños e independientes sobre las cadenas grandes — todo automático, sin opiniones.",
   "spots": [
     {
       "rank": 1,
-      "name": "Taco Palenque",
-      "city": "Valley-wide",
-      "known_for": "The border's beloved 24/7 taco institution — pirata tacos and salsa bar supremacy",
-      "known_for_es": "La institución taquera 24/7 de la frontera — tacos pirata y la mejor barra de salsas",
-      "mentions": 29,
+      "name": "Zaya",
+      "city": "McAllen",
+      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
+      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
+      "mentions": 28,
       "reddit_mentions": null,
-      "review_delta": 10,
-      "rating": 4.4,
-      "trend": "steady",
-      "badges": [],
-      "streak_weeks": 3,
-      "photo": "taco-palenque.jpg"
+      "review_delta": 6,
+      "rating": 4.8,
+      "trend": "up",
+      "moved": 4,
+      "badges": [
+        "biggest_mover"
+      ],
+      "streak_weeks": 1,
+      "photo": "zaya.jpg"
     },
     {
       "rank": 2,
@@ -25,71 +28,75 @@
       "city": "McAllen",
       "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
       "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 13,
+      "mentions": 14,
       "reddit_mentions": null,
-      "review_delta": 8,
+      "review_delta": 13,
       "rating": 4.8,
-      "trend": "up",
+      "trend": "steady",
+      "moved": 0,
       "badges": [],
       "photo": "ambra.jpg"
     },
     {
       "rank": 3,
+      "name": "Brasas",
+      "city": "McAllen",
+      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
+      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
+      "mentions": 7,
+      "reddit_mentions": null,
+      "review_delta": 1,
+      "rating": 4.8,
+      "trend": "steady",
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "photo": "brasas.jpg"
+    },
+    {
+      "rank": 4,
       "name": "Moūsai",
       "city": "McAllen",
       "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
       "known_for_es": "El nuevo sushi bar elegante que trae rollos frescos y nigiri a McAllen",
-      "mentions": 11,
+      "mentions": 4,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 0,
       "rating": 4.8,
       "trend": "down",
+      "moved": -1,
       "badges": [],
       "photo": "mo-sai.jpg"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "Blu Brasserie",
       "city": "McAllen",
       "known_for": "McAllen's polished new brasserie for date nights and long dinners",
       "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
-      "mentions": 11,
+      "mentions": 4,
       "reddit_mentions": null,
-      "review_delta": 2,
+      "review_delta": 0,
       "rating": 4.9,
-      "trend": "steady",
-      "badges": [
-        "new_entry"
-      ],
-      "photo": "blu-brasserie.jpg"
-    },
-    {
-      "rank": 5,
-      "name": "Zaya",
-      "city": "McAllen",
-      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
-      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 10,
-      "reddit_mentions": null,
-      "review_delta": 2,
-      "rating": 4.8,
-      "trend": "steady",
+      "trend": "down",
+      "moved": -1,
       "badges": [],
-      "photo": "zaya.jpg"
+      "photo": "blu-brasserie.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "Brasas",
+      "name": "Hacienda Las Mariposas",
+      "city": "RGV"
+    },
+    {
+      "name": "Republic of the Rio Grande",
       "city": "McAllen"
     },
     {
-      "name": "Delia's Tamales",
-      "city": "San Juan + 6 Valley locations"
-    },
-    {
-      "name": "Casa De Mariscos",
-      "city": "Weslaco"
+      "name": "Taqueria Sheko's",
+      "city": "Brownsville"
     }
   ]
 }

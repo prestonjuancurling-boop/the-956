@@ -36,63 +36,207 @@
     "date": "2026-07-20"
   },
   "Zaya": {
-    "reviewCount": 179,
+    "reviewCount": 185,
     "rating": 4.8,
-    "ema": 9.621138355644721,
-    "date": "2026-07-20"
+    "ema": 28.393566092274767,
+    "date": "2026-07-27"
   },
   "Moūsai": {
     "reviewCount": 1036,
     "rating": 4.8,
-    "ema": 10.650350314739002,
-    "date": "2026-07-20"
+    "ema": 4.260140125895601,
+    "date": "2026-07-27"
   },
   "Blu Brasserie": {
     "reviewCount": 98,
     "rating": 4.9,
-    "ema": 10.723173036841402,
-    "date": "2026-07-20"
+    "ema": 4.289269214736561,
+    "date": "2026-07-27"
   },
   "Brasas": {
-    "reviewCount": 169,
+    "reviewCount": 170,
     "rating": 4.8,
-    "ema": 6.948512376701457,
-    "date": "2026-07-20"
+    "ema": 7.046920863025567,
+    "date": "2026-07-27"
   },
   "cat:Young's Sno Wiz": {
-    "reviewCount": 518,
+    "reviewCount": 519,
     "rating": 4.8,
-    "ema": 5.076929502113744,
-    "date": "2026-07-20"
+    "ema": 3.8006233670718825,
+    "date": "2026-07-27"
   },
   "cat:Margo's": {
-    "reviewCount": 465,
+    "reviewCount": 466,
     "rating": 4.5,
-    "ema": 3.5392552524416048,
-    "date": "2026-07-20"
+    "ema": 3.4485891450362915,
+    "date": "2026-07-27"
   },
   "cat:Viva La Raspa": {
     "reviewCount": 25,
     "rating": 4.6,
     "ema": 0,
-    "date": "2026-07-20"
+    "date": "2026-07-27"
   },
   "cat:Iced Cube": {
-    "reviewCount": 65,
-    "rating": 3.9,
-    "ema": 0,
-    "date": "2026-07-20"
+    "reviewCount": 88,
+    "rating": 4.4,
+    "ema": 123.92419558599671,
+    "date": "2026-07-27"
   },
   "cat:Fruti Raspas La Isla": {
     "reviewCount": 29,
     "rating": 4.6,
-    "ema": 0.45430299809708496,
-    "date": "2026-07-20"
+    "ema": 0.181721199238834,
+    "date": "2026-07-27"
   },
   "AMBRA": {
-    "reviewCount": 2368,
+    "reviewCount": 2381,
     "rating": 4.8,
-    "ema": 12.592254988977878,
-    "date": "2026-07-20"
+    "ema": 13.630482801789377,
+    "date": "2026-07-27"
+  },
+  "Hacienda Las Mariposas": {
+    "reviewCount": 464,
+    "rating": 4.1,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Republic of the Rio Grande": {
+    "reviewCount": 3874,
+    "rating": 4.7,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Taqueria Sheko's": {
+    "reviewCount": 870,
+    "rating": 4.2,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Chilmoli Mexican Steakhouse": {
+    "reviewCount": 340,
+    "rating": 4.4,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Madeira": {
+    "reviewCount": 308,
+    "rating": 4.4,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Cayuco Seafood & Grill": {
+    "reviewCount": 254,
+    "rating": 4.4,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Dirty Al's": {
+    "reviewCount": 5121,
+    "rating": 4.1,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Smoke: Texas BBQ & Watering Hole": {
+    "reviewCount": 1576,
+    "rating": 4.3,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Frankie Flaves": {
+    "reviewCount": 999,
+    "rating": 4.1,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Dos Olivos Market": {
+    "reviewCount": 508,
+    "rating": 4.7,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "El Toro": {
+    "reviewCount": 5953,
+    "rating": 4.5,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Barrel House Kitchen & Bar": {
+    "reviewCount": 367,
+    "rating": 4.3,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Kokiri Korean Bistro": {
+    "reviewCount": 934,
+    "rating": 4.8,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Los Machetes Quesadillas Factory": {
+    "reviewCount": 556,
+    "rating": 4.8,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Jerusalem Mediterranean Bistro": {
+    "reviewCount": 401,
+    "rating": 4.7,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "El Jardin": {
+    "reviewCount": 346,
+    "rating": 4.8,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Angel's Kitchen": {
+    "reviewCount": 106,
+    "rating": 4.7,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "5x5 Brewing Co.": {
+    "reviewCount": null,
+    "rating": null,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Don Ferruco": {
+    "reviewCount": 2,
+    "rating": 4,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Junction Café": {
+    "reviewCount": 1493,
+    "rating": 4.3,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "El Itacate": {
+    "reviewCount": 858,
+    "rating": 4.5,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "Cast Iron Cafe": {
+    "reviewCount": 454,
+    "rating": 4.4,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "El Rancho Grande": {
+    "reviewCount": 2823,
+    "rating": 4.2,
+    "ema": 0,
+    "date": "2026-07-27"
+  },
+  "GW's BBQ": {
+    "reviewCount": 832,
+    "rating": 4.6,
+    "ema": 0,
+    "date": "2026-07-27"
   }
 }

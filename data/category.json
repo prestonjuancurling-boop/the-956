@@ -10,6 +10,26 @@
   "status": "ranked",
   "spots": [
     {
+      "name": "Iced Cube",
+      "aliases": [
+        "iced cube raspa",
+        "iced cube elsa"
+      ],
+      "city": "Harlingen",
+      "display_city": "Harlingen",
+      "known_for": "The build-your-own raspa phenomenon that once drew 75-car lines — the Harlingen stand carries the torch",
+      "known_for_es": "El fenómeno de raspas arma-tú-mismo que llegó a hacer filas de 75 carros — el puesto de Harlingen sigue la tradición",
+      "places_query": "Iced Cube raspas Harlingen TX",
+      "rank": 1,
+      "mentions": 124,
+      "reddit_mentions": null,
+      "review_delta": 23,
+      "rating": 4.4,
+      "photo": "iced-cube.jpg",
+      "moved": 4,
+      "streak_weeks": 1
+    },
+    {
       "name": "Young's Sno Wiz",
       "aliases": [
         "young's",
@@ -21,12 +41,13 @@
       "known_for": "The McAllen institution locals swear has the best raspas in the Valley",
       "known_for_es": "La institución de McAllen que según los locales tiene las mejores raspas del Valle",
       "places_query": "Young's Sno Wiz McAllen TX",
-      "rank": 1,
-      "mentions": 5,
+      "rank": 2,
+      "mentions": 4,
       "reddit_mentions": null,
-      "review_delta": 2,
+      "review_delta": 1,
       "rating": 4.8,
-      "photo": "young-s-sno-wiz.jpg"
+      "photo": "young-s-sno-wiz.jpg",
+      "moved": -1
     },
     {
       "name": "Margo's",
@@ -39,12 +60,13 @@
       "known_for": "60+ combinations with homemade syrups — home of the legendary mangonada",
       "known_for_es": "Más de 60 combinaciones con jarabes caseros — la casa de la legendaria mangonada",
       "places_query": "Margo's raspas Rio Grande Valley TX",
-      "rank": 2,
-      "mentions": 4,
+      "rank": 3,
+      "mentions": 3,
       "reddit_mentions": null,
-      "review_delta": 2,
+      "review_delta": 1,
       "rating": 4.5,
-      "photo": "margo-s.jpg"
+      "photo": "margo-s.jpg",
+      "moved": -1
     },
     {
       "name": "Fruti Raspas La Isla",
@@ -57,12 +79,13 @@
       "known_for": "Fruteria-style raspas piled with fresh fruit, chamoy and everything on it",
       "known_for_es": "Raspas estilo frutería con fruta fresca, chamoy y de todo encima",
       "places_query": "Fruti Raspas La Isla McAllen TX",
-      "rank": 3,
+      "rank": 4,
       "mentions": 0,
       "reddit_mentions": null,
       "review_delta": 0,
       "rating": 4.6,
-      "photo": "fruti-raspas-la-isla.jpg"
+      "photo": "fruti-raspas-la-isla.jpg",
+      "moved": -1
     },
     {
       "name": "Viva La Raspa",
@@ -74,30 +97,13 @@
       "known_for": "Mexican-blanket murals and raspas born from watching everyone else's long lines",
       "known_for_es": "Murales de cobija mexicana y raspas que nacieron de ver las filas largas de los demás",
       "places_query": "Viva La Raspa Weslaco TX",
-      "rank": 4,
-      "mentions": 0,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.6,
-      "photo": "viva-la-raspa.jpg"
-    },
-    {
-      "name": "Iced Cube",
-      "aliases": [
-        "iced cube raspa",
-        "iced cube elsa"
-      ],
-      "city": "Harlingen",
-      "display_city": "Harlingen",
-      "known_for": "The build-your-own raspa phenomenon that once drew 75-car lines — the Harlingen stand carries the torch",
-      "known_for_es": "El fenómeno de raspas arma-tú-mismo que llegó a hacer filas de 75 carros — el puesto de Harlingen sigue la tradición",
-      "places_query": "Iced Cube raspas Harlingen TX",
       "rank": 5,
       "mentions": 0,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 3.9,
-      "photo": "iced-cube.jpg"
+      "rating": 4.6,
+      "photo": "viva-la-raspa.jpg",
+      "moved": -1
     }
   ],
   "baseline_date": "2026-07-02"
