@@ -1,0 +1,21 @@
+{
+  "site_name": "The 956",
+  "tagline": "El Valle's weekly digest",
+  "tagline_es": "El resumen semanal del Valle",
+  "week_of": "July 27 – Aug 2, 2026",
+  "week_of_es": "27 de julio al 2 de agosto, 2026",
+  "edition": "Vol. 1 · No. 5",
+  "generated_at": "2026-07-27T09:00:00-05:00",
+  "ticker": [
+    "🎤 Grupo Barak takes over Bert Ogden Arena, Saturday August 1",
+    "🎶 Majo Aguilar brings her tour to Payne Arena that same Saturday night",
+    "🔊 Hard dance headliner Junkie Kid makes his Brownsville debut at Lopez Ranch, Friday July 31",
+    "🎆 SPI fireworks light up the bay every Friday night, all summer long"
+  ],
+  "ticker_es": [
+    "🎤 Grupo Barak llega a Bert Ogden Arena el sábado 1 de agosto",
+    "🎶 Majo Aguilar trae su gira a Payne Arena esa misma noche del sábado",
+    "🔊 El headliner de hard dance Junkie Kid debuta en Brownsville en Lopez Ranch, viernes 31 de julio",
+    "🎆 Fuegos artificiales en SPI todos los viernes del verano"
+  ]
+}

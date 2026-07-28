@@ -1,0 +1,50 @@
+{
+  "section_note": "What's happening around the Valley today.",
+  "section_note_es": "Lo que está pasando hoy en el Valle.",
+  "items": [
+    {
+      "headline": "Mission CISD and McAllen ISD kick off the school year with backpack giveaways",
+      "headline_es": "Mission CISD y McAllen ISD arrancan el año escolar repartiendo mochilas",
+      "summary": "Both districts hosted Back-to-School Bash events Monday — Mission CISD handed out more than 1,000 backpacks at the Mission Event Center, while McAllen ISD offered supplies, free meals, physicals, immunizations and haircuts at McAllen High School.",
+      "summary_es": "Ambos distritos organizaron sus eventos de Back-to-School Bash el lunes — Mission CISD repartió más de 1,000 mochilas en el Mission Event Center, mientras McAllen ISD ofreció útiles, comidas gratis, consultas médicas, vacunas y cortes de pelo en McAllen High School.",
+      "source": "KRGV",
+      "topic": "Community",
+      "topic_es": "Comunidad",
+      "published": "Jul 27",
+      "url": "https://www.krgv.com/news/mission-cisd-mcallen-isd-to-hand-out-school-supplies-at-back-to-school-events/"
+    },
+    {
+      "headline": "McAllen lands $6M federal grant to build new industrial park near the bridges",
+      "headline_es": "McAllen consigue subvención federal de $6M para nuevo parque industrial cerca de los puentes",
+      "summary": "The Economic Development Administration grant, delivered by Rep. Monica De La Cruz and Commerce Secretary Howard Lutnick, will fund roads, water and sewer for a new industrial park expected to draw $34 million in private investment and create close to 500 jobs.",
+      "summary_es": "La subvención de la Administración de Desarrollo Económico, entregada por la representante Monica De La Cruz y el secretario de Comercio Howard Lutnick, financiará caminos, agua y drenaje para un nuevo parque industrial que se espera atraiga $34 millones en inversión privada y cree casi 500 empleos.",
+      "source": "MyRGV",
+      "topic": "Business",
+      "topic_es": "Negocios",
+      "published": "Jul 20",
+      "url": "https://myrgv.com/local-news/2026/07/20/mcallen-gets-6m-grant-to-spur-industrialization/"
+    },
+    {
+      "headline": "Brownsville's District 2 gets a fifth-cent property tax cut",
+      "headline_es": "El Distrito 2 de Brownsville recibe otro recorte al impuesto predial",
+      "summary": "City commissioners voted to lower the district's PID tax rate from 15 cents to 10 cents per $100 valuation — the third such reduction in recent years, for a combined 23-cent cut, after the district trimmed about half a million dollars from its budget.",
+      "summary_es": "Los comisionados de la ciudad votaron para bajar la tasa del impuesto PID del distrito de 15 a 10 centavos por cada $100 de valuación — la tercera reducción en años recientes, sumando 23 centavos en total, después de que el distrito recortara cerca de medio millón de dólares de su presupuesto.",
+      "source": "KRGV",
+      "topic": "Civic",
+      "topic_es": "Cívico",
+      "published": "Jul 25",
+      "url": "https://www.krgv.com/news/brownsville-district-2-homeowners-to-receive-property-tax-cut/"
+    },
+    {
+      "headline": "Valley couple behind 40+ restaurants inducted into Texas Restaurant Hall of Honor",
+      "headline_es": "Pareja del Valle detrás de más de 40 restaurantes es incluida en el Salón de Honor de Restaurantes de Texas",
+      "summary": "Robert and Laurie Lozano, who operate more than 40 restaurants through F&P Group, were recognized among the state's top restaurant industry leaders, selected by their peers for the honor.",
+      "summary_es": "Robert y Laurie Lozano, quienes operan más de 40 restaurantes a través de F&P Group, fueron reconocidos entre los principales líderes de la industria restaurantera del estado, seleccionados por sus colegas para este honor.",
+      "source": "MyRGV",
+      "topic": "Business",
+      "topic_es": "Negocios",
+      "published": "Jul 17",
+      "url": "https://myrgv.com/local-news/2026/07/17/valley-couples-dedication-lands-them-in-texas-restaurant-association-hall-of-honor/"
+    }
+  ]
+}
