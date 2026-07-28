@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fdf8ee; --paper-2: #f7efdd; --ink: #22301f; --ink-soft: #5a6653;
+    --sunset: #e4582b; --sunset-deep: #c2431c; --citrus: #f0a832;
+    --palm: #2e6e4e; --palm-deep: #1d4a33; --card: #fffdf7; --line: #e4d9c2;
+    --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); }
+  .slide { width: 1080px; height: 1350px; background: var(--paper); background-image: radial-gradient(ellipse 1400px 700px at 50% -150px, #fdeed3 0%, var(--paper) 62%); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+  .slide + .slide { margin-top: 40px; }
+  .band { background: var(--palm-deep); color: #f2ecd9; font-weight: 700; font-size: 26px; letter-spacing: 0.04em; padding: 22px 56px; display: flex; justify-content: space-between; }
+  .pad { padding: 56px 64px; flex: 1; display: flex; flex-direction: column; }
+  .sun { position: absolute; top: -220px; left: 50%; transform: translateX(-50%); width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(240,168,50,0.30) 0%, rgba(240,168,50,0) 68%); }
+
+  /* cover */
+  .cover-mast { text-align: center; margin-top: 40px; }
+  .cover-mast .overline { font-size: 24px; font-weight: 700; letter-spacing: 0.18em; color: var(--sunset); text-transform: uppercase; }
+  .cover-mast h1 { font-family: var(--serif); font-weight: 800; font-size: 100px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); margin-top: 18px; }
+  .cover-mast h1 em { color: var(--sunset); font-style: italic; }
+  .cover-emoji { text-align: center; font-size: 140px; margin-top: 40px; }
+  .cover-hook { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 62px; color: var(--ink); margin-top: 36px; line-height: 1.15; padding: 0 30px; }
+  .cover-hook em { color: var(--sunset); font-style: italic; }
+  .cover-sub { text-align: center; font-size: 32px; color: var(--ink-soft); margin-top: 28px; padding: 0 60px; line-height: 1.45; }
+  .cover-footer { margin-top: auto; text-align: center; padding-bottom: 20px; font-size: 26px; font-weight: 700; color: var(--palm-deep); }
+
+  /* event slide */
+  .e-photo { position: relative; width: 100%; height: 660px; flex-shrink: 0; overflow: hidden; background: var(--paper-2); }
+  .e-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .e-tint { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(29,74,51,0.15) 0%, rgba(29,74,51,0.05) 45%, var(--paper) 100%); }
+  .e-medal { position: absolute; top: 36px; left: 40px; width: 150px; height: 150px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 900; font-size: 84px; background: var(--card); border: 6px solid var(--citrus); color: var(--citrus); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+  .e-medal.gold { border-color: var(--sunset); color: var(--sunset); }
+  .e-tag { position: absolute; top: 40px; right: 40px; font-size: 22px; font-weight: 800; letter-spacing: 0.04em; padding: 12px 24px; border-radius: 999px; background: var(--card); color: var(--sunset-deep); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
+  .e-pad { padding-top: 40px; }
+  .e-title { font-family: var(--serif); font-weight: 700; font-size: 54px; line-height: 1.1; color: var(--ink); }
+  .e-place { font-size: 26px; font-weight: 700; color: var(--palm); margin-top: 12px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .info-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
+  .info-pill { font-size: 23px; font-weight: 800; letter-spacing: 0.02em; padding: 12px 26px; border-radius: 999px; background: #eaf3ec; color: var(--palm-deep); border: 2px solid #cde3d4; }
+  .info-pill.free { background: #fdeeda; color: #a4610d; border-color: #f3d9ad; }
+  .e-blurb { font-family: var(--serif); font-size: 32px; line-height: 1.42; color: var(--ink); margin-top: 30px; }
+  .e-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 26px; border-top: 3px double var(--line); }
+  .e-footer .brand { font-family: var(--serif); font-weight: 800; font-size: 34px; color: var(--ink); }
+  .e-footer .brand em { color: var(--sunset); font-style: italic; }
+  .e-footer .swipe { font-size: 24px; font-weight: 700; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<script>
+(async () => {
+  const events = await fetch("../data/staged/events.json", { cache: "no-store" }).then(r => r.json());
+  const items = [...events.events].sort((a, b) => a.rank - b.rank);
+
+  const cover = document.createElement("div");
+  cover.className = "slide";
+  cover.id = "slide-0";
+  cover.innerHTML = `
+    <div class="sun"></div>
+    <div class="pad">
+      <div class="cover-mast">
+        <div class="overline">The 956 Big 5</div>
+        <h1>This Week's <em>Lineup</em></h1>
+      </div>
+      <div class="cover-emoji">🎉</div>
+      <div class="cover-hook">The five biggest things<br><em>happening</em> this week</div>
+      <div class="cover-sub">${events.section_note}</div>
+      <div class="cover-footer">Swipe for the lineup · the956.com</div>
+    </div>
+  `;
+  document.body.appendChild(cover);
+
+  items.forEach((e, i) => {
+    const slide = document.createElement("div");
+    slide.className = "slide";
+    slide.id = "slide-" + (i + 1);
+    const photoTag = e.photo
+      ? `<img src="photos/${e.photo}" alt="${e.title}" onerror="this.remove()">`
+      : "";
+    const pricePill = /free/i.test(e.price)
+      ? `<div class="info-pill free">🎟️ ${e.price}</div>`
+      : `<div class="info-pill">🎟️ ${e.price}</div>`;
+    slide.innerHTML = `
+      <div class="band"><span>BIG 5 THIS WEEK</span><span>#${e.rank} OF ${items.length}</span></div>
+      <div class="e-photo">
+        ${photoTag}
+        <div class="e-tint"></div>
+        <div class="e-medal${e.rank === 1 ? " gold" : ""}">${e.rank}</div>
+        <div class="e-tag">${e.tag}</div>
+      </div>
+      <div class="pad e-pad">
+        <div class="e-title">${e.title}</div>
+        <div class="e-place">📍 ${e.venue}, ${e.city}</div>
+        <div class="info-row">
+          <div class="info-pill">📅 ${e.date}</div>
+          <div class="info-pill">🕒 ${e.time}</div>
+          ${pricePill}
+        </div>
+        <div class="e-blurb">${e.blurb}</div>
+        <div class="e-footer">
+          <div class="brand">The <em>956</em></div>
+          <div class="swipe">swipe →</div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(slide);
+  });
+
+  const only = new URLSearchParams(location.search).get("slide");
+  if (only !== null) {
+    document.querySelectorAll(".slide").forEach((s) => {
+      s.style.display = s.id === "slide-" + only ? "flex" : "none";
+      s.style.margin = "0";
+    });
+  }
+})();
+</script>
+</body>
+</html>

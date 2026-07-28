@@ -45,6 +45,22 @@ Meta app "Claude" (App ID 1563544178720675 for Facebook, Instagram App ID
   fills the frame). Requires ffmpeg on PATH. Does NOT publish anywhere —
   TikTok's Content Posting API needs app review before public posting is
   allowed, so this just produces the .mp4 for manual upload for now.
+- `render-carousel.mjs <template.html> <outDir> <prefix> <count> [name1 ...]`
+  — renders a data-driven carousel template (e.g. `social/big5-carousel.html`)
+  into numbered PNG slides. Spins up a throwaway local HTTP server (needed
+  because the templates `fetch()` their data JSON, which file:// URLs block
+  via CORS) and screenshots each `?slide=N` with headless Chrome/Edge. Uses
+  async `spawn`, not `execFileSync` — the server runs in the same process,
+  and a synchronous exec call would block the event loop the server needs
+  to answer Chrome's own request (this deadlocked during initial testing).
+
+## Posting-status trackers
+
+- `social/output/ig-posted.json` / `social/output/fb-posted.json` — record
+  what's already gone out, keyed `"<date>/<slug>"` (e.g. `"2026-07-27/big5"`)
+  with `postedAt`/`mediaId` or `scheduledFor`/`postId`. The weekly check-in
+  cron jobs read these before proposing a post, so nothing double-posts.
+- `social/output/stories-posted.json` — same idea, for Stories.
 
 ## The approval model — important
 
