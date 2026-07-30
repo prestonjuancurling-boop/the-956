@@ -5,55 +5,56 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --paper: #fdf8ee; --paper-2: #f7efdd; --ink: #22301f; --ink-soft: #5a6653;
-    --sunset: #e4582b; --sunset-deep: #c2431c; --citrus: #f0a832;
-    --palm: #2e6e4e; --palm-deep: #1d4a33; --card: #fffdf7; --line: #e4d9c2;
+    --ink: #f4ede0; --ink-soft: #cbb98a; --sunset: #e4582b; --citrus: #f0a832;
+    --dark: #0c0a08; --dark-2: #17130f; --line: rgba(244,237,224,0.16);
     --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: var(--sans); }
-  .slide { width: 1080px; height: 1350px; background: var(--paper); background-image: radial-gradient(ellipse 1400px 700px at 50% -150px, #fdeed3 0%, var(--paper) 62%); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+  .slide { width: 1080px; height: 1350px; background: var(--dark); position: relative; overflow: hidden; }
   .slide + .slide { margin-top: 40px; }
-  .band { background: var(--palm-deep); color: #f2ecd9; font-weight: 700; font-size: 26px; letter-spacing: 0.04em; padding: 22px 56px; display: flex; justify-content: space-between; }
-  .pad { padding: 56px 64px; flex: 1; display: flex; flex-direction: column; }
-  .sun { position: absolute; top: -220px; left: 50%; transform: translateX(-50%); width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(240,168,50,0.30) 0%, rgba(240,168,50,0) 68%); }
 
-  /* cover */
-  .cover-mast { text-align: center; margin-top: 40px; }
-  .cover-mast .overline { font-size: 24px; font-weight: 700; letter-spacing: 0.18em; color: var(--sunset); text-transform: uppercase; }
-  .cover-mast h1 { font-family: var(--serif); font-weight: 800; font-size: 100px; line-height: 1; letter-spacing: -0.02em; color: var(--ink); margin-top: 18px; }
-  .cover-mast h1 em { color: var(--sunset); font-style: italic; }
-  .cover-emoji { text-align: center; font-size: 140px; margin-top: 40px; }
-  .cover-hook { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 66px; color: var(--ink); margin-top: 36px; line-height: 1.15; }
-  .cover-hook em { color: var(--sunset); font-style: italic; }
-  .cover-sub { text-align: center; font-size: 32px; color: var(--ink-soft); margin-top: 28px; padding: 0 60px; line-height: 1.45; }
-  .cover-footer { margin-top: auto; text-align: center; padding-bottom: 20px; font-size: 26px; font-weight: 700; color: var(--palm-deep); }
+  .bg-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.92); }
+  .scrim-top { position: absolute; top: 0; left: 0; right: 0; height: 420px; background: linear-gradient(180deg, rgba(0,0,0,0.78) 0%, transparent 100%); }
+  .scrim-bot { position: absolute; bottom: 0; left: 0; right: 0; height: 680px; background: linear-gradient(0deg, rgba(0,0,0,0.94) 22%, rgba(0,0,0,0.55) 60%, transparent 100%); }
+  .glow-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 900px 700px at 50% -100px, rgba(228,88,43,0.20) 0%, transparent 60%), var(--dark); }
 
-  /* contender/winner slide */
-  .c-photo { position: relative; width: 100%; height: 660px; flex-shrink: 0; overflow: hidden; background: var(--paper-2); }
-  .c-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .c-tint { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(29,74,51,0.15) 0%, rgba(29,74,51,0.05) 45%, var(--paper) 100%); }
-  .q-medal { position: absolute; top: 36px; left: 40px; width: 150px; height: 150px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 900; font-size: 84px; background: var(--card); border: 6px solid var(--citrus); color: var(--citrus); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
-  .q-medal.gold { border-color: var(--sunset); color: var(--sunset); }
-  .c-pad { padding-top: 40px; }
-  .c-name { font-family: var(--serif); font-weight: 700; font-size: 58px; line-height: 1.08; color: var(--ink); }
-  .c-city { font-size: 26px; font-weight: 700; color: var(--palm); margin-top: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
-  .c-known { font-family: var(--serif); font-size: 38px; line-height: 1.4; color: var(--ink); margin-top: 36px; }
-  .pill-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
-  .move-pill { font-size: 23px; font-weight: 800; letter-spacing: 0.04em; padding: 12px 26px; border-radius: 999px; background: #eaf3ec; color: var(--palm-deep); border: 2px solid #cde3d4; }
-  .move-pill.up { background: #fdeeda; color: #a4610d; border-color: #f3d9ad; }
-  .move-pill.down { background: #f7e9e4; color: var(--sunset-deep); border-color: #ecd2c8; }
-  .c-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 26px; border-top: 3px double var(--line); }
-  .c-footer .brand { font-family: var(--serif); font-weight: 800; font-size: 34px; color: var(--ink); }
-  .c-footer .brand em { color: var(--sunset); font-style: italic; }
-  .c-footer .swipe { font-size: 24px; font-weight: 700; color: var(--ink-soft); }
+  .top-row { position: absolute; top: 46px; left: 52px; right: 52px; display: flex; justify-content: space-between; align-items: center; z-index: 2; }
+  .top-row .brand { font-family: var(--serif); font-weight: 800; font-size: 32px; color: #fff; }
+  .top-row .brand em { color: var(--citrus); font-style: italic; }
+  .top-row .rankpill { background: var(--sunset); color: #fff; font-weight: 800; font-size: 24px; padding: 12px 24px; border-radius: 999px; letter-spacing: 0.02em; }
 
-  /* CTA */
-  .cta-emoji { text-align: center; font-size: 130px; margin-top: 70px; }
-  .cta-title { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 66px; color: var(--ink); margin-top: 30px; padding: 0 40px; line-height: 1.18; }
-  .cta-title em { color: var(--sunset); font-style: italic; }
-  .cta-body { text-align: center; font-size: 32px; color: var(--ink-soft); margin-top: 32px; padding: 0 70px; line-height: 1.5; }
-  .cta-prompt { margin: 56px 60px 0; background: var(--palm-deep); color: #f2ecd9; border-radius: 20px; padding: 42px 44px; font-family: var(--serif); font-style: italic; font-size: 34px; text-align: center; line-height: 1.4; }
+  .content { position: absolute; bottom: 56px; left: 56px; right: 56px; z-index: 2; }
+  .content .overline { font-size: 25px; font-weight: 800; letter-spacing: 0.16em; color: var(--citrus); text-transform: uppercase; }
+  .content h1 { font-family: var(--serif); font-weight: 800; font-size: 84px; line-height: 0.98; color: #fff; margin-top: 14px; }
+  .content h1 em { color: var(--citrus); font-style: italic; }
+  .content .sub { font-size: 29px; color: #e9e2cf; margin-top: 20px; line-height: 1.4; }
+  .content .foot { margin-top: 30px; font-size: 23px; font-weight: 700; color: var(--ink-soft); }
+
+  .badge-row { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .pill { font-size: 21px; font-weight: 800; letter-spacing: 0.02em; padding: 10px 22px; border-radius: 999px; background: rgba(244,237,224,0.12); color: #fff; border: 1.5px solid rgba(244,237,224,0.25); backdrop-filter: blur(4px); }
+  .pill.hot { background: rgba(228,88,43,0.85); border-color: rgba(228,88,43,0.85); }
+  .pill.down { background: rgba(244,237,224,0.08); }
+
+  /* no-photo slides (cover teaser / cta) */
+  .flat { display: flex; flex-direction: column; padding: 70px 60px; }
+  .flat .band { display: flex; justify-content: space-between; align-items: center; }
+  .flat .band .brand { font-family: var(--serif); font-weight: 800; font-size: 30px; color: #fff; }
+  .flat .band .brand em { color: var(--citrus); font-style: italic; }
+  .flat .band .tag { font-size: 23px; font-weight: 800; letter-spacing: 0.1em; color: var(--citrus); text-transform: uppercase; }
+
+  .cover-emoji { text-align: center; font-size: 130px; margin-top: 90px; }
+  .cover-hook { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 62px; color: #fff; margin-top: 30px; padding: 0 20px; line-height: 1.2; }
+  .cover-hook em { color: var(--citrus); font-style: italic; }
+  .cover-body { text-align: center; font-size: 30px; color: var(--ink-soft); margin-top: 30px; padding: 0 40px; line-height: 1.5; }
+  .cover-footer { margin-top: auto; text-align: center; font-size: 23px; font-weight: 700; color: var(--ink-soft); }
+
+  .cta-icon { text-align: center; font-size: 130px; margin-top: 90px; }
+  .cta-title { text-align: center; font-family: var(--serif); font-weight: 700; font-size: 66px; color: #fff; margin-top: 30px; padding: 0 20px; line-height: 1.2; }
+  .cta-title em { color: var(--citrus); font-style: italic; }
+  .cta-body { text-align: center; font-size: 30px; color: var(--ink-soft); margin-top: 30px; padding: 0 40px; line-height: 1.5; }
+  .cta-prompt { margin: 54px 10px 0; background: var(--sunset); color: #fff; border-radius: 20px; padding: 42px 44px; font-family: var(--serif); font-style: italic; font-size: 34px; text-align: center; line-height: 1.4; }
+  .cta-footer { margin-top: auto; text-align: center; font-size: 23px; font-weight: 700; color: var(--ink-soft); }
 </style>
 </head>
 <body>
@@ -66,76 +67,90 @@
   const cat = await fetch("../data/category.json", { cache: "no-store" }).then(r => r.json());
   const revealed = cat.status === "ranked";
   const spots = revealed ? [...cat.spots].sort((a, b) => a.rank - b.rank) : cat.spots;
+  const total = spots.length;
 
   const cover = document.createElement("div");
   cover.className = "slide";
   cover.id = "slide-0";
-  cover.innerHTML = `
-    <div class="sun"></div>
-    <div class="pad">
-      <div class="cover-mast">
-        <div class="overline">The 956 Micro-Rankings</div>
-        <h1>${cat.title}</h1>
+  if (revealed && spots[0] && spots[0].photo) {
+    cover.innerHTML = `
+      <img class="bg-photo" src="photos/${spots[0].photo}" onerror="this.remove()">
+      <div class="scrim-top"></div>
+      <div class="scrim-bot"></div>
+      <div class="top-row">
+        <div class="brand">The <em>956</em></div>
+        <div class="rankpill">RESULTS</div>
       </div>
-      <div class="cover-emoji">${revealed ? "👑" : "❓"}</div>
-      <div class="cover-hook">${revealed ? "The results are in.<br><em>Meet the winner.</em>" : `${spots.length} contenders.<br>1 crown.<br><em>Ranking soon.</em>`}</div>
-      <div class="cover-sub">${revealed ? cat.note : (cat.measuring_note || cat.note)}</div>
-      <div class="cover-footer">${revealed ? "See the full order" : "Meet the contenders"} · the956.com</div>
-    </div>
-  `;
+      <div class="content">
+        <div class="overline">${cat.title}</div>
+        <h1>${spots[0].name} takes<br>the <em>crown</em></h1>
+        <div class="sub">${cat.note}</div>
+        <div class="foot">Swipe for the full order · the956.com</div>
+      </div>
+    `;
+  } else {
+    cover.className = "slide flat";
+    cover.innerHTML = `
+      <div class="glow-bg" style="position:absolute;"></div>
+      <div style="position:relative;z-index:2;display:flex;flex-direction:column;height:100%;">
+        <div class="band"><div class="brand">The <em>956</em></div><div class="tag">Micro-Rankings</div></div>
+        <div class="cover-emoji">${revealed ? "👑" : "❓"}</div>
+        <div class="cover-hook">${revealed ? "The results are in.<br><em>Meet the winner.</em>" : `${cat.title}<br>${total} contenders. 1 crown.<br><em>Ranking soon.</em>`}</div>
+        <div class="cover-body">${revealed ? cat.note : (cat.measuring_note || cat.note)}</div>
+        <div class="cover-footer">${revealed ? "See the full order" : "Meet the contenders"} · the956.com</div>
+      </div>
+    `;
+  }
   document.body.appendChild(cover);
 
   spots.forEach((s, i) => {
     const slide = document.createElement("div");
     slide.className = "slide";
     slide.id = "slide-" + (i + 1);
-    const photoTag = s.photo
-      ? `<img src="photos/${s.photo}" alt="${s.name}" onerror="this.remove()">`
-      : "";
-    const medalLabel = revealed ? s.rank : "?";
-    const movePill = !revealed || s.moved == null || s.moved === 0 ? "" :
-      s.moved > 0
-        ? `<div class="move-pill up">▲ up ${s.moved} spot${s.moved === 1 ? "" : "s"}</div>`
-        : `<div class="move-pill down">▼ down ${-s.moved}</div>`;
-    const streakPill = revealed && s.rank === 1 && s.streak_weeks > 1
-      ? `<div class="move-pill">🔥 ${s.streak_weeks} weeks at #1</div>` : "";
+    const rankLabel = revealed ? `#${s.rank} OF ${total}` : `CONTENDER ${i + 1} OF ${total}`;
+    const pills = [];
+    if (revealed && s.moved > 0) pills.push(`<span class="pill hot">▲ up ${s.moved} spot${s.moved === 1 ? "" : "s"}</span>`);
+    if (revealed && s.moved < 0) pills.push(`<span class="pill down">▼ down ${-s.moved}</span>`);
+    if (revealed && s.rank === 1 && s.streak_weeks > 1) pills.push(`<span class="pill">🔥 ${s.streak_weeks} weeks at #1</span>`);
     slide.innerHTML = `
-      <div class="band"><span>${cat.title.toUpperCase()}${revealed ? "" : " · CONTENDER"}</span><span>${revealed ? `#${s.rank} OF ${spots.length}` : `${i + 1} OF ${spots.length}`}</span></div>
-      <div class="c-photo">
-        ${photoTag}
-        <div class="c-tint"></div>
-        <div class="q-medal${revealed && s.rank === 1 ? " gold" : ""}">${medalLabel}</div>
+      ${s.photo ? `<img class="bg-photo" src="photos/${s.photo}" onerror="this.remove()">` : `<div class="glow-bg"></div>`}
+      <div class="scrim-top"></div>
+      <div class="scrim-bot"></div>
+      <div class="top-row">
+        <div class="brand">The <em>956</em></div>
+        <div class="rankpill">${rankLabel}</div>
       </div>
-      <div class="pad c-pad">
-        <div class="c-name">${s.name}</div>
-        <div class="c-city">📍 ${s.display_city || s.city}</div>
-        ${movePill || streakPill ? `<div class="pill-row">${streakPill}${movePill}</div>` : ""}
-        <div class="c-known">${s.known_for}</div>
-        <div class="c-footer">
-          <div class="brand">The <em>956</em></div>
-          <div class="swipe">swipe →</div>
-        </div>
+      <div class="content">
+        <div class="overline">📍 ${s.display_city || s.city}</div>
+        <h1>${s.name}</h1>
+        <div class="sub">${s.known_for}</div>
+        ${pills.length ? `<div class="badge-row">${pills.join("")}</div>` : ""}
+        <div class="foot">swipe →</div>
       </div>
     `;
     document.body.appendChild(slide);
   });
 
   const cta = document.createElement("div");
-  cta.className = "slide";
-  cta.id = "slide-" + (spots.length + 1);
+  cta.className = "slide flat";
+  cta.id = "slide-" + (total + 1);
   cta.innerHTML = revealed ? `
-    <div class="pad">
-      <div class="cta-emoji">🔄</div>
+    <div class="glow-bg" style="position:absolute;"></div>
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;height:100%;justify-content:center;">
+      <div class="cta-icon" style="margin-top:0;">🔄</div>
       <div class="cta-title">New theme,<br><em>every month</em></div>
       <div class="cta-body">${cat.title} was this month's micro-ranking, tracked with the same real-data engine as the Power Rankings. A new food category kicks off next month.</div>
       <div class="cta-prompt">Tell us who should be in next month's lineup 👇</div>
+      <div class="cta-footer" style="margin-top:60px;">the956.com</div>
     </div>
   ` : `
-    <div class="pad">
-      <div class="cta-emoji">👑</div>
+    <div class="glow-bg" style="position:absolute;"></div>
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;height:100%;justify-content:center;">
+      <div class="cta-icon" style="margin-top:0;">👑</div>
       <div class="cta-title">Who takes<br>the crown?</div>
       <div class="cta-body">The ranking is computed from real buzz data — Google review velocity and local chatter. No opinions, no favorites.</div>
       <div class="cta-prompt">Call your winner in the comments 👇</div>
+      <div class="cta-footer" style="margin-top:60px;">the956.com</div>
     </div>
   `;
   document.body.appendChild(cta);
@@ -143,7 +158,7 @@
   const only = new URLSearchParams(location.search).get("slide");
   if (only !== null) {
     document.querySelectorAll(".slide").forEach((s) => {
-      s.style.display = s.id === "slide-" + only ? "flex" : "none";
+      s.style.display = s.id === "slide-" + only ? "block" : "none";
       s.style.margin = "0";
     });
   }
