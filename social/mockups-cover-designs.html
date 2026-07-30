@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,50&family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .slide { width: 1080px; height: 1350px; position: relative; overflow: hidden; display: none; font-family: "Inter", sans-serif; }
+
+  /* ============ DESIGN 1: Neon Nightlife ============ */
+  #d1 {
+    background: radial-gradient(ellipse 900px 700px at 50% 0%, #241a3d 0%, #0d0a1a 55%, #060509 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 70px 60px;
+  }
+  #d1 .glow { position: absolute; top: -300px; left: 50%; transform: translateX(-50%); width: 900px; height: 900px; border-radius: 50%; background: radial-gradient(circle, rgba(255,45,149,0.35) 0%, rgba(120,50,255,0.15) 40%, transparent 70%); filter: blur(10px); }
+  #d1 .tag { font-family: "Bebas Neue", sans-serif; font-size: 34px; letter-spacing: 0.3em; color: #ff2d95; text-align: center; z-index: 2; }
+  #d1 h1 { font-family: "Anton", sans-serif; font-size: 118px; line-height: 0.95; text-align: center; margin-top: 14px; z-index: 2; color: #fff; text-shadow: 0 0 30px rgba(255,45,149,0.6); }
+  #d1 h1 .grad { background: linear-gradient(90deg, #ff2d95, #a83bff, #3bcfff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  #d1 .photowrap { z-index: 2; margin-top: 40px; width: 780px; height: 560px; border-radius: 28px; overflow: hidden; position: relative; border: 4px solid rgba(255,255,255,0.15); box-shadow: 0 0 60px rgba(168,59,255,0.4); }
+  #d1 .photowrap img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.2) contrast(1.05); }
+  #d1 .photowrap .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(6,5,9,0.95) 100%); }
+  #d1 .photowrap .name { position: absolute; bottom: 26px; left: 32px; font-family: "Anton", sans-serif; font-size: 56px; color: #fff; }
+  #d1 .photowrap .crown { position: absolute; top: 24px; right: 28px; width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg,#ff2d95,#a83bff); display: flex; align-items: center; justify-content: center; font-family: "Anton"; font-size: 52px; color: #fff; box-shadow: 0 0 30px rgba(255,45,149,0.7); }
+  #d1 .foot { z-index: 2; margin-top: 40px; font-family: "Bebas Neue"; font-size: 30px; letter-spacing: 0.15em; color: #b9a8e0; }
+
+  /* ============ DESIGN 2: Editorial Refined (evolution of current) ============ */
+  #d2 {
+    background: #fdf8ee;
+    background-image: radial-gradient(ellipse 1400px 800px at 50% -200px, #ffe4c2 0%, #fdf8ee 62%);
+    display: flex; flex-direction: column; padding: 0;
+  }
+  #d2 .band { background: #1d4a33; color: #f2ecd9; font-family: "Fraunces"; font-weight: 800; font-size: 30px; letter-spacing: 0.06em; padding: 26px 56px; display: flex; justify-content: space-between; align-items: center; }
+  #d2 .band .dot { width: 14px; height: 14px; border-radius: 50%; background: #e4582b; display: inline-block; margin-right: 14px; }
+  #d2 .photowrap { margin: 0; width: 100%; height: 720px; position: relative; overflow: hidden; }
+  #d2 .photowrap img { width: 100%; height: 100%; object-fit: cover; }
+  #d2 .photowrap .scrim { position: absolute; inset: 0; background: linear-gradient(0deg, #fdf8ee 0%, rgba(253,248,238,0) 30%), linear-gradient(180deg, rgba(29,74,51,0.35) 0%, transparent 35%); }
+  #d2 .photowrap .rank { position: absolute; bottom: -50px; left: 56px; font-family: "Fraunces"; font-weight: 900; font-size: 240px; color: #fdf8ee; -webkit-text-stroke: 6px #1d4a33; line-height: 1; }
+  #d2 .body { padding: 20px 64px 0; }
+  #d2 h1 { font-family: "Fraunces"; font-weight: 800; font-size: 84px; line-height: 0.98; color: #22301f; letter-spacing: -0.01em; }
+  #d2 h1 em { color: #e4582b; font-style: italic; }
+  #d2 .name { font-family: "Fraunces"; font-weight: 700; font-size: 46px; color: #22301f; margin-top: 22px; }
+  #d2 .sub { font-size: 28px; color: #5a6653; margin-top: 12px; }
+  #d2 .foot { margin-top: auto; padding: 30px 64px 34px; font-size: 24px; font-weight: 700; color: #1d4a33; border-top: 3px double #e4d9c2; }
+
+  /* ============ DESIGN 3: Meme / Gen-Z Sticker ============ */
+  #d3 { background: #fff100; display: flex; flex-direction: column; align-items: center; padding: 56px 50px; position: relative; }
+  #d3 .bolt { position: absolute; font-size: 90px; opacity: 0.9; }
+  #d3 .b1 { top: 60px; left: 40px; transform: rotate(-15deg); }
+  #d3 .b2 { top: 90px; right: 50px; transform: rotate(12deg); }
+  #d3 .tag { font-family: "Archivo Black"; font-size: 32px; background: #111; color: #fff100; padding: 10px 26px; border-radius: 8px; transform: rotate(-3deg); z-index: 2; }
+  #d3 h1 { font-family: "Archivo Black"; font-size: 96px; line-height: 0.92; text-align: center; color: #111; margin-top: 26px; z-index: 2; -webkit-text-stroke: 2px #111; }
+  #d3 h1 .hl { color: #fff; -webkit-text-stroke: 6px #ff2d55; text-shadow: 8px 8px 0 #111; }
+  #d3 .polaroid { z-index: 2; margin-top: 34px; background: #fff; padding: 22px 22px 90px; border-radius: 4px; transform: rotate(2deg); box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
+  #d3 .polaroid img { width: 700px; height: 520px; object-fit: cover; }
+  #d3 .polaroid .cap { font-family: "Archivo Black"; font-size: 40px; color: #111; text-align: center; margin-top: 24px; }
+  #d3 .badge { position: absolute; z-index: 3; top: 690px; right: 130px; width: 160px; height: 160px; background: #ff2d55; border-radius: 50%; border: 6px solid #111; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(12deg); color: #fff; font-family: "Archivo Black"; text-align: center; line-height: 1.1; box-shadow: 0 10px 0 #111; }
+  #d3 .badge .n { font-size: 60px; }
+  #d3 .badge .t { font-size: 20px; }
+  #d3 .foot { z-index: 2; margin-top: 46px; font-family: "Archivo Black"; font-size: 26px; color: #111; background: #fff; padding: 14px 30px; border-radius: 999px; border: 3px solid #111; }
+
+  /* ============ DESIGN 4: Photo-Forward Full-Bleed ============ */
+  #d4 { background: #000; }
+  #d4 img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.92); }
+  #d4 .scrim-top { position: absolute; top: 0; left: 0; right: 0; height: 400px; background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, transparent 100%); }
+  #d4 .scrim-bot { position: absolute; bottom: 0; left: 0; right: 0; height: 640px; background: linear-gradient(0deg, rgba(0,0,0,0.92) 20%, rgba(0,0,0,0.5) 60%, transparent 100%); }
+  #d4 .top-row { position: absolute; top: 46px; left: 48px; right: 48px; display: flex; justify-content: space-between; align-items: center; z-index: 2; }
+  #d4 .top-row .brand { font-family: "Fraunces"; font-weight: 800; font-size: 32px; color: #fff; }
+  #d4 .top-row .brand em { color: #f0a832; font-style: italic; }
+  #d4 .top-row .rankpill { background: #e4582b; color: #fff; font-weight: 800; font-size: 26px; padding: 12px 26px; border-radius: 999px; }
+  #d4 .content { position: absolute; bottom: 56px; left: 56px; right: 56px; z-index: 2; }
+  #d4 .content .overline { font-size: 26px; font-weight: 800; letter-spacing: 0.15em; color: #f0a832; text-transform: uppercase; }
+  #d4 h1 { font-family: "Fraunces"; font-weight: 800; font-size: 92px; line-height: 0.98; color: #fff; margin-top: 14px; }
+  #d4 h1 em { color: #f0a832; font-style: italic; }
+  #d4 .content .sub { font-size: 30px; color: #e9e2cf; margin-top: 20px; line-height: 1.4; }
+  #d4 .content .foot { margin-top: 34px; font-size: 24px; font-weight: 700; color: #cbb98a; }
+
+  /* ============ DESIGN 5: Retro RGV / Papel Picado ============ */
+  #d5 { background: linear-gradient(160deg, #ff5f6d 0%, #ff9d3d 45%, #ffd23f 100%); display: flex; flex-direction: column; align-items: center; padding: 64px 56px; position: relative; }
+  #d5 .cutout-top, #d5 .cutout-bot { position: absolute; left: 0; right: 0; height: 60px; background-repeat: repeat-x; background-size: 60px 60px; }
+  #d5 .cutout-top { top: 0; background-image: radial-gradient(circle at 30px 0px, transparent 30px, #0b6e5c 31px); background-color: #0b6e5c; height: 34px; }
+  #d5 .cutout-bot { bottom: 0; background-image: radial-gradient(circle at 30px 60px, transparent 30px, #0b6e5c 31px); background-color: #0b6e5c; height: 34px; }
+  #d5 .tag { margin-top: 40px; font-family: "Fraunces"; font-weight: 800; font-size: 30px; letter-spacing: 0.1em; color: #0b6e5c; background: #fff; padding: 10px 30px; border-radius: 999px; border: 4px solid #0b6e5c; }
+  #d5 h1 { font-family: "Fraunces"; font-weight: 900; font-size: 108px; line-height: 0.95; text-align: center; color: #fff; margin-top: 26px; text-shadow: 6px 6px 0 #0b6e5c; }
+  #d5 h1 em { color: #fff176; font-style: italic; text-shadow: 6px 6px 0 #0b6e5c; }
+  #d5 .photowrap { margin-top: 36px; width: 760px; height: 540px; border-radius: 20px; overflow: hidden; border: 8px solid #fff; box-shadow: 8px 8px 0 #0b6e5c; position: relative; }
+  #d5 .photowrap img { width: 100%; height: 100%; object-fit: cover; }
+  #d5 .crown { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: #fff176; border: 5px solid #0b6e5c; border-radius: 50%; width: 110px; height: 110px; display: flex; align-items: center; justify-content: center; font-family: "Fraunces"; font-weight: 900; font-size: 50px; color: #0b6e5c; z-index: 3; }
+  #d5 .name { margin-top: 30px; font-family: "Fraunces"; font-weight: 800; font-size: 52px; color: #fff; text-shadow: 3px 3px 0 #0b6e5c; }
+  #d5 .foot { margin-top: auto; padding-bottom: 10px; font-family: "Fraunces"; font-weight: 700; font-size: 26px; color: #0b6e5c; background: #fff; padding: 12px 28px; border-radius: 999px; }
+</style>
+</head>
+<body>
+
+<div class="slide" id="d1">
+  <div class="glow"></div>
+  <div class="tag">THE 956 &middot; POWER RANKINGS</div>
+  <h1>WHO'S<br><span class="grad">#1</span> THIS WEEK</h1>
+  <div class="photowrap">
+    <img src="photos/zaya.jpg" onerror="this.remove()">
+    <div class="scrim"></div>
+    <div class="crown">1</div>
+    <div class="name">ZAYA</div>
+  </div>
+  <div class="foot">SWIPE FOR THE FULL TOP 5 &rarr; THE956.COM</div>
+</div>
+
+<div class="slide" id="d2">
+  <div class="band"><span><span class="dot"></span>POWER RANKINGS</span><span>WEEK 4</span></div>
+  <div class="photowrap">
+    <img src="photos/zaya.jpg" onerror="this.remove()">
+    <div class="scrim"></div>
+    <div class="rank">1</div>
+  </div>
+  <div class="body">
+    <h1>New <em>#1</em> this week</h1>
+    <div class="name">Zaya, McAllen</div>
+    <div class="sub">Dethrones a 3-week reign &mdash; up 4 spots on real review velocity.</div>
+  </div>
+  <div class="foot">Swipe for the full Top 5 &middot; the956.com</div>
+</div>
+
+<div class="slide" id="d3">
+  <div class="bolt b1">🔥</div>
+  <div class="bolt b2">⚡</div>
+  <div class="tag">THIS WEEK'S RANKINGS</div>
+  <h1>NEW<br><span class="hl">#1</span> ALERT</h1>
+  <div class="polaroid">
+    <img src="photos/zaya.jpg" onerror="this.remove()">
+    <div class="cap">ZAYA · MCALLEN</div>
+  </div>
+  <div class="badge"><div class="n">#1</div><div class="t">THIS WEEK</div></div>
+  <div class="foot">SWIPE FOR THE TOP 5 👉</div>
+</div>
+
+<div class="slide" id="d4">
+  <img class="bg" src="photos/zaya.jpg" onerror="this.remove()">
+  <div class="scrim-top"></div>
+  <div class="scrim-bot"></div>
+  <div class="top-row">
+    <div class="brand">The <em>956</em></div>
+    <div class="rankpill">#1 THIS WEEK</div>
+  </div>
+  <div class="content">
+    <div class="overline">Power Rankings &middot; Week 4</div>
+    <h1>Zaya takes<br>the <em>crown</em></h1>
+    <div class="sub">Up 4 spots, dethroning a 3-week #1 &mdash; real review data, no opinions.</div>
+    <div class="foot">Swipe for the full Top 5 &middot; the956.com</div>
+  </div>
+</div>
+
+<div class="slide" id="d5">
+  <div class="cutout-top"></div>
+  <div class="cutout-bot"></div>
+  <div class="tag">THE 956 · POWER RANKINGS</div>
+  <h1>THIS WEEK'S<br><em>TOP 5</em></h1>
+  <div class="photowrap">
+    <div class="crown">👑</div>
+    <img src="photos/zaya.jpg" onerror="this.remove()">
+  </div>
+  <div class="name">Zaya takes #1</div>
+  <div class="foot">Swipe for the lineup · the956.com</div>
+</div>
+
+<script>
+  const only = new URLSearchParams(location.search).get("slide");
+  const map = { "0": "d1", "1": "d2", "2": "d3", "3": "d4", "4": "d5" };
+  const id = map[only];
+  document.querySelectorAll(".slide").forEach((s) => { s.style.display = s.id === id ? "flex" : "none"; });
+</script>
+</body>
+</html>
