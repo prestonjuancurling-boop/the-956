@@ -21,33 +21,32 @@
       "known_for_es": "El fenómeno de raspas arma-tú-mismo que llegó a hacer filas de 75 carros — el puesto de Harlingen sigue la tradición",
       "places_query": "Iced Cube raspas Harlingen TX",
       "rank": 1,
-      "mentions": 124,
+      "mentions": 55,
       "reddit_mentions": null,
-      "review_delta": 23,
+      "review_delta": 1,
       "rating": 4.4,
       "photo": "iced-cube.jpg",
-      "moved": 4,
-      "streak_weeks": 1
+      "moved": 0,
+      "streak_weeks": 2
     },
     {
-      "name": "Young's Sno Wiz",
+      "name": "Fruti Raspas La Isla",
       "aliases": [
-        "young's",
-        "sno wiz",
-        "youngs sno"
+        "fruti raspas",
+        "la isla raspas"
       ],
       "city": "McAllen",
       "display_city": "McAllen",
-      "known_for": "The McAllen institution locals swear has the best raspas in the Valley",
-      "known_for_es": "La institución de McAllen que según los locales tiene las mejores raspas del Valle",
-      "places_query": "Young's Sno Wiz McAllen TX",
+      "known_for": "Fruteria-style raspas piled with fresh fruit, chamoy and everything on it",
+      "known_for_es": "Raspas estilo frutería con fruta fresca, chamoy y de todo encima",
+      "places_query": "Fruti Raspas La Isla McAllen TX",
       "rank": 2,
-      "mentions": 4,
+      "mentions": 10,
       "reddit_mentions": null,
       "review_delta": 1,
-      "rating": 4.8,
-      "photo": "young-s-sno-wiz.jpg",
-      "moved": -1
+      "rating": 4.6,
+      "photo": "fruti-raspas-la-isla.jpg",
+      "moved": 2
     },
     {
       "name": "Margo's",
@@ -61,31 +60,32 @@
       "known_for_es": "Más de 60 combinaciones con jarabes caseros — la casa de la legendaria mangonada",
       "places_query": "Margo's raspas Rio Grande Valley TX",
       "rank": 3,
-      "mentions": 3,
+      "mentions": 7,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 3,
       "rating": 4.5,
       "photo": "margo-s.jpg",
-      "moved": -1
+      "moved": 0
     },
     {
-      "name": "Fruti Raspas La Isla",
+      "name": "Young's Sno Wiz",
       "aliases": [
-        "fruti raspas",
-        "la isla raspas"
+        "young's",
+        "sno wiz",
+        "youngs sno"
       ],
       "city": "McAllen",
       "display_city": "McAllen",
-      "known_for": "Fruteria-style raspas piled with fresh fruit, chamoy and everything on it",
-      "known_for_es": "Raspas estilo frutería con fruta fresca, chamoy y de todo encima",
-      "places_query": "Fruti Raspas La Isla McAllen TX",
+      "known_for": "The McAllen institution locals swear has the best raspas in the Valley",
+      "known_for_es": "La institución de McAllen que según los locales tiene las mejores raspas del Valle",
+      "places_query": "Young's Sno Wiz McAllen TX",
       "rank": 4,
-      "mentions": 0,
+      "mentions": 2,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 4.6,
-      "photo": "fruti-raspas-la-isla.jpg",
-      "moved": -1
+      "rating": 4.8,
+      "photo": "young-s-sno-wiz.jpg",
+      "moved": -2
     },
     {
       "name": "Viva La Raspa",
@@ -103,7 +103,7 @@
       "review_delta": 0,
       "rating": 4.6,
       "photo": "viva-la-raspa.jpg",
-      "moved": -1
+      "moved": 0
     }
   ],
   "baseline_date": "2026-07-02"
