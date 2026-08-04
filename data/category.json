@@ -1,110 +1,86 @@
 {
   "comment": "The rotating monthly micro-ranking. Rotate the category on the 1st of each month: update month/title/note, swap in 5-6 real candidate spots (verified via local sources — never invented), reset status to 'measuring', set baseline_date to today, and prune stale cat: keys from buzz-history.json. compute-buzz.mjs scores candidates weekly with the same engine as the Power Rankings (history keys prefixed 'cat:'). LOCKED 12-MONTH CALENDAR (themes fixed, candidate spots researched fresh each rotation): Jul=raspas, Aug=breakfast tacos, Sep=barbacoa, Oct=pan dulce, Nov=menudo, Dec=tamales (publish before Christmas ordering), Jan=caldos, Feb=mariscos (Lent), Mar=fajitas, Apr=elotes & street corn, May=paletas & aguas frescas, Jun=homegrown burgers (no chains). High school football is a separate section, not a category.",
-  "month": "2026-07",
-  "title": "July: Best Raspas ❄️",
-  "title_es": "Julio: Las mejores raspas ❄️",
-  "note": "It's 98° in the Valley — the only ranking that matters right now. Tracked with the same real-data engine as the Power Rankings.",
-  "note_es": "Hace 98° en el Valle — el único ranking que importa ahorita. Medido con el mismo sistema de datos reales que El Ranking.",
+  "month": "2026-08",
+  "title": "August: Best Breakfast Tacos 🌮",
+  "title_es": "Agosto: Los mejores tacos de desayuno 🌮",
+  "note": "Raspas cool you down, but breakfast tacos start the day right — six Valley kitchens up before sunrise to prove it.",
+  "note_es": "Las raspas te refrescan, pero los tacos de desayuno arrancan bien el día — seis cocinas del Valle despiertas antes del amanecer para demostrarlo.",
   "measuring_note": "Tracking just started — the first ranking drops Monday. The contenders:",
   "measuring_note_es": "Apenas empezamos a medir — el primer ranking sale el lunes. Los contendientes:",
-  "status": "ranked",
+  "status": "measuring",
   "spots": [
     {
-      "name": "Iced Cube",
+      "name": "Ms G's Tacos N' More",
       "aliases": [
-        "iced cube raspa",
-        "iced cube elsa"
+        "ms g's tacos",
+        "ms gs tacos n more",
+        "ms g's tacos n more"
+      ],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "Grandma-style breakfast tacos with fresh flour tortillas that locals call a legend",
+      "known_for_es": "Tacos de desayuno estilo abuela con tortillas de harina frescas que los locales llaman una leyenda",
+      "places_query": "Ms G's Tacos N' More McAllen TX"
+    },
+    {
+      "name": "Taco N' Todo",
+      "aliases": [
+        "taco n todo",
+        "taco n' todo"
+      ],
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Quesabirria breakfast tacos and tacos estilo Matamoros that draw visitors from across Texas",
+      "known_for_es": "Tacos de quesabirria y estilo Matamoros para desayunar que atraen visitas de todo Texas",
+      "places_query": "Taco N Todo Edinburg TX"
+    },
+    {
+      "name": "Restaurant Marychuy",
+      "aliases": [
+        "marychuy",
+        "restaurant marychuy"
+      ],
+      "city": "Weslaco",
+      "display_city": "Weslaco",
+      "known_for": "15+ years of Monterrey-style breakfast tacos alongside caldo de res made fresh daily",
+      "known_for_es": "Más de 15 años de tacos de desayuno estilo Monterrey junto con caldo de res hecho fresco cada día",
+      "places_query": "Restaurant Marychuy Weslaco TX"
+    },
+    {
+      "name": "La Barra Del Taco",
+      "aliases": [
+        "la barra del taco",
+        "barra del taco"
+      ],
+      "city": "Brownsville",
+      "display_city": "Brownsville",
+      "known_for": "Street-style breakfast tacos with five vegan options and a salsa for every guiso",
+      "known_for_es": "Tacos de desayuno estilo callejero con cinco opciones veganas y una salsa para cada guiso",
+      "places_query": "La Barra Del Taco Brownsville TX"
+    },
+    {
+      "name": "Eddie's Tacos",
+      "aliases": [
+        "eddie's tacos",
+        "eddies tacos"
+      ],
+      "city": "Pharr",
+      "display_city": "Pharr",
+      "known_for": "The converted-gas-station original that grew into a five-location breakfast taco chain",
+      "known_for_es": "El original de una gasolinera convertida que creció hasta ser una cadena de cinco ubicaciones",
+      "places_query": "Eddie's Tacos Pharr TX"
+    },
+    {
+      "name": "Tejano Grill",
+      "aliases": [
+        "tejano grill"
       ],
       "city": "Harlingen",
       "display_city": "Harlingen",
-      "known_for": "The build-your-own raspa phenomenon that once drew 75-car lines — the Harlingen stand carries the torch",
-      "known_for_es": "El fenómeno de raspas arma-tú-mismo que llegó a hacer filas de 75 carros — el puesto de Harlingen sigue la tradición",
-      "places_query": "Iced Cube raspas Harlingen TX",
-      "rank": 1,
-      "mentions": 55,
-      "reddit_mentions": null,
-      "review_delta": 1,
-      "rating": 4.4,
-      "photo": "iced-cube.jpg",
-      "moved": 0,
-      "streak_weeks": 2
-    },
-    {
-      "name": "Fruti Raspas La Isla",
-      "aliases": [
-        "fruti raspas",
-        "la isla raspas"
-      ],
-      "city": "McAllen",
-      "display_city": "McAllen",
-      "known_for": "Fruteria-style raspas piled with fresh fruit, chamoy and everything on it",
-      "known_for_es": "Raspas estilo frutería con fruta fresca, chamoy y de todo encima",
-      "places_query": "Fruti Raspas La Isla McAllen TX",
-      "rank": 2,
-      "mentions": 10,
-      "reddit_mentions": null,
-      "review_delta": 1,
-      "rating": 4.6,
-      "photo": "fruti-raspas-la-isla.jpg",
-      "moved": 2
-    },
-    {
-      "name": "Margo's",
-      "aliases": [
-        "margo's raspas",
-        "margos raspa"
-      ],
-      "city": "Weslaco",
-      "display_city": "Weslaco",
-      "known_for": "60+ combinations with homemade syrups — home of the legendary mangonada",
-      "known_for_es": "Más de 60 combinaciones con jarabes caseros — la casa de la legendaria mangonada",
-      "places_query": "Margo's raspas Rio Grande Valley TX",
-      "rank": 3,
-      "mentions": 7,
-      "reddit_mentions": null,
-      "review_delta": 3,
-      "rating": 4.5,
-      "photo": "margo-s.jpg",
-      "moved": 0
-    },
-    {
-      "name": "Young's Sno Wiz",
-      "aliases": [
-        "young's",
-        "sno wiz",
-        "youngs sno"
-      ],
-      "city": "McAllen",
-      "display_city": "McAllen",
-      "known_for": "The McAllen institution locals swear has the best raspas in the Valley",
-      "known_for_es": "La institución de McAllen que según los locales tiene las mejores raspas del Valle",
-      "places_query": "Young's Sno Wiz McAllen TX",
-      "rank": 4,
-      "mentions": 2,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.8,
-      "photo": "young-s-sno-wiz.jpg",
-      "moved": -2
-    },
-    {
-      "name": "Viva La Raspa",
-      "aliases": [
-        "viva la raspa"
-      ],
-      "city": "Weslaco",
-      "display_city": "Weslaco",
-      "known_for": "Mexican-blanket murals and raspas born from watching everyone else's long lines",
-      "known_for_es": "Murales de cobija mexicana y raspas que nacieron de ver las filas largas de los demás",
-      "places_query": "Viva La Raspa Weslaco TX",
-      "rank": 5,
-      "mentions": 0,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.6,
-      "photo": "viva-la-raspa.jpg",
-      "moved": 0
+      "known_for": "Breakfast tacos locals call divine — huge even in the 'small' size",
+      "known_for_es": "Tacos de desayuno que los locales llaman divinos — enormes hasta en el tamaño 'chico'",
+      "places_query": "Tejano Grill Harlingen TX"
     }
   ],
-  "baseline_date": "2026-07-02"
+  "baseline_date": "2026-08-03"
 }
