@@ -89,11 +89,15 @@ Find restaurants that recently opened or were just announced in the RGV
 };
 
 function runClaude(prompt) {
+  // Prompt goes over stdin, not as a CLI arg: on Windows, shell:true (needed
+  // below so execFileSync can resolve the claude.cmd shim) concatenates argv
+  // into a single command-line string without per-argument escaping, which
+  // corrupts a multiline prompt passed as an argument.
   return execFileSync("claude", [
-    "-p", prompt,
+    "-p",
     "--allowedTools", "WebSearch,WebFetch",
     "--output-format", "text",
-  ], { encoding: "utf8", timeout: 10 * 60 * 1000, shell: process.platform === "win32" });
+  ], { input: prompt, encoding: "utf8", timeout: 10 * 60 * 1000, shell: process.platform === "win32" });
 }
 
 function extractJSON(text) {
