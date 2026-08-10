@@ -20,7 +20,8 @@
       "display_city": "McAllen",
       "known_for": "Grandma-style breakfast tacos with fresh flour tortillas that locals call a legend",
       "known_for_es": "Tacos de desayuno estilo abuela con tortillas de harina frescas que los locales llaman una leyenda",
-      "places_query": "Ms G's Tacos N' More McAllen TX"
+      "places_query": "Ms G's Tacos N' More McAllen TX",
+      "photo": "ms-g-s-tacos-n-more.jpg"
     },
     {
       "name": "Taco N' Todo",
@@ -32,7 +33,8 @@
       "display_city": "Edinburg",
       "known_for": "Quesabirria breakfast tacos and tacos estilo Matamoros that draw visitors from across Texas",
       "known_for_es": "Tacos de quesabirria y estilo Matamoros para desayunar que atraen visitas de todo Texas",
-      "places_query": "Taco N Todo Edinburg TX"
+      "places_query": "Taco N Todo Edinburg TX",
+      "photo": "taco-n-todo.jpg"
     },
     {
       "name": "Restaurant Marychuy",
@@ -44,7 +46,8 @@
       "display_city": "Weslaco",
       "known_for": "15+ years of Monterrey-style breakfast tacos alongside caldo de res made fresh daily",
       "known_for_es": "Más de 15 años de tacos de desayuno estilo Monterrey junto con caldo de res hecho fresco cada día",
-      "places_query": "Restaurant Marychuy Weslaco TX"
+      "places_query": "Restaurant Marychuy Weslaco TX",
+      "photo": "restaurant-marychuy.jpg"
     },
     {
       "name": "La Barra Del Taco",
@@ -56,7 +59,8 @@
       "display_city": "Brownsville",
       "known_for": "Street-style breakfast tacos with five vegan options and a salsa for every guiso",
       "known_for_es": "Tacos de desayuno estilo callejero con cinco opciones veganas y una salsa para cada guiso",
-      "places_query": "La Barra Del Taco Brownsville TX"
+      "places_query": "La Barra Del Taco Brownsville TX",
+      "photo": "la-barra-del-taco.jpg"
     },
     {
       "name": "Eddie's Tacos",
@@ -68,7 +72,8 @@
       "display_city": "Pharr",
       "known_for": "The converted-gas-station original that grew into a five-location breakfast taco chain",
       "known_for_es": "El original de una gasolinera convertida que creció hasta ser una cadena de cinco ubicaciones",
-      "places_query": "Eddie's Tacos Pharr TX"
+      "places_query": "Eddie's Tacos Pharr TX",
+      "photo": "eddie-s-tacos.jpg"
     },
     {
       "name": "Tejano Grill",
@@ -79,7 +84,8 @@
       "display_city": "Harlingen",
       "known_for": "Breakfast tacos locals call divine — huge even in the 'small' size",
       "known_for_es": "Tacos de desayuno que los locales llaman divinos — enormes hasta en el tamaño 'chico'",
-      "places_query": "Tejano Grill Harlingen TX"
+      "places_query": "Tejano Grill Harlingen TX",
+      "photo": "tejano-grill.jpg"
     }
   ],
   "baseline_date": "2026-08-03"
