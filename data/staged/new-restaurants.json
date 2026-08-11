@@ -77,6 +77,16 @@
       "blurb": "The Valley's all-you-can-eat favorite is expanding — a second McAllen location is headed to 4201 W. Expressway 83 with a sushi bar, Mongolian grill and live cooking stations across 8,800 square feet.",
       "blurb_es": "El favorito de buffet libre del Valle se expande — una segunda ubicación en McAllen llega a 4201 W. Expressway 83 con barra de sushi, grill mongol y estaciones de cocina en vivo en 8,800 pies cuadrados.",
       "emoji": "🥢"
+    },
+    {
+      "name": "The Great Greek Mediterranean Grill",
+      "city": "Brownsville",
+      "cuisine": "Mediterranean",
+      "cuisine_es": "Mediterránea",
+      "status": "Coming soon",
+      "blurb": "The fast-growing Mediterranean chain is landing its first-ever Valley location in Brownsville, bringing gyros, hummus and Greek salads to the border.",
+      "blurb_es": "La cadena mediterránea de rápido crecimiento abre su primera ubicación en el Valle en Brownsville, trayendo gyros, hummus y ensaladas griegas a la frontera.",
+      "emoji": "🥙"
     }
   ]
 }
