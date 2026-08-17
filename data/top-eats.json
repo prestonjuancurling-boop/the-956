@@ -6,97 +6,97 @@
   "spots": [
     {
       "rank": 1,
-      "name": "Kokiri Korean Bistro",
-      "city": "Edinburg",
-      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
-      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
-      "mentions": 54,
-      "reddit_mentions": null,
-      "review_delta": 35,
-      "rating": 4.8,
-      "trend": "up",
-      "moved": 3,
-      "badges": [
-        "biggest_mover"
-      ],
-      "streak_weeks": 1,
-      "photo": "kokiri-korean-bistro.jpg"
-    },
-    {
-      "rank": 2,
       "name": "Zaya",
       "city": "McAllen",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
       "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 40,
+      "mentions": 51,
       "reddit_mentions": null,
-      "review_delta": 7,
+      "review_delta": 9,
+      "rating": 4.8,
+      "trend": "up",
+      "moved": 1,
+      "badges": [],
+      "streak_weeks": 1,
+      "photo": "zaya.jpg"
+    },
+    {
+      "rank": 2,
+      "name": "Kokiri Korean Bistro",
+      "city": "Edinburg",
+      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
+      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
+      "mentions": 43,
+      "reddit_mentions": null,
+      "review_delta": 17,
       "rating": 4.8,
       "trend": "down",
       "moved": -1,
       "badges": [],
-      "photo": "zaya.jpg"
+      "photo": "kokiri-korean-bistro.jpg"
     },
     {
       "rank": 3,
-      "name": "AMBRA",
+      "name": "Brasas",
       "city": "McAllen",
-      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
-      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 21,
+      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
+      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
+      "mentions": 27,
       "reddit_mentions": null,
-      "review_delta": 17,
+      "review_delta": 5,
       "rating": 4.8,
-      "trend": "steady",
-      "moved": 0,
-      "badges": [],
-      "photo": "ambra.jpg"
+      "trend": "up",
+      "moved": 2,
+      "badges": [
+        "biggest_mover"
+      ],
+      "photo": "brasas.jpg"
     },
     {
       "rank": 4,
-      "name": "El Toro",
-      "city": "Harlingen",
-      "known_for": "Family-owned Harlingen staple — carne asada and chiles rellenos for 20+ years",
-      "known_for_es": "Restaurante familiar de Harlingen — carne asada y chiles rellenos por más de 20 años",
-      "mentions": 16,
+      "name": "El Jardin",
+      "city": "Edinburg",
+      "known_for": "Edinburg's garden-named Mexican mainstay",
+      "known_for_es": "El clásico mexicano de Edinburg",
+      "mentions": 22,
       "reddit_mentions": null,
-      "review_delta": 39,
-      "rating": 4.5,
+      "review_delta": 7,
+      "rating": 4.8,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "el-toro.jpg"
+      "photo": "el-jardin.jpg"
     },
     {
       "rank": 5,
-      "name": "Brasas",
+      "name": "AMBRA",
       "city": "McAllen",
-      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
-      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
-      "mentions": 15,
+      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
+      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
+      "mentions": 17,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 14,
       "rating": 4.8,
       "trend": "down",
-      "moved": -3,
+      "moved": -2,
       "badges": [],
-      "photo": "brasas.jpg"
+      "photo": "ambra.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "Blu Brasserie",
-      "city": "McAllen"
+      "name": "El Toro",
+      "city": "Harlingen"
     },
     {
-      "name": "Angel's Kitchen",
-      "city": "Mission"
-    },
-    {
-      "name": "El Jardin",
+      "name": "Barrel House Kitchen & Bar",
       "city": "Edinburg"
+    },
+    {
+      "name": "GW's BBQ",
+      "city": "San Juan"
     }
   ]
 }
