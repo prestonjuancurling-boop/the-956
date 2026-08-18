@@ -2,20 +2,20 @@
   "site_name": "The 956",
   "tagline": "El Valle's weekly digest",
   "tagline_es": "El resumen semanal del Valle",
-  "week_of": "July 20 – 26, 2026",
-  "week_of_es": "20 al 26 de julio, 2026",
-  "edition": "Vol. 1 · No. 4",
-  "generated_at": "2026-07-20T21:15:00-05:00",
+  "week_of": "August 17 – 23, 2026",
+  "week_of_es": "17 al 23 de agosto, 2026",
+  "edition": "Vol. 1 · No. 6",
+  "generated_at": "2026-08-18T10:42:16-05:00",
   "ticker": [
-    "🎤 Marco Antonio Solís — \"El Buki\" — plays Payne Arena, Saturday July 25",
-    "🎶 Eslabón Armado brings Amor Nocturno to the McAllen PAC, Sunday July 26",
-    "🎡 Edinburg's Summer Concert Series wraps with a free K-Pop finale, Saturday July 25",
+    "🎒 The school bell rings again — McAllen ISD and Valley districts head back to class Monday, August 17",
+    "🎤 Los Gemelos De Sinaloa headline Payne Arena, Saturday August 22",
+    "🎭 Pharr Community Theater's 'Tales of the Hidalgo Pumphouse' plays the DRC Center Friday and Saturday",
     "🎆 SPI fireworks light up the bay every Friday night, all summer long"
   ],
   "ticker_es": [
-    "🎤 Marco Antonio Solís — \"El Buki\" — toca en Payne Arena, sábado 25 de julio",
-    "🎶 Eslabón Armado trae su gira Amor Nocturno al McAllen PAC, domingo 26 de julio",
-    "🎡 La Serie de Conciertos de Verano de Edinburg cierra con finale gratis de K-Pop, sábado 25 de julio",
+    "🎒 Suena la campana otra vez — McAllen ISD y los distritos del Valle regresan a clases el lunes 17 de agosto",
+    "🎤 Los Gemelos De Sinaloa encabezan Payne Arena el sábado 22 de agosto",
+    "🎭 'Tales of the Hidalgo Pumphouse' del Pharr Community Theater se presenta en el DRC Center viernes y sábado",
     "🎆 Fuegos artificiales en SPI todos los viernes del verano"
   ]
 }
