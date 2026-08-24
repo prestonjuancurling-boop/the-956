@@ -10,26 +10,6 @@
   "status": "ranked",
   "spots": [
     {
-      "name": "Taco N' Todo",
-      "aliases": [
-        "taco n todo",
-        "taco n' todo"
-      ],
-      "city": "Edinburg",
-      "display_city": "Edinburg",
-      "known_for": "Quesabirria breakfast tacos and tacos estilo Matamoros that draw visitors from across Texas",
-      "known_for_es": "Tacos de quesabirria y estilo Matamoros para desayunar que atraen visitas de todo Texas",
-      "places_query": "Taco N Todo Edinburg TX",
-      "photo": "taco-n-todo.jpg",
-      "rank": 1,
-      "mentions": 4,
-      "reddit_mentions": null,
-      "review_delta": 1,
-      "rating": 3.7,
-      "moved": null,
-      "streak_weeks": 1
-    },
-    {
       "name": "Eddie's Tacos",
       "aliases": [
         "eddie's tacos",
@@ -41,12 +21,13 @@
       "known_for_es": "El original de una gasolinera convertida que creció hasta ser una cadena de cinco ubicaciones",
       "places_query": "Eddie's Tacos Pharr TX",
       "photo": "eddie-s-tacos.jpg",
-      "rank": 2,
-      "mentions": 1,
+      "rank": 1,
+      "mentions": 3,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 2,
       "rating": 4.5,
-      "moved": null
+      "moved": 1,
+      "streak_weeks": 1
     },
     {
       "name": "Tejano Grill",
@@ -59,12 +40,31 @@
       "known_for_es": "Tacos de desayuno que los locales llaman divinos — enormes hasta en el tamaño 'chico'",
       "places_query": "Tejano Grill Harlingen TX",
       "photo": "tejano-grill.jpg",
+      "rank": 2,
+      "mentions": 3,
+      "reddit_mentions": null,
+      "review_delta": 5,
+      "rating": 4.2,
+      "moved": 1
+    },
+    {
+      "name": "Taco N' Todo",
+      "aliases": [
+        "taco n todo",
+        "taco n' todo"
+      ],
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Quesabirria breakfast tacos and tacos estilo Matamoros that draw visitors from across Texas",
+      "known_for_es": "Tacos de quesabirria y estilo Matamoros para desayunar que atraen visitas de todo Texas",
+      "places_query": "Taco N Todo Edinburg TX",
+      "photo": "taco-n-todo.jpg",
       "rank": 3,
       "mentions": 1,
       "reddit_mentions": null,
-      "review_delta": 2,
-      "rating": 4.2,
-      "moved": null
+      "review_delta": 0,
+      "rating": 3.7,
+      "moved": -2
     },
     {
       "name": "Ms G's Tacos N' More",
@@ -84,7 +84,7 @@
       "reddit_mentions": null,
       "review_delta": 0,
       "rating": 4.5,
-      "moved": null
+      "moved": 0
     },
     {
       "name": "Restaurant Marychuy",
@@ -103,7 +103,7 @@
       "reddit_mentions": null,
       "review_delta": 0,
       "rating": 4.3,
-      "moved": null
+      "moved": 0
     },
     {
       "name": "La Barra Del Taco",
@@ -122,7 +122,7 @@
       "reddit_mentions": null,
       "review_delta": 0,
       "rating": 4.7,
-      "moved": null
+      "moved": 0
     }
   ],
   "baseline_date": "2026-08-03"

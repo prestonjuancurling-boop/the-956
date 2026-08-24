@@ -10,30 +10,32 @@
       "city": "McAllen",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
       "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 51,
+      "mentions": 62,
       "reddit_mentions": null,
-      "review_delta": 9,
+      "review_delta": 11,
       "rating": 4.8,
-      "trend": "up",
-      "moved": 1,
+      "trend": "steady",
+      "moved": 0,
       "badges": [],
-      "streak_weeks": 1,
+      "streak_weeks": 2,
       "photo": "zaya.jpg"
     },
     {
       "rank": 2,
-      "name": "Kokiri Korean Bistro",
-      "city": "Edinburg",
-      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
-      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
-      "mentions": 43,
+      "name": "Blu Brasserie",
+      "city": "McAllen",
+      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
+      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
+      "mentions": 42,
       "reddit_mentions": null,
-      "review_delta": 17,
-      "rating": 4.8,
-      "trend": "down",
-      "moved": -1,
-      "badges": [],
-      "photo": "kokiri-korean-bistro.jpg"
+      "review_delta": 6,
+      "rating": 4.9,
+      "trend": "steady",
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "photo": "blu-brasserie.jpg"
     },
     {
       "rank": 3,
@@ -43,46 +45,42 @@
       "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
       "mentions": 27,
       "reddit_mentions": null,
-      "review_delta": 5,
+      "review_delta": 4,
       "rating": 4.8,
-      "trend": "up",
-      "moved": 2,
-      "badges": [
-        "biggest_mover"
-      ],
+      "trend": "steady",
+      "moved": 0,
+      "badges": [],
       "photo": "brasas.jpg"
     },
     {
       "rank": 4,
-      "name": "El Jardin",
+      "name": "Kokiri Korean Bistro",
       "city": "Edinburg",
-      "known_for": "Edinburg's garden-named Mexican mainstay",
-      "known_for_es": "El clásico mexicano de Edinburg",
-      "mentions": 22,
+      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
+      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
+      "mentions": 26,
       "reddit_mentions": null,
       "review_delta": 7,
-      "rating": 4.8,
-      "trend": "steady",
-      "moved": null,
-      "badges": [
-        "new_entry"
-      ],
-      "photo": "el-jardin.jpg"
-    },
-    {
-      "rank": 5,
-      "name": "AMBRA",
-      "city": "McAllen",
-      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
-      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 17,
-      "reddit_mentions": null,
-      "review_delta": 14,
       "rating": 4.8,
       "trend": "down",
       "moved": -2,
       "badges": [],
-      "photo": "ambra.jpg"
+      "photo": "kokiri-korean-bistro.jpg"
+    },
+    {
+      "rank": 5,
+      "name": "El Jardin",
+      "city": "Edinburg",
+      "known_for": "Edinburg's garden-named Mexican mainstay",
+      "known_for_es": "El clásico mexicano de Edinburg",
+      "mentions": 23,
+      "reddit_mentions": null,
+      "review_delta": 6,
+      "rating": 4.8,
+      "trend": "down",
+      "moved": -1,
+      "badges": [],
+      "photo": "el-jardin.jpg"
     }
   ],
   "bubble": [
@@ -91,8 +89,8 @@
       "city": "Harlingen"
     },
     {
-      "name": "Barrel House Kitchen & Bar",
-      "city": "Edinburg"
+      "name": "AMBRA",
+      "city": "McAllen"
     },
     {
       "name": "GW's BBQ",
