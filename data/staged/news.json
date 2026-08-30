@@ -1,0 +1,61 @@
+{
+  "section_note": "This week's real talk: a job fair connects Valley workers with employers, a Mercedes band hits a 100-year milestone, and a McAllen team opens the season with a bang.",
+  "section_note_es": "Lo que se cuece esta semana: una feria de empleo conecta a trabajadores del Valle con patrones, una banda de Mercedes llega a los 100 años, y un equipo de McAllen arranca la temporada con todo.",
+  "items": [
+    {
+      "headline": "Pharr EDC job fair connects 25-plus employers with Valley job seekers",
+      "headline_es": "Feria de empleo de Pharr EDC conecta a más de 25 patrones con buscadores de empleo del Valle",
+      "summary": "The Pharr Economic Development Corporation partnered with Workforce Solutions and Progressive Talent Solutions to host a Career & Connections Job Fair at the Jose \"Pepe\" Salinas Event Center, bringing dozens of job seekers face-to-face with recruiters from more than 25 Valley employers.",
+      "summary_es": "La Corporación de Desarrollo Económico de Pharr se unió con Workforce Solutions y Progressive Talent Solutions para presentar una Feria de Empleo Career & Connections en el Jose \"Pepe\" Salinas Event Center, conectando a decenas de buscadores de empleo con reclutadores de más de 25 empresas del Valle.",
+      "source": "Texas Border Business",
+      "topic": "Business",
+      "topic_es": "Negocios",
+      "published": "Aug 25",
+      "url": "https://texasborderbusiness.com/pharr-edcs-workforce-job-fair-connecting-local-employers-with-job-seekers-august-25th/"
+    },
+    {
+      "headline": "Free \"Energy Camp\" in Mission opens registration for kids at risk of diabetes",
+      "headline_es": "\"Energy Camp\" gratis en Mission abre registro para niños en riesgo de diabetes",
+      "summary": "The Rio Grande Valley Diabetes Association is hosting a free Sept. 26 camp in Mission for kids ages 6-12, teaching healthy eating habits alongside canoeing, horseback riding, and biking. Only 40 spots are available.",
+      "summary_es": "La Asociación de Diabetes del Valle del Río Grande presenta un campamento gratis el 26 de septiembre en Mission para niños de 6 a 12 años, enseñando buenos hábitos alimenticios junto con canotaje, equitación y ciclismo. Solo hay 40 lugares disponibles.",
+      "source": "KRGV",
+      "topic": "Community Health",
+      "topic_es": "Salud Comunitaria",
+      "published": "Aug 28",
+      "url": "https://www.krgv.com/news/free-energy-camp-in-mission-will-help-local-kids-fight-diabetes-risk"
+    },
+    {
+      "headline": "Mercedes Mighty Tiger Band marks 100 years with a newly restored trailer",
+      "headline_es": "La Mighty Tiger Band de Mercedes celebra 100 años con un remolque renovado",
+      "summary": "Boosters raised nearly $30,000 to renovate the Mercedes High School band's aging equipment trailer as part of the program's 100th-anniversary celebration, giving the percussion and front-ensemble sections a much easier load-in at performances.",
+      "summary_es": "Los padres de familia recaudaron casi $30,000 para renovar el remolque de equipo de la banda de Mercedes High School como parte de la celebración del 100 aniversario del programa, facilitando mucho la carga para las secciones de percusión y front-ensemble en las presentaciones.",
+      "source": "KRGV",
+      "topic": "Community",
+      "topic_es": "Comunidad",
+      "published": "Aug 27",
+      "url": "https://www.krgv.com/news/mercedes-marching-band-celebrates-100-years-with-new-trailer"
+    },
+    {
+      "headline": "McAllen Memorial outlasts Sharyland 55-43 in high-scoring season opener",
+      "headline_es": "McAllen Memorial vence a Sharyland 55-43 en un arranque de temporada de altas anotaciones",
+      "summary": "Running backs Braxton Speights and Oscar Jasso combined for seven rushing touchdowns as the Mustangs held off the Rattlers in a shootout to open the 2026 season on Friday night.",
+      "summary_es": "Los corredores Braxton Speights y Oscar Jasso combinaron para siete touchdowns por tierra mientras los Mustangs resistieron a los Rattlers en un partido de muchas anotaciones para abrir la temporada 2026 el viernes en la noche.",
+      "source": "MyRGV",
+      "topic": "Sports",
+      "topic_es": "Deportes",
+      "published": "Aug 29",
+      "url": "https://myrgv.com/rgvsports/2026/08/29/mustangs-outrun-rattlers-in-high-scoring-season-opener/"
+    },
+    {
+      "headline": "Cameron County seeks input on highway tied to a second SPI causeway",
+      "headline_es": "El Condado de Cameron pide opinión sobre carretera ligada a una segunda calzada a SPI",
+      "summary": "The Cameron County Regional Mobility Authority held a public meeting in Rio Hondo on the proposed 21.5-mile Outer Parkway, a divided highway that wouldn't reach the Island itself but is designed to support future connectivity toward a second South Padre Island causeway.",
+      "summary_es": "La Autoridad Regional de Movilidad del Condado de Cameron realizó una junta pública en Rio Hondo sobre la propuesta Outer Parkway, una carretera dividida de 21.5 millas que no llega a la Isla pero está diseñada para apoyar la futura conectividad hacia una segunda calzada a South Padre Island.",
+      "source": "RGV Business Journal",
+      "topic": "Local Resources",
+      "topic_es": "Recursos Locales",
+      "published": "Aug 25",
+      "url": "https://www.rgvbusinessjournal.com/news/25/08/2026/cameron-county-outer-parkway-spi-second-causeway/"
+    }
+  ]
+}
