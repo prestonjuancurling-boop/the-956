@@ -11,7 +11,8 @@
       "status_es": "Ya abrió",
       "blurb": "This taco favorite opened its Harlingen location on Aug. 12 at 99 Bass Pro Dr., bringing its loaded tacos and salsas to the eastern Valley.",
       "blurb_es": "Esta taquería favorita abrió su local en Harlingen el 12 de agosto en 99 Bass Pro Dr., trayendo sus tacos bien cargados y salsas al lado este del Valle.",
-      "emoji": "🌮"
+      "emoji": "🌮",
+      "photo": "taquero-mucho.jpg"
     },
     {
       "name": "Lin's Grand Buffet",
@@ -22,7 +23,8 @@
       "status_es": "Abre pronto",
       "blurb": "McAllen's second Lin's Grand Buffet celebrates its grand opening Aug. 28 at 4201 W. Expressway 83, complete with a ribbon cutting and lion dance — and nearly 100 new jobs for the Valley.",
       "blurb_es": "El segundo Lin's Grand Buffet de McAllen tiene su gran apertura el 28 de agosto en 4201 W. Expressway 83, con corte de listón y hasta danza del león — y casi 100 nuevos empleos para el Valle.",
-      "emoji": "🥡"
+      "emoji": "🥡",
+      "photo": "lin-s-grand-buffet.jpg"
     },
     {
       "name": "Hawaiian Bros",
@@ -33,7 +35,8 @@
       "status_es": "Próximamente",
       "blurb": "The Hawaiian plate-lunch chain is opening its first-ever Rio Grande Valley location at 1100 Trenton Rd., bringing huli huli chicken and macaroni salad plates to McAllen.",
       "blurb_es": "La cadena de plate lunch hawaiano abre su primera ubicación en el Valle del Río Grande en 1100 Trenton Rd., trayendo pollo huli huli y ensalada de macarrones a McAllen.",
-      "emoji": "🌺"
+      "emoji": "🌺",
+      "photo": "hawaiian-bros.jpg"
     },
     {
       "name": "Wing Snob",
@@ -44,7 +47,8 @@
       "status_es": "Abre pronto",
       "blurb": "A new wing spot is coming to McAllen's Central Marketplace, with a build-out underway and an opening targeted for around November.",
       "blurb_es": "Un nuevo lugar de alitas viene a Central Marketplace en McAllen, ya están remodelando el local y esperan abrir como en noviembre.",
-      "emoji": "🍗"
+      "emoji": "🍗",
+      "photo": "wing-snob.jpg"
     },
     {
       "name": "The Great Greek Mediterranean Grill",
@@ -55,7 +59,8 @@
       "status_es": "Abre pronto",
       "blurb": "The Valley's first-ever Great Greek Mediterranean Grill is set to open in Brownsville, bringing gyros, kebabs and Greek classics to the RGV for the first time.",
       "blurb_es": "El primer Great Greek Mediterranean Grill de todo el Valle va a abrir en Brownsville, trayendo gyros, kebabs y platillos griegos al RGV por primera vez.",
-      "emoji": "🥙"
+      "emoji": "🥙",
+      "photo": "the-great-greek-mediterranean-grill.jpg"
     },
     {
       "name": "HTeaO",
@@ -66,7 +71,8 @@
       "status_es": "Abre pronto",
       "blurb": "The popular Texas tea chain just broke ground on its first South Texas location at 205 Rocky Road, with an opening eyed for early 2027.",
       "blurb_es": "La popular cadena tejana de tés acaba de empezar la construcción de su primer local en el sur de Texas, en 205 Rocky Road, con apertura pensada para principios del 2027.",
-      "emoji": "🧋"
+      "emoji": "🧋",
+      "photo": "hteao.jpg"
     }
   ]
 }

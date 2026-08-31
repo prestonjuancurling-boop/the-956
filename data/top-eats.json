@@ -10,62 +10,64 @@
       "city": "McAllen",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
       "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 62,
+      "mentions": 90,
       "reddit_mentions": null,
-      "review_delta": 11,
+      "review_delta": 19,
       "rating": 4.8,
       "trend": "steady",
       "moved": 0,
       "badges": [],
-      "streak_weeks": 2,
+      "streak_weeks": 3,
       "photo": "zaya.jpg"
     },
     {
       "rank": 2,
-      "name": "Blu Brasserie",
-      "city": "McAllen",
-      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
-      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
-      "mentions": 42,
+      "name": "Kokiri Korean Bistro",
+      "city": "Edinburg",
+      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
+      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
+      "mentions": 27,
       "reddit_mentions": null,
-      "review_delta": 6,
-      "rating": 4.9,
+      "review_delta": 13,
+      "rating": 4.8,
+      "trend": "up",
+      "moved": 2,
+      "badges": [
+        "biggest_mover"
+      ],
+      "photo": "kokiri-korean-bistro.jpg"
+    },
+    {
+      "rank": 3,
+      "name": "Dos Olivos Market",
+      "city": "Harlingen",
+      "known_for": "Market-café hybrid that downtown Harlingen adopted immediately",
+      "known_for_es": "Mercado y café en uno — el centro de Harlingen lo adoptó de inmediato",
+      "mentions": 24,
+      "reddit_mentions": null,
+      "review_delta": 12,
+      "rating": 4.7,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "blu-brasserie.jpg"
-    },
-    {
-      "rank": 3,
-      "name": "Brasas",
-      "city": "McAllen",
-      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
-      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
-      "mentions": 27,
-      "reddit_mentions": null,
-      "review_delta": 4,
-      "rating": 4.8,
-      "trend": "steady",
-      "moved": 0,
-      "badges": [],
-      "photo": "brasas.jpg"
+      "photo": "dos-olivos-market.jpg"
     },
     {
       "rank": 4,
-      "name": "Kokiri Korean Bistro",
-      "city": "Edinburg",
-      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
-      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
-      "mentions": 26,
+      "name": "Blu Brasserie",
+      "city": "McAllen",
+      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
+      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
+      "mentions": 17,
       "reddit_mentions": null,
-      "review_delta": 7,
-      "rating": 4.8,
+      "review_delta": 0,
+      "rating": 4.9,
       "trend": "down",
       "moved": -2,
       "badges": [],
-      "photo": "kokiri-korean-bistro.jpg"
+      "photo": "blu-brasserie.jpg"
     },
     {
       "rank": 5,
@@ -73,24 +75,24 @@
       "city": "Edinburg",
       "known_for": "Edinburg's garden-named Mexican mainstay",
       "known_for_es": "El clásico mexicano de Edinburg",
-      "mentions": 23,
+      "mentions": 17,
       "reddit_mentions": null,
-      "review_delta": 6,
+      "review_delta": 3,
       "rating": 4.8,
-      "trend": "down",
-      "moved": -1,
+      "trend": "steady",
+      "moved": 0,
       "badges": [],
       "photo": "el-jardin.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "El Toro",
-      "city": "Harlingen"
+      "name": "Brasas",
+      "city": "McAllen"
     },
     {
-      "name": "AMBRA",
-      "city": "McAllen"
+      "name": "El Toro",
+      "city": "Harlingen"
     },
     {
       "name": "GW's BBQ",
