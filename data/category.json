@@ -22,12 +22,31 @@
       "places_query": "Taco N Todo Edinburg TX",
       "photo": "taco-n-todo.jpg",
       "rank": 1,
-      "mentions": 11,
+      "mentions": 15,
       "reddit_mentions": null,
       "review_delta": 3,
-      "rating": 3.6,
-      "moved": 2,
-      "streak_weeks": 1
+      "rating": 3.7,
+      "moved": 0,
+      "streak_weeks": 2
+    },
+    {
+      "name": "La Barra Del Taco",
+      "aliases": [
+        "la barra del taco",
+        "barra del taco"
+      ],
+      "city": "Brownsville",
+      "display_city": "Brownsville",
+      "known_for": "Street-style breakfast tacos with five vegan options and a salsa for every guiso",
+      "known_for_es": "Tacos de desayuno estilo callejero con cinco opciones veganas y una salsa para cada guiso",
+      "places_query": "La Barra Del Taco Brownsville TX",
+      "photo": "la-barra-del-taco.jpg",
+      "rank": 2,
+      "mentions": 13,
+      "reddit_mentions": null,
+      "review_delta": 2,
+      "rating": 4.7,
+      "moved": 4
     },
     {
       "name": "Eddie's Tacos",
@@ -41,11 +60,11 @@
       "known_for_es": "El original de una gasolinera convertida que creció hasta ser una cadena de cinco ubicaciones",
       "places_query": "Eddie's Tacos Pharr TX",
       "photo": "eddie-s-tacos.jpg",
-      "rank": 2,
-      "mentions": 2,
+      "rank": 3,
+      "mentions": 5,
       "reddit_mentions": null,
-      "review_delta": 1,
-      "rating": 4.5,
+      "review_delta": 4,
+      "rating": 4.4,
       "moved": -1
     },
     {
@@ -59,7 +78,7 @@
       "known_for_es": "Tacos de desayuno que los locales llaman divinos — enormes hasta en el tamaño 'chico'",
       "places_query": "Tejano Grill Harlingen TX",
       "photo": "tejano-grill.jpg",
-      "rank": 3,
+      "rank": 4,
       "mentions": 2,
       "reddit_mentions": null,
       "review_delta": 2,
@@ -79,12 +98,12 @@
       "known_for_es": "Tacos de desayuno estilo abuela con tortillas de harina frescas que los locales llaman una leyenda",
       "places_query": "Ms G's Tacos N' More McAllen TX",
       "photo": "ms-g-s-tacos-n-more.jpg",
-      "rank": 4,
+      "rank": 5,
       "mentions": 2,
       "reddit_mentions": null,
-      "review_delta": 2,
+      "review_delta": 1,
       "rating": 4.5,
-      "moved": 0
+      "moved": -1
     },
     {
       "name": "Restaurant Marychuy",
@@ -98,31 +117,12 @@
       "known_for_es": "Más de 15 años de tacos de desayuno estilo Monterrey junto con caldo de res hecho fresco cada día",
       "places_query": "Restaurant Marychuy Weslaco TX",
       "photo": "restaurant-marychuy.jpg",
-      "rank": 5,
-      "mentions": 0,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.3,
-      "moved": 0
-    },
-    {
-      "name": "La Barra Del Taco",
-      "aliases": [
-        "la barra del taco",
-        "barra del taco"
-      ],
-      "city": "Brownsville",
-      "display_city": "Brownsville",
-      "known_for": "Street-style breakfast tacos with five vegan options and a salsa for every guiso",
-      "known_for_es": "Tacos de desayuno estilo callejero con cinco opciones veganas y una salsa para cada guiso",
-      "places_query": "La Barra Del Taco Brownsville TX",
-      "photo": "la-barra-del-taco.jpg",
       "rank": 6,
       "mentions": 0,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 4.7,
-      "moved": 0
+      "rating": 4.3,
+      "moved": -1
     }
   ],
   "baseline_date": "2026-08-03"

@@ -10,82 +10,86 @@
       "city": "McAllen",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
       "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 90,
+      "mentions": 69,
       "reddit_mentions": null,
-      "review_delta": 19,
-      "rating": 4.8,
+      "review_delta": 12,
+      "rating": 4.9,
       "trend": "steady",
       "moved": 0,
       "badges": [],
-      "streak_weeks": 3,
+      "streak_weeks": 4,
       "photo": "zaya.jpg"
     },
     {
       "rank": 2,
-      "name": "Kokiri Korean Bistro",
-      "city": "Edinburg",
-      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
-      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
-      "mentions": 27,
+      "name": "Blu Brasserie",
+      "city": "McAllen",
+      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
+      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
+      "mentions": 24,
       "reddit_mentions": null,
-      "review_delta": 13,
-      "rating": 4.8,
+      "review_delta": 3,
+      "rating": 4.9,
       "trend": "up",
       "moved": 2,
       "badges": [
         "biggest_mover"
       ],
-      "photo": "kokiri-korean-bistro.jpg"
+      "photo": "blu-brasserie.jpg"
     },
     {
       "rank": 3,
-      "name": "Dos Olivos Market",
-      "city": "Harlingen",
-      "known_for": "Market-café hybrid that downtown Harlingen adopted immediately",
-      "known_for_es": "Mercado y café en uno — el centro de Harlingen lo adoptó de inmediato",
-      "mentions": 24,
+      "name": "AMBRA",
+      "city": "McAllen",
+      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
+      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
+      "mentions": 20,
       "reddit_mentions": null,
-      "review_delta": 12,
-      "rating": 4.7,
+      "review_delta": 25,
+      "rating": 4.8,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "dos-olivos-market.jpg"
+      "photo": "ambra.jpg"
     },
     {
       "rank": 4,
-      "name": "Blu Brasserie",
-      "city": "McAllen",
-      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
-      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
-      "mentions": 17,
+      "name": "Kokiri Korean Bistro",
+      "city": "Edinburg",
+      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
+      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
+      "mentions": 20,
       "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.9,
+      "review_delta": 7,
+      "rating": 4.8,
       "trend": "down",
       "moved": -2,
       "badges": [],
-      "photo": "blu-brasserie.jpg"
+      "photo": "kokiri-korean-bistro.jpg"
     },
     {
       "rank": 5,
-      "name": "El Jardin",
-      "city": "Edinburg",
-      "known_for": "Edinburg's garden-named Mexican mainstay",
-      "known_for_es": "El clásico mexicano de Edinburg",
-      "mentions": 17,
+      "name": "Dos Olivos Market",
+      "city": "Harlingen",
+      "known_for": "Market-café hybrid that downtown Harlingen adopted immediately",
+      "known_for_es": "Mercado y café en uno — el centro de Harlingen lo adoptó de inmediato",
+      "mentions": 18,
       "reddit_mentions": null,
-      "review_delta": 3,
-      "rating": 4.8,
-      "trend": "steady",
-      "moved": 0,
+      "review_delta": 5,
+      "rating": 4.7,
+      "trend": "down",
+      "moved": -2,
       "badges": [],
-      "photo": "el-jardin.jpg"
+      "photo": "dos-olivos-market.jpg"
     }
   ],
   "bubble": [
+    {
+      "name": "Moūsai",
+      "city": "McAllen"
+    },
     {
       "name": "Brasas",
       "city": "McAllen"
@@ -93,10 +97,6 @@
     {
       "name": "El Toro",
       "city": "Harlingen"
-    },
-    {
-      "name": "GW's BBQ",
-      "city": "San Juan"
     }
   ]
 }
