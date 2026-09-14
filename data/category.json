@@ -22,12 +22,12 @@
       "places_query": "Taco N Todo Edinburg TX",
       "photo": "taco-n-todo.jpg",
       "rank": 1,
-      "mentions": 15,
+      "mentions": 14,
       "reddit_mentions": null,
       "review_delta": 3,
       "rating": 3.7,
       "moved": 0,
-      "streak_weeks": 2
+      "streak_weeks": 3
     },
     {
       "name": "La Barra Del Taco",
@@ -42,11 +42,11 @@
       "places_query": "La Barra Del Taco Brownsville TX",
       "photo": "la-barra-del-taco.jpg",
       "rank": 2,
-      "mentions": 13,
+      "mentions": 5,
       "reddit_mentions": null,
-      "review_delta": 2,
+      "review_delta": 0,
       "rating": 4.7,
-      "moved": 4
+      "moved": 0
     },
     {
       "name": "Eddie's Tacos",
@@ -61,11 +61,11 @@
       "places_query": "Eddie's Tacos Pharr TX",
       "photo": "eddie-s-tacos.jpg",
       "rank": 3,
-      "mentions": 5,
+      "mentions": 3,
       "reddit_mentions": null,
-      "review_delta": 4,
-      "rating": 4.4,
-      "moved": -1
+      "review_delta": 1,
+      "rating": 4.5,
+      "moved": 0
     },
     {
       "name": "Tejano Grill",
@@ -79,11 +79,11 @@
       "places_query": "Tejano Grill Harlingen TX",
       "photo": "tejano-grill.jpg",
       "rank": 4,
-      "mentions": 2,
+      "mentions": 3,
       "reddit_mentions": null,
-      "review_delta": 2,
+      "review_delta": 4,
       "rating": 4.2,
-      "moved": -1
+      "moved": 0
     },
     {
       "name": "Ms G's Tacos N' More",
@@ -99,11 +99,11 @@
       "places_query": "Ms G's Tacos N' More McAllen TX",
       "photo": "ms-g-s-tacos-n-more.jpg",
       "rank": 5,
-      "mentions": 2,
+      "mentions": 3,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 2,
       "rating": 4.5,
-      "moved": -1
+      "moved": 0
     },
     {
       "name": "Restaurant Marychuy",
@@ -122,7 +122,7 @@
       "reddit_mentions": null,
       "review_delta": 0,
       "rating": 4.3,
-      "moved": -1
+      "moved": 0
     }
   ],
   "baseline_date": "2026-08-03"
