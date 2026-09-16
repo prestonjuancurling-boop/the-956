@@ -6,93 +6,93 @@
   "spots": [
     {
       "rank": 1,
-      "name": "Zaya",
+      "name": "AMBRA",
       "city": "McAllen",
-      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
-      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 69,
+      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
+      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
+      "mentions": 39,
       "reddit_mentions": null,
-      "review_delta": 12,
-      "rating": 4.9,
-      "trend": "steady",
-      "moved": 0,
-      "badges": [],
-      "streak_weeks": 4,
-      "photo": "zaya.jpg"
-    },
-    {
-      "rank": 2,
-      "name": "Blu Brasserie",
-      "city": "McAllen",
-      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
-      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
-      "mentions": 24,
-      "reddit_mentions": null,
-      "review_delta": 3,
-      "rating": 4.9,
+      "review_delta": 49,
+      "rating": 4.8,
       "trend": "up",
       "moved": 2,
       "badges": [
         "biggest_mover"
       ],
-      "photo": "blu-brasserie.jpg"
+      "streak_weeks": 1,
+      "photo": "ambra.jpg"
+    },
+    {
+      "rank": 2,
+      "name": "Kokiri Korean Bistro",
+      "city": "Edinburg",
+      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
+      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
+      "mentions": 25,
+      "reddit_mentions": null,
+      "review_delta": 14,
+      "rating": 4.8,
+      "trend": "up",
+      "moved": 2,
+      "badges": [],
+      "photo": "kokiri-korean-bistro.jpg"
     },
     {
       "rank": 3,
-      "name": "AMBRA",
+      "name": "Zaya",
       "city": "McAllen",
-      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
-      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 20,
+      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
+      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
+      "mentions": 21,
       "reddit_mentions": null,
-      "review_delta": 25,
+      "review_delta": 1,
       "rating": 4.8,
+      "trend": "down",
+      "moved": -2,
+      "badges": [],
+      "photo": "zaya.jpg"
+    },
+    {
+      "rank": 4,
+      "name": "Blu Brasserie",
+      "city": "McAllen",
+      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
+      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
+      "mentions": 21,
+      "reddit_mentions": null,
+      "review_delta": 2,
+      "rating": 4.9,
+      "trend": "down",
+      "moved": -2,
+      "badges": [],
+      "photo": "blu-brasserie.jpg"
+    },
+    {
+      "rank": 5,
+      "name": "Chilmoli Mexican Steakhouse",
+      "city": "Brownsville",
+      "known_for": "Brownsville's Mexican steakhouse — top-ranked in town",
+      "known_for_es": "El steakhouse mexicano de Brownsville — de lo mejor de la ciudad",
+      "mentions": 21,
+      "reddit_mentions": null,
+      "review_delta": 9,
+      "rating": 4.3,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "ambra.jpg"
-    },
-    {
-      "rank": 4,
-      "name": "Kokiri Korean Bistro",
-      "city": "Edinburg",
-      "known_for": "Korean bistro putting Edinburg on the Valley's food map",
-      "known_for_es": "Bistró coreano que puso a Edinburg en el mapa gastronómico del Valle",
-      "mentions": 20,
-      "reddit_mentions": null,
-      "review_delta": 7,
-      "rating": 4.8,
-      "trend": "down",
-      "moved": -2,
-      "badges": [],
-      "photo": "kokiri-korean-bistro.jpg"
-    },
-    {
-      "rank": 5,
-      "name": "Dos Olivos Market",
-      "city": "Harlingen",
-      "known_for": "Market-café hybrid that downtown Harlingen adopted immediately",
-      "known_for_es": "Mercado y café en uno — el centro de Harlingen lo adoptó de inmediato",
-      "mentions": 18,
-      "reddit_mentions": null,
-      "review_delta": 5,
-      "rating": 4.7,
-      "trend": "down",
-      "moved": -2,
-      "badges": [],
-      "photo": "dos-olivos-market.jpg"
+      "photo": "chilmoli-mexican-steakhouse.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "Moūsai",
-      "city": "McAllen"
+      "name": "Dos Olivos Market",
+      "city": "Harlingen"
     },
     {
-      "name": "Brasas",
-      "city": "McAllen"
+      "name": "El Jardin",
+      "city": "Edinburg"
     },
     {
       "name": "El Toro",
