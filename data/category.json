@@ -10,6 +10,26 @@
   "status": "ranked",
   "spots": [
     {
+      "name": "Restaurant Marychuy",
+      "aliases": [
+        "marychuy",
+        "restaurant marychuy"
+      ],
+      "city": "Weslaco",
+      "display_city": "Weslaco",
+      "known_for": "15+ years of Monterrey-style breakfast tacos alongside caldo de res made fresh daily",
+      "known_for_es": "Más de 15 años de tacos de desayuno estilo Monterrey junto con caldo de res hecho fresco cada día",
+      "places_query": "Restaurant Marychuy Weslaco TX",
+      "photo": "restaurant-marychuy.jpg",
+      "rank": 1,
+      "mentions": 5,
+      "reddit_mentions": null,
+      "review_delta": 2,
+      "rating": 4.3,
+      "moved": 5,
+      "streak_weeks": 1
+    },
+    {
       "name": "Taco N' Todo",
       "aliases": [
         "taco n todo",
@@ -21,13 +41,12 @@
       "known_for_es": "Tacos de quesabirria y estilo Matamoros para desayunar que atraen visitas de todo Texas",
       "places_query": "Taco N Todo Edinburg TX",
       "photo": "taco-n-todo.jpg",
-      "rank": 1,
-      "mentions": 14,
+      "rank": 2,
+      "mentions": 4,
       "reddit_mentions": null,
-      "review_delta": 3,
+      "review_delta": 0,
       "rating": 3.7,
-      "moved": 0,
-      "streak_weeks": 3
+      "moved": -1
     },
     {
       "name": "La Barra Del Taco",
@@ -41,12 +60,12 @@
       "known_for_es": "Tacos de desayuno estilo callejero con cinco opciones veganas y una salsa para cada guiso",
       "places_query": "La Barra Del Taco Brownsville TX",
       "photo": "la-barra-del-taco.jpg",
-      "rank": 2,
-      "mentions": 5,
+      "rank": 3,
+      "mentions": 2,
       "reddit_mentions": null,
       "review_delta": 0,
       "rating": 4.7,
-      "moved": 0
+      "moved": -1
     },
     {
       "name": "Eddie's Tacos",
@@ -60,12 +79,12 @@
       "known_for_es": "El original de una gasolinera convertida que creció hasta ser una cadena de cinco ubicaciones",
       "places_query": "Eddie's Tacos Pharr TX",
       "photo": "eddie-s-tacos.jpg",
-      "rank": 3,
-      "mentions": 3,
+      "rank": 4,
+      "mentions": 1,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 0,
       "rating": 4.5,
-      "moved": 0
+      "moved": -1
     },
     {
       "name": "Tejano Grill",
@@ -78,12 +97,12 @@
       "known_for_es": "Tacos de desayuno que los locales llaman divinos — enormes hasta en el tamaño 'chico'",
       "places_query": "Tejano Grill Harlingen TX",
       "photo": "tejano-grill.jpg",
-      "rank": 4,
-      "mentions": 3,
+      "rank": 5,
+      "mentions": 1,
       "reddit_mentions": null,
-      "review_delta": 4,
+      "review_delta": 0,
       "rating": 4.2,
-      "moved": 0
+      "moved": -1
     },
     {
       "name": "Ms G's Tacos N' More",
@@ -98,31 +117,12 @@
       "known_for_es": "Tacos de desayuno estilo abuela con tortillas de harina frescas que los locales llaman una leyenda",
       "places_query": "Ms G's Tacos N' More McAllen TX",
       "photo": "ms-g-s-tacos-n-more.jpg",
-      "rank": 5,
-      "mentions": 3,
-      "reddit_mentions": null,
-      "review_delta": 2,
-      "rating": 4.5,
-      "moved": 0
-    },
-    {
-      "name": "Restaurant Marychuy",
-      "aliases": [
-        "marychuy",
-        "restaurant marychuy"
-      ],
-      "city": "Weslaco",
-      "display_city": "Weslaco",
-      "known_for": "15+ years of Monterrey-style breakfast tacos alongside caldo de res made fresh daily",
-      "known_for_es": "Más de 15 años de tacos de desayuno estilo Monterrey junto con caldo de res hecho fresco cada día",
-      "places_query": "Restaurant Marychuy Weslaco TX",
-      "photo": "restaurant-marychuy.jpg",
       "rank": 6,
-      "mentions": 0,
+      "mentions": 1,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 4.3,
-      "moved": 0
+      "rating": 4.5,
+      "moved": -1
     }
   ],
   "baseline_date": "2026-08-03"
