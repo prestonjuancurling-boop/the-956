@@ -6,36 +6,36 @@
   "spots": [
     {
       "rank": 1,
+      "name": "El Toro",
+      "city": "Harlingen",
+      "known_for": "Family-owned Harlingen staple — carne asada and chiles rellenos for 20+ years",
+      "known_for_es": "Restaurante familiar de Harlingen — carne asada y chiles rellenos por más de 20 años",
+      "mentions": 1873,
+      "reddit_mentions": null,
+      "review_delta": 6491,
+      "rating": 4.6,
+      "trend": "steady",
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "streak_weeks": 1,
+      "photo": "el-toro.jpg"
+    },
+    {
+      "rank": 2,
       "name": "Zaya",
       "city": "McAllen",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
       "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 28,
+      "mentions": 45,
       "reddit_mentions": null,
-      "review_delta": 6,
+      "review_delta": 11,
       "rating": 4.8,
-      "trend": "up",
-      "moved": 3,
-      "badges": [
-        "biggest_mover"
-      ],
-      "streak_weeks": 1,
-      "photo": "zaya.jpg"
-    },
-    {
-      "rank": 2,
-      "name": "AMBRA",
-      "city": "McAllen",
-      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
-      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 23,
-      "reddit_mentions": null,
-      "review_delta": 21,
-      "rating": 4.8,
-      "trend": "up",
-      "moved": 1,
+      "trend": "down",
+      "moved": -1,
       "badges": [],
-      "photo": "ambra.jpg"
+      "photo": "zaya.jpg"
     },
     {
       "rank": 3,
@@ -43,56 +43,56 @@
       "city": "McAllen",
       "known_for": "McAllen's polished new brasserie for date nights and long dinners",
       "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
-      "mentions": 13,
+      "mentions": 22,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 3,
       "rating": 4.9,
-      "trend": "up",
-      "moved": 2,
+      "trend": "steady",
+      "moved": 0,
       "badges": [],
       "photo": "blu-brasserie.jpg"
     },
     {
       "rank": 4,
-      "name": "Brasas",
+      "name": "AMBRA",
       "city": "McAllen",
-      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
-      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
-      "mentions": 13,
+      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
+      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
+      "mentions": 15,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 9,
       "rating": 4.8,
       "trend": "down",
       "moved": -2,
       "badges": [],
-      "photo": "brasas.jpg"
+      "photo": "ambra.jpg"
     },
     {
       "rank": 5,
-      "name": "Dos Olivos Market",
-      "city": "Harlingen",
-      "known_for": "Market-café hybrid that downtown Harlingen adopted immediately",
-      "known_for_es": "Mercado y café en uno — el centro de Harlingen lo adoptó de inmediato",
-      "mentions": 13,
+      "name": "Cayuco Seafood & Grill",
+      "city": "Brownsville",
+      "known_for": "Seafood and grill plates earning Brownsville's buzz",
+      "known_for_es": "Mariscos y parrilla que traen a Brownsville hablando",
+      "mentions": 15,
       "reddit_mentions": null,
-      "review_delta": 3,
-      "rating": 4.7,
+      "review_delta": 5,
+      "rating": 4.5,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "dos-olivos-market.jpg"
+      "photo": "cayuco-seafood-grill.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "Jerusalem Mediterranean Bistro",
-      "city": "Edinburg"
+      "name": "Brasas",
+      "city": "McAllen"
     },
     {
-      "name": "GW's BBQ",
-      "city": "San Juan"
+      "name": "El Jardin",
+      "city": "Edinburg"
     },
     {
       "name": "Moūsai",
