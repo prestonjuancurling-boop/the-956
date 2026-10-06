@@ -202,41 +202,5 @@
     "rating": 4.6,
     "ema": 6.104515896827415,
     "date": "2026-10-05"
-  },
-  "cat:Ms G's Tacos N' More": {
-    "reviewCount": 1028,
-    "rating": 4.5,
-    "ema": 0.20725146040635423,
-    "date": "2026-10-05"
-  },
-  "cat:Taco N' Todo": {
-    "reviewCount": 161,
-    "rating": 3.7,
-    "ema": 21.901433706705213,
-    "date": "2026-10-05"
-  },
-  "cat:Restaurant Marychuy": {
-    "reviewCount": 259,
-    "rating": 4.3,
-    "ema": 0.8396544793183577,
-    "date": "2026-10-05"
-  },
-  "cat:La Barra Del Taco": {
-    "reviewCount": 66,
-    "rating": 4.7,
-    "ema": 0.3369201207170627,
-    "date": "2026-10-05"
-  },
-  "cat:Eddie's Tacos": {
-    "reviewCount": 1228,
-    "rating": 4.5,
-    "ema": 0.2010486413893157,
-    "date": "2026-10-05"
-  },
-  "cat:Tejano Grill": {
-    "reviewCount": 2748,
-    "rating": 4.2,
-    "ema": 1.292060176464445,
-    "date": "2026-10-05"
   }
 }

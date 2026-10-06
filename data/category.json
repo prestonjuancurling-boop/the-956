@@ -1,129 +1,85 @@
 {
   "comment": "The rotating monthly micro-ranking. Rotate the category on the 1st of each month: update month/title/note, swap in 5-6 real candidate spots (verified via local sources — never invented), reset status to 'measuring', set baseline_date to today, and prune stale cat: keys from buzz-history.json. compute-buzz.mjs scores candidates weekly with the same engine as the Power Rankings (history keys prefixed 'cat:'). LOCKED 12-MONTH CALENDAR (themes fixed, candidate spots researched fresh each rotation): Jul=raspas, Aug=breakfast tacos, Sep=barbacoa, Oct=pan dulce, Nov=menudo, Dec=tamales (publish before Christmas ordering), Jan=caldos, Feb=mariscos (Lent), Mar=fajitas, Apr=elotes & street corn, May=paletas & aguas frescas, Jun=homegrown burgers (no chains). High school football is a separate section, not a category.",
-  "month": "2026-08",
-  "title": "August: Best Breakfast Tacos 🌮",
-  "title_es": "Agosto: Los mejores tacos de desayuno 🌮",
-  "note": "Raspas cool you down, but breakfast tacos start the day right — six Valley kitchens up before sunrise to prove it.",
-  "note_es": "Las raspas te refrescan, pero los tacos de desayuno arrancan bien el día — seis cocinas del Valle despiertas antes del amanecer para demostrarlo.",
+  "month": "2026-10",
+  "title": "October: Best Pan Dulce 🥐",
+  "title_es": "Octubre: El mejor pan dulce 🥐",
+  "note": "Breakfast tacos start the day, but no Valley morning is complete without a concha and café — six panaderías baking the Valley's favorite sweet bread fresh every day.",
+  "note_es": "Los tacos de desayuno arrancan el día, pero ninguna mañana en el Valle está completa sin una concha y café — seis panaderías del Valle horneando el pan dulce favorito, fresco todos los días.",
   "measuring_note": "Tracking just started — the first ranking drops Monday. The contenders:",
   "measuring_note_es": "Apenas empezamos a medir — el primer ranking sale el lunes. Los contendientes:",
-  "status": "ranked",
+  "status": "measuring",
+  "baseline_date": "2026-10-05",
   "spots": [
     {
-      "name": "Taco N' Todo",
+      "name": "La Mexicana Bakery",
       "aliases": [
-        "taco n todo",
-        "taco n' todo"
+        "la mexicana bakery",
+        "la mexicana"
       ],
       "city": "Edinburg",
       "display_city": "Edinburg",
-      "known_for": "Quesabirria breakfast tacos and tacos estilo Matamoros that draw visitors from across Texas",
-      "known_for_es": "Tacos de quesabirria y estilo Matamoros para desayunar que atraen visitas de todo Texas",
-      "places_query": "Taco N Todo Edinburg TX",
-      "photo": "taco-n-todo.jpg",
-      "rank": 1,
-      "mentions": 22,
-      "reddit_mentions": null,
-      "review_delta": 6,
-      "rating": 3.7,
-      "moved": 0,
-      "streak_weeks": 2
+      "known_for": "Decades of fresh conchas, donuts, and breakfast tacos out of the same Edinburg oven",
+      "known_for_es": "Décadas de conchas, donas y tacos de desayuno frescos del mismo horno de Edinburg",
+      "places_query": "La Mexicana Bakery Edinburg TX"
     },
     {
-      "name": "Tejano Grill",
+      "name": "El Fenix Bakery",
       "aliases": [
-        "tejano grill"
+        "el fenix bakery",
+        "el fenix"
       ],
-      "city": "Harlingen",
-      "display_city": "Harlingen",
-      "known_for": "Breakfast tacos locals call divine — huge even in the 'small' size",
-      "known_for_es": "Tacos de desayuno que los locales llaman divinos — enormes hasta en el tamaño 'chico'",
-      "places_query": "Tejano Grill Harlingen TX",
-      "photo": "tejano-grill.jpg",
-      "rank": 2,
-      "mentions": 1,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.2,
-      "moved": 0
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Baking since 1947 — the glazed donuts and conchas Valley regulars drive hours for",
+      "known_for_es": "Horneando desde 1947 — las donas glaseadas y conchas por las que la gente maneja horas",
+      "places_query": "El Fenix Bakery Edinburg TX"
     },
     {
-      "name": "Restaurant Marychuy",
+      "name": "Ayala's Bakery",
       "aliases": [
-        "marychuy",
-        "restaurant marychuy"
-      ],
-      "city": "Weslaco",
-      "display_city": "Weslaco",
-      "known_for": "15+ years of Monterrey-style breakfast tacos alongside caldo de res made fresh daily",
-      "known_for_es": "Más de 15 años de tacos de desayuno estilo Monterrey junto con caldo de res hecho fresco cada día",
-      "places_query": "Restaurant Marychuy Weslaco TX",
-      "photo": "restaurant-marychuy.jpg",
-      "rank": 3,
-      "mentions": 1,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.3,
-      "moved": 0
-    },
-    {
-      "name": "La Barra Del Taco",
-      "aliases": [
-        "la barra del taco",
-        "barra del taco"
+        "ayala's bakery",
+        "ayalas bakery"
       ],
       "city": "Brownsville",
       "display_city": "Brownsville",
-      "known_for": "Street-style breakfast tacos with five vegan options and a salsa for every guiso",
-      "known_for_es": "Tacos de desayuno estilo callejero con cinco opciones veganas y una salsa para cada guiso",
-      "places_query": "La Barra Del Taco Brownsville TX",
-      "photo": "la-barra-del-taco.jpg",
-      "rank": 4,
-      "mentions": 0,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.7,
-      "moved": 0
+      "known_for": "Brownsville's go-to panadería — fresh bread, friendly staff, and a spotless case",
+      "known_for_es": "La panadería de cabecera de Brownsville — pan fresco, personal amable y vitrina impecable",
+      "places_query": "Ayala's Bakery Brownsville TX"
     },
     {
-      "name": "Eddie's Tacos",
+      "name": "Paris Bakery",
       "aliases": [
-        "eddie's tacos",
-        "eddies tacos"
+        "paris bakery"
+      ],
+      "city": "Mission",
+      "display_city": "Mission",
+      "known_for": "Mission's concha specialist — locals say theirs are simply the best",
+      "known_for_es": "El especialista en conchas de Mission — los locales dicen que son sencillamente las mejores",
+      "places_query": "Paris Bakery Mission TX"
+    },
+    {
+      "name": "La Reynera Bakery Express",
+      "aliases": [
+        "la reynera bakery express",
+        "la reynera"
       ],
       "city": "Pharr",
       "display_city": "Pharr",
-      "known_for": "The converted-gas-station original that grew into a five-location breakfast taco chain",
-      "known_for_es": "El original de una gasolinera convertida que creció hasta ser una cadena de cinco ubicaciones",
-      "places_query": "Eddie's Tacos Pharr TX",
-      "photo": "eddie-s-tacos.jpg",
-      "rank": 5,
-      "mentions": 0,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.5,
-      "moved": 0
+      "known_for": "Concha bread and mini conchas keeping the Nolana Loop case full all day",
+      "known_for_es": "Pan de concha y mini conchas que mantienen la vitrina de Nolana Loop llena todo el día",
+      "places_query": "La Reynera Bakery Express Pharr TX"
     },
     {
-      "name": "Ms G's Tacos N' More",
+      "name": "La Especial Bakery",
       "aliases": [
-        "ms g's tacos",
-        "ms gs tacos n more",
-        "ms g's tacos n more"
+        "la especial bakery",
+        "la especial"
       ],
       "city": "McAllen",
       "display_city": "McAllen",
-      "known_for": "Grandma-style breakfast tacos with fresh flour tortillas that locals call a legend",
-      "known_for_es": "Tacos de desayuno estilo abuela con tortillas de harina frescas que los locales llaman una leyenda",
-      "places_query": "Ms G's Tacos N' More McAllen TX",
-      "photo": "ms-g-s-tacos-n-more.jpg",
-      "rank": 6,
-      "mentions": 0,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.5,
-      "moved": 0
+      "known_for": "The neighborhood panadería with soft conchas, fruit empanadas, and nostalgic marranitos",
+      "known_for_es": "La panadería del barrio con conchas suaves, empanadas de fruta y marranitos nostálgicos",
+      "places_query": "La Especial Bakery McAllen TX"
     }
-  ],
-  "baseline_date": "2026-08-03"
+  ]
 }
