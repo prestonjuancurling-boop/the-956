@@ -6,24 +6,6 @@
   "spots": [
     {
       "rank": 1,
-      "name": "El Toro",
-      "city": "Harlingen",
-      "known_for": "Family-owned Harlingen staple — carne asada and chiles rellenos for 20+ years",
-      "known_for_es": "Restaurante familiar de Harlingen — carne asada y chiles rellenos por más de 20 años",
-      "mentions": 1873,
-      "reddit_mentions": null,
-      "review_delta": 6491,
-      "rating": 4.6,
-      "trend": "steady",
-      "moved": null,
-      "badges": [
-        "new_entry"
-      ],
-      "streak_weeks": 1,
-      "photo": "el-toro.jpg"
-    },
-    {
-      "rank": 2,
       "name": "Zaya",
       "city": "McAllen",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
@@ -32,13 +14,14 @@
       "reddit_mentions": null,
       "review_delta": 11,
       "rating": 4.8,
-      "trend": "down",
-      "moved": -1,
+      "trend": "steady",
+      "moved": 0,
       "badges": [],
+      "streak_weeks": 5,
       "photo": "zaya.jpg"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "name": "Blu Brasserie",
       "city": "McAllen",
       "known_for": "McAllen's polished new brasserie for date nights and long dinners",
@@ -53,7 +36,7 @@
       "photo": "blu-brasserie.jpg"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "name": "AMBRA",
       "city": "McAllen",
       "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
@@ -68,7 +51,7 @@
       "photo": "ambra.jpg"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "name": "Cayuco Seafood & Grill",
       "city": "Brownsville",
       "known_for": "Seafood and grill plates earning Brownsville's buzz",
@@ -83,13 +66,26 @@
         "new_entry"
       ],
       "photo": "cayuco-seafood-grill.jpg"
+    },
+    {
+      "rank": 5,
+      "name": "Brasas",
+      "city": "McAllen",
+      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
+      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
+      "mentions": 13,
+      "reddit_mentions": null,
+      "review_delta": null,
+      "rating": 4.8,
+      "trend": "steady",
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "photo": "brasas.jpg"
     }
   ],
   "bubble": [
-    {
-      "name": "Brasas",
-      "city": "McAllen"
-    },
     {
       "name": "El Jardin",
       "city": "Edinburg"
@@ -97,6 +93,10 @@
     {
       "name": "Moūsai",
       "city": "McAllen"
+    },
+    {
+      "name": "Kokiri Korean Bistro",
+      "city": "Edinburg"
     }
   ]
 }
