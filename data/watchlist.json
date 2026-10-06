@@ -143,15 +143,6 @@
       "places_query": "Dos Olivos Market Harlingen TX"
     },
     {
-      "name": "El Toro",
-      "aliases": ["el toro harlingen"],
-      "city": "Harlingen",
-      "display_city": "Harlingen",
-      "known_for": "Family-owned Harlingen staple — carne asada and chiles rellenos for 20+ years",
-      "known_for_es": "Restaurante familiar de Harlingen — carne asada y chiles rellenos por más de 20 años",
-      "places_query": "El Toro restaurant Harlingen TX"
-    },
-    {
       "name": "Barrel House Kitchen & Bar",
       "aliases": ["barrel house"],
       "city": "Edinburg",
