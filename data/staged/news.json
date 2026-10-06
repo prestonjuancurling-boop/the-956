@@ -1,0 +1,61 @@
+{
+  "section_note": "This week around el Valle: South Padre Island swears in a new council member, a $3.2B shipyard breaks ground in Brownsville, McAllen's long-awaited cancer clinic finally opens its doors, downtown's ArtWalk lights back up, and Valley poets gather at Bentsen State Park.",
+  "section_note_es": "Esta semana por el Valle: South Padre Island toma juramento a una nueva concejal, un astillero de $3.2 mil millones rompe tierra en Brownsville, la esperada clínica de cáncer de McAllen por fin abre sus puertas, el ArtWalk del centro se vuelve a encender, y los poetas del Valle se reúnen en Bentsen State Park.",
+  "items": [
+    {
+      "headline": "Rita Hernandez wins South Padre Island special election for City Council",
+      "headline_es": "Rita Hernandez gana la elección especial de South Padre Island para el Concejo Municipal",
+      "summary": "Unofficial results show Hernandez, a retired BISD assistant superintendent and 30-year island resident, defeating Gayle Hood 522 to 205 for the City Council Place 1 seat left vacant since Ken Medders' death in June.",
+      "summary_es": "Resultados no oficiales muestran a Hernandez, ex subsuperintendente retirada del BISD y residente de la isla por 30 años, derrotando a Gayle Hood 522 a 205 por el puesto 1 del Concejo, vacante desde la muerte de Ken Medders en junio.",
+      "source": "KRGV",
+      "topic": "Civic",
+      "topic_es": "Cívico",
+      "published": "Oct 4",
+      "url": "https://www.krgv.com/news/unofficial-special-election-results-show-hernandez-taking-south-padre-island-city-council-place-1-seat/"
+    },
+    {
+      "headline": "$3.2B Port Alpha shipyard breaks ground at the Port of Brownsville, promising 10,000 jobs",
+      "headline_es": "El astillero Port Alpha de $3.2 mil millones rompe tierra en el Puerto de Brownsville, prometiendo 10,000 empleos",
+      "summary": "Autonomous-vessel builder Saronic broke ground on Port Alpha, an 835-acre shipyard with room to grow to nearly 4,400 acres. The facility is expected to employ welders, electricians, engineers and technicians, with operations targeted to start in 2028.",
+      "summary_es": "La constructora de embarcaciones autónomas Saronic rompió tierra en Port Alpha, un astillero de 835 acres con espacio para crecer hasta casi 4,400 acres. Se espera que la planta emplee a soldadores, electricistas, ingenieros y técnicos, con operaciones programadas para arrancar en 2028.",
+      "source": "RGV Business Journal",
+      "topic": "Business",
+      "topic_es": "Negocios",
+      "published": "Sep 30",
+      "url": "https://www.rgvbusinessjournal.com/news/30/09/2026/vice-president-jd-vance-kicks-off-construction-of-3-2b-brownsville-shipyard-promising-10000-jobs/"
+    },
+    {
+      "headline": "Texas Oncology opens new McAllen West cancer clinic after a seven-year wait",
+      "headline_es": "Texas Oncology abre su nueva clínica de cáncer McAllen West tras una espera de siete años",
+      "summary": "The 15,000-square-foot facility adds a PET scanner, a full clinical lab, 15 exam rooms and 20 infusion chairs to relieve a Valley cancer-care system that had been stretched to capacity. Surgical oncology is planned to follow.",
+      "summary_es": "La instalación de 15,000 pies cuadrados suma un escáner PET, un laboratorio clínico completo, 15 cuartos de examen y 20 sillas de infusión para aliviar un sistema de atención de cáncer del Valle que ya estaba al tope. Se planea agregar oncología quirúrgica más adelante.",
+      "source": "MyRGV",
+      "topic": "Business",
+      "topic_es": "Negocios",
+      "published": "Oct 1",
+      "url": "https://myrgv.com/local-news/2026/10/01/texas-oncology-opens-new-facility-in-mcallen-expanding-cancer-care-in-rgv/"
+    },
+    {
+      "headline": "McAllen's ArtWalk returns with a Friday soft launch",
+      "headline_es": "El ArtWalk de McAllen regresa con un arranque suave el viernes",
+      "summary": "Galleries and businesses from Business 83 to Pecan Boulevard — including Ponte Creative Studio & Gallery, Hinovations Art Gallery and Staccato Coffee House — threw open their doors for the evening stroll's return downtown.",
+      "summary_es": "Galerías y negocios desde Business 83 hasta Pecan Boulevard — incluyendo Ponte Creative Studio & Gallery, Hinovations Art Gallery y Staccato Coffee House — abrieron sus puertas para el regreso de esta caminata nocturna por el centro.",
+      "source": "MyRGV",
+      "topic": "Community",
+      "topic_es": "Comunidad",
+      "published": "Sep 30",
+      "url": "https://myrgv.com/local-news/2026/09/30/mcallens-artwalk-returns-with-friday-soft-launch/"
+    },
+    {
+      "headline": "Valley poets gather at Bentsen State Park to celebrate RGV land and people",
+      "headline_es": "Poetas del Valle se reúnen en Bentsen State Park para celebrar la tierra y la gente del RGV",
+      "summary": "The RGV Women's Poet Society and the Poets Against Walls collective host a free celebration of Valley land and culture Sunday, Oct. 11 at Bentsen-Rio Grande Valley State Park in Mission, with organizers encouraging an early arrival to enjoy the park.",
+      "summary_es": "La RGV Women's Poet Society y el colectivo Poets Against Walls organizan una celebración gratuita de la tierra y cultura del Valle el domingo 11 de octubre en el Bentsen-Rio Grande Valley State Park en Mission, animando a llegar temprano para disfrutar del parque.",
+      "source": "MyRGV",
+      "topic": "Community",
+      "topic_es": "Comunidad",
+      "published": "Oct 5",
+      "url": "https://myrgv.com/local-news/2026/10/05/poetry-groups-to-celebrate-rgv-land-people-at-state-park/"
+    }
+  ]
+}
