@@ -36,171 +36,207 @@
     "date": "2026-07-20"
   },
   "Zaya": {
-    "reviewCount": 270,
+    "reviewCount": 272,
     "rating": 4.8,
-    "ema": 45.45714311181575,
-    "date": "2026-10-05"
+    "ema": 17.549526301880515,
+    "date": "2026-10-12"
   },
   "Moūsai": {
-    "reviewCount": 1073,
+    "reviewCount": 1105,
     "rating": 4.8,
-    "ema": 9.939700697285272,
-    "date": "2026-10-05"
+    "ema": 46.671374776619835,
+    "date": "2026-10-12"
   },
   "Blu Brasserie": {
-    "reviewCount": 119,
+    "reviewCount": 122,
     "rating": 4.9,
-    "ema": 21.807276004916236,
-    "date": "2026-10-05"
+    "ema": 24.985448106301515,
+    "date": "2026-10-12"
   },
   "Brasas": {
     "reviewCount": 198,
     "rating": 4.8,
-    "ema": 12.644872522503517,
-    "date": "2026-10-05"
+    "ema": 5.057949009001407,
+    "date": "2026-10-12"
   },
   "AMBRA": {
-    "reviewCount": 2573,
+    "reviewCount": 2597,
     "rating": 4.8,
-    "ema": 14.82909080285657,
-    "date": "2026-10-05"
+    "ema": 21.12261580935604,
+    "date": "2026-10-12"
   },
   "Hacienda Las Mariposas": {
-    "reviewCount": 466,
+    "reviewCount": 467,
     "rating": 4.1,
-    "ema": 0.06143620360508409,
-    "date": "2026-10-05"
+    "ema": 2.089767563984165,
+    "date": "2026-10-12"
   },
   "Republic of the Rio Grande": {
-    "reviewCount": 3949,
+    "reviewCount": 3958,
     "rating": 4.7,
-    "ema": 4.989898334418582,
-    "date": "2026-10-05"
+    "ema": 6.527958146544153,
+    "date": "2026-10-12"
   },
   "Taqueria Sheko's": {
-    "reviewCount": 829,
-    "rating": 4.2,
-    "ema": 1.001086746206722,
-    "date": "2026-10-05"
+    "reviewCount": 108,
+    "rating": 4.4,
+    "ema": 0.40043469848268876,
+    "date": "2026-10-12"
   },
   "Chilmoli Mexican Steakhouse": {
-    "reviewCount": 360,
+    "reviewCount": 361,
     "rating": 4.3,
-    "ema": 5.9026253877958155,
-    "date": "2026-10-05"
+    "ema": 4.5835764709078,
+    "date": "2026-10-12"
   },
   "Madeira": {
-    "reviewCount": 309,
+    "reviewCount": 312,
     "rating": 4.4,
-    "ema": 1.969545103592099,
-    "date": "2026-10-05"
+    "ema": 8.100516038756295,
+    "date": "2026-10-12"
   },
   "Cayuco Seafood & Grill": {
-    "reviewCount": 272,
+    "reviewCount": 275,
     "rating": 4.5,
-    "ema": 15.396606324412705,
-    "date": "2026-10-05"
+    "ema": 14.097556837035429,
+    "date": "2026-10-12"
   },
   "Dirty Al's": {
-    "reviewCount": 5188,
+    "reviewCount": 5195,
     "rating": 4.1,
-    "ema": 3.381358112182773,
-    "date": "2026-10-05"
+    "ema": 3.4083632644837167,
+    "date": "2026-10-12"
   },
   "Smoke: Texas BBQ & Watering Hole": {
     "reviewCount": 1583,
     "rating": 4.3,
-    "ema": 0.2904452449585193,
-    "date": "2026-10-05"
+    "ema": 0.11617809798340772,
+    "date": "2026-10-12"
   },
   "Frankie Flaves": {
     "reviewCount": 998,
     "rating": 4.1,
     "ema": 0,
-    "date": "2026-10-05"
+    "date": "2026-10-12"
   },
   "Dos Olivos Market": {
     "reviewCount": 554,
     "rating": 4.7,
-    "ema": 6.820783895967621,
-    "date": "2026-10-05"
+    "ema": 2.7283135583870486,
+    "date": "2026-10-12"
   },
   "Barrel House Kitchen & Bar": {
-    "reviewCount": 386,
+    "reviewCount": 389,
     "rating": 4.2,
-    "ema": 5.916426253027359,
-    "date": "2026-10-05"
+    "ema": 8.663760473128294,
+    "date": "2026-10-12"
   },
   "Kokiri Korean Bistro": {
     "reviewCount": 1058,
     "rating": 4.8,
-    "ema": 9.704968210370525,
-    "date": "2026-10-05"
+    "ema": 3.8819872841482104,
+    "date": "2026-10-12"
   },
   "Los Machetes Quesadillas Factory": {
-    "reviewCount": 574,
+    "reviewCount": 579,
     "rating": 4.8,
-    "ema": 4.470905098975607,
-    "date": "2026-10-05"
+    "ema": 10.166572119617939,
+    "date": "2026-10-12"
   },
   "Jerusalem Mediterranean Bistro": {
-    "reviewCount": 424,
+    "reviewCount": 426,
     "rating": 4.7,
-    "ema": 9.272219003480352,
-    "date": "2026-10-05"
+    "ema": 8.121728020371766,
+    "date": "2026-10-12"
   },
   "El Jardin": {
-    "reviewCount": 386,
+    "reviewCount": 388,
     "rating": 4.8,
-    "ema": 11.61397727817241,
-    "date": "2026-10-05"
+    "ema": 9.353548009760527,
+    "date": "2026-10-12"
   },
   "Angel's Kitchen": {
     "reviewCount": 109,
     "rating": 4.7,
-    "ema": 0.008066398912354585,
-    "date": "2026-10-05"
+    "ema": 0.003226559564941834,
+    "date": "2026-10-12"
   },
   "5x5 Brewing Co.": {
     "reviewCount": 9,
     "rating": 5,
     "ema": 0,
-    "date": "2026-10-05"
+    "date": "2026-10-12"
   },
   "Don Ferruco": {
     "reviewCount": 2,
     "rating": 4,
     "ema": 0,
-    "date": "2026-10-05"
+    "date": "2026-10-12"
   },
   "Junction Café": {
     "reviewCount": 1519,
     "rating": 4.3,
-    "ema": 1.2205974682375929,
-    "date": "2026-10-05"
+    "ema": 0.4882389872950372,
+    "date": "2026-10-12"
   },
   "El Itacate": {
-    "reviewCount": 880,
+    "reviewCount": 882,
     "rating": 4.5,
-    "ema": 7.943972709086969,
-    "date": "2026-10-05"
+    "ema": 5.747417156975612,
+    "date": "2026-10-12"
   },
   "Cast Iron Cafe": {
-    "reviewCount": 476,
+    "reviewCount": 477,
     "rating": 4.5,
-    "ema": 3.90434291117392,
-    "date": "2026-10-05"
+    "ema": 3.5710474939109913,
+    "date": "2026-10-12"
   },
   "El Rancho Grande": {
-    "reviewCount": 2854,
+    "reviewCount": 2853,
     "rating": 4.2,
-    "ema": 2.3030868949870302,
-    "date": "2026-10-05"
+    "ema": 0.9212347579948121,
+    "date": "2026-10-12"
   },
   "GW's BBQ": {
-    "reviewCount": 878,
+    "reviewCount": 885,
     "rating": 4.6,
-    "ema": 6.104515896827415,
-    "date": "2026-10-05"
+    "ema": 11.590364678052863,
+    "date": "2026-10-12"
+  },
+  "cat:La Mexicana Bakery": {
+    "reviewCount": 360,
+    "rating": 4.7,
+    "ema": 0,
+    "date": "2026-10-12"
+  },
+  "cat:El Fenix Bakery": {
+    "reviewCount": 570,
+    "rating": 4.7,
+    "ema": 0,
+    "date": "2026-10-12"
+  },
+  "cat:Ayala's Bakery": {
+    "reviewCount": 603,
+    "rating": 4.6,
+    "ema": 0,
+    "date": "2026-10-12"
+  },
+  "cat:Paris Bakery": {
+    "reviewCount": 546,
+    "rating": 4.3,
+    "ema": 0,
+    "date": "2026-10-12"
+  },
+  "cat:La Reynera Bakery Express": {
+    "reviewCount": 497,
+    "rating": 4.4,
+    "ema": 0,
+    "date": "2026-10-12"
+  },
+  "cat:La Especial Bakery": {
+    "reviewCount": 824,
+    "rating": 4.8,
+    "ema": 0,
+    "date": "2026-10-12"
   }
 }

@@ -6,19 +6,21 @@
   "spots": [
     {
       "rank": 1,
-      "name": "Zaya",
+      "name": "Moūsai",
       "city": "McAllen",
-      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
-      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 45,
+      "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
+      "known_for_es": "El nuevo sushi bar elegante que trae rollos frescos y nigiri a McAllen",
+      "mentions": 47,
       "reddit_mentions": null,
-      "review_delta": 11,
+      "review_delta": 32,
       "rating": 4.8,
       "trend": "steady",
-      "moved": 0,
-      "badges": [],
-      "streak_weeks": 5,
-      "photo": "zaya.jpg"
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "streak_weeks": 1,
+      "photo": "mo-sai.jpg"
     },
     {
       "rank": 2,
@@ -26,7 +28,7 @@
       "city": "McAllen",
       "known_for": "McAllen's polished new brasserie for date nights and long dinners",
       "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
-      "mentions": 22,
+      "mentions": 25,
       "reddit_mentions": null,
       "review_delta": 3,
       "rating": 4.9,
@@ -41,61 +43,57 @@
       "city": "McAllen",
       "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
       "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 15,
+      "mentions": 21,
       "reddit_mentions": null,
-      "review_delta": 9,
+      "review_delta": 24,
       "rating": 4.8,
-      "trend": "down",
-      "moved": -2,
+      "trend": "steady",
+      "moved": 0,
       "badges": [],
       "photo": "ambra.jpg"
     },
     {
       "rank": 4,
+      "name": "Zaya",
+      "city": "McAllen",
+      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
+      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
+      "mentions": 18,
+      "reddit_mentions": null,
+      "review_delta": 2,
+      "rating": 4.8,
+      "trend": "down",
+      "moved": -3,
+      "badges": [],
+      "photo": "zaya.jpg"
+    },
+    {
+      "rank": 5,
       "name": "Cayuco Seafood & Grill",
       "city": "Brownsville",
       "known_for": "Seafood and grill plates earning Brownsville's buzz",
       "known_for_es": "Mariscos y parrilla que traen a Brownsville hablando",
-      "mentions": 15,
+      "mentions": 14,
       "reddit_mentions": null,
-      "review_delta": 5,
+      "review_delta": 3,
       "rating": 4.5,
-      "trend": "steady",
-      "moved": null,
-      "badges": [
-        "new_entry"
-      ],
+      "trend": "down",
+      "moved": -1,
+      "badges": [],
       "photo": "cayuco-seafood-grill.jpg"
-    },
-    {
-      "rank": 5,
-      "name": "Brasas",
-      "city": "McAllen",
-      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
-      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
-      "mentions": 13,
-      "reddit_mentions": null,
-      "review_delta": null,
-      "rating": 4.8,
-      "trend": "steady",
-      "moved": null,
-      "badges": [
-        "new_entry"
-      ],
-      "photo": "brasas.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "El Jardin",
+      "name": "GW's BBQ",
+      "city": "San Juan"
+    },
+    {
+      "name": "Los Machetes Quesadillas Factory",
       "city": "Edinburg"
     },
     {
-      "name": "Moūsai",
-      "city": "McAllen"
-    },
-    {
-      "name": "Kokiri Korean Bistro",
+      "name": "Barrel House Kitchen & Bar",
       "city": "Edinburg"
     }
   ]

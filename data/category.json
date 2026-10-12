@@ -20,7 +20,8 @@
       "display_city": "Edinburg",
       "known_for": "Decades of fresh conchas, donuts, and breakfast tacos out of the same Edinburg oven",
       "known_for_es": "Décadas de conchas, donas y tacos de desayuno frescos del mismo horno de Edinburg",
-      "places_query": "La Mexicana Bakery Edinburg TX"
+      "places_query": "La Mexicana Bakery Edinburg TX",
+      "photo": "la-mexicana-bakery.jpg"
     },
     {
       "name": "El Fenix Bakery",
@@ -32,7 +33,8 @@
       "display_city": "Edinburg",
       "known_for": "Baking since 1947 — the glazed donuts and conchas Valley regulars drive hours for",
       "known_for_es": "Horneando desde 1947 — las donas glaseadas y conchas por las que la gente maneja horas",
-      "places_query": "El Fenix Bakery Edinburg TX"
+      "places_query": "El Fenix Bakery Edinburg TX",
+      "photo": "el-fenix-bakery.jpg"
     },
     {
       "name": "Ayala's Bakery",
@@ -44,7 +46,8 @@
       "display_city": "Brownsville",
       "known_for": "Brownsville's go-to panadería — fresh bread, friendly staff, and a spotless case",
       "known_for_es": "La panadería de cabecera de Brownsville — pan fresco, personal amable y vitrina impecable",
-      "places_query": "Ayala's Bakery Brownsville TX"
+      "places_query": "Ayala's Bakery Brownsville TX",
+      "photo": "ayala-s-bakery.jpg"
     },
     {
       "name": "Paris Bakery",
@@ -55,7 +58,8 @@
       "display_city": "Mission",
       "known_for": "Mission's concha specialist — locals say theirs are simply the best",
       "known_for_es": "El especialista en conchas de Mission — los locales dicen que son sencillamente las mejores",
-      "places_query": "Paris Bakery Mission TX"
+      "places_query": "Paris Bakery Mission TX",
+      "photo": "paris-bakery.jpg"
     },
     {
       "name": "La Reynera Bakery Express",
@@ -67,7 +71,8 @@
       "display_city": "Pharr",
       "known_for": "Concha bread and mini conchas keeping the Nolana Loop case full all day",
       "known_for_es": "Pan de concha y mini conchas que mantienen la vitrina de Nolana Loop llena todo el día",
-      "places_query": "La Reynera Bakery Express Pharr TX"
+      "places_query": "La Reynera Bakery Express Pharr TX",
+      "photo": "la-reynera-bakery-express.jpg"
     },
     {
       "name": "La Especial Bakery",
@@ -79,7 +84,8 @@
       "display_city": "McAllen",
       "known_for": "The neighborhood panadería with soft conchas, fruit empanadas, and nostalgic marranitos",
       "known_for_es": "La panadería del barrio con conchas suaves, empanadas de fruta y marranitos nostálgicos",
-      "places_query": "La Especial Bakery McAllen TX"
+      "places_query": "La Especial Bakery McAllen TX",
+      "photo": "la-especial-bakery.jpg"
     }
   ]
 }
