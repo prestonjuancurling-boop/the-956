@@ -73,6 +73,18 @@
       "blurb_es": "La popular cadena tejana de tés acaba de empezar la construcción de su primer local en el sur de Texas, en 205 Rocky Road, con apertura pensada para principios del 2027.",
       "emoji": "🧋",
       "photo": "hteao.jpg"
+    },
+    {
+      "name": "Zaxby's",
+      "city": "Harlingen",
+      "cuisine": "Chicken / American",
+      "cuisine_es": "Pollo / Americana",
+      "status": "Opening soon",
+      "status_es": "Abre pronto",
+      "blurb": "The Georgia chicken chain is breaking ground on a second Valley location — a 1,948-sq.-ft. restaurant at 4707 S. Expressway 77/83 — following its first RGV spot in McAllen. Completion is targeted for January 2027.",
+      "blurb_es": "La cadena de pollo de Georgia ya está construyendo su segunda ubicación en el Valle — un restaurante de 1,948 pies cuadrados en el 4707 S. Expressway 77/83 — tras abrir su primer local del RGV en McAllen. Esperan terminar en enero del 2027.",
+      "emoji": "🐔",
+      "photo": "zaxbys.jpg"
     }
   ]
 }
