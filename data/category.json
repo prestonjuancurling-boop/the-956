@@ -7,22 +7,9 @@
   "note_es": "Los tacos de desayuno arrancan el día, pero ninguna mañana en el Valle está completa sin una concha y café — seis panaderías del Valle horneando el pan dulce favorito, fresco todos los días.",
   "measuring_note": "Tracking just started — the first ranking drops Monday. The contenders:",
   "measuring_note_es": "Apenas empezamos a medir — el primer ranking sale el lunes. Los contendientes:",
-  "status": "measuring",
+  "status": "ranked",
   "baseline_date": "2026-10-05",
   "spots": [
-    {
-      "name": "La Mexicana Bakery",
-      "aliases": [
-        "la mexicana bakery",
-        "la mexicana"
-      ],
-      "city": "Edinburg",
-      "display_city": "Edinburg",
-      "known_for": "Decades of fresh conchas, donuts, and breakfast tacos out of the same Edinburg oven",
-      "known_for_es": "Décadas de conchas, donas y tacos de desayuno frescos del mismo horno de Edinburg",
-      "places_query": "La Mexicana Bakery Edinburg TX",
-      "photo": "la-mexicana-bakery.jpg"
-    },
     {
       "name": "El Fenix Bakery",
       "aliases": [
@@ -34,7 +21,14 @@
       "known_for": "Baking since 1947 — the glazed donuts and conchas Valley regulars drive hours for",
       "known_for_es": "Horneando desde 1947 — las donas glaseadas y conchas por las que la gente maneja horas",
       "places_query": "El Fenix Bakery Edinburg TX",
-      "photo": "el-fenix-bakery.jpg"
+      "photo": "el-fenix-bakery.jpg",
+      "rank": 1,
+      "mentions": 2,
+      "reddit_mentions": null,
+      "review_delta": 1,
+      "rating": 4.7,
+      "moved": null,
+      "streak_weeks": 1
     },
     {
       "name": "Ayala's Bakery",
@@ -47,7 +41,13 @@
       "known_for": "Brownsville's go-to panadería — fresh bread, friendly staff, and a spotless case",
       "known_for_es": "La panadería de cabecera de Brownsville — pan fresco, personal amable y vitrina impecable",
       "places_query": "Ayala's Bakery Brownsville TX",
-      "photo": "ayala-s-bakery.jpg"
+      "photo": "ayala-s-bakery.jpg",
+      "rank": 2,
+      "mentions": 2,
+      "reddit_mentions": null,
+      "review_delta": 1,
+      "rating": 4.6,
+      "moved": null
     },
     {
       "name": "Paris Bakery",
@@ -59,20 +59,13 @@
       "known_for": "Mission's concha specialist — locals say theirs are simply the best",
       "known_for_es": "El especialista en conchas de Mission — los locales dicen que son sencillamente las mejores",
       "places_query": "Paris Bakery Mission TX",
-      "photo": "paris-bakery.jpg"
-    },
-    {
-      "name": "La Reynera Bakery Express",
-      "aliases": [
-        "la reynera bakery express",
-        "la reynera"
-      ],
-      "city": "Pharr",
-      "display_city": "Pharr",
-      "known_for": "Concha bread and mini conchas keeping the Nolana Loop case full all day",
-      "known_for_es": "Pan de concha y mini conchas que mantienen la vitrina de Nolana Loop llena todo el día",
-      "places_query": "La Reynera Bakery Express Pharr TX",
-      "photo": "la-reynera-bakery-express.jpg"
+      "photo": "paris-bakery.jpg",
+      "rank": 3,
+      "mentions": 2,
+      "reddit_mentions": null,
+      "review_delta": 1,
+      "rating": 4.3,
+      "moved": null
     },
     {
       "name": "La Especial Bakery",
@@ -85,7 +78,51 @@
       "known_for": "The neighborhood panadería with soft conchas, fruit empanadas, and nostalgic marranitos",
       "known_for_es": "La panadería del barrio con conchas suaves, empanadas de fruta y marranitos nostálgicos",
       "places_query": "La Especial Bakery McAllen TX",
-      "photo": "la-especial-bakery.jpg"
+      "photo": "la-especial-bakery.jpg",
+      "rank": 4,
+      "mentions": 1,
+      "reddit_mentions": null,
+      "review_delta": 1,
+      "rating": 4.8,
+      "moved": null
+    },
+    {
+      "name": "La Mexicana Bakery",
+      "aliases": [
+        "la mexicana bakery",
+        "la mexicana"
+      ],
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Decades of fresh conchas, donuts, and breakfast tacos out of the same Edinburg oven",
+      "known_for_es": "Décadas de conchas, donas y tacos de desayuno frescos del mismo horno de Edinburg",
+      "places_query": "La Mexicana Bakery Edinburg TX",
+      "photo": "la-mexicana-bakery.jpg",
+      "rank": 5,
+      "mentions": 0,
+      "reddit_mentions": null,
+      "review_delta": 0,
+      "rating": 4.7,
+      "moved": null
+    },
+    {
+      "name": "La Reynera Bakery Express",
+      "aliases": [
+        "la reynera bakery express",
+        "la reynera"
+      ],
+      "city": "Pharr",
+      "display_city": "Pharr",
+      "known_for": "Concha bread and mini conchas keeping the Nolana Loop case full all day",
+      "known_for_es": "Pan de concha y mini conchas que mantienen la vitrina de Nolana Loop llena todo el día",
+      "places_query": "La Reynera Bakery Express Pharr TX",
+      "photo": "la-reynera-bakery-express.jpg",
+      "rank": 6,
+      "mentions": 0,
+      "reddit_mentions": null,
+      "review_delta": 0,
+      "rating": 4.4,
+      "moved": null
     }
   ]
 }

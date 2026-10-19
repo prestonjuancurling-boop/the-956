@@ -10,32 +10,32 @@
       "city": "McAllen",
       "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
       "known_for_es": "El nuevo sushi bar elegante que trae rollos frescos y nigiri a McAllen",
-      "mentions": 47,
+      "mentions": 49,
       "reddit_mentions": null,
-      "review_delta": 32,
+      "review_delta": 23,
       "rating": 4.8,
       "trend": "steady",
-      "moved": null,
-      "badges": [
-        "new_entry"
-      ],
-      "streak_weeks": 1,
+      "moved": 0,
+      "badges": [],
+      "streak_weeks": 2,
       "photo": "mo-sai.jpg"
     },
     {
       "rank": 2,
-      "name": "Blu Brasserie",
+      "name": "Zaya",
       "city": "McAllen",
-      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
-      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
-      "mentions": 25,
+      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
+      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
+      "mentions": 22,
       "reddit_mentions": null,
-      "review_delta": 3,
-      "rating": 4.9,
-      "trend": "steady",
-      "moved": 0,
-      "badges": [],
-      "photo": "blu-brasserie.jpg"
+      "review_delta": 5,
+      "rating": 4.8,
+      "trend": "up",
+      "moved": 2,
+      "badges": [
+        "biggest_mover"
+      ],
+      "photo": "zaya.jpg"
     },
     {
       "rank": 3,
@@ -43,9 +43,9 @@
       "city": "McAllen",
       "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
       "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 21,
+      "mentions": 20,
       "reddit_mentions": null,
-      "review_delta": 24,
+      "review_delta": 19,
       "rating": 4.8,
       "trend": "steady",
       "moved": 0,
@@ -54,43 +54,45 @@
     },
     {
       "rank": 4,
-      "name": "Zaya",
-      "city": "McAllen",
-      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
-      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 18,
-      "reddit_mentions": null,
-      "review_delta": 2,
-      "rating": 4.8,
-      "trend": "down",
-      "moved": -3,
-      "badges": [],
-      "photo": "zaya.jpg"
-    },
-    {
-      "rank": 5,
       "name": "Cayuco Seafood & Grill",
       "city": "Brownsville",
       "known_for": "Seafood and grill plates earning Brownsville's buzz",
       "known_for_es": "Mariscos y parrilla que traen a Brownsville hablando",
-      "mentions": 14,
+      "mentions": 16,
       "reddit_mentions": null,
-      "review_delta": 3,
+      "review_delta": 4,
       "rating": 4.5,
-      "trend": "down",
-      "moved": -1,
+      "trend": "up",
+      "moved": 1,
       "badges": [],
       "photo": "cayuco-seafood-grill.jpg"
+    },
+    {
+      "rank": 5,
+      "name": "Los Machetes Quesadillas Factory",
+      "city": "Edinburg",
+      "known_for": "Machete-length quesadillas — as fun as they are enormous",
+      "known_for_es": "Quesadillas del tamaño de un machete — tan divertidas como enormes",
+      "mentions": 14,
+      "reddit_mentions": null,
+      "review_delta": 6,
+      "rating": 4.8,
+      "trend": "steady",
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "photo": "los-machetes-quesadillas-factory.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "GW's BBQ",
-      "city": "San Juan"
+      "name": "Blu Brasserie",
+      "city": "McAllen"
     },
     {
-      "name": "Los Machetes Quesadillas Factory",
-      "city": "Edinburg"
+      "name": "GW's BBQ",
+      "city": "San Juan"
     },
     {
       "name": "Barrel House Kitchen & Bar",
