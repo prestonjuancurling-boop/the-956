@@ -1,0 +1,50 @@
+{
+  "section_note": "Election season is in full swing across el Valle — plus some well-earned help for our volunteer firefighters, a last call for Veterans Day parade floats, and a Grulla student with big dreams.",
+  "section_note_es": "La temporada de elecciones está a todo lo que da en el Valle — además de una ayudita bien merecida para nuestros bomberos voluntarios, la última llamada para carros alegóricos del desfile de Veterans Day, y un estudiante de Grulla con sueños grandes.",
+  "items": [
+    {
+      "headline": "'Presidential turnout': Cameron County voters are packing early voting sites",
+      "headline_es": "'Participación de elección presidencial': votantes del Condado Cameron llenan los sitios de votación anticipada",
+      "summary": "Nearly 26,000 ballots were cast in Cameron County in the first three days of early voting, with the Brownsville Public Library the busiest of 21 sites. Early voting runs through Oct. 30; Election Day is Nov. 3.",
+      "summary_es": "Casi 26,000 boletas se emitieron en el Condado Cameron en los primeros tres días de votación anticipada, y la Biblioteca Pública de Brownsville fue el sitio más concurrido de los 21. La votación anticipada sigue hasta el 30 de octubre; el día de la elección es el 3 de noviembre.",
+      "source": "KRGV",
+      "topic": "Civic",
+      "topic_es": "Cívico",
+      "published": "Oct 22",
+      "url": "https://www.krgv.com/news/presidential-turnout-cameron-county-sees-high-voter-volume-at-early-voting-sites"
+    },
+    {
+      "headline": "Valley volunteer fire departments get funding for new emergency gear",
+      "headline_es": "Departamentos de bomberos voluntarios del Valle reciben fondos para nuevo equipo de emergencia",
+      "summary": "The Texas A&M Forest Service is sending $19.6 million to 518 rural volunteer fire departments statewide. Valley recipients include Progreso ($165K for a brush truck), Edcouch and La Joya ($45K each), and La Grulla, La Casita and La Rosita in Starr County.",
+      "summary_es": "El Texas A&M Forest Service está repartiendo $19.6 millones entre 518 departamentos de bomberos voluntarios rurales en todo el estado. Entre los del Valle están Progreso ($165 mil para una troca contra incendios de maleza), Edcouch y La Joya ($45 mil cada uno), y La Grulla, La Casita y La Rosita en el Condado Starr.",
+      "source": "KRGV",
+      "topic": "Community",
+      "topic_es": "Comunidad",
+      "published": "Oct 23",
+      "url": "https://www.krgv.com/news/valley-fire-departments-receive-funds-for-emergency-response-gear"
+    },
+    {
+      "headline": "Edinburg calls for Veterans Day Parade entries — deadline Oct. 29",
+      "headline_es": "Edinburg busca participantes para el desfile de Veterans Day — fecha límite el 29 de octubre",
+      "summary": "Schools, nonprofits, veterans' groups and neighbors can enter a float in Edinburg's Veterans Day Parade, set for 10 a.m. Saturday, Nov. 7, along Closner Boulevard's 'Boulevard of Heroes.' Trophies go to the top three in the Most Patriotic Float competition.",
+      "summary_es": "Escuelas, organizaciones sin fines de lucro, grupos de veteranos y vecinos pueden inscribir un carro alegórico en el desfile de Veterans Day de Edinburg, el sábado 7 de noviembre a las 10 a.m. por el 'Boulevard of Heroes' en Closner Boulevard. Habrá trofeos para los tres primeros lugares del concurso al carro más patriótico.",
+      "source": "City of Edinburg",
+      "topic": "Community",
+      "topic_es": "Comunidad",
+      "published": "Oct 20",
+      "url": "https://www.cityofedinburg.com/news_detail_T3_R137.php"
+    },
+    {
+      "headline": "Grulla High senior aims for fetal surgery at Johns Hopkins",
+      "headline_es": "Estudiante de último año de Grulla High sueña con ser cirujano fetal en Johns Hopkins",
+      "summary": "KRGV's Student of the Week, Miguel Sanchez, is senior class president, National Honor Society president, 4th in his class and already a certified phlebotomist — and he's set his sights on becoming a fetal surgeon.",
+      "summary_es": "El Estudiante de la Semana de KRGV, Miguel Sanchez, es presidente de su generación, presidente de la National Honor Society, el 4.º de su clase y ya es flebotomista certificado — y tiene la mira puesta en ser cirujano fetal.",
+      "source": "KRGV",
+      "topic": "Education",
+      "topic_es": "Educación",
+      "published": "Oct 21",
+      "url": "https://www.krgv.com/news/student-of-the-week-grulla-high-school-s-miguel-sanchez"
+    }
+  ]
+}
