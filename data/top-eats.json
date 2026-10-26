@@ -10,47 +10,47 @@
       "city": "McAllen",
       "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
       "known_for_es": "El nuevo sushi bar elegante que trae rollos frescos y nigiri a McAllen",
-      "mentions": 49,
+      "mentions": 21,
       "reddit_mentions": null,
-      "review_delta": 23,
+      "review_delta": 3,
       "rating": 4.8,
       "trend": "steady",
       "moved": 0,
       "badges": [],
-      "streak_weeks": 2,
+      "streak_weeks": 3,
       "photo": "mo-sai.jpg"
     },
     {
       "rank": 2,
-      "name": "Zaya",
-      "city": "McAllen",
-      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
-      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 22,
-      "reddit_mentions": null,
-      "review_delta": 5,
-      "rating": 4.8,
-      "trend": "up",
-      "moved": 2,
-      "badges": [
-        "biggest_mover"
-      ],
-      "photo": "zaya.jpg"
-    },
-    {
-      "rank": 3,
       "name": "AMBRA",
       "city": "McAllen",
       "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
       "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 20,
+      "mentions": 18,
       "reddit_mentions": null,
-      "review_delta": 19,
+      "review_delta": 16,
       "rating": 4.8,
-      "trend": "steady",
-      "moved": 0,
+      "trend": "up",
+      "moved": 1,
       "badges": [],
       "photo": "ambra.jpg"
+    },
+    {
+      "rank": 3,
+      "name": "El Jardin",
+      "city": "Edinburg",
+      "known_for": "Edinburg's garden-named Mexican mainstay",
+      "known_for_es": "El clásico mexicano de Edinburg",
+      "mentions": 13,
+      "reddit_mentions": null,
+      "review_delta": 4,
+      "rating": 4.8,
+      "trend": "steady",
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "photo": "el-jardin.jpg"
     },
     {
       "rank": 4,
@@ -58,44 +58,44 @@
       "city": "Brownsville",
       "known_for": "Seafood and grill plates earning Brownsville's buzz",
       "known_for_es": "Mariscos y parrilla que traen a Brownsville hablando",
-      "mentions": 16,
+      "mentions": 12,
       "reddit_mentions": null,
-      "review_delta": 4,
+      "review_delta": 2,
       "rating": 4.5,
-      "trend": "up",
-      "moved": 1,
+      "trend": "steady",
+      "moved": 0,
       "badges": [],
       "photo": "cayuco-seafood-grill.jpg"
     },
     {
       "rank": 5,
-      "name": "Los Machetes Quesadillas Factory",
-      "city": "Edinburg",
-      "known_for": "Machete-length quesadillas — as fun as they are enormous",
-      "known_for_es": "Quesadillas del tamaño de un machete — tan divertidas como enormes",
-      "mentions": 14,
+      "name": "Angel's Kitchen",
+      "city": "Mission",
+      "known_for": "Mission's Mexican kitchen with fresh tortillas made in front of you",
+      "known_for_es": "La cocina mexicana de Mission — tortillas frescas hechas frente a ti",
+      "mentions": 12,
       "reddit_mentions": null,
-      "review_delta": 6,
-      "rating": 4.8,
+      "review_delta": 2,
+      "rating": 4.7,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "los-machetes-quesadillas-factory.jpg"
+      "photo": "angel-s-kitchen.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "Blu Brasserie",
+      "name": "Zaya",
       "city": "McAllen"
     },
     {
-      "name": "GW's BBQ",
-      "city": "San Juan"
+      "name": "Los Machetes Quesadillas Factory",
+      "city": "Edinburg"
     },
     {
-      "name": "Barrel House Kitchen & Bar",
+      "name": "Jerusalem Mediterranean Bistro",
       "city": "Edinburg"
     }
   ]

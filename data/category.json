@@ -11,6 +11,25 @@
   "baseline_date": "2026-10-05",
   "spots": [
     {
+      "name": "Paris Bakery",
+      "aliases": [
+        "paris bakery"
+      ],
+      "city": "Mission",
+      "display_city": "Mission",
+      "known_for": "Mission's concha specialist — locals say theirs are simply the best",
+      "known_for_es": "El especialista en conchas de Mission — los locales dicen que son sencillamente las mejores",
+      "places_query": "Paris Bakery Mission TX",
+      "photo": "paris-bakery.jpg",
+      "rank": 1,
+      "mentions": 5,
+      "reddit_mentions": null,
+      "review_delta": 3,
+      "rating": 4.3,
+      "moved": 2,
+      "streak_weeks": 1
+    },
+    {
       "name": "El Fenix Bakery",
       "aliases": [
         "el fenix bakery",
@@ -22,50 +41,12 @@
       "known_for_es": "Horneando desde 1947 — las donas glaseadas y conchas por las que la gente maneja horas",
       "places_query": "El Fenix Bakery Edinburg TX",
       "photo": "el-fenix-bakery.jpg",
-      "rank": 1,
-      "mentions": 2,
-      "reddit_mentions": null,
-      "review_delta": 1,
-      "rating": 4.7,
-      "moved": null,
-      "streak_weeks": 1
-    },
-    {
-      "name": "Ayala's Bakery",
-      "aliases": [
-        "ayala's bakery",
-        "ayalas bakery"
-      ],
-      "city": "Brownsville",
-      "display_city": "Brownsville",
-      "known_for": "Brownsville's go-to panadería — fresh bread, friendly staff, and a spotless case",
-      "known_for_es": "La panadería de cabecera de Brownsville — pan fresco, personal amable y vitrina impecable",
-      "places_query": "Ayala's Bakery Brownsville TX",
-      "photo": "ayala-s-bakery.jpg",
       "rank": 2,
       "mentions": 2,
       "reddit_mentions": null,
       "review_delta": 1,
-      "rating": 4.6,
-      "moved": null
-    },
-    {
-      "name": "Paris Bakery",
-      "aliases": [
-        "paris bakery"
-      ],
-      "city": "Mission",
-      "display_city": "Mission",
-      "known_for": "Mission's concha specialist — locals say theirs are simply the best",
-      "known_for_es": "El especialista en conchas de Mission — los locales dicen que son sencillamente las mejores",
-      "places_query": "Paris Bakery Mission TX",
-      "photo": "paris-bakery.jpg",
-      "rank": 3,
-      "mentions": 2,
-      "reddit_mentions": null,
-      "review_delta": 1,
-      "rating": 4.3,
-      "moved": null
+      "rating": 4.7,
+      "moved": -1
     },
     {
       "name": "La Especial Bakery",
@@ -79,12 +60,31 @@
       "known_for_es": "La panadería del barrio con conchas suaves, empanadas de fruta y marranitos nostálgicos",
       "places_query": "La Especial Bakery McAllen TX",
       "photo": "la-especial-bakery.jpg",
-      "rank": 4,
-      "mentions": 1,
+      "rank": 3,
+      "mentions": 2,
       "reddit_mentions": null,
       "review_delta": 1,
       "rating": 4.8,
-      "moved": null
+      "moved": 1
+    },
+    {
+      "name": "Ayala's Bakery",
+      "aliases": [
+        "ayala's bakery",
+        "ayalas bakery"
+      ],
+      "city": "Brownsville",
+      "display_city": "Brownsville",
+      "known_for": "Brownsville's go-to panadería — fresh bread, friendly staff, and a spotless case",
+      "known_for_es": "La panadería de cabecera de Brownsville — pan fresco, personal amable y vitrina impecable",
+      "places_query": "Ayala's Bakery Brownsville TX",
+      "photo": "ayala-s-bakery.jpg",
+      "rank": 4,
+      "mentions": 1,
+      "reddit_mentions": null,
+      "review_delta": 0,
+      "rating": 4.6,
+      "moved": -2
     },
     {
       "name": "La Mexicana Bakery",
@@ -103,7 +103,7 @@
       "reddit_mentions": null,
       "review_delta": 0,
       "rating": 4.7,
-      "moved": null
+      "moved": 0
     },
     {
       "name": "La Reynera Bakery Express",
@@ -121,8 +121,8 @@
       "mentions": 0,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 4.4,
-      "moved": null
+      "rating": 5,
+      "moved": 0
     }
   ]
 }
