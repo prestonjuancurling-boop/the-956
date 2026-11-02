@@ -6,42 +6,63 @@
   "spots": [
     {
       "rank": 1,
-      "name": "Moūsai",
-      "city": "McAllen",
-      "known_for": "Sleek new sushi bar bringing fresh rolls and nigiri to McAllen",
-      "known_for_es": "El nuevo sushi bar elegante que trae rollos frescos y nigiri a McAllen",
-      "mentions": 21,
+      "name": "5x5 Brewing Co.",
+      "city": "Mission",
+      "known_for": "The Valley's veteran-owned brewery — craft beer and a packed taproom",
+      "known_for_es": "La cervecería del Valle fundada por veteranos — cerveza artesanal y taproom lleno",
+      "mentions": 895,
       "reddit_mentions": null,
-      "review_delta": 3,
+      "review_delta": 381,
       "rating": 4.8,
       "trend": "steady",
-      "moved": 0,
-      "badges": [],
-      "streak_weeks": 3,
-      "photo": "mo-sai.jpg"
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "streak_weeks": 1,
+      "photo": "5x5-brewing-co.jpg"
     },
     {
       "rank": 2,
-      "name": "AMBRA",
-      "city": "McAllen",
-      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
-      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 18,
+      "name": "Taqueria Sheko's",
+      "city": "Brownsville",
+      "known_for": "Suadero and molleja tacos that Brownsville swears by",
+      "known_for_es": "Tacos de suadero y molleja que Brownsville defiende con todo",
+      "mentions": 21,
       "reddit_mentions": null,
-      "review_delta": 16,
-      "rating": 4.8,
-      "trend": "up",
-      "moved": 1,
-      "badges": [],
-      "photo": "ambra.jpg"
+      "review_delta": 4,
+      "rating": 4.4,
+      "trend": "steady",
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "photo": "taqueria-sheko-s.jpg"
     },
     {
       "rank": 3,
-      "name": "El Jardin",
-      "city": "Edinburg",
-      "known_for": "Edinburg's garden-named Mexican mainstay",
-      "known_for_es": "El clásico mexicano de Edinburg",
-      "mentions": 13,
+      "name": "Zaya",
+      "city": "McAllen",
+      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
+      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
+      "mentions": 19,
+      "reddit_mentions": null,
+      "review_delta": 5,
+      "rating": 4.8,
+      "trend": "steady",
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "photo": "zaya.jpg"
+    },
+    {
+      "rank": 4,
+      "name": "Brasas",
+      "city": "McAllen",
+      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
+      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
+      "mentions": 15,
       "reddit_mentions": null,
       "review_delta": 4,
       "rating": 4.8,
@@ -50,53 +71,38 @@
       "badges": [
         "new_entry"
       ],
-      "photo": "el-jardin.jpg"
-    },
-    {
-      "rank": 4,
-      "name": "Cayuco Seafood & Grill",
-      "city": "Brownsville",
-      "known_for": "Seafood and grill plates earning Brownsville's buzz",
-      "known_for_es": "Mariscos y parrilla que traen a Brownsville hablando",
-      "mentions": 12,
-      "reddit_mentions": null,
-      "review_delta": 2,
-      "rating": 4.5,
-      "trend": "steady",
-      "moved": 0,
-      "badges": [],
-      "photo": "cayuco-seafood-grill.jpg"
+      "photo": "brasas.jpg"
     },
     {
       "rank": 5,
-      "name": "Angel's Kitchen",
-      "city": "Mission",
-      "known_for": "Mission's Mexican kitchen with fresh tortillas made in front of you",
-      "known_for_es": "La cocina mexicana de Mission — tortillas frescas hechas frente a ti",
-      "mentions": 12,
+      "name": "Jerusalem Mediterranean Bistro",
+      "city": "Edinburg",
+      "known_for": "Mediterranean plates and groceries — an Edinburg original",
+      "known_for_es": "Platillos mediterráneos y abarrotes — un original de Edinburg",
+      "mentions": 13,
       "reddit_mentions": null,
-      "review_delta": 2,
+      "review_delta": 5,
       "rating": 4.7,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "angel-s-kitchen.jpg"
+      "photo": "jerusalem-mediterranean-bistro.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "Zaya",
+      "name": "Moūsai",
       "city": "McAllen"
     },
     {
-      "name": "Los Machetes Quesadillas Factory",
+      "name": "El Jardin",
       "city": "Edinburg"
     },
     {
-      "name": "Jerusalem Mediterranean Bistro",
-      "city": "Edinburg"
+      "name": "AMBRA",
+      "city": "McAllen"
     }
   ]
 }
