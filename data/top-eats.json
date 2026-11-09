@@ -10,99 +10,95 @@
       "city": "Mission",
       "known_for": "The Valley's veteran-owned brewery — craft beer and a packed taproom",
       "known_for_es": "La cervecería del Valle fundada por veteranos — cerveza artesanal y taproom lleno",
-      "mentions": 895,
+      "mentions": 358,
       "reddit_mentions": null,
-      "review_delta": 381,
-      "rating": 4.8,
+      "review_delta": null,
+      "rating": null,
       "trend": "steady",
-      "moved": null,
-      "badges": [
-        "new_entry"
-      ],
-      "streak_weeks": 1,
+      "moved": 0,
+      "badges": [],
+      "streak_weeks": 2,
       "photo": "5x5-brewing-co.jpg"
     },
     {
       "rank": 2,
-      "name": "Taqueria Sheko's",
-      "city": "Brownsville",
-      "known_for": "Suadero and molleja tacos that Brownsville swears by",
-      "known_for_es": "Tacos de suadero y molleja que Brownsville defiende con todo",
-      "mentions": 21,
-      "reddit_mentions": null,
-      "review_delta": 4,
-      "rating": 4.4,
-      "trend": "steady",
-      "moved": null,
-      "badges": [
-        "new_entry"
-      ],
-      "photo": "taqueria-sheko-s.jpg"
-    },
-    {
-      "rank": 3,
       "name": "Zaya",
       "city": "McAllen",
       "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
       "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 19,
+      "mentions": 23,
       "reddit_mentions": null,
       "review_delta": 5,
       "rating": 4.8,
-      "trend": "steady",
-      "moved": null,
-      "badges": [
-        "new_entry"
-      ],
+      "trend": "up",
+      "moved": 1,
+      "badges": [],
       "photo": "zaya.jpg"
     },
     {
-      "rank": 4,
-      "name": "Brasas",
+      "rank": 3,
+      "name": "Blu Brasserie",
       "city": "McAllen",
-      "known_for": "Peruvian rotisserie chicken, lomo saltado and aji verde on everything",
-      "known_for_es": "Pollo a la brasa peruano, lomo saltado y ají verde en todo",
-      "mentions": 15,
+      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
+      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
+      "mentions": 14,
       "reddit_mentions": null,
-      "review_delta": 4,
+      "review_delta": 2,
+      "rating": 4.9,
+      "trend": "steady",
+      "moved": null,
+      "badges": [
+        "new_entry"
+      ],
+      "photo": "blu-brasserie.jpg"
+    },
+    {
+      "rank": 4,
+      "name": "AMBRA",
+      "city": "McAllen",
+      "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
+      "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
+      "mentions": 12,
+      "reddit_mentions": null,
+      "review_delta": 13,
       "rating": 4.8,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "brasas.jpg"
+      "photo": "ambra.jpg"
     },
     {
       "rank": 5,
-      "name": "Jerusalem Mediterranean Bistro",
+      "name": "El Jardin",
       "city": "Edinburg",
-      "known_for": "Mediterranean plates and groceries — an Edinburg original",
-      "known_for_es": "Platillos mediterráneos y abarrotes — un original de Edinburg",
-      "mentions": 13,
+      "known_for": "Edinburg's garden-named Mexican mainstay",
+      "known_for_es": "El clásico mexicano de Edinburg",
+      "mentions": 9,
       "reddit_mentions": null,
-      "review_delta": 5,
-      "rating": 4.7,
+      "review_delta": 2,
+      "rating": 4.8,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "jerusalem-mediterranean-bistro.jpg"
+      "photo": "el-jardin.jpg"
     }
   ],
   "bubble": [
     {
-      "name": "Moūsai",
-      "city": "McAllen"
+      "name": "GW's BBQ",
+      "city": "San Juan"
     },
     {
-      "name": "El Jardin",
-      "city": "Edinburg"
+      "name": "Hacienda Las Mariposas",
+      "city": "RGV"
     },
     {
-      "name": "AMBRA",
-      "city": "McAllen"
+      "name": "Taqueria Sheko's",
+      "city": "Brownsville"
     }
   ]
 }
