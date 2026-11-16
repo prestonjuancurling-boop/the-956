@@ -23,31 +23,12 @@
       "places_query": "La Reynera Bakery Express Pharr TX",
       "photo": "la-reynera-bakery-express.jpg",
       "rank": 1,
-      "mentions": 957,
+      "mentions": 335,
       "reddit_mentions": null,
-      "review_delta": 493,
+      "review_delta": 0,
       "rating": 4.4,
       "moved": 0,
-      "streak_weeks": 2
-    },
-    {
-      "name": "La Mexicana Bakery",
-      "aliases": [
-        "la mexicana bakery",
-        "la mexicana"
-      ],
-      "city": "Edinburg",
-      "display_city": "Edinburg",
-      "known_for": "Decades of fresh conchas, donuts, and breakfast tacos out of the same Edinburg oven",
-      "known_for_es": "Décadas de conchas, donas y tacos de desayuno frescos del mismo horno de Edinburg",
-      "places_query": "La Mexicana Bakery Edinburg TX",
-      "photo": "la-mexicana-bakery.jpg",
-      "rank": 2,
-      "mentions": 5,
-      "reddit_mentions": null,
-      "review_delta": 2,
-      "rating": 4.7,
-      "moved": 4
+      "streak_weeks": 3
     },
     {
       "name": "El Fenix Bakery",
@@ -61,48 +42,30 @@
       "known_for_es": "Horneando desde 1947 — las donas glaseadas y conchas por las que la gente maneja horas",
       "places_query": "El Fenix Bakery Edinburg TX",
       "photo": "el-fenix-bakery.jpg",
-      "rank": 3,
-      "mentions": 4,
+      "rank": 2,
+      "mentions": 5,
       "reddit_mentions": null,
       "review_delta": 2,
       "rating": 4.7,
-      "moved": 0
+      "moved": 1
     },
     {
-      "name": "Paris Bakery",
+      "name": "La Mexicana Bakery",
       "aliases": [
-        "paris bakery"
+        "la mexicana bakery",
+        "la mexicana"
       ],
-      "city": "Mission",
-      "display_city": "Mission",
-      "known_for": "Mission's concha specialist — locals say theirs are simply the best",
-      "known_for_es": "El especialista en conchas de Mission — los locales dicen que son sencillamente las mejores",
-      "places_query": "Paris Bakery Mission TX",
-      "photo": "paris-bakery.jpg",
-      "rank": 4,
-      "mentions": 1,
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Decades of fresh conchas, donuts, and breakfast tacos out of the same Edinburg oven",
+      "known_for_es": "Décadas de conchas, donas y tacos de desayuno frescos del mismo horno de Edinburg",
+      "places_query": "La Mexicana Bakery Edinburg TX",
+      "photo": "la-mexicana-bakery.jpg",
+      "rank": 3,
+      "mentions": 4,
       "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.3,
-      "moved": -2
-    },
-    {
-      "name": "La Especial Bakery",
-      "aliases": [
-        "la especial bakery",
-        "la especial"
-      ],
-      "city": "McAllen",
-      "display_city": "McAllen",
-      "known_for": "The neighborhood panadería with soft conchas, fruit empanadas, and nostalgic marranitos",
-      "known_for_es": "La panadería del barrio con conchas suaves, empanadas de fruta y marranitos nostálgicos",
-      "places_query": "La Especial Bakery McAllen TX",
-      "photo": "la-especial-bakery.jpg",
-      "rank": 5,
-      "mentions": 0,
-      "reddit_mentions": null,
-      "review_delta": 0,
-      "rating": 4.8,
+      "review_delta": 1,
+      "rating": 4.7,
       "moved": -1
     },
     {
@@ -117,11 +80,48 @@
       "known_for_es": "La panadería de cabecera de Brownsville — pan fresco, personal amable y vitrina impecable",
       "places_query": "Ayala's Bakery Brownsville TX",
       "photo": "ayala-s-bakery.jpg",
+      "rank": 4,
+      "mentions": 2,
+      "reddit_mentions": null,
+      "review_delta": 1,
+      "rating": 4.6,
+      "moved": 2
+    },
+    {
+      "name": "Paris Bakery",
+      "aliases": [
+        "paris bakery"
+      ],
+      "city": "Mission",
+      "display_city": "Mission",
+      "known_for": "Mission's concha specialist — locals say theirs are simply the best",
+      "known_for_es": "El especialista en conchas de Mission — los locales dicen que son sencillamente las mejores",
+      "places_query": "Paris Bakery Mission TX",
+      "photo": "paris-bakery.jpg",
+      "rank": 5,
+      "mentions": 0,
+      "reddit_mentions": null,
+      "review_delta": 0,
+      "rating": 4.3,
+      "moved": -1
+    },
+    {
+      "name": "La Especial Bakery",
+      "aliases": [
+        "la especial bakery",
+        "la especial"
+      ],
+      "city": "McAllen",
+      "display_city": "McAllen",
+      "known_for": "The neighborhood panadería with soft conchas, fruit empanadas, and nostalgic marranitos",
+      "known_for_es": "La panadería del barrio con conchas suaves, empanadas de fruta y marranitos nostálgicos",
+      "places_query": "La Especial Bakery McAllen TX",
+      "photo": "la-especial-bakery.jpg",
       "rank": 6,
       "mentions": 0,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 4.6,
+      "rating": 4.8,
       "moved": -1
     }
   ]

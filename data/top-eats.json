@@ -10,94 +10,92 @@
       "city": "Mission",
       "known_for": "The Valley's veteran-owned brewery — craft beer and a packed taproom",
       "known_for_es": "La cervecería del Valle fundada por veteranos — cerveza artesanal y taproom lleno",
-      "mentions": 358,
+      "mentions": 125,
       "reddit_mentions": null,
-      "review_delta": null,
-      "rating": null,
+      "review_delta": 0,
+      "rating": 5,
       "trend": "steady",
       "moved": 0,
       "badges": [],
-      "streak_weeks": 2,
+      "streak_weeks": 3,
       "photo": "5x5-brewing-co.jpg"
     },
     {
       "rank": 2,
-      "name": "Zaya",
-      "city": "McAllen",
-      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
-      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
-      "mentions": 23,
-      "reddit_mentions": null,
-      "review_delta": 5,
-      "rating": 4.8,
-      "trend": "up",
-      "moved": 1,
-      "badges": [],
-      "photo": "zaya.jpg"
-    },
-    {
-      "rank": 3,
-      "name": "Blu Brasserie",
-      "city": "McAllen",
-      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
-      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
-      "mentions": 14,
-      "reddit_mentions": null,
-      "review_delta": 2,
-      "rating": 4.9,
-      "trend": "steady",
-      "moved": null,
-      "badges": [
-        "new_entry"
-      ],
-      "photo": "blu-brasserie.jpg"
-    },
-    {
-      "rank": 4,
       "name": "AMBRA",
       "city": "McAllen",
       "known_for": "The globally inspired steakhouse everyone waited for — 4.8 stars out of the gate",
       "known_for_es": "El steakhouse de inspiración global que todos esperaban — 4.8 estrellas desde el arranque",
-      "mentions": 12,
+      "mentions": 21,
       "reddit_mentions": null,
-      "review_delta": 13,
+      "review_delta": 26,
       "rating": 4.8,
-      "trend": "steady",
-      "moved": null,
+      "trend": "up",
+      "moved": 2,
       "badges": [
-        "new_entry"
+        "biggest_mover"
       ],
       "photo": "ambra.jpg"
     },
     {
-      "rank": 5,
-      "name": "El Jardin",
-      "city": "Edinburg",
-      "known_for": "Edinburg's garden-named Mexican mainstay",
-      "known_for_es": "El clásico mexicano de Edinburg",
-      "mentions": 9,
+      "rank": 3,
+      "name": "Zaya",
+      "city": "McAllen",
+      "known_for": "The new see-and-be-seen spot — dressed-up plates and a lively room",
+      "known_for_es": "El nuevo lugar para ver y ser visto — platillos elegantes y un ambiente animado",
+      "mentions": 18,
       "reddit_mentions": null,
-      "review_delta": 2,
+      "review_delta": 3,
       "rating": 4.8,
+      "trend": "down",
+      "moved": -1,
+      "badges": [],
+      "photo": "zaya.jpg"
+    },
+    {
+      "rank": 4,
+      "name": "Taqueria Sheko's",
+      "city": "Brownsville",
+      "known_for": "Suadero and molleja tacos that Brownsville swears by",
+      "known_for_es": "Tacos de suadero y molleja que Brownsville defiende con todo",
+      "mentions": 17,
+      "reddit_mentions": null,
+      "review_delta": 3,
+      "rating": 4.4,
       "trend": "steady",
       "moved": null,
       "badges": [
         "new_entry"
       ],
-      "photo": "el-jardin.jpg"
+      "photo": "taqueria-sheko-s.jpg"
+    },
+    {
+      "rank": 5,
+      "name": "Blu Brasserie",
+      "city": "McAllen",
+      "known_for": "McAllen's polished new brasserie for date nights and long dinners",
+      "known_for_es": "La nueva brasserie refinada de McAllen para citas y cenas largas",
+      "mentions": 16,
+      "reddit_mentions": null,
+      "review_delta": 2,
+      "rating": 4.9,
+      "trend": "down",
+      "moved": -2,
+      "badges": [],
+      "photo": "blu-brasserie.jpg"
     }
   ],
   "bubble": [
+    {
+      "name": "Moūsai",
+      "city": "McAllen"
+    },
     {
       "name": "GW's BBQ",
       "city": "San Juan"
     },
     {
-      "name": "Hacienda Las Mariposas",
-      "city": "RGV"
-    },
-    {
-      "name": "Taqueria Sheko's",
+      "name": "Cayuco Seafood & Grill",
       "city": "Brownsville"
     }
   ]
