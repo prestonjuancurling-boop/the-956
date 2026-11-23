@@ -23,31 +23,12 @@
       "places_query": "La Reynera Bakery Express Pharr TX",
       "photo": "la-reynera-bakery-express.jpg",
       "rank": 1,
-      "mentions": 335,
+      "mentions": 101,
       "reddit_mentions": null,
       "review_delta": 0,
-      "rating": 4.4,
+      "rating": 4.2,
       "moved": 0,
-      "streak_weeks": 3
-    },
-    {
-      "name": "El Fenix Bakery",
-      "aliases": [
-        "el fenix bakery",
-        "el fenix"
-      ],
-      "city": "Edinburg",
-      "display_city": "Edinburg",
-      "known_for": "Baking since 1947 — the glazed donuts and conchas Valley regulars drive hours for",
-      "known_for_es": "Horneando desde 1947 — las donas glaseadas y conchas por las que la gente maneja horas",
-      "places_query": "El Fenix Bakery Edinburg TX",
-      "photo": "el-fenix-bakery.jpg",
-      "rank": 2,
-      "mentions": 5,
-      "reddit_mentions": null,
-      "review_delta": 2,
-      "rating": 4.7,
-      "moved": 1
+      "streak_weeks": 4
     },
     {
       "name": "La Mexicana Bakery",
@@ -61,12 +42,12 @@
       "known_for_es": "Décadas de conchas, donas y tacos de desayuno frescos del mismo horno de Edinburg",
       "places_query": "La Mexicana Bakery Edinburg TX",
       "photo": "la-mexicana-bakery.jpg",
-      "rank": 3,
-      "mentions": 4,
+      "rank": 2,
+      "mentions": 6,
       "reddit_mentions": null,
-      "review_delta": 1,
+      "review_delta": 2,
       "rating": 4.7,
-      "moved": -1
+      "moved": 1
     },
     {
       "name": "Ayala's Bakery",
@@ -80,12 +61,31 @@
       "known_for_es": "La panadería de cabecera de Brownsville — pan fresco, personal amable y vitrina impecable",
       "places_query": "Ayala's Bakery Brownsville TX",
       "photo": "ayala-s-bakery.jpg",
+      "rank": 3,
+      "mentions": 4,
+      "reddit_mentions": null,
+      "review_delta": 2,
+      "rating": 4.6,
+      "moved": 1
+    },
+    {
+      "name": "El Fenix Bakery",
+      "aliases": [
+        "el fenix bakery",
+        "el fenix"
+      ],
+      "city": "Edinburg",
+      "display_city": "Edinburg",
+      "known_for": "Baking since 1947 — the glazed donuts and conchas Valley regulars drive hours for",
+      "known_for_es": "Horneando desde 1947 — las donas glaseadas y conchas por las que la gente maneja horas",
+      "places_query": "El Fenix Bakery Edinburg TX",
+      "photo": "el-fenix-bakery.jpg",
       "rank": 4,
       "mentions": 2,
       "reddit_mentions": null,
-      "review_delta": 1,
-      "rating": 4.6,
-      "moved": 2
+      "review_delta": 0,
+      "rating": 4.7,
+      "moved": -2
     },
     {
       "name": "Paris Bakery",
@@ -99,11 +99,11 @@
       "places_query": "Paris Bakery Mission TX",
       "photo": "paris-bakery.jpg",
       "rank": 5,
-      "mentions": 0,
+      "mentions": 2,
       "reddit_mentions": null,
-      "review_delta": 0,
+      "review_delta": 1,
       "rating": 4.3,
-      "moved": -1
+      "moved": 0
     },
     {
       "name": "La Especial Bakery",
@@ -122,7 +122,7 @@
       "reddit_mentions": null,
       "review_delta": 0,
       "rating": 4.8,
-      "moved": -1
+      "moved": 0
     }
   ]
 }
